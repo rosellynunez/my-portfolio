@@ -1,0 +1,668 @@
+/* Estilo para el gradiente en el modo claro */
+#intro.claro {
+  background: linear-gradient(to right bottom, #e3fdfd, #e2faff, #e4f6ff, #eaf2ff, #f1edff, #f5edff, #f8edff, #fcedfe, #fbf2ff, #fbf7ff, #fdfbff, #ffffff);;
+  color: rgb(0, 0, 0); /* Texto en blanco para contraste */
+}
+
+
+/* Estilo para el gradiente en el modo oscuro */
+#intro.oscuro {
+  background: linear-gradient(135deg, #1E1E1E 30%, #5a2cb4 95%, transparent 100%);
+  color: white; /* Texto en blanco para contraste */
+}
+
+/* Estilos para el navbar */
+.navbar-toggler-text {
+  display: none; /* Initially hidden */
+  text-align: center; /* Center the text below the icon */
+  font-size: 9px; /* Adjust the size as needed */
+  font-weight: normal;
+}
+
+#auto-typing-output {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+@media (max-width: 992px) {
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .navbar-toggler {
+      display: flex;
+      flex-direction: column; /* Stack icon and text vertically */
+      align-items: center; /* Center align both icon and text */
+      box-shadow: none !important; /* Elimina la sombra del botón en mobile */
+      align-self: center; /* Centra el botón verticalmente */
+  }
+  
+  .navbar-collapse {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .navbar-toggler-text {
+      display: block; /* Show on mobile */
+      color: #000000;
+  }
+}
+
+/* Alineación del ícono para cambiar entre modo claro y oscuro */
+
+.bg-body-tertiary {
+  background-color: white !important;
+}
+
+.btn {
+  align-self: center; /* Centra verticalmente el botón de cambio de tema */
+  margin-left: 0 !important; /* Evita cualquier desplazamiento hacia la derecha */
+}
+
+.header-item-2 {
+  justify-items: right;
+  align-items: right;
+  justify-content: right;
+  align-content: right;
+}
+
+.header-item-1-2 {
+  display: flex;
+  align-items: center;
+}
+
+/* Define un color específico para el icono */
+#dl-icon {
+  color: black; 
+}
+
+/* En el modo oscuro, asegúrate de que el icono se vea bien */
+body[data-bs-theme="dark"] #dl-icon {
+  color: white;
+}
+
+body {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 1em;
+}
+
+.subtitle-1 {
+  font-size: 1.5em;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.text-highlight{
+  font-family: "Libre Caslon Text", serif;
+  font-optical-sizing: auto;
+  letter-spacing: -1.75px;
+  font-weight: 400;
+}
+
+/* Estilos para el header */
+header ul {
+  margin-left: 40px;
+}
+
+header button {
+  margin-right: 10px;
+}
+
+/* Estilos para el intro */
+#intro {
+  margin: 0% 0.8%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 6 0 6%;
+  height: 80vh;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 400 !important;
+  position: relative; /* Ensures that the button is positioned relative to this section */
+  overflow: hidden;
+}
+
+h2 {
+  text-align: left;
+  font-size: 2.7em!important;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+h3 {
+  text-align: left;
+  font-weight: 400;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  padding: 0.5em 0em 1em 0em;
+}
+
+.text-intro {
+  top: 4em;
+  position: absolute;
+}
+
+/* By default (desktop), the span behaves like an inline element (no break) */
+.mobile-break {
+  display: none;
+}
+
+/* On mobile, show the line break */
+@media (max-width: 768px) {
+  .mobile-break {
+    display: inline;
+  }
+}
+
+#intro h1 {
+  text-align: left;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 3.6em;
+  font-weight: 400;
+}
+
+#intro h1.bold {
+  font-weight: 500;
+}
+
+@media (min-width: 769px) and (max-width: 991px) {
+  #intro h1 {
+    font-size: 3em;
+  }
+
+  #intro .h1-bold {
+    font-weight: 400;
+  }
+
+  h2 {
+    font-size: 2.4em !important;
+  }
+}
+
+/* General button style */
+#intro .btn-primary {
+  position: absolute; /* or 'fixed' if you want it to stay on screen when scrolling */
+  top: 25em; /* Adjust this value for desktop positioning */
+  z-index: 10; /* Make sure it's above other content */
+}
+
+@media (min-width: 769px) and (max-width: 991px) {
+  #intro h1 {
+    font-size: 3em;
+  }
+
+  #intro .h1-bold {
+    font-weight: 400;
+  }
+
+  h2 {
+    font-size: 2.4em !important;
+  }
+
+  #intro .btn-primary {
+    position: absolute;
+    bottom: 1em; /* Adjust this value for mobile */
+    z-index: 10; /* Make sure it's above other content */
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1999px) {
+  #intro h1 {
+    font-size: 2.8em;
+  }
+
+  #intro .h1-bold {
+    font-weight: 500;
+  }
+
+  h2 {
+    font-size: 2.4em !important;
+  }
+
+  #intro .btn-primary {
+    position: absolute;
+    bottom: 1em; /* Adjust this value for mobile */
+    z-index: 10; /* Make sure it's above other content */
+  }
+}
+
+/* Mobile-specific style */
+@media (max-width: 768px) {
+  #intro .btn-primary {
+    position: absolute;
+    top: 28em; /* Adjust this value for mobile */
+    z-index: 10; /* Make sure it's above other content */
+  }
+
+  #intro h1 {
+    font-size: 2.4em;
+  }
+
+  #intro .h1-bold {
+    font-weight: 500;
+  }
+
+  h2 {
+    font-size: 2em !important;
+  }
+}
+
+#i-love {
+  display: inline-block; /* Ensures it's treated like a block-level element */
+  margin-top: 0.5em; 
+}
+
+#typed-output {
+  color: #2e2e2e;
+}
+
+.btn-primary {
+  font-weight: 600!important;
+  --bs-btn-border-color: 0px !important;
+  background: linear-gradient(79deg, #2b0aff, #ff5b8a 49%, #ff5b8a 55%, #fba64b 77%, #f99b52);
+  color: white!important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  background-size: 300%;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, .5);
+  align-items: center;
+  text-align: center;
+  --bs-btn-padding-x: 2rem !important;
+  --bs-btn-padding-y: 0.8rem !important;
+  line-height: 4.5%;
+  padding: 1.4rem 2rem;
+} 
+
+.btn-primary:hover {
+  background: linear-gradient(79deg, #2b0aff, #ff5b8a 49%, #ff5b8a 55%, #fba64b 77%, #f99b52);
+  background-size: 200%;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, .5);
+}
+
+.btn-primary:active {
+  color:#d9d9d9;
+  background-size: 100%;
+}
+
+.rounded-section {
+  background-color: #fff; /* Background color */
+  padding: 80px 20px; /* Add some padding */
+  border-radius: 0 0 50px 50px; /* Large rounded top corners */
+  margin: 1.2em;
+}
+
+@media (max-width: 768px) {
+  .rounded-section {
+    margin: 1em;
+    border-radius: 0 0 30px 30px
+  }
+}
+
+.content {
+  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Estilos para el portafolio */
+
+.case-study ul {
+  list-style: none;
+  padding: 0;
+}
+
+.case-study ul li {
+  padding-bottom: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.case-study ul i {
+  font-size: 20px;
+  padding-right: 4px;
+  color: var(--accent-color);
+}
+
+.case-study .read-more {
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  font-family: var(--heading-font);
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  padding: 10px 28px;
+  border-radius: 5px;
+  transition: 0.3s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.case-study .read-more i {
+  font-size: 18px;
+  margin-left: 5px;
+  line-height: 0;
+  transition: 0.3s;
+}
+
+.case-study .read-more:hover {
+  background: color-mix(in srgb, var(--accent-color), transparent 20%);
+}
+
+.case-study .read-more:hover i {
+  transform: translate(5px, 0);
+}
+
+.hero-image-portfolio {
+  align-items: center;
+  display: block; 
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3rem;
+  width: 90%;
+}
+
+.portfolio-h1 {
+  font-size: 4rem;
+  margin: 2rem 0em;
+}
+
+.portfolio-h2 {
+  margin: 2rem 0rem 1rem 0rem;
+}
+
+.small-title {
+  font-size: 1rem !important;
+  font-weight: 700;
+}
+
+.portfolio {
+  padding: 2em;
+  background-color: #ffffff;
+  padding-bottom: 4em;
+}
+
+.portfolio h3 {
+  font-size: 1.2em;
+  padding-bottom: 1em;
+}
+
+.portfolio h4 {
+  font-size: 1.2em;
+  text-align: left;
+}
+
+.btn-secondary { 
+  cursor: pointer;
+  color: #7e5998 !important;
+  background-color: #8254a2;
+  border-color: #a31f1f;
+  border-radius: 10px;
+}
+
+.image-portfolio:hover {
+  transform: rotate(-6deg);
+  transition: 0.5s;
+}
+
+#portfolio .card {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  border-color:#eeeeee !important;
+  transition: transform 0.2s;
+}
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.hover-image {
+  width: 100%;
+  height: auto;
+  transition: transform 0.5s ease, filter 0.5s ease;
+  display: block;
+}
+
+.image-container:hover .hover-image {
+  transform: scale(1.1); /* Zoom in effect */
+  filter: brightness(50%); /* Darken slightly */
+}
+
+/* Optional: Add an overlay with a slight color on hover */
+.image-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0); /* Transparent initially */
+  transition: background-color 0.5s ease;
+}
+
+.image-container:hover::after {
+  background-color: rgba(0, 0, 0, 0.3); /* Slight overlay on hover */
+}
+
+
+/*OUR SERVICES*/
+
+.bd-placeholder-img {
+  font-size: 4em;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+
+.b-example-divider {
+  width: 100%;
+  height: 3rem;
+  background-color: rgba(0, 0, 0, .1);
+  border: solid rgba(0, 0, 0, .15);
+  border-width: 1px 0;
+  box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+}
+
+.b-example-vr {
+  flex-shrink: 0;
+  width: 1.5rem;
+  height: 100vh;
+}
+
+.bi {
+  vertical-align: -.125em;
+  fill: currentColor;
+}
+
+.bd-mode-toggle {
+  z-index: 1500;
+}
+
+.bd-mode-toggle .dropdown-menu .active .bi {
+  display: block !important;
+}
+
+.feature-icon {
+  width: 4rem;
+  height: 4rem;
+  border-radius: .75rem;
+}
+
+.icon-square {
+  width: 3rem;
+  height: 3rem;
+  border-radius: .75rem;
+}
+
+.feature-icon-small {
+  width: 3rem;
+  height: 3rem;
+}
+
+/* Estilos para el About me? */
+
+#about {
+  padding: 2em 2em;
+  align-items: center;
+}
+
+#about img {
+  display: block; 
+  margin: auto;
+  max-width: 80%;
+}
+
+.objects-right-2 {
+  float: right;
+}
+
+.objects-right {
+  position: relative;
+}
+
+.col-lg-5 img {
+  margin: 10px; /* Adds space between images */
+}
+
+/* Estilos para Contact Me */
+
+#contact-me h2 {
+  text-align: center;
+}
+
+#contact-me {
+  font-size: 1em;
+  height:80vh;
+  display: flex;
+  justify-content: center; /* Center horizontally with display:flex */
+  align-items: center;     /* Center vertically with display:flex */
+  background-image: 
+  radial-gradient(circle at 30% -10%, rgb(255, 255, 255), rgba(255, 255, 255, 0.1) 25%),
+  radial-gradient(circle, #fcedfe, #f6ebff, #efe9ff, #e7e7ff, #dfe5ff, #dae7ff, #d5e9ff, #d1ebff, #d3f0ff, #d7f5fe, #dcf9fd, #e3fdfd),
+  radial-gradient(circle at 20% 85%, rgb(255, 227, 252), rgba(250, 250, 250, 0.5) 70%),
+  radial-gradient(circle at 70% 60%, rgba(173, 216, 230, 0.6), rgba(255, 255, 255, 0.2) 80%);
+
+}
+
+.contact-me-block {
+  padding: auto;
+  border-radius: 20px;
+  box-shadow: 10 10px 10px 20px rgba(0, 0, 0, 0.1); /* Optional shadow */
+  -webkit-box-shadow: 10px 10px 44px -7px rgba(0,0,0,0.1);
+  -moz-box-shadow: 10px 10px 44px -7px rgba(0,0,0,0.1);
+  margin: 4em 1em;
+  text-align: center;      /* Center text inside the block */
+}
+
+
+
+/* Estilos para el footer */
+
+footer {
+  background-color: hsl(0, 0%, 0%);
+  color: #fff;
+  text-align: center;
+  clear: both;
+  padding: 1em;
+}
+
+footer p {
+  margin: 0em !important;
+}
+
+/* unvisited link */
+a:link {
+  color: red;
+}
+
+/* visited link */
+a:visited {
+  color: green;
+}
+
+/* mouse over link */
+a:hover {
+  color: hotpink;
+}
+
+/* selected link */
+a:active {
+  color: blue;
+}
+
+
+#hero {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer {
+  background-color: #222;
+}
+
+
+
+/* Styles for the Portfolio page */ 
+
+/* Remove padding and margins from the image container */
+.no-padding {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* Make sure the image covers the full width */
+.text-image img {
+    height: auto;
+    object-fit: cover;
+    width: 880px;
+    height: auto;
+}
+
+.h3-pag-portfolio {
+  padding-top: 0rem !important;
+}
+
+
+/* Styles for the About page */ 
+
+#about-me {
+  padding-top: 10rem;
+}
+.themed-heading {
+  font-weight: bold;
+  font-size: 8em;
+  color: transparent;
+  background-image: linear-gradient(90deg, #f0357c, #f154ff, #777dff, #497ce2, #37bdde);
+  background-repeat: no-repeat;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@media (max-width: 768px) {
+  .themed-heading {
+    font-size: 4.5rem;
+  }
+}
+
+.custom-col {
+  flex: 1;
+  padding: 5px;
+}
+
+#about-me img {
+  width: 100%;
+}
