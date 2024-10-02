@@ -1,6 +1,7 @@
 /* Estilo para el gradiente en el modo claro */
 #intro.claro {
-  background: linear-gradient(to right bottom, #e3fdfd, #e2faff, #e4f6ff, #eaf2ff, #f1edff, #f5edff, #f8edff, #fcedfe, #fbf2ff, #fbf7ff, #fdfbff, #ffffff);;
+  background:
+  linear-gradient(to right bottom, #e3fdfd, #e2faff, #e4f6ff, #eaf2ff, #f1edff, #f5edff, #f8edff, #fcedfe, #fbf2ff, #fbf7ff, #fdfbff, #ffffff);
   color: rgb(0, 0, 0); /* Texto en blanco para contraste */
 }
 
@@ -306,53 +307,6 @@ h3 {
 
 /* Estilos para el portafolio */
 
-.case-study ul {
-  list-style: none;
-  padding: 0;
-}
-
-.case-study ul li {
-  padding-bottom: 5px;
-  display: flex;
-  align-items: center;
-}
-
-.case-study ul i {
-  font-size: 20px;
-  padding-right: 4px;
-  color: var(--accent-color);
-}
-
-.case-study .read-more {
-  background: var(--accent-color);
-  color: var(--contrast-color);
-  font-family: var(--heading-font);
-  font-weight: 500;
-  font-size: 16px;
-  letter-spacing: 1px;
-  padding: 10px 28px;
-  border-radius: 5px;
-  transition: 0.3s;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.case-study .read-more i {
-  font-size: 18px;
-  margin-left: 5px;
-  line-height: 0;
-  transition: 0.3s;
-}
-
-.case-study .read-more:hover {
-  background: color-mix(in srgb, var(--accent-color), transparent 20%);
-}
-
-.case-study .read-more:hover i {
-  transform: translate(5px, 0);
-}
-
 .hero-image-portfolio {
   align-items: center;
   display: block; 
@@ -513,6 +467,10 @@ h3 {
   align-items: center;
 }
 
+#about h3 {
+  font-weight: 300;
+}
+
 #about img {
   display: block; 
   margin: auto;
@@ -616,6 +574,10 @@ footer {
 
 /* Styles for the Portfolio page */ 
 
+.case-study {
+  padding-top: 6rem;
+}
+
 /* Remove padding and margins from the image container */
 .no-padding {
     padding-left: 0;
@@ -640,11 +602,13 @@ footer {
 /* Styles for the About page */ 
 
 #about-me {
-  padding-top: 10rem;
+  margin-top: 5rem;
+  margin-bottom: 8rem;
 }
+
 .themed-heading {
   font-weight: bold;
-  font-size: 8em;
+  font-size: 7em;
   color: transparent;
   background-image: linear-gradient(90deg, #f0357c, #f154ff, #777dff, #497ce2, #37bdde);
   background-repeat: no-repeat;
@@ -652,9 +616,26 @@ footer {
   background-clip: text;
 }
 
+.themed-p {
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 100%;
+  color: transparent;
+  background-image: linear-gradient(90deg, #f0357c, #f154ff, #777dff, #497ce2, #37bdde);
+  background-repeat: no-repeat;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@media (min-width: 769px) and (max-width: 991px) {
+  .themed-heading {
+    font-size: 5rem;
+  }
+}
+
 @media (max-width: 768px) {
   .themed-heading {
-    font-size: 4.5rem;
+    font-size: 3.5rem;
   }
 }
 
