@@ -1,59 +1,192 @@
-/* Estilo para el gradiente en el modo claro */
-#intro.claro {
-  background:
-  linear-gradient(to right bottom, #e3fdfd, #e2faff, #e4f6ff, #eaf2ff, #f1edff, #f5edff, #f8edff, #fcedfe, #fbf2ff, #fbf7ff, #fdfbff, #ffffff);
-  color: rgb(0, 0, 0); /* Texto en blanco para contraste */
+/* Tema claro */
+[data-bs-theme="light"] {
+  --bs-body-bg: #f9f8f1!important; /* Fondo claro personalizado */
+  --bs-body-color: #212529; /* Color del texto en tema claro */
+  /* Añade más variables según sea necesario */
 }
 
-
-/* Estilo para el gradiente en el modo oscuro */
-#intro.oscuro {
-  background: linear-gradient(135deg, #1E1E1E 30%, #5a2cb4 95%, transparent 100%);
-  color: white; /* Texto en blanco para contraste */
+/* Tema oscuro */
+[data-bs-theme="dark"] {
+  --bs-body-bg: #212529; /* Fondo oscuro personalizado */
+  --bs-body-color: #f8f9fa; /* Color del texto en tema oscuro */
+  /* Añade más variables según sea necesario */
 }
 
-/* Estilos para el navbar */
-.navbar-toggler-text {
-  display: none; /* Initially hidden */
-  text-align: center; /* Center the text below the icon */
-  font-size: 9px; /* Adjust the size as needed */
-  font-weight: normal;
+/* NAVBAR */
+.navbar {
+  transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+.navbar.scrolled {
+  background-color: rgba(255, 255, 255, 0.8); /* Cambia el color de fondo al hacer scroll */
+  backdrop-filter: blur(10px); /* Añade el efecto de blur */
+}
+
+/* Alineación de logo a la izquierda y menú a la derecha */
+.navbar .container-fluid {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+/* Definir colores para el elemento #typed-output según el tema */
+.light-theme #typed-output {
+  color: black;
+}
+
+.dark-theme #typed-output {
+  color: white;
+}
+
+/* Toggler */
+
+/* Estilo para hacer el toggler circular */
+.custom-toggler {
+  border: none;
+  background-color: transparent;
+  position: relative;
+  width: 3em;
+  height: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  transition: all 0.3s ease;
+  border-radius: 50%!important;
+}
+
+.custom-toggler .toggler-icon {
+  position: relative;
+  width: 2rem;
+  height: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.custom-toggler .navbar-toggler-icon {
+  width: 100%;
+  height: 0.2rem;
+  background-color: #212529;
+  transition: all 0.3s ease;
+}
+
+/* Toggler icon color for dark mode */
+body[data-bs-theme="dark"] .custom-toggler .navbar-toggler-text {
+  color: #f9f8f1;
+}
+
+/* Crear la "X" con las dos líneas al abrir el menú */
+.custom-toggler.open .navbar-toggler-icon:nth-child(1) {
+  transform: rotate(45deg) translate(0.3rem, 0.3rem);
+}
+
+.custom-toggler.open .navbar-toggler-icon:nth-child(2) {
+  transform: rotate(-45deg) translate(0.3rem, -0.3rem);
+}
+
+.custom-toggler .navbar-toggler-icon {
+  margin: 0;
+}
+
+/* Ocultar "MENU" cuando el menú está abierto */
+.custom-toggler.open .navbar-toggler-text {
+  display: none;
+}
+
+/* Estilos para el menú en pantalla completa */
+.full-screen-menu.collapse:not(.show) {
+  display: none;
+}
+
+/* Mostrar "MENU" cuando el menú está cerrado */
+.custom-toggler .navbar-toggler-text {
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #212529;
+  transition: opacity 0.3s ease;
+  display: inline-block;
+  text-align: center;
+}
+
+/* Toggler icon color for dark mode */
+body[data-bs-theme="dark"] .custom-toggler .navbar-toggler-text {
+  color: #f9f8f1;
+}
+
+/* Ensure vertical alignment on smaller screens */
+
+@media (max-width: 992px) {
+/* Alinear el menú mobile al centro cuando esté desplegado */
+  .full-screen-menu.collapse.show {
+    justify-content: center;
+  }
+
+  .full-screen-menu .navbar-nav {
+    flex-direction: column;
+    align-items: center;
+    margin-left: inherit !important;
+    text-decoration: none !important;
+  }
+  
+  .full-screen-menu .navbar-nav .nav-item {
+    margin: 1em 0;
+    text-decoration: none !important;
+  }
+
+  .navbar-nav .nav-item .nav-link {
+    font-size: 2.6rem;
+    font-family: "Libre Caslon Text", serif;
+    text-decoration: none !important;
+  }
+
+  .navbar-nav .nav-item .nav-link:hover {
+    color: #fba64b;
+    text-decoration: none !important;
+  }
+
+/* Estilos del fondo y ajuste de posición para el menú móvil */
+  .full-screen-menu {
+    background-color: rgba(33, 37, 41, 0.95);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9;
+    transition: all 0.3s ease;
+  }
+}
+
+/* Versión escritorio sigue con el menú a la derecha */
+@media (min-width: 992px) {
+  .navbar-nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    text-decoration: none !important;
+  }
+
+  /* Ajustar los márgenes del botón de cambio de modo oscuro en escritorio */
+  .btn {
+    margin-left: 1rem;
+  }
 }
 
 #auto-typing-output {
   font-size: 24px;
   font-weight: bold;
 }
-
-@media (max-width: 992px) {
-
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .navbar-toggler {
-      display: flex;
-      flex-direction: column; /* Stack icon and text vertically */
-      align-items: center; /* Center align both icon and text */
-      box-shadow: none !important; /* Elimina la sombra del botón en mobile */
-      align-self: center; /* Centra el botón verticalmente */
-  }
-  
-  .navbar-collapse {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-  }
-
-  .navbar-toggler-text {
-      display: block; /* Show on mobile */
-      color: #000000;
-  }
-}
-
-/* Alineación del ícono para cambiar entre modo claro y oscuro */
 
 .bg-body-tertiary {
   background-color: white !important;
@@ -62,6 +195,7 @@
 .btn {
   align-self: center; /* Centra verticalmente el botón de cambio de tema */
   margin-left: 0 !important; /* Evita cualquier desplazamiento hacia la derecha */
+  text-align: center;
 }
 
 .header-item-2 {
@@ -86,6 +220,10 @@ body[data-bs-theme="dark"] #dl-icon {
   color: white;
 }
 
+#intro h1 {
+font-weight: 700;
+}
+
 body {
     font-family: "Plus Jakarta Sans", sans-serif;
     font-size: 1em;
@@ -103,32 +241,38 @@ body {
   font-weight: 400;
 }
 
-/* Estilos para el header */
-header ul {
-  margin-left: 40px;
-}
-
 header button {
   margin-right: 10px;
 }
 
 /* Estilos para el intro */
 #intro {
-  margin: 0% 0.8%;
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding: 0 6 0 6%;
-  height: 80vh;
+  height: 100vh;
   font-family: "Plus Jakarta Sans", sans-serif;
-  font-weight: 400 !important;
   position: relative; /* Ensures that the button is positioned relative to this section */
   overflow: hidden;
 }
 
+.content {
+  place-items: center;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  top: 2.6em;
+  position: absolute;
+}
+
+.text-intro {
+  margin: auto;
+  align-items: center;
+}
+
 h2 {
   text-align: left;
-  font-size: 2.7em!important;
+  font-size: 3em!important;
   font-family: "Plus Jakarta Sans", sans-serif;
 }
 
@@ -139,97 +283,53 @@ h3 {
   padding: 0.5em 0em 1em 0em;
 }
 
-.text-intro {
-  top: 4em;
-  position: absolute;
+.img-intro {
+  width: 130px;
+  height: 50px;
+  border-radius: 50px;
+  object-fit: cover;
 }
 
-/* By default (desktop), the span behaves like an inline element (no break) */
-.mobile-break {
-  display: none;
-}
-
-/* On mobile, show the line break */
-@media (max-width: 768px) {
-  .mobile-break {
-    display: inline;
-  }
-}
-
-#intro h1 {
-  text-align: left;
-  font-family: "Plus Jakarta Sans", sans-serif;
-  font-size: 3.6em;
-  font-weight: 400;
-}
-
-#intro h1.bold {
-  font-weight: 500;
-}
-
-@media (min-width: 769px) and (max-width: 991px) {
-  #intro h1 {
-    font-size: 3em;
-  }
-
-  #intro .h1-bold {
-    font-weight: 400;
-  }
-
-  h2 {
-    font-size: 2.4em !important;
-  }
-}
-
-/* General button style */
-#intro .btn-primary {
-  position: absolute; /* or 'fixed' if you want it to stay on screen when scrolling */
-  top: 25em; /* Adjust this value for desktop positioning */
-  z-index: 10; /* Make sure it's above other content */
-}
-
-@media (min-width: 769px) and (max-width: 991px) {
-  #intro h1 {
-    font-size: 3em;
-  }
-
-  #intro .h1-bold {
-    font-weight: 400;
-  }
-
-  h2 {
-    font-size: 2.4em !important;
-  }
-
+/* Mobile-specific style */
+@media (max-width: 389px) {
   #intro .btn-primary {
     position: absolute;
-    bottom: 1em; /* Adjust this value for mobile */
+    top: 30em; /* Adjust this value for mobile */
     z-index: 10; /* Make sure it's above other content */
   }
-}
 
-@media (min-width: 992px) and (max-width: 1999px) {
   #intro h1 {
-    font-size: 2.8em;
+    font-size: 2.5em;
+    line-height: 100%;
   }
 
-  #intro .h1-bold {
-    font-weight: 500;
-  }
-
-  h2 {
-    font-size: 2.4em !important;
-  }
-
-  #intro .btn-primary {
-    position: absolute;
-    bottom: 1em; /* Adjust this value for mobile */
-    z-index: 10; /* Make sure it's above other content */
+  #intro h2 {
+    font-size: 1.6em !important;
+    text-align: center;
   }
 }
 
 /* Mobile-specific style */
-@media (max-width: 768px) {
+@media (min-width: 390px) and (max-width: 576px) {
+  #intro .btn-primary {
+    position: absolute;
+    top: 36em; /* Adjust this value for mobile */
+    z-index: 10; /* Make sure it's above other content */
+  }
+
+  #intro h1 {
+    font-size: 2.9em;
+    line-height: 110%;
+  }
+
+  #intro h2 {
+    font-size: 1.6em !important;
+    text-align: center;
+  }
+}
+
+/* Mobile-specific style */
+@media (min-width: 577px) and (max-width: 768px) {
   #intro .btn-primary {
     position: absolute;
     top: 28em; /* Adjust this value for mobile */
@@ -237,59 +337,109 @@ h3 {
   }
 
   #intro h1 {
-    font-size: 2.4em;
+    font-size: 3.2em;
+    line-height: 99%; 
   }
 
-  #intro .h1-bold {
-    font-weight: 500;
-  }
-
-  h2 {
+  #intro h2 {
     font-size: 2em !important;
+    text-align: center;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 991px) {
+  #intro h1 {
+    font-size: 3.4em;
+    line-height: 99%;
+  }
+
+  #intro h2 {
+    font-size: 2.4em !important;
+    text-align: center;
+  }
+
+  #intro .btn-primary {
+    position: absolute;
+    top: 36em; /* Adjust this value for mobile */
+    z-index: 10; /* Make sure it's above other content */
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  #intro h1 {
+    font-size: 3.8em;
+    line-height: 98%;
+    padding-top: 0.5rem; /* Para que aparezca la ñ */  }
+
+  #intro h2 {
+    font-size: 2.4em !important;
+    text-align: center;
+  }
+
+  #intro .btn-primary {
+    position: absolute;
+    top: 24em; /* Adjust this value for mobile */
+    z-index: 1; /* Make sure it's above other content */
+  }
+
+  .mobile-break {
+    display: none; /* By default (desktop), the span behaves like an inline element (no break) */
+
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+  #intro h1 {
+    font-size: 4.2em;
+    line-height: 98%;
+    padding-top: 0.5rem; /* Para que aparezca la ñ */  }
+
+  #intro .btn-primary {
+    position: absolute;
+    top: 28em; /* Adjust this value for mobile */
+    z-index: 10; /* Make sure it's above other content */
+  }
+
+  .mobile-break {
+    display: none; /* By default (desktop), the span behaves like an inline element (no break) */
+  }
+
+  #intro h2 {
+    font-size: 2.4em !important;
+    text-align: center;
+  }
+}
+
+@media (min-width: 1400px) {
+  #intro h1 {
+    font-size: 5.2em;
+    line-height: 99%;
+    padding-top: 0.5rem; /* Para que aparezca la ñ */
+  }
+
+  .text-intro {
+    margin-top: 2.8rem;
+  }
+
+  #intro .btn-primary {
+    position: absolute;
+    z-index: 10; /* Make sure it's above other content */
+    top: 34em; /* Adjust this value for mobile */
+  }
+
+  #intro h2 {
+    font-size: 2.4em !important;
+    text-align: center;
+  }
+
+  .mobile-break {
+    display: none; /* By default (desktop), the span behaves like an inline element (no break) */
   }
 }
 
 #i-love {
   display: inline-block; /* Ensures it's treated like a block-level element */
   margin-top: 0.5em; 
-}
-
-#typed-output {
-  color: #2e2e2e;
-}
-
-.btn-primary {
-  font-weight: 600!important;
-  --bs-btn-border-color: 0px !important;
-  background: linear-gradient(79deg, #2b0aff, #ff5b8a 49%, #ff5b8a 55%, #fba64b 77%, #f99b52);
-  color: white!important;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  background-size: 300%;
-  text-shadow: 0px 1px 2px rgba(0, 0, 0, .5);
-  align-items: center;
-  text-align: center;
-  --bs-btn-padding-x: 2rem !important;
-  --bs-btn-padding-y: 0.8rem !important;
-  line-height: 4.5%;
-  padding: 1.4rem 2rem;
-} 
-
-.btn-primary:hover {
-  background: linear-gradient(79deg, #2b0aff, #ff5b8a 49%, #ff5b8a 55%, #fba64b 77%, #f99b52);
-  background-size: 200%;
-  text-shadow: 0px 1px 2px rgba(0, 0, 0, .5);
-}
-
-.btn-primary:active {
-  color:#d9d9d9;
-  background-size: 100%;
-}
-
-.rounded-section {
-  background-color: #fff; /* Background color */
-  padding: 80px 20px; /* Add some padding */
-  border-radius: 0 0 50px 50px; /* Large rounded top corners */
-  margin: 1.2em;
 }
 
 @media (max-width: 768px) {
@@ -304,8 +454,6 @@ h3 {
   max-width: 1000px;
   margin: 0 auto;
 }
-
-/* Estilos para el portafolio */
 
 .hero-image-portfolio {
   align-items: center;
@@ -332,7 +480,6 @@ h3 {
 
 .portfolio {
   padding: 2em;
-  background-color: #ffffff;
   padding-bottom: 4em;
 }
 
@@ -346,14 +493,6 @@ h3 {
   text-align: left;
 }
 
-.btn-secondary { 
-  cursor: pointer;
-  color: #7e5998 !important;
-  background-color: #8254a2;
-  border-color: #a31f1f;
-  border-radius: 10px;
-}
-
 .image-portfolio:hover {
   transform: rotate(-6deg);
   transition: 0.5s;
@@ -361,7 +500,6 @@ h3 {
 
 #portfolio .card {
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  border-color:#eeeeee !important;
   transition: transform 0.2s;
 }
 
@@ -397,7 +535,6 @@ h3 {
 .image-container:hover::after {
   background-color: rgba(0, 0, 0, 0.3); /* Slight overlay on hover */
 }
-
 
 /*OUR SERVICES*/
 
@@ -446,13 +583,13 @@ h3 {
 .feature-icon {
   width: 4rem;
   height: 4rem;
-  border-radius: .75rem;
+  border-radius: 5rem;
 }
 
 .icon-square {
   width: 3rem;
   height: 3rem;
-  border-radius: .75rem;
+  border-radius: 5rem;
 }
 
 .feature-icon-small {
@@ -460,7 +597,16 @@ h3 {
   height: 3rem;
 }
 
-/* Estilos para el About me? */
+.custom-bg-color {
+  border: 1px solid #fcd6e9;
+  background-color: white;
+}
+
+/* Estilos para el About me */
+
+.display-5 {
+  line-height: 98% !important;
+}
 
 #about {
   padding: 2em 2em;
@@ -489,6 +635,21 @@ h3 {
   margin: 10px; /* Adds space between images */
 }
 
+.rotated-text {
+  text-align: center; /* Para centrar el texto */
+  transform: rotate(-5deg); /* Gira el texto */
+}
+
+.rotated-text p {
+  font-size: 2rem;          /* Ajusta el tamaño del texto */
+  font-weight: 500;        /* Otro estilo para resaltar el texto */
+  background: #ffdddd;      /* Color de fondo */
+  padding: 0.2rem 1rem;       /* Espaciado alrededor del texto */
+  line-height: 1.6;         /* Espaciado entre líneas */
+  display: inline;    /* Mantiene el fondo solo detrás del texto */
+  margin: 0;                /* Elimina el margen por defecto */
+}
+
 /* Estilos para Contact Me */
 
 #contact-me h2 {
@@ -497,34 +658,94 @@ h3 {
 
 #contact-me {
   font-size: 1em;
-  height:80vh;
+  height:70vh;
   display: flex;
   justify-content: center; /* Center horizontally with display:flex */
   align-items: center;     /* Center vertically with display:flex */
-  background-image: 
-  radial-gradient(circle at 30% -10%, rgb(255, 255, 255), rgba(255, 255, 255, 0.1) 25%),
-  radial-gradient(circle, #fcedfe, #f6ebff, #efe9ff, #e7e7ff, #dfe5ff, #dae7ff, #d5e9ff, #d1ebff, #d3f0ff, #d7f5fe, #dcf9fd, #e3fdfd),
-  radial-gradient(circle at 20% 85%, rgb(255, 227, 252), rgba(250, 250, 250, 0.5) 70%),
-  radial-gradient(circle at 70% 60%, rgba(173, 216, 230, 0.6), rgba(255, 255, 255, 0.2) 80%);
-
+  position: relative; /* El contenedor principal tiene posición relativa */
+  overflow: hidden; /* Para evitar que los gradientes desborden */
 }
 
-.contact-me-block {
-  padding: auto;
+#contact-me.claro {
+  background-color: #f9f8f1;
+  color: #212529; /* Texto oscuro para el fondo claro */
+  position: relative;
+  z-index: 1;
+}
+
+#contact-me.oscuro {
+  background-color: #212529;
+  color: #f9f8f1; /* Texto claro para el fondo oscuro */
+  position: relative;
+  z-index: 1;
+}
+
+#contact-me::before {
+  content: "";
+  position: absolute; /* Coloca el gradiente en la capa inferior */
+  z-index: 1; /* El gradiente queda por detrás del contenido */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+      ellipse at 30% 88%, 
+      #fba64b,  
+      rgba(0, 255, 0, 0) 40.71%
+    ),
+    radial-gradient(
+      ellipse at 40% 90%, 
+      hsl(343, 100%, 68%), 
+      rgba(0, 255, 0, 0) 40%
+    ),
+    radial-gradient(
+      ellipse at 70% 50%, 
+      #1D9EFD, 
+      rgba(0, 0, 255, 0) 42%
+    );
+  filter: blur(60px);
+}
+
+#contact-me .contact-content {
+  position: relative; /* El contenido debe tener un z-index más alto que el fondo */
+  z-index: 3; /* Coloca el contenido por encima del gradiente */
+}
+
+.rounded-block.claro {
   border-radius: 20px;
   box-shadow: 10 10px 10px 20px rgba(0, 0, 0, 0.1); /* Optional shadow */
-  -webkit-box-shadow: 10px 10px 44px -7px rgba(0,0,0,0.1);
-  -moz-box-shadow: 10px 10px 44px -7px rgba(0,0,0,0.1);
-  margin: 4em 1em;
+  padding: 2.2rem 0rem;
   text-align: center;      /* Center text inside the block */
+  background-color: #ffffff;
+  align-items: center;
+  z-index: 2;
+  max-width: 60rem; /* Ajusta el ancho máximo del contenedor */
 }
 
+.rounded-block.oscuro {
+  border-radius: 20px;
+  background: linear-gradient(0deg, 
+  rgba(255, 255, 255, 0.015) 0.001%,
+  rgba(255, 255, 255, 0.2) 100%);
+  background-color: hsl(210, 11%, 5%);
+  padding: 2.2em 0em;
+  text-align: center;      /* Center text inside the block */
+  z-index: 2;
+  max-width: 80%; /* Ajusta el ancho máximo del contenedor */
+}
+
+/* Para pantallas pequeñas (mobile) */
+@media (max-width: 991px) {
+  .rounded-block.claro {
+    max-width: 80%; /* Limita el ancho del contenedor al 90% de la pantalla */
+  }
+}
 
 
 /* Estilos para el footer */
 
 footer {
-  background-color: hsl(0, 0%, 0%);
+  background-color: #000000;
   color: #fff;
   text-align: center;
   clear: both;
@@ -535,26 +756,9 @@ footer p {
   margin: 0em !important;
 }
 
-/* unvisited link */
-a:link {
-  color: red;
+a i {
+  margin-left: 0.4rem; /* Puedes ajustar este valor según el espacio que desees */
 }
-
-/* visited link */
-a:visited {
-  color: green;
-}
-
-/* mouse over link */
-a:hover {
-  color: hotpink;
-}
-
-/* selected link */
-a:active {
-  color: blue;
-}
-
 
 #hero {
   background-position: center;
@@ -570,9 +774,13 @@ footer {
   background-color: #222;
 }
 
+/* STYLES FOR PORTFOLIO PAGE */ 
 
-
-/* Styles for the Portfolio page */ 
+.case-study h1 {
+  text-align: left;
+  font-size: 4em!important;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
 
 .case-study {
   padding-top: 6rem;
@@ -598,8 +806,88 @@ footer {
   padding-top: 0rem !important;
 }
 
+/* Sección para más proyectos */
+#more-proyects {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
 
-/* Styles for the About page */ 
+/* Estilos para la navegación de proyectos (mobile por defecto) */
+.project-navigation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.col-align {
+  margin-bottom: 1.5rem !important; /* Espacio entre los elementos */
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268;
+}
+
+/* Icon arrow alineado */
+.bi {
+vertical-align: 0rem;
+}
+
+#dl-icon-arrow {
+  width: 32px;
+  height: 32px;
+}
+
+/* Sección para más proyectos */
+#more-proyects {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+/* Estilos para la navegación de proyectos (mobile por defecto) */
+.project-navigation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.col-align {
+  margin-bottom: 4rem; /* Espacio entre los elementos */
+}
+
+#more-proyects .subtitle-1 {
+  font-weight: bold;
+}
+
+/* Media query para pantallas más grandes (desktop) */
+@media (min-width: 992px) {
+  .project-navigation {
+      flex-direction: row;
+      justify-content: space-between;
+      text-align: left;
+  }
+
+  .col-align:nth-child(1) {
+      text-align: left;
+  }
+
+  .col-align:nth-child(2) {
+      text-align: right;
+  }
+}
+
+
+/* STYLES FOR ABOUT PAGE  */
 
 #about-me {
   margin-top: 5rem;
@@ -607,10 +895,9 @@ footer {
 }
 
 .themed-heading {
-  font-weight: bold;
-  font-size: 7em;
+  font-weight: normal;
   color: transparent;
-  background-image: linear-gradient(90deg, #f0357c, #f154ff, #777dff, #497ce2, #37bdde);
+  background-image: linear-gradient(79deg, #2b0aff, #ff5b8a 49%, #ff5b8a 55%, #fba64b 77%, #f99b52);;
   background-repeat: no-repeat;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -619,7 +906,6 @@ footer {
 .themed-p {
   font-size: 3rem;
   font-weight: 300;
-  line-height: 100%;
   color: transparent;
   background-image: linear-gradient(90deg, #f0357c, #f154ff, #777dff, #497ce2, #37bdde);
   background-repeat: no-repeat;
@@ -629,7 +915,7 @@ footer {
 
 @media (min-width: 769px) and (max-width: 991px) {
   .themed-heading {
-    font-size: 5rem;
+    font-size: 3.5rem;
   }
 }
 
@@ -647,3 +933,121 @@ footer {
 #about-me img {
   width: 100%;
 }
+
+/* Estilos generales para los enlaces (href) */
+a {
+  text-decoration: none; /* Elimina el subrayado predeterminado */
+  color: #212529; /* Color del texto en tema claro */
+  transition: color 0.3s ease; /* Transición suave al cambiar el color */
+}
+
+/* Estilos de enlace en hover (href) */
+a:hover {
+  color: #fba64b; /* Cambia el color al pasar el mouse */
+}
+
+/* Estilos de enlace (href) externos */
+#links-external { 
+  text-decoration: none!important;
+  display: flex;
+}
+
+/* Estilos de enlace en modo oscuro */
+body[data-bs-theme="dark"] #links-external {
+  color: #f9f8f1; /* Color claro para enlaces en tema oscuro */
+  border-bottom: 1px solid rgb(255, 255, 255);
+}
+
+body[data-bs-theme="light"] #links-external {
+  color: #ff5b8a; /* Color de hover en modo oscuro */
+  border-bottom: 1px solid rgb(210, 15, 15);
+}
+
+a {
+  display: inline !important;
+  text-decoration: none!important;
+}
+
+/* Estilos de enlace en modo oscuro */
+body[data-bs-theme="dark"] a {
+  color: #f9f8f1; /* Color claro para enlaces en tema oscuro */
+}
+
+body[data-bs-theme="dark"] a:hover {
+  color: #ff5b8a; /* Color de hover en modo oscuro */
+}
+
+/* Estilos para los enlaces dentro del navbar */
+.navbar-nav .nav-item .nav-link {
+  font-size: 1rem; /* Tamaño de fuente para los enlaces del navbar */
+  font-family: "Plus Jakarta Sans", sans-serif; /* Tipografía específica para el navbar */
+  color: #212529; /* Color predeterminado del texto */
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+  padding: 0.5rem 1rem; /* Espaciado para los enlaces */
+  text-decoration: none !important; /* Sin subrayado */
+}
+
+/* Hover en enlaces del navbar */
+.navbar-nav .nav-item .nav-link:hover {
+  color: #fba64b; /* Cambia el color al pasar el mouse */
+  text-decoration: underline; /* Añade subrayado al hover */
+}
+
+/* Estilos en modo oscuro para el navbar */
+body[data-bs-theme="dark"] .navbar-nav .nav-link {
+  color: #f8f9fa; /* Texto claro para modo oscuro */
+}
+
+body[data-bs-theme="dark"] .navbar-nav .nav-link:hover {
+  color: #ff5b8a; /* Color de hover para el modo oscuro */
+}
+
+/* Estilos generales para los botones */
+.btn-primary {
+  font-weight: 600!important;
+  color: #ffffff!important;
+  --bs-btn-border-color: 0px !important;
+  background: linear-gradient(79deg, #2b0aff, #ff5b8a 49%, #ff5b8a 55%, #fba64b 77%, #f99b52);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  background-size: 300%;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, .5);
+  align-items: center;
+  text-align: center;
+  line-height: 4.5%;
+  padding: 1.4rem 2rem;
+  margin: 1rem 0rem 1rem 0rem;
+  --bs-btn-padding-x: 2rem !important;
+  --bs-btn-padding-y: 0.8rem !important;
+} 
+
+/* Hover en botones */
+.btn-primary:hover {
+  background: linear-gradient(79deg, #2b0aff, #ff5b8a 49%, #ff5b8a 55%, #fba64b 77%, #f99b52);
+  background-size: 200%;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, .5);
+}
+
+.btn-secondary {
+  font-weight: 600!important;
+  color: #2b0aff!important;
+  border: 2px solid #2b0aff !important;
+  background-color: white !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  align-items: center;
+  text-align: center;
+  padding: 1.4rem 2rem;
+  margin: 1rem 0rem 1rem 0rem;
+  --bs-btn-padding-x: 2rem !important;
+  --bs-btn-padding-y: 0.8rem !important;
+}
+
+/* Estilos en modo oscuro para botones */
+body[data-bs-theme="dark"] .btn-primary {
+  color: #212529!important; /* Color de texto oscuro en el botón */
+}
+
+body[data-bs-theme="dark"] .btn-primary:hover {
+  background: linear-gradient(79deg, #f9f8f1, #ff5b8a 30%, #ff5b8a 50%, #fba64b 77%, #f99b52);
+}
+
+

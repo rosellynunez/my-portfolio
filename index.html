@@ -41,136 +41,151 @@
 
   <body data-bs-theme="light">
     <header>
-      <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+      <nav class="navbar navbar-expand-lg navbar-light bg-transparent fixed-top">
         <div class="container-fluid">
-
+    
           <!-- Logo -->
           <a class="navbar-brand" href="#">Logo</a>
-        
+    
           <!-- Agrupar el ícono y el navbar-toggler juntos a la derecha -->
-          <div class="navbar-nav ms-auto"> 
+          <div class="d-flex align-items-center ms-auto">
 
-              <div class="d-flex align-items-center ms-auto">
-                  <!-- Botón para cambiar entre modo claro y oscuro -->
-                  <button onclick="cambiarTema()" class="btn rounded-fill">
-                    <i id="dl-icon" class="bi bi-moon-fill"></i>
-                  </button> 
-
-                  <!-- Botón navbar-toggler para colapsar el menú -->
-                    <button
-                      class="navbar-toggler"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#navbarSupportedContent"
-                      aria-controls="navbarSupportedContent"
-                      aria-expanded="false"
-                      aria-label="Toggle navigation"
-                    >
-                      <span class="navbar-toggler-icon"></span>
-                      <span class="navbar-toggler-text">MENU</span> <!-- Added span for MENU text -->
-                    </button>
-              </div>
-
-              <!-- Menú colapsable -->
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link active" href="portfolio.html">Portfolio</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" href="about.html">About</a>
-                  </li>
-                </ul>
-              </div>
+            <!-- Botón para cambiar entre modo claro y oscuro -->
+            <button onclick="cambiarTema()" class="btn rounded-fill">
+              <i id="dl-icon" class="bi bi-moon-fill"></i>
+            </button>
+    
+            <!-- Botón navbar-toggler visible sólo en mobile -->
+            <button class="navbar-toggler custom-toggler d-lg-none" 
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                    onclick="toggleMenu(this)">
+                <div class="toggler-icon">
+                  <span class="navbar-toggler-icon"></span>
+                  <span class="navbar-toggler-icon"></span>
+                </div>
+                  <span class="navbar-toggler-text">MENU</span>
+            </button>      
           </div>
+    
+            <!-- Menú colapsable en pantallas pequeñas, visible en pantallas grandes -->
+            <div class="collapse navbar-collapse full-screen-menu" id="navbarSupportedContent">
+              <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-center">
+                <li class="nav-item">
+                  <a class="nav-link active" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="portfolio.html">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="about.html">About</a>
+                </li>
+              </ul>
+            </div>
         </div>
       </nav>
     </header>
-
   <main>
+
   <section id="intro" class="claro">
         
-    <div class="content container-md">
+    <article class="content container-md">
 
-        <div class="text-intro col-sm-10 col-md-10 col-lg-9">
-          <h1 class="bold">
-          Hi 👋, <span class="mobile-break"><br></span> I'm Roselly Nuñez,<br> a UX/UI Designer.</h1>
-          <br>
-          <h1><span id="i-love">I love helping brands <span id="typed-output"></span>
+        <div class="text-intro col-sm-10 col-md-10 col-lg-10 mt-5 pt-5">
+          <h1 class="themed-heading">
+          Hi, <span class="mobile-break"><br></span> I'm Roselly Nuñez,<br> a UX, UI & WEB Designer.<span></span></h1><br>
+          <img src="images/Roselly_Nunez.jpg" alt="Roselly Nuñez" class="img-intro"></span><br><br><br>
+          <h2><span id="i-love">I love helping brands <br><span id="typed-output"></span>
           <!-- Texto autoescribible -->
-          </h1>
+          </h2>
         </div>
 
-        <!-- Button -->
-        <div class="col-sm 12 col-md-8 col-lg-8 d-grid gap-2 d-md-flex justify-content-md-start">
-          <a class="btn btn-primary me-md-2" href="#" role="button">Contact me</a>
-        </div>
-
-    </div>  
+    </article>  
   </section>
 
+  <section id="about" class="container-xxl container px-4 py-5">
+    <h2 class="pb-2 border-bottom"><span h2 class="text-highlight">About Me</span></h2>
+    
+      <article class="display-5 py-3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 👩🏻‍💻Passionate about crafting intuitive and visually engaging digital experiences that make both users and stakeholders say, "Wow, that's smooth!" Blending creativity with a deep understanding of user behavior, always aiming to strike the perfect balance between aesthetics and practicality.⚡️ Because who says you can't have both?<br><br>A stickler for consistency, especially when it comes to design systems, ensuring everything works seamlessly (and looks fantastic while doing it 🤟🤩). Delivering products that are not just beautiful, but so user-friendly they practically greet you with a smile 🙌</article>
+
+        <!-- Button -->
+        <div class="col-md-9 col-lg-9 mb-4 pt-5">
+          <a class="btn btn-primary me-md-2" href="#" role="button">Know me more</a>
+        </div>
+      </article>
+
+  </section>
+
+  <section>
   <div class="container px-4 py-5" id="featured-3">
-    <h2 class="pb-2 border-bottom">What can I do <span h2 class="text-highlight">for you</span></h2>
+    <h2 class="pb-2 border-bottom"><span h2 class="text-highlight">What can I do for you</span></h2>
       <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
 
           <div class="feature col">
-            <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
-              <svg class="bi" width="1em" height="1em"><use xlink:href="#collection"/></svg>
+            <div class="feature-icon d-inline-flex align-items-center justify-content-center custom-bg-color bg-gradient fs-2 mb-3">
+              <span class="bi" width="1em" height="1em">🎯</span>
             </div>
             <h3 class="fs-2 text-body-emphasis">User Experience (UX) Design</h3>
             <p>Designing user-centered interfaces through research and needs analysis. Creating wireframes, prototypes, and usability testing to ensure an intuitive and effective user experience.</p>
           </div>
           
           <div class="feature col">
-            <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
-              <svg class="bi" width="1em" height="1em"><use xlink:href="#people-circle"/></svg>
+            <div class="feature-icon d-inline-flex align-items-center justify-content-center custom-bg-color bg-gradient fs-2 mb-3">
+              <span class="bi" width="1em" height="1em">🖼</span>
             </div>
             <h3 class="fs-2 text-body-emphasis">User Interface (UI) Design</h3>
             <p>Developing visually appealing and functional interfaces using modern design principles. Includes creating graphic elements, color palettes, typography, and responsive design for various platforms.</p>
           </div>
 
           <div class="feature col">
-            <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
-              <svg class="bi" width="1em" height="1em"><use xlink:href="#toggles2"/></svg>
+            <div class="feature-icon d-inline-flex align-items-center justify-content-center custom-bg-color bg-gradient fs-2 mb-3">
+              <span class="bi" width="1em" height="1em">📂</span>
             </div>
             <h3 class="fs-2 text-body-emphasis">Design Systems</h3>
             <p>Creating and maintaining custom design systems to ensure consistency and efficiency in digital product design. Includes style guides, component libraries, and reusable design patterns.</p>
           </div>
 
           <div class="feature col">
-            <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
-              <svg class="bi" width="1em" height="1em"><use xlink:href="#toggles2"/></svg>
+            <div class="feature-icon d-inline-flex align-items-center justify-content-center custom-bg-color bg-gradient fs-2 mb-3">
+              <span class="bi" width="1em" height="1em">👓</span>
             </div>
             <h3 class="fs-2 text-body-emphasis">Web Accessibility</h3>
             <p>Auditing and optimizing websites to meet accessibility guidelines (WCAG). Implementing practices to ensure content is accessible to all users, including those with disabilities..</p>
           </div>
 
           <div class="feature col">
-            <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
-              <svg class="bi" width="1em" height="1em"><use xlink:href="#toggles2"/></svg>
+            <div class="feature-icon d-inline-flex align-items-center justify-content-center custom-bg-color bg-gradient fs-2 mb-3">
+              <span class="bi" width="1em" height="1em">📊</span>
             </div>
             <h3 class="fs-2 text-body-emphasis">User Research and Usability Testing</h3>
             <p>Conducting research to understand user needs and behaviors. Performing usability tests to validate designs and improve user interactions with the product.</p>
           </div>
 
           <div class="feature col">
-            <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
-              <svg class="bi" width="1em" height="1em"><use xlink:href="#toggles2"/></svg>
+            <div class="feature-icon d-inline-flex align-items-center justify-content-center custom-bg-color bg-gradient fs-2 mb-3">
+              <span class="bi" width="1em" height="1em">🪄</span>
             </div>
             <h3 class="fs-2 text-body-emphasis">Redesign of Existing Interfaces</h3>
             <p>Updating and improving existing user interfaces to optimize user experience and visual performance. This may include modernizing appearance, enhancing usability, and implementing new features.</p>
           </div>
       </div>
   </div>
+  </section>
 
   <section id="portfolio" class="container-lg container px-4 py-5">
-    <h2 class="pb-2 border-bottom"><span h2 class="text-highlight">Some of my</span> recent work.</span></h2>
+    <h2 class="pb-2 border-bottom"><span h2 class="text-highlight">Some of my recent work</span></h2>
 
     <div class="row row-cols-1 row-cols-md-2 g-4 py-5">
 
       <div class="col">
         <div class="card">
-          <img src="images/pumkins.jpg" class="card-img-top" alt="..." width="100%" height="40%">
+          <div class="image-container">
+            <img src="images/pumkins.jpg" class="card-img-top image-portfolio hover-image" alt="..." width="100%" height="40%">
+          </div>
           <div class="card-body">
             <h4 class="card-title">Festina</h4>
             <a href="#" class="btn btn-primary">Read case study</a>
@@ -178,75 +193,58 @@
         </div>
         </div>
       
-      <div class="col">
-        <div class="card">
-          <img src="images/pumkins.jpg" class="card-img-top" alt="..." width="100%" height="40%">
-          <div class="card-body">
-            <h4 class="card-title">Kronaby</h4>
-            <a href="#" class="btn btn-primary">Read case study</a>
+        <div class="col">
+          <div class="card">
+            <div class="image-container">
+              <img src="images/pumkins.jpg" class="card-img-top image-portfolio hover-image" alt="..." width="100%" height="40%">
+            </div>
+            <div class="card-body">
+              <h4 class="card-title">Festina</h4>
+              <a href="#" class="btn btn-primary">Read case study</a>
+            </div>
           </div>
-        </div>
-      </div>
+          </div>
 
-      <div class="col">
-        <div class="card">
-          <img src="images/pumkins.jpg" class="card-img-top" alt="..." width="100%" height="40%">
-          <div class="card-body">
-            <h4 class="card-title">Kronaby</h4>
-            <a href="#" class="btn btn-primary">Read case study</a>
-          </div>
-        </div>
-      </div>
+          <div class="col">
+            <div class="card">
+              <div class="image-container">
+                <img src="images/pumkins.jpg" class="card-img-top image-portfolio hover-image" alt="..." width="100%" height="40%">
+              </div>
+              <div class="card-body">
+                <h4 class="card-title">Festina</h4>
+                <a href="#" class="btn btn-primary">Read case study</a>
+              </div>
+            </div>
+            </div>
 
-      <div class="col">
-        <div class="card">
-          <div class="image-container">
-            <img src="images/pumkins.jpg" class="card-img-top hover-image" alt="..." width="100%" height="40%">
-          </div>
-          <div class="card-body">
-            <h4 class="card-title">Kronaby</h4>
-            <a href="#" class="btn btn-primary">Read case study</a>
-          </div>
-        </div>
-      </div>
+            <div class="col">
+              <div class="card">
+                <div class="image-container">
+                  <img src="images/pumkins.jpg" class="card-img-top image-portfolio hover-image" alt="..." width="100%" height="40%">
+                </div>
+                <div class="card-body">
+                  <h4 class="card-title">Festina</h4>
+                  <a href="#" class="btn btn-primary">Read case study</a>
+                </div>
+              </div>
+              </div>
 
   </section>
 
-  <section id="about" class="container-lg container px-4 py-5">
-    <h2 class="pb-2 border-bottom"><span h2 class="text-highlight">About</span> Me</span></h2>
-    
-      <article class="subtitle-1 pt-3">I'm a multidisciplinary designer with +10 years of experience in different fields of the design sector I'm a multidisciplinary designer with +10 years of experience in different fields of the design sector.</article>
-
-        <article class="objects-right">
-          <div>
-            <p class="objects-right-2 lead col-md-9 col-lg-9 pt-2">
-            I see every new experience as an opportunity to learn. My favorite projects are those that require me to push beyond my boundaries and acquire new skills and knowledge in order to succeed.
-            </p>
-          </div>
-
-          <!-- Button -->
-          <div class="objects-right-2 lead col-md-9 col-lg-9 mb-4 pb-4">
-            <a class="btn btn-primary me-md-2" href="#" role="button">Know me more</a>
-          </div>
-        </article>
-  
-          <div>
-            <img src="images/pumkins.jpg" class="card-img-top" alt="..." width="80%" height="40%">
-          </div>
-  </section>
-
-  <section id="contact-me" class="container-fluid">
-    <div class="rounded-section py-5 contact-me-block container-md">
-      <h2><span h2 class="text-highlight">Do you like </span>my world?</h2>
-        <div>
-          <p class="subtitle-1">
-          You can reach me for an inquiry or just to say hi at roselly.nunez@gmail.com<br>For more about me, I'm also on <a href="https://www.linkedin.com/in/rosellynunez/" target="_blank">linkedin</a>
-          </p>
-        </div>
+  <!-- Contact Section -->
+  <section id="contact-me" class="container-fluid claro d-flex align-items-center justify-content-center">
+    <div class="row justify-content-center rounded-block container-md claro">
+      <div class="text-center py-4 contact-content">
+        <h2 class="text-highlight">Do you like my world?</h2>
+        <p class="subtitle-1">
+          You can reach me for an inquiry or just to say hi at <b>roselly.nunez@gmail.com</b><br>For more about me, I'm also on <a href="https://www.linkedin.com/in/rosellynunez/" id ="links-external" target="_blank">linkedin</a>
+        </p>
+      </div>
     </div>
   </section>
 
   </main>
+
     <footer>
       <p>Designed and coded with 💖 by Roselly Nuñez. Built with Bootstrap.</p>
     </footer>
