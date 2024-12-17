@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Roselly </title>
+
+    <!-- Preconnect for faster Google Fonts loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Cargar fuentes y CSS minimizados -->
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet" />
+
+    <!-- Bootstrap y Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" />
+    
+    <!-- Bootstrap JS with defer for non-blocking -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+
+    <!-- Carga asincrónica o diferida de scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12" defer></script>
+    <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous" defer></script>
+
+    <!-- Script para cambiar el tema -->
+    <script src="js.js"></script>
+
+    <!-- Local stylesheet -->
+    <link rel="stylesheet" href="style.css"/>
+    
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    
+    <script>twemoji.parse(document.body);</script>
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="../assets/js/color-modes.js"></script>
+    
+  </head>
+
+  <body data-bs-theme="light">
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-transparent fixed-top">
+        <div class="container-fluid">
+    
+          <!-- Logo -->
+          <a class="navbar-brand" href="#">Logo</a>
+    
+          <!-- Agrupar el ícono y el navbar-toggler juntos a la derecha -->
+          <div class="d-flex align-items-center ms-auto">
+
+            <!-- Botón para cambiar entre modo claro y oscuro -->
+            <button onclick="cambiarTema()" class="btn rounded-fill">
+              <i id="dl-icon" class="bi bi-moon-fill"></i>
+            </button>
+    
+            <!-- Botón navbar-toggler visible sólo en mobile -->
+            <button class="navbar-toggler custom-toggler d-lg-none" 
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                    onclick="toggleMenu(this)">
+                <div class="toggler-icon">
+                  <span class="navbar-toggler-icon"></span>
+                  <span class="navbar-toggler-icon"></span>
+                </div>
+                  <span class="navbar-toggler-text">MENU</span>
+            </button>      
+          </div>
+    
+            <!-- Menú colapsable en pantallas pequeñas, visible en pantallas grandes -->
+            <div class="collapse navbar-collapse full-screen-menu" id="navbarSupportedContent">
+              <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-center">
+                <li class="nav-item">
+                  <a class="nav-link active" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="portfolio.html">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="about.html">About</a>
+                </li>
+              </ul>
+            </div>
+        </div>
+      </nav>
+    </header>
+  <main>
+
+    <section class="case-study" class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-7">
+                    <h1 class="pb-4">Festina and Lotus Connected D Landing Pages</h1>
+                    <p class="lead">Festina Group is a leading multinational watchmaking company with a long history in the industry, whose watches watches are sold in over 90 countries.<br>This project is due to Festina Group wanted to introduce two new connected watch models: the Festina Connected D and the Lotus Hybrid Connected.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div>
+            <img src="images/pumkins.jpg" class="hero-image-portfolio" alt="About Image">
+        </div>
+    </section>
+
+<!-- Case study -->
+
+<section>
+    <div class="container">
+
+        <div class="row mt-5">
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                <h2 class="small-title text-uppercase">About</h2>
+            </div>
+
+            <div class="col-lg-8 lead" data-aos="fade-up" data-aos-delay="200">
+                <p>
+                Both the Festina Connected D and the Lotus Hybrid Connected belong to their respective brands' connected watch collections, each with its unique style and audience appeal. The Festina Connected D is part of a more classic and premium collection, while the Lotus Hybrid Connected targets a younger demographic with a more modern design. This landing pages were integral to the introduction to these two new collections.
+                </p>
+                <div>
+                    <a href="https://festina.com/en-GB/festina-connected-d-watch" target="_blank" id="links-external">
+                    Visit Festina Connected D site
+                    <i id="dl-icon-arrow" class="bi bi-box-arrow-up-right"></i> <!-- Icono de Bootstrap -->
+                    </a><br>
+                    <a href="https://lotus-watches.com/es-ES/connected-d-reloj-hibrido" target="_blank" id="links-external">
+                    Visit site Lotus Connected D site
+                    <i id="dl-icon-arrow" class="bi bi-box-arrow-up-right"></i> <!-- Icono de Bootstrap -->
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                <h2 class="small-title text-uppercase">How I helped</h2>
+            </div>
+
+            <div class="col-lg-8 lead" data-aos="fade-up" data-aos-delay="200">
+                <p>
+                A Multi-brand Challenge
+                I was tasked with creating landing pages for two distinct brands under the Festina Group umbrella: Festina and Lotus. These two brands have completely different styles and target audiences, but both required cohesive yet unique digital experiences that reflected their individual identities. Despite the differences in branding, the landing pages needed to follow a unified structure.<br>
+                Working with the Spain-based marketing team and the strategy team in Sweden, I was responsible for the UI design and also collaborated closely with the development team, which maintained the pages using Bootstrap.
+                </p>
+            </div>
+        </div>
+    </div> 
+
+    <div>
+        <img src="images/pumkins.jpg" class="hero-image-portfolio" alt="About Image">
+    </div>
+</section>
+
+<section>
+
+</section>
+
+    <section class="text-image py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-4">
+                    <h4>Creating Versatile Components
+                    </h4>
+                    <p>Given the lack of time, we opted to reuse the same structure for both landing pages. This decision helped us meet the deadline while ensuring that each page respected the distinct branding. I led the creation of versatile components that could be easily adapted across different pages for both brands and other websites in the company's portfolio.<br>
+                    As I mentioned, I worked closely with the development team, using Bootstrap to ensure the components were scalable across desktop, mobile, and tablet devices. I used Figma to design the components, incorporating design tokens for consistency, and regularly consulted with the development area to ensure that everything was technically feasible. To streamline the design-to-development process, I also utilized Figma plugins to ensure an efficient handoff, and we integrated Storybook to manage and test components.<br>
+                </div>
+                <div class="col-lg-8 no-padding">
+                    <img src="images/pumkins.jpg" class="img-fluid" alt="About Image">
+                </div>
+            </div>
+        </div>    
+    </section>
+
+    <section class="text-image py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-4">
+                    <h4>Collaboration with Marketing</h4>
+                    <p>Throughout the project, I coordinated with both marketing and development to balance the branding needs and technical constraints. Despite the tight deadline, our team successfully delivered two functional and visually distinct landing pages. I collaborated with the Spanish marketing team, which was responsible for the copy, strategy, and general graphic materials. While they provided the images, I carefully curated and resized them for optimal performance on desktop and mobile. Additionally, I had regular touchpoints with the strategic team in Sweden to ensure that both the design and the marketing strategy were aligned.<br>
+                    </p>
+                </div>
+                <div class="col-lg-8 no-padding">
+                    <img src="images/pumkins.jpg" class="img-fluid" alt="About Image">
+                </div>
+            </div>
+        </div>    
+    </section>
+
+    <section class="text-image py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-4">
+                    <h4>Collaboration with Development</h4>
+                    <p>
+                    Collaboration with the development team was critical to ensure that these components aligned with the overall user experience while maintaining visual consistency across all devices. Using Bootstrap as the framework allowed for rapid prototyping, but it also required close coordination to ensure that the responsive elements functioned seamlessly.
+                    </p>
+                </div>
+                <div class="col-lg-8 no-padding">
+                    <img src="images/pumkins.jpg" class="img-fluid" alt="About Image">
+                </div>
+            </div>
+        </div>    
+    </section>
+
+    <section class="text-image py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-4">
+                    <h4>UI/UX Approach</h4>
+                    <p>From a UX standpoint, the main goal was to simplify navigation while guiding users through the product features. I employed clear visual hierarchy and CTA buttons that stand out, with sufficient white space to keep the design clean and focused. I made sure that both landing pages adhered to modern usability standards and incorporated feedback loops to ensure optimal functionality.<br>
+                    On the UI side, I utilized Bootstrap's grid system for alignment consistency and responsiveness. This was particularly useful when building modular components, such as the product details and image galleries.<br>
+                </div>
+                <div class="col-lg-8 no-padding">
+                    <img src="images/pumkins.jpg" class="img-fluid" alt="About Image">
+                </div>
+            </div>
+        </div>    
+    </section>
+
+    <section class="text-image py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-4">
+                    <h4>Post-Development: QA and Design Refinements
+                    </h4>
+                    <p>After the development team implemented my designs, I conducted multiple rounds of QA (quality assurance) to ensure that everything—from paddings to design details—was pixel-perfect. I worked closely with the developers to adjust small design elements, ensuring that both the user experience and the overall look and feel of the landing pages met the high standards we had set. We made sure that the transition from Figma to the live website was smooth, tweaking any issues that arose during the development phase.<br>
+                </div>
+                <div class="col-lg-8 no-padding">
+                    <img src="images/pumkins.jpg" class="img-fluid" alt="About Image">
+                </div>
+            </div>
+        </div>    
+    </section>
+
+    <section class="text-image py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-4">
+                    <h4>Final Results</h4>
+                    <p>We successfully launched this two landing pages that reflected the individual characteristics of the Festina and Lotus brands. The collaborative effort between the UI design, development, and marketing teams resulted in landing pages that were visually compelling and effective at communicating the features and appeal of the new watch collections.<br>
+                </div>
+                <div class="col-lg-8 no-padding">
+                    <img src="images/pumkins.jpg" class="img-fluid" alt="About Image">
+                </div>
+            </div>
+        </div>    
+    </section>
+
+</section><!-- /Section -->
+    
+<!-- More proyects -->
+<section id="more-proyects" class="py-3t claro">
+    <div class="container">
+        
+        <div class="row project-navigation">
+            <div class="col-md-6 col-align">
+                <p class="subtitle-1 text-align">Title Previous project</p>
+                <button class="btn btn-secondary">Previous project
+                    <i id="dl-icon-arrow" class="bi bi-arrow-left-circle-fill"></i>
+                </button>
+            </div>     
+            <div class="col-md-6 col-align">
+                <p class="subtitle-1 text-align">Title Next project</p>
+                <button class="btn btn-secondary">Next project
+                    <i id="dl-icon-arrow" class="bi bi-arrow-right-circle-fill"></i>
+                </button>
+            </div> 
+        </div>
+
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact-me" class="container-fluid claro d-flex align-items-center justify-content-center">
+    <div class="row justify-content-center rounded-block container-md claro">
+      <div class="text-center py-4 contact-content">
+        <h2 class="text-highlight">Do you like my world?</h2>
+        <p class="subtitle-1">
+          You can reach me for an inquiry or just to say hi at <b>roselly.nunez@gmail.com</b><br>For more about me, I'm also on <a href="https://www.linkedin.com/in/rosellynunez/" target="_blank">linkedin</a>
+        </p>
+      </div>
+    </div>
+</section>
+
+</main>
+<footer>
+    <p>Designed and coded with 💖 by Roselly Nuñez. Built with Bootstrap.</p>
+</footer>
+</body>
+</html>
