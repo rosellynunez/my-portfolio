@@ -780,6 +780,8 @@ footer {
   text-align: left;
   font-size: 4em!important;
   font-family: "Plus Jakarta Sans", sans-serif;
+  line-height: 100%;
+  font-weight: 600;
 }
 
 .case-study {
