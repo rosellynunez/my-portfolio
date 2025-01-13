@@ -7,7 +7,7 @@
 
 /* Tema oscuro */
 [data-bs-theme="dark"] {
-  --bs-body-bg: #212529; /* Fondo oscuro personalizado */
+  --bs-body-bg: #181632!important;; /* Fondo oscuro personalizado */
   --bs-body-color: #f8f9fa; /* Color del texto en tema oscuro */
   /* Añade más variables según sea necesario */
 }
@@ -464,6 +464,10 @@ h3 {
   width: 90%;
 }
 
+.width-90 {
+  width: 90%;
+}
+
 .portfolio-h1 {
   font-size: 4rem;
   margin: 2rem 0em;
@@ -496,6 +500,18 @@ h3 {
 .image-portfolio:hover {
   transform: rotate(-6deg);
   transition: 0.5s;
+}
+
+.carousel-inner {
+  border-radius: 1.5rem; /* Aplica borde redondeado al contenedor */
+}
+
+.carousel-item {
+  border-radius: 1.5rem; /* Asegura que el borde redondeado sea consistente */
+}
+
+.image-item {
+  border-radius: 1.5rem; /* Asegura que el borde redondeado sea consistente */
 }
 
 #portfolio .card {
@@ -602,7 +618,7 @@ h3 {
   background-color: white;
 }
 
-/* Estilos para el About me */
+/* HOME - About me */
 
 .display-5 {
   line-height: 98% !important;
@@ -650,7 +666,7 @@ h3 {
   margin: 0;                /* Elimina el margen por defecto */
 }
 
-/* Estilos para Contact Me */
+/* HOME - COTACT ME */
 
 #contact-me h2 {
   text-align: center;
@@ -674,7 +690,7 @@ h3 {
 }
 
 #contact-me.oscuro {
-  background-color: #212529;
+  background-color: #181632;
   color: #f9f8f1; /* Texto claro para el fondo oscuro */
   position: relative;
   z-index: 1;
@@ -741,11 +757,10 @@ h3 {
   }
 }
 
-
-/* Estilos para el footer */
+/* FOOTER */
 
 footer {
-  background-color: #000000;
+  background-color: #181632;
   color: #fff;
   text-align: center;
   clear: both;
@@ -774,7 +789,7 @@ footer {
   background-color: #222;
 }
 
-/* STYLES FOR PORTFOLIO PAGE */ 
+/* PORTFOLIO PAGE */ 
 
 .case-study h1 {
   text-align: left;
@@ -786,6 +801,11 @@ footer {
 
 .case-study {
   padding-top: 6rem;
+}
+
+.center-image {
+  display: flex; 
+  justify-content: center; 
 }
 
 /* Remove padding and margins from the image container */
@@ -804,11 +824,11 @@ footer {
     height: auto;
 }
 
-.h3-pag-portfolio {
-  padding-top: 0rem !important;
+.title-text .h3-pag-portfolio {
+  padding: 0.5em 0em 0em 0em !important;
 }
 
-/* Sección para más proyectos */
+/* More proyects */
 #more-proyects {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
@@ -824,19 +844,6 @@ footer {
 
 .col-align {
   margin-bottom: 1.5rem !important; /* Espacio entre los elementos */
-}
-
-.btn-secondary {
-  background-color: #6c757d;
-  color: #fff;
-  border: none;
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  transition: background-color 0.3s ease;
-}
-
-.btn-secondary:hover {
-  background-color: #5a6268;
 }
 
 /* Icon arrow alineado */
@@ -889,41 +896,69 @@ vertical-align: 0rem;
 }
 
 
-/* STYLES FOR ABOUT PAGE  */
+/* ABOUT ME - PAGE  */
 
 #about-me {
   margin-top: 5rem;
-  margin-bottom: 8rem;
+  margin-bottom: 2rem;
 }
 
-.themed-heading {
-  font-weight: normal;
+.customized-h1 {
   color: transparent;
   background-image: linear-gradient(79deg, #2b0aff, #ff5b8a 49%, #ff5b8a 55%, #fba64b 77%, #f99b52);;
   background-repeat: no-repeat;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 90%;
 }
 
-.themed-p {
-  font-size: 3rem;
-  font-weight: 300;
+@media (min-width: 992px) {
+  .customized-h1 {
+    font-size: 8rem;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 991px) {
+  .customized-h1 {
+    font-size: 5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .customized-h1 {
+    font-size: 3.5rem;
+  }
+}
+
+#about-me .customized-h2 {
   color: transparent;
   background-image: linear-gradient(90deg, #f0357c, #f154ff, #777dff, #497ce2, #37bdde);
   background-repeat: no-repeat;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 4.5rem !important;
+  line-height: 90%;
+}
+
+@media (min-width: 992px) {
+  #about-me .customized-h2 {
+    font-size: 5rem !important;
+  }
 }
 
 @media (min-width: 769px) and (max-width: 991px) {
-  .themed-heading {
-    font-size: 3.5rem;
+  #about-me .customized-h2 {
+    font-size: 4rem !important;
   }
 }
 
 @media (max-width: 768px) {
-  .themed-heading {
-    font-size: 3.5rem;
+  #about-me .customized-h2 {
+    font-size: 3rem !important;
   }
 }
 
@@ -949,25 +984,23 @@ a:hover {
 }
 
 /* Estilos de enlace (href) externos */
-#links-external { 
-  text-decoration: none!important;
+.links-external { 
+  text-decoration: underline;
   display: flex;
+  color: #181632;
 }
 
 /* Estilos de enlace en modo oscuro */
 body[data-bs-theme="dark"] #links-external {
   color: #f9f8f1; /* Color claro para enlaces en tema oscuro */
-  border-bottom: 1px solid rgb(255, 255, 255);
 }
 
 body[data-bs-theme="light"] #links-external {
   color: #ff5b8a; /* Color de hover en modo oscuro */
-  border-bottom: 1px solid rgb(210, 15, 15);
 }
 
 a {
   display: inline !important;
-  text-decoration: none!important;
 }
 
 /* Estilos de enlace en modo oscuro */
@@ -985,7 +1018,7 @@ body[data-bs-theme="dark"] a:hover {
   font-family: "Plus Jakarta Sans", sans-serif; /* Tipografía específica para el navbar */
   color: #212529; /* Color predeterminado del texto */
   transition: color 0.3s ease, text-decoration 0.3s ease;
-  padding: 0.5rem 1rem; /* Espaciado para los enlaces */
+  padding: 1rem; /* Espaciado para los enlaces */
   text-decoration: none !important; /* Sin subrayado */
 }
 
@@ -1041,6 +1074,7 @@ body[data-bs-theme="dark"] .navbar-nav .nav-link:hover {
   margin: 1rem 0rem 1rem 0rem;
   --bs-btn-padding-x: 2rem !important;
   --bs-btn-padding-y: 0.8rem !important;
+  border-radius: 2rem !important;
 }
 
 /* Estilos en modo oscuro para botones */
@@ -1052,4 +1086,104 @@ body[data-bs-theme="dark"] .btn-primary:hover {
   background: linear-gradient(79deg, #f9f8f1, #ff5b8a 30%, #ff5b8a 50%, #fba64b 77%, #f99b52);
 }
 
+/* General de gifs e imgs*/
+.image-container {
+  display:flex; /*Para usar align-self*/
+  justify-content: center; /* Centrado horizontal */
+  align-items: center; /* Centrado vertical */
+}
 
+.image-container :hover{
+  opacity: 0!important; 
+}
+
+.gif-image-wrap {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+.gif-image-wrap :hover{
+  opacity: 0 !important; 
+}
+
+.gif-image-wrap iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.aspect-ratio-16-9 {
+  aspect-ratio: 16 / 9; /* Mantiene proporción 16:9 */
+}
+
+.aspect-ratio-4-3 {
+  aspect-ratio: 4 / 3; /* Mantiene proporción 16:9 */
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap; /* Permitir que los GIFs se ajusten a nuevas filas */
+  justify-content: center;
+}
+
+/* Pantallas menores a 768px (Small) */
+@media (max-width: 768px) {
+  .row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .image-container {
+    width: 100% !important;
+  }
+
+  .small-screen-center{
+    align-self: center; /*Alinea al centro*/
+    width: 100% !important;
+    padding-bottom: 2rem;
+  }
+
+  .small-screen-left{
+    align-self: flex-start; /*Alinea a la izquierda*/
+    width: 60% !important;
+    padding-bottom: 2rem;
+  }
+  
+  .small-screen-right{
+    align-self: flex-end; /*Alinea a la derecha*/
+    width: 60% !important;
+  }
+}
+
+.ul-icons-line {
+  list-style-type: none;
+  display: flex;
+  padding-left: 0rem !important;
+}
+
+.li-icons-line {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 6rem;
+  margin: 0 0.25rem;
+  text-align: center;
+}
+
+.li-icons-line svg {
+  width: 3rem;
+  height: 3rem;
+  color:#816e91;
+  margin: 0.5rem;
+}
+
+
+.ul-icons-line.justify-content-between {
+  justify-content: space-between; /* Distributes space evenly between icons */
+}
+
+.align-icons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  text-decoration: none !important;
+}
