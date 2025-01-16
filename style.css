@@ -510,6 +510,10 @@ h3 {
   border-radius: 1.5rem; /* Asegura que el borde redondeado sea consistente */
 }
 
+.border-radius {
+  border-radius: 1.5rem; /* Asegura que el borde redondeado sea consistente */
+}
+
 .image-item {
   border-radius: 1.5rem; /* Asegura que el borde redondeado sea consistente */
 }
@@ -550,6 +554,28 @@ h3 {
 
 .image-container:hover::after {
   background-color: rgba(0, 0, 0, 0.3); /* Slight overlay on hover */
+}
+
+
+/* Estilos generales */
+.border-radius {
+  border-radius: 10px;
+}
+
+/* Media query para pantallas extra grandes (ajusta el breakpoint según necesites) */
+.two-hero-images-container {
+  max-width: 1000px; /* Ancho máximo en pantallas grandes */
+}
+
+.hero-image-container {
+  max-width: 2000px; /* Ancho máximo en pantallas grandes */
+}
+
+/* Estilos para las imágenes hero */
+.hero-image {
+  width: 100%;
+  display: block;
+  object-fit: cover; /* O contain, según prefieras */
 }
 
 /*OUR SERVICES*/
@@ -806,6 +832,11 @@ footer {
 .center-image {
   display: flex; 
   justify-content: center; 
+}
+
+/* Icon arrow alineado */
+.p-note {
+  text-align: center;
 }
 
 /* Remove padding and margins from the image container */
@@ -1119,7 +1150,7 @@ body[data-bs-theme="dark"] .btn-primary:hover {
   aspect-ratio: 4 / 3; /* Mantiene proporción 16:9 */
 }
 
-.row {
+.row-about {
   display: flex;
   flex-wrap: wrap; /* Permitir que los GIFs se ajusten a nuevas filas */
   justify-content: center;
@@ -1127,7 +1158,7 @@ body[data-bs-theme="dark"] .btn-primary:hover {
 
 /* Pantallas menores a 768px (Small) */
 @media (max-width: 768px) {
-  .row {
+  .row-about {
     display: flex;
     flex-direction: column;
   }
