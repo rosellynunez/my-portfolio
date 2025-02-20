@@ -3,7 +3,8 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Roselly Nuñez</title>
+        <title>Roselly Nuñez's Portfolio</title>
+        <link rel="icon" type="image/png" href="images/favicon.png"/>
 
         <!-- Preconnect for faster Google Fonts loading -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,54 +36,53 @@
 
     <body>
       <header>
-        <nav class="navbar navbar-expand-lg bg-transparent">
+        <nav class="navbar navbar-expand-lg bg-transparent fixed-top">
             <div class="container-fluid">
         
               <!-- Logo -->
-              <a class="navbar-brand" href="#">Roselly Nuñez</a>
-              
-              <div class="d-flex align-items-center"> 
+              <a class="navbar-brand" href="index.html">
+                <svg id="logo" width="150" height="50" viewBox="0 0 39.8 24" xmlns="http://www.w3.org/2000/svg">
+                  <path class="st0" d="M12.5,1v5.2c-3.4,0-6.1,2.7-6.1,6.1v10.9H1.1V1.1h5.2v1.7c1.8-1.1,3.9-1.8,6.1-1.8Z" fill="currentColor"/>
+                  <path class="st0" d="M20.3,23.1v-10.8c0-3.4,2.8-6.1,6.1-6.1h.7c2.4,0,4.4,1.4,5.5,3.3.4.8.6,1.7.7,2.7,0,0,0,0,0,0v5.3c0,0,0,5.5,0,5.5h5.1v-9.5c0-2-.3-3.8-.9-5.4-.2-.5-.4-1-.6-1.4-1-1.9-2.4-3.4-4.2-4.3-1.8-1-3.8-1.5-6-1.5s-3.1.3-4.5.9h0c-.7.3-1.4.6-2,1v-1.7h-5.2v22h5.2Z" 
+                  fill="currentColor"/>
+                </svg>
+              </a>
 
-                <!-- Botón navbar-toggler visible sólo en mobile -->
-                <button class="navbar-toggler" 
-                  type="button" 
-                  data-bs-toggle="collapse" 
-                  data-bs-target="#navbarSupportedContent" 
-                  aria-controls="navbarSupportedContent" 
-                  aria-expanded="false" 
-                  aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                  <span class="ms-2">MENU</span>
-                </button>   
-
-                <!-- Botón para cambiar entre modo claro y oscuro -->
-                <button onclick="cambiarTema()" class="btn-vibe">
-                  <span class="label">Change the Vibe</span>
-                  <svg 
-                    xmlns="http://www.w3.org/2000/svg" 
-                    width="16" 
-                    height="16" 
-                    fill="currentColor" 
-                    class="icon-vibe"
-                    viewBox="0 0 16 16">
-                    <path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/>
-                  </svg>
-                </button>  
+              <!-- Botón para cambiar entre modo claro y oscuro -->
+              <button onclick="cambiarTema()" class="btn-vibe order-2 order-sm-1 order-lg-3">
+                <span class="label">Change the Vibe</span>
+                <svg xmlns="http://www.w3.org/2000/svg"
+                  width="16" 
+                  height="16" 
+                  fill="#fab04e" 
+                  class="icon-vibe" 
+                  viewBox="0 0 16 16">
+                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16M2.31 5.243A1 1 0 0 1 3.28 4H6a1 1 0 0 1 1 1v.116A4.2 4.2 0 0 1 8 5c.35 0 .69.04 1 .116V5a1 1 0 0 1 1-1h2.72a1 1 0 0 1 .97 1.243l-.311 1.242A2 2 0 0 1 11.439 8H11a2 2 0 0 1-1.994-1.839A3 3 0 0 0 8 6c-.393 0-.74.064-1.006.161A2 2 0 0 1 5 8h-.438a2 2 0 0 1-1.94-1.515zM4.969 9.75A3.5 3.5 0 0 0 8 11.5a3.5 3.5 0 0 0 3.032-1.75.5.5 0 1 1 .866.5A4.5 4.5 0 0 1 8 12.5a4.5 4.5 0 0 1-3.898-2.25.5.5 0 0 1 .866-.5z"/>
+                </svg>
+              </button>  
               
-              </div>
+              <!-- Botón navbar-toggler visible sólo en mobile -->
+              <button 
+                id="menu-mobile-color"
+                class="navbar-toggler order-3" 
+                aria-controls="navbarSupportedContent" 
+                aria-expanded="false" 
+                aria-label="Toggle navigation">
+                  <span id="menu-style">MENU</span>
+              </button>  
 
               <!-- Menú colapsable en pantallas pequeñas, visible en pantallas grandes -->
-              <div class="collapse navbar-collapse desktop-menu" id="navbarSupportedContent">
+              <div class="collapse navbar-collapse desktop-menu order-lg-2" id="navbarSupportedContent">
 
-                <ul class="navbar-nav text-center">
+                <ul class="navbar-nav text-center mx-auto">
                     <li class="nav-item">
-                      <a class="nav-link active" href="portfolio.html">Portfolio</a>
+                      <a class="nav-link active" href="#my-work">My Work</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link active" href="about.html">About</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link active" href="/images/cv/CV_Roselly_Nuñez_UX_UI_Designer-en.pdf">Resume<i class="bi bi-download"></i></a>
+                      <a class="nav-link active" href="/images/cv/CV_Roselly_Nuñez_UX_UI_Designer-en.pdf">Resume<i class="bi bi-box-arrow-up-right ms-2"></i></a>
                     </li>
                 </ul>
 
@@ -90,23 +90,22 @@
 
             </div>
         </nav>
-
       </header>
 
     <main>
       <section id="intro" class="container">         
-        <article class="content pt-5">
+        <article id="presentation" class="mt-5 pt-lg-5">
 
-            <section class="text-intro pt-5">
-              <h1>
-                <span class="text-gradient custom-dark">Hi</span>
-                <span>👋🏼,</span>
+            <section class="text-intro mt-5">
+              <h1 class="mb-4 mb-lg-5">
+                <span class="text-gradient custom-dark">Hi!</span>
+                <span>👋🏼</span>
                 <span class="mobile-break"><br></span>
-                <span class="colorful-text">I'm Roselly Nuñez,</span><br> 
-                <span class="text-gradient custom-dark">a UX & UI Designer.</span>
+                <span class="colorful-text">I'm Roselly Nuñez,</span><br>
+                <span class="text-gradient custom-dark">a UX & UI Designer</span>
               </h1>
-              <img src="images/Roselly_Nunez.jpg" alt="Roselly Nuñez" class="img-intro mt-3"></span><br><br><br>
-              <h2>I love helping brands to<br><span id="typed-output"></span>
+              <img src="images/me-roselly-nunez/my-picture.jpg" alt="Hey! That's me. This image is is my pic. Nice to meet you!" class="img-intro">
+              <h2 class="mt-5 pt-3">I love helping brands to<br><span id="typed-output" aria-live="polite"></span>
               <!-- Texto autoescribible -->
               </h2>
             </section>
@@ -117,8 +116,15 @@
       <section id="about" class="container-xxl container px-4 py-5">
 
         <article class="py-3">
-            <p class="highlight-text-1"> <span class="colorful-text"> Stunning aesthetics and seamless functionality? Absolutely.</span> I create user-friendly digital products  by understanding user needs, building consistent design systems, and leveraging my web development skills.
+            <p class="highlight-text-1"> 
+              <span class="colorful-text fade-in hidden"> Stunning aesthetics and seamless functionality? You bet.</span><br>
+              <span class="fade-in hidden">With 5+ years in design, I shape engaging experiences.</span><br>
+              <span class="fade-in hidden">I believe design clicks when user needs and business goals meet.</span><br>
+              <span class="fade-in hidden">My dev skills make collaboration seamless.</span>
             </p>
+            <div class="mt-5">
+            <a href="about.html" class="btn btn-primary" role="button">Learn more about me</a>
+            </div>
         </article>
 
       </section>
@@ -154,13 +160,14 @@
         <section class="row row-cols-1 row-cols-md-2 g-5 py-5">
 
           <article class="col-sm-12 col-md-7">
-            <a href="https://lotusmartime.com/en" target="_blank">
+            <!-- 
+            <a href="https://lotusmartime.com/en" target="_blank"> -->
               <div class="project-card pb-2 image-container">
-                <img src="images/prueba-770.jpg" class="image-portfolio hover-image" alt="...">
+                <img src="images/smartime/smartime.jpg" class="image-portfolio hover-image" alt="...">
                 <div class="go-icon-container">GO</div>
               </div>
             </a>
-            <h4 class="card-title">Lotus Smartime Web Page Design<i class="bi bi-box-arrow-up-right ms-2"></i></h4>
+            <h4 class="card-title">Lotus Smartime Web Page Design (Soon) <i class="bi bi-arrow-right ms-2"></i></h4>
           </article>
 
           <article class="col-sm-12 col-md-5">
@@ -236,23 +243,35 @@
 
       <section id="contact-me" class="container-fluid d-flex align-items-center justify-content-left py-5">
         
-        <article class="row justify-content-center rounded-block container-md my-5 px-5">
-          <div class="text-center py-3">
+        <article class="row justify-content-center rounded-block container-lg my-5 px-lg-5 px-md-5">
+          <div class="text-center py-4">
 
-            <h2 class="pb-2 border-bottom"><span class="section-title text-gradient">Let's connect!</span></h2>
+            <h2 class="py-2 border-bottom"><span class="section-title text-gradient">Let's connect!</span></h2>
 
-            <p class="highlight-text-2 mt-">
-              Drop it like it's hot and hit me at <span class="colorful-text">roselly.nunez@gmail.com</span> or find me on my <a class="colorful-text" href="https://www.linkedin.com/in/rosellynunez/" class ="links-external" target="_blank">linkedin</a> account.
+            <p class="highlight-text-2 my-4">
+              Drop it like it's hot and hit me at <span class="colorful-text underlined"><a href="mailto:roselly.nunezg@gmail.com">my email</a></span> or find me on my <span><a class="colorful-text underlined" href="https://www.linkedin.com/in/rosellynunez/" class ="links-external" target="_blank">linkedin</a></span> account.
             </p>
+
           </div>
         </article>
       </section>
 
     </main>
 
+    <!-- Overlay para menú mobile -->
+    <div id="menu-overlay">
+      <ul class="overlay-menu">
+        <li><a href="index.html">My Work</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="/images/cv/CV_Roselly_Nuñez_UX_UI_Designer-en.pdf">Resume <i class="bi bi-box-arrow-up-right ms-2"></i></a></li>
+      </ul>
+    </div>
+
+
     <footer>
       <p>Designed and coded with 💖 by Roselly Nuñez. Built with Bootstrap.</p>
     </footer>
+
 
     </body>
 </html>

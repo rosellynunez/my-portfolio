@@ -1,14 +1,48 @@
-/* Tema claro */
+/* TEMA CLARO */
 [data-bs-theme="light"] {
   --bs-body-bg: #F5F4EB; /* Fondo claro personalizado */
-  --bs-body-color: #23005C; /* Color del texto */
+  --bs-body-color: #23005C; /* Color del texto en tema claro */
+
+  button.btn-vibe  {
+    /* Estilos para el botón del menú móvil en modo claro */
+    color: #23005C; 
+    border: none;
+    background: linear-gradient(90deg, rgba(243, 202, 77, 0.5) 0%, rgba(255, 152, 154, 0.5) 42.88%, rgba(203, 171, 255, 0.5) 94.62%), linear-gradient(0deg, rgb(255, 255, 255), rgb(255, 255, 255))
+  } 
+
+  button#menu-mobile-color {
+    /* Estilos para el botón del menú móvil en modo claro */
+    color: #F5F4EB; 
+    background: #5800E5; 
+  }
+
+  #logo {
+    fill: #23005C; 
+  }
 }
 
-/* Tema oscuro */
+/* TEMA OSCURO*/
 [data-bs-theme="dark"] {
   --bs-body-bg: #020005; /* Fondo oscuro personalizado */
-  --bs-body-color: #f8f9fa; /* Color del texto en tema oscuro */
-  /* Añade más variables según sea necesario */
+  --bs-body-color: #F5F4EB; 
+
+  button.btn-vibe  {
+    /* Estilos para el botón del menú móvil en modo claro */
+    color: #F5F4EB; 
+    border: none;
+    background: linear-gradient(94deg, rgba(128, 47, 126, 0.7) 0%, rgba(255, 255, 255, 0.1) 100%); 
+  }; 
+
+  button#menu-mobile-color {
+    /* Estilos para el botón del menú móvil en modo claro */
+    color: #5800E5; 
+    background: #F5F4EB; 
+    border: none;
+  }
+
+  #logo {
+    fill: #F5F4EB; 
+  }
 }
 
 /* Degradado radial en modo oscuro */
@@ -27,12 +61,14 @@
 }
 
 /* NAVBAR */
-.navbar {
-  transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+
+#logo {
+  height: 2rem;
+  width: 4rem;
 }
 
 .navbar.scrolled {
-  background-color: rgba(255, 255, 255, 0.8); /* Cambia el color de fondo al hacer scroll */
+  background-color: rgba(255, 255, 255, 0.1) !important;
   backdrop-filter: blur(10px); /* Añade el efecto de blur */
 }
 
@@ -41,9 +77,6 @@
   display: flex;
   justify-content: space-between;
 }
-
-/* Toggler */
-
 
 @media (max-width: 992px) {
 /* Alinear el menú mobile al centro cuando esté desplegado */
@@ -71,12 +104,27 @@
   }
 }
 
+.navbar-expand-lg {
+  padding-top: 1rem;
+}
+
+/* Mobile-specific style */
+@media (min-width: 768px) {
+  .navbar-expand-lg  {
+    padding: 1rem 1.5rem;
+  }
+}
+
 .navbar-nav {
   display: flex;
   align-items: center;
   justify-content: flex-end;
   border-radius: 2rem;
   padding: 0.5rem 0.8rem;
+}
+
+.navbar {
+  transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
 }
 
 /* Versión escritorio sigue con el menú al centro*/
@@ -110,7 +158,6 @@
   background-clip: text;
 }
 
-
 #auto-typing-output {
   font-size: 24px;
   font-weight: bold;
@@ -133,13 +180,13 @@ font-weight: 700;
 }
 
 body {
-  font-family: "Plus Jakarta Sans", sans-serif;
-  font-size: 1em;
+  font-family: "Inter Display", "Inter Display Placeholder", sans-serif;
+  font-size: 1rem;
 }
 
 .subtitle-1 {
   font-size: 1.5em;
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: "Inter Display", "Inter Display Placeholder", sans-serif;
 }
 
 .section-title {
@@ -155,30 +202,33 @@ body {
   justify-content: center;
   align-items: flex-start;
   height: 100vh;
-  font-family: "Plus Jakarta Sans", sans-serif;
+  max-width: 80vw;
   position: relative; /* Ensures that the button is positioned relative to this section */
   overflow: hidden;
 }
 
-.content {
+@media (min-width: 576px) and (max-width: 991px) {
+  #intro {
+    height: 86vh;
+  }
+}
+
+#presentation {
   place-items: center;
-  margin: 0 auto;
   align-items: center;
   justify-content: center;
   top: 2.6em;
   position: absolute;
   text-align: center;
-  max-width: 80vw;
 }
 
 .text-intro {
-  margin: auto;
   align-items: center;
 }
 
 h2 {
   text-align: left;
-  font-size: 3em!important;
+  font-size: 3rem!important;
   font-family: "Inter Display", "Inter Display Placeholder", sans-serif;
 }
 
@@ -190,9 +240,9 @@ h3 {
 }
 
 .img-intro {
-  width: 130px;
-  height: 50px;
-  border-radius: 50px;
+  width: 8rem;
+  height: 4.3rem;
+  border-radius: 3rem;
   object-fit: cover;
 }
 
@@ -205,7 +255,7 @@ h3 {
   }
 
   #intro h1 {
-    font-size: 2.5em;
+    font-size: 3em;
     line-height: 100%;
   }
 
@@ -236,6 +286,7 @@ h3 {
 
 /* Mobile-specific style */
 @media (min-width: 577px) and (max-width: 768px) {
+
   #intro .btn-primary {
     position: absolute;
     top: 28em; /* Adjust this value for mobile */
@@ -296,7 +347,7 @@ h3 {
 
 @media (min-width: 1200px) and (max-width: 1399px) {
   #intro h1 {
-    font-size: 4.2em;
+    font-size: 4.8em;
     line-height: 98%;
     padding-top: 0.5rem; /* Para que aparezca la ñ */  }
 
@@ -343,10 +394,63 @@ h3 {
   }
 }
 
-@media (max-width: 768px) {
-  .rounded-section {
-    margin: 1em;
-    border-radius: 0 0 30px 30px
+.colorful-text {
+  color: transparent;
+  background-image: linear-gradient(130deg, rgb(241, 58, 238) -9.41449%, rgb(44, 90, 255) 110.686%, rgb(100, 246, 255) 175.912%);
+  background-repeat: no-repeat;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.highlight-text-1 {
+  line-height: 105% !important;
+  font-size: 2.6rem;
+  font-weight: 600;
+  font-family: "Inter Display", "Inter Display Placeholder", sans-serif;
+}
+
+.highlight-text-2 {
+  line-height: 105% !important;
+  font-size: 2.2rem;
+  font-weight: 400;
+  font-family: "Inter Display", "Inter Display Placeholder", sans-serif;
+}
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .highlight-text-1 {
+    line-height: 105% !important;
+    font-size: 3.8rem;
+    font-weight: 600;
+    font-family: "Inter Display", "Inter Display Placeholder", sans-serif;
+  }
+  
+  .highlight-text-2 {
+    line-height: 105% !important;
+    font-size: 3.3rem;
+    font-weight: 400;
+    font-family: "Inter Display", "Inter Display Placeholder", sans-serif;
+  }
+}
+
+@media (min-width: 1400px) {
+  #intro h1 {
+    font-size: 6rem;
+    line-height: 99%;
+    padding-top: 0.5rem; /* Para que aparezca la ñ */
+  }
+
+  .highlight-text-1 {
+    line-height: 105% !important;
+    font-size: 4.2rem;
+    font-weight: 600;
+    font-family: "Inter Display", "Inter Display Placeholder", sans-serif;
+  }
+  
+  .highlight-text-2 {
+    line-height: 105% !important;
+    font-size: 3.3rem;
+    font-weight: 400;
+    font-family: "Inter Display", "Inter Display Placeholder", sans-serif;
   }
 }
 
@@ -392,19 +496,19 @@ h3 {
 }
 
 .carousel-inner {
-  border-radius: 2rem; /* Aplica borde redondeado al contenedor */
+  border-radius: 1.2rem; /* Aplica borde redondeado al contenedor */
 }
 
 .carousel-item {
-  border-radius: 2rem; /* Asegura que el borde redondeado sea consistente */
+  border-radius: 1.2rem; /* Asegura que el borde redondeado sea consistente */
 }
 
 .border-radius {
-  border-radius: 2rem; /* Asegura que el borde redondeado sea consistente */
+  border-radius: 1.2rem; /* Asegura que el borde redondeado sea consistente */
 }
 
 .image-item {
-  border-radius: 2rem; /* Asegura que el borde redondeado sea consistente */
+  border-radius: 1.2rem; /* Asegura que el borde redondeado sea consistente */
 }
 
 #my-work .project-card {
@@ -415,7 +519,7 @@ h3 {
 .image-container {
   position: relative;
   overflow: hidden;
-  border-radius: 2rem;
+  border-radius: 1.2rem;
 }
 
 /* Imagen con zoom y oscurecimiento en hover */
@@ -424,13 +528,13 @@ h3 {
   height: auto;
   transition: transform 0.5s ease, filter 0.5s ease;
   display: block;
-  border-radius: 2rem;
+  border-radius: 1.2rem;
 }
 
 .image-container:hover .hover-image {
   transform: scale(1.1); /* Zoom in effect */
   filter: brightness(50%); /* Darken slightly */
-  border-radius: 2rem;
+  border-radius: 1.2rem;
 }
 
 /* overlay with a slight color on hover */
@@ -443,12 +547,12 @@ h3 {
   height: 100%;
   background-color: rgba(0, 0, 0, 0); /* Transparent initially */
   transition: background-color 0.5s ease;
-  border-radius: 2rem;
+  border-radius:1.2rem;
 }
 
 .image-container:hover::after {
   background-color: rgba(0, 0, 0, 0.3); /* Slight overlay on hover */
-  border-radius: 2rem;
+  border-radius: 1.2rem;
 }
 
 /* Go icons styles */
@@ -601,12 +705,10 @@ h3 {
 [data-bs-theme="light"] .rounded-block {
 border-radius: 20px;
 box-shadow: 10 10px 10px 20px rgba(0, 0, 0, 0.1); /* Optional shadow */
-padding: 2.2rem 0rem;
 text-align: center;      /* Center text inside the block */
 background-color: #ffffff;
 align-items: center;
 z-index: 2;
-max-width: 70%; /* Ajusta el ancho máximo del contenedor */
 }
 
 [data-bs-theme="light"] #contact-me .rounded-block h2 {
@@ -622,14 +724,30 @@ max-width: 70%; /* Ajusta el ancho máximo del contenedor */
 [data-bs-theme="dark"] .rounded-block {
   border-radius: 20px;
   background: radial-gradient(65% 62% at -22.4% -3.3%, rgb(45, 0, 61) 0%, rgb(13, 13, 28) 100%);
-  padding: 2.2em 0em;
   text-align: center;      /* Center text inside the block */
   z-index: 2;
-  max-width: 70%; /* Ajusta el ancho máximo del contenedor */
 }
 
 [data-bs-theme="dark"] #contact-me .rounded-block h2 {
   color: #f9f8f1 !important;;
+}
+
+@media (max-width: 991px) {
+  .rounded-block {
+    font-size: 4.8em;
+    line-height: 98%;
+    padding-top: 0.5rem; /* Para que aparezca la ñ */  
+    max-width: 90%;
+  }
+}
+
+@media (min-width: 992px) {
+  .rounded-block {
+    font-size: 6rem;
+    line-height: 98%;
+    padding-top: 0.5rem; /* Para que aparezca la ñ */
+    max-width: 70%;
+  }
 }
 
 /* FOOTER */
@@ -664,14 +782,26 @@ a i {
 
 .case-study h1 {
   text-align: left;
-  font-size: 4em!important;
+  font-size: 3em!important;
   font-family: "Inter Display", "Inter Display Placeholder", sans-serif;
   line-height: 100%;
   font-weight: 600;
 }
 
+@media (min-width: 769px) and (max-width: 1199px) {
+  .case-study h1 {
+    font-size: 3.5rem !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .case-study h1 {
+    font-size: 4.4rem !important;
+  }
+}
+
 .case-study {
-  padding-top: 6rem;
+  padding-top: 9rem;
 }
 
 .center-image {
@@ -719,24 +849,6 @@ a i {
 }
 
 .col-align {
-  margin-bottom: 1.5rem !important; /* Espacio entre los elementos */
-}
-
-/* Sección para más proyectos */
-#more-proyects {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-}
-
-/* Estilos para la navegación de proyectos (mobile por defecto) */
-.project-navigation {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.col-align {
   margin-bottom: 4rem; /* Espacio entre los elementos */
 }
 
@@ -744,41 +856,14 @@ a i {
   font-weight: bold;
 }
 
-/* Media query para pantallas más grandes (desktop) */
-@media (min-width: 992px) {
-  .project-navigation {
-      flex-direction: row;
-      justify-content: space-between;
-      text-align: left;
-  }
-
-  .col-align:nth-child(1) {
-      text-align: left;
-  }
-
-  .col-align:nth-child(2) {
-      text-align: right;
-  }
-}
-
-
 /* ABOUT ME - PAGE  */
 
-#about-me {
-  margin-top: 5rem;
-  margin-bottom: 2rem;
+#about-me-presentation {
+  padding-top: 10rem;
 }
 
-#about-me .customized-h2 {
-  color: transparent;
-  background-image: linear-gradient(90deg, #f0357c, #f154ff, #777dff, #497ce2, #37bdde);
-  background-repeat: no-repeat;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 4.5rem !important;
-  line-height: 90%;
+#about-me-presentation h1 {
+  font-size: 4rem!important;
 }
 
 @media (min-width: 992px) {
@@ -808,30 +893,8 @@ a i {
   width: 100%;
 }
 
-.colorful-text {
-  color: transparent;
-  background-image: linear-gradient(130deg, rgb(241, 58, 238) -9.41449%, rgb(44, 90, 255) 110.686%, rgb(100, 246, 255) 175.912%);
-  background-repeat: no-repeat;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.highlight-text-1 {
-  line-height: 105% !important;
-  font-size: 4.5rem;
-  font-weight: 600;
-  font-family: "Inter Display", "Inter Display Placeholder", sans-serif;
-}
-
-.highlight-text-2 {
-  line-height: 105% !important;
-  font-size: 3.5rem;
-  font-weight: 500;
-  font-family: "Inter Display", "Inter Display Placeholder", sans-serif;
-}
-
 /* Estilos generales para los enlaces (href) */
-a {
+a nav{
   text-decoration: none; /* Elimina el subrayado predeterminado */
   color: #23005C; /* Color del texto en tema claro */
   transition: color 0.3s ease; /* Transición suave al cambiar el color */
@@ -913,18 +976,43 @@ body[data-bs-theme="dark"] .navbar-nav .nav-link:hover {
   font-weight: 600!important;
   color: #ffffff!important;
   --bs-btn-border-color: 0px !important;
-  background: linear-gradient(79deg, #2b0aff, #ff5b8a 49%, #ff5b8a 55%, #fba64b 77%, #f99b52);
+  background: linear-gradient(79deg, #5800E5, #3B0099 25%);
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   background-size: 500%;
   text-shadow: 0px 1px 2px rgba(0, 0, 0, .5);
   align-items: center;
   text-align: center;
   line-height: 4.5%;
-  padding: 1.4rem 2rem;
+  padding: 1rem 1.5rem;
   margin: 1rem 0rem 1rem 0rem;
   --bs-btn-padding-x: 2rem !important;
   --bs-btn-padding-y: 0.8rem !important;
 } 
+
+/* Hover en botones */
+.btn-primary:hover {
+  background: linear-gradient(79deg, #5800E5, #ff5b8a 55%, #fba64b 77%, #f99b52);
+  background-size: 130%;
+}
+
+.btn-secondary {
+  font-weight: 600!important;
+  color: #5800E5!important;
+  border: 2px solid #5800E5 !important;
+  background-color: white !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  align-items: center;
+  text-align: center;
+  padding: 0.8rem 1.2rem;
+  margin: 1rem 0rem 1rem 0rem;
+  --bs-btn-padding-x: 2rem !important;
+  --bs-btn-padding-y: 0.8rem !important;
+}
+
+.btn-secondary:hover {
+  background-color:#C099FF !important;
+}
+
 
 .btn-vibe {
   padding: 0.3rem 0.5rem;
@@ -940,16 +1028,8 @@ body[data-bs-theme="dark"] .navbar-nav .nav-link:hover {
   transition: border-color 0.5s ease;
 }
 
-body[data-bs-theme="dark"] .btn-vibe {
-  border-color: #604D80!important;
-}
-
-body[data-bs-theme="light"] .btn-vibe {
-  border-color: #140033;
-}
-
 .label {
-  font-weight: 400 !important;
+  font-size: 0.7rem;
 }
 
 .icon-vibe {
@@ -977,25 +1057,45 @@ body[data-bs-theme="light"] .icon-vibe {
   }
 }
 
-/* Hover en botones */
-.btn-primary:hover {
-  background: linear-gradient(79deg, #2b0aff, #ff5b8a 49%, #ff5b8a 55%, #fba64b 77%, #f99b52);
-  background-size: 200%;
+#menu-style {
+  font-size: 0.8rem;
 }
 
-.btn-secondary {
-  font-weight: 600!important;
-  color: #2b0aff!important;
-  border: 2px solid #2b0aff !important;
-  background-color: white !important;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+/* Personalización del botón navbar-toggler */
+.navbar-toggler {
+  border: 1px solid; /* Quita el borde predeterminado */
+  border-radius: 2rem; /* Ajusta el border-radius */
+  padding: 0.5rem 0.5rem; /* Espaciado interno para centrar el texto */
+  font-weight: bold;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  display: flex;
   align-items: center;
-  text-align: center;
-  padding: 1.4rem 2rem;
-  margin: 1rem 0rem 1rem 0rem;
-  --bs-btn-padding-x: 2rem !important;
-  --bs-btn-padding-y: 0.8rem !important;
-  border-radius: 2rem !important;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+
+.navbar-toggler {
+  position: relative;
+  z-index: 1051; /* Más alto que el overlay */
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar {
+  --bs-navbar-color: none;
+}
+
+/* Oculta el ícono predeterminado de Bootstrap */
+.navbar-toggler-icon {
+  display: none;
+}
+
+/* Ajustes cuando el menú está abierto */
+.navbar-toggler[aria-expanded="true"] #menu-style {
+  content: "CLOSE"; /* Puedes cambiarlo a "CERRAR" si prefieres en español */
 }
 
 /* Estilos en modo oscuro para botones */
@@ -1014,36 +1114,39 @@ body[data-bs-theme="dark"] .btn-primary:hover {
   align-items: center; /* Centrado vertical */
 }
 
-.image-container :hover{
-  opacity: 0!important; 
-}
-
 .gif-image-wrap {
   width: 100%;
   aspect-ratio: 16 / 9;
-}
-
-.gif-image-wrap :hover{
-  opacity: 0 !important; 
+  border-radius: 1.2rem;
 }
 
 .gif-image-wrap iframe {
   width: 100%;
   height: 100%;
+  border-radius: 1.2rem;
 }
 
 .aspect-ratio-16-9 {
   aspect-ratio: 16 / 9; /* Mantiene proporción 16:9 */
+  border-radius: 1.2rem;
 }
 
 .aspect-ratio-4-3 {
   aspect-ratio: 4 / 3; /* Mantiene proporción 16:9 */
+  border-radius: 1.2rem;
 }
 
 .row-about {
   display: flex;
   flex-wrap: wrap; /* Permitir que los GIFs se ajusten a nuevas filas */
   justify-content: center;
+}
+
+.image-about-container {
+  border-radius: 1.2rem;
+  display:flex; /*Para usar align-self*/
+  justify-content: center; /* Centrado horizontal */
+  align-items: center; /* Centrado vertical */
 }
 
 /* Pantallas menores a 768px (Small) */
@@ -1060,13 +1163,13 @@ body[data-bs-theme="dark"] .btn-primary:hover {
   .small-screen-center{
     align-self: center; /*Alinea al centro*/
     width: 100% !important;
-    padding-bottom: 2rem;
+    margin-bottom: 2rem;
   }
 
   .small-screen-left{
     align-self: flex-start; /*Alinea a la izquierda*/
     width: 60% !important;
-    padding-bottom: 2rem;
+    margin-bottom: 2rem;
   }
   
   .small-screen-right{
@@ -1086,7 +1189,7 @@ body[data-bs-theme="dark"] .btn-primary:hover {
   flex-direction: column;
   align-items: center;
   width: 6rem;
-  margin: 0 0.25rem;
+  margin: 0.25rem;
   text-align: center;
 }
 
@@ -1096,7 +1199,6 @@ body[data-bs-theme="dark"] .btn-primary:hover {
   color:#816e91;
   margin: 0.5rem;
 }
-
 
 .ul-icons-line.justify-content-between {
   justify-content: space-between; /* Distributes space evenly between icons */
@@ -1117,3 +1219,96 @@ body[data-bs-theme="dark"] .btn-primary:hover {
 .problem-items {
     list-style-type: none;
 }
+
+/* Alinear el menú en el centro en desktop */
+@media (min-width: 992px) {
+  .desktop-menu {
+    flex-grow: 1;
+    justify-content: center;
+  }
+  
+  .navbar .container-fluid {
+    display: flex;
+    align-items: center;
+  }
+
+  /* Logo a la izquierda, menú al centro, botón a la derecha */
+  .navbar-brand {
+    order: 1;
+  }
+
+  .desktop-menu {
+    order: 2;
+  }
+
+  .btn-vibe {
+    order: 3;
+  }
+}
+
+/* Overlay inicial (oculto) */
+#menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #23005C; /* Fondo oscuro semitransparente */
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Overlay activo (visible) */
+#menu-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Estilos del menú en el overlay */
+.overlay-menu {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+}
+
+.overlay-menu li {
+  margin: 1rem 0;
+}
+
+.overlay-menu li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-family: "Inter Display", "Inter Display Placeholder", sans-serif;
+  transition: color 0.3s;
+  font-weight: 400;
+}
+
+.overlay-menu li a:hover {
+  color: #fba64b;
+}
+
+.hidden {
+  opacity: 0.3;
+  transform: translateY(30px); /* Pequeño desplazamiento hacia abajo */
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.underlined {
+    text-decoration: underline !important;
+    background-image: linear-gradient(130deg, rgb(241, 58, 238) -9.41449%, rgb(44, 90, 255) 110.686%, rgb(100, 246, 255) 175.912%);    
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px #5800E5;
+}
+
