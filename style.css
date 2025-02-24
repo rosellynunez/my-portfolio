@@ -2,6 +2,7 @@
 [data-bs-theme="light"] {
   --bs-body-bg: #F5F4EB; /* Fondo claro personalizado */
   --bs-body-color: #23005C; /* Color del texto en tema claro */
+  --bs-link-color-rgb: #ff5b8a;
 
   button.btn-vibe  {
     /* Estilos para el botón del menú móvil en modo claro */
@@ -25,6 +26,7 @@
 [data-bs-theme="dark"] {
   --bs-body-bg: #020005; /* Fondo oscuro personalizado */
   --bs-body-color: #F5F4EB; 
+  --bs-link-color-rgb: #ff5b8a;
 
   button.btn-vibe  {
     /* Estilos para el botón del menú móvil en modo claro */
@@ -42,6 +44,10 @@
 
   #logo {
     fill: #F5F4EB; 
+  }
+
+  body[data-bs-theme="dark"] a {
+    color: #f9f8f1!important; /* Color claro para enlaces en tema oscuro */
   }
 }
 
@@ -196,6 +202,59 @@ body {
   font-weight: 400;
 }
 
+/* Estilos generales para los enlaces (href) */
+a nav{
+  text-decoration: none; /* Elimina el subrayado predeterminado */
+  color: #23005C; /* Color del texto en tema claro */
+  transition: color 0.3s ease; /* Transición suave al cambiar el color */
+}
+
+/* Estilos de enlace en hover (href) */
+a:hover {
+  color: #fba64b; /* Cambia el color al pasar el mouse */
+}
+
+a {
+  display: inline !important;
+}
+
+/* Estilos para los enlaces dentro del navbar */
+.navbar-nav .nav-item .nav-link {
+  font-size: 1rem; /* Tamaño de fuente para los enlaces del navbar */
+  font-weight: 500;
+  font-family: "Inter Display", "Inter Display Placeholder", sans-serif; /* Tipografía específica para el navbar */
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+  padding: 2rem; /* Espaciado para los enlaces */
+  text-decoration: none !important; /* Sin subrayado */
+}
+
+.navbar-brand {
+  margin-right: 0;
+}
+
+body[data-bs-theme="dark"] .navbar-nav .nav-item .nav-link {
+  color: #f9f8f1; /* Color claro para enlaces en tema oscuro */
+}
+
+body[data-bs-theme="light"] .navbar-nav .nav-item .nav-link {
+  color: #23005C; /* Color claro para enlaces en tema oscuro */
+}
+
+/* Hover en enlaces del navbar */
+.navbar-nav .nav-item .nav-link:hover {
+  color: #fba64b; /* Cambia el color al pasar el mouse */
+  text-decoration: underline; /* Añade subrayado al hover */
+}
+
+/* Estilos en modo oscuro para el navbar */
+body[data-bs-theme="dark"] .navbar-nav .nav-link {
+  color: #f8f9fa; /* Texto claro para modo oscuro */
+}
+
+body[data-bs-theme="dark"] .navbar-nav .nav-link:hover {
+  color: #ff5b8a; /* Color de hover para el modo oscuro */
+}
+
 /* Estilos para el intro */
 #intro {
   display: flex;
@@ -341,7 +400,6 @@ h3 {
 
   .mobile-break {
     display: none; /* By default (desktop), the span behaves like an inline element (no break) */
-
   }
 }
 
@@ -410,8 +468,8 @@ h3 {
 }
 
 .highlight-text-2 {
-  line-height: 105% !important;
-  font-size: 2.2rem;
+  line-height: 115% !important;
+  font-size: 2rem;
   font-weight: 400;
   font-family: "Inter Display", "Inter Display Placeholder", sans-serif;
 }
@@ -893,84 +951,6 @@ a i {
   width: 100%;
 }
 
-/* Estilos generales para los enlaces (href) */
-a nav{
-  text-decoration: none; /* Elimina el subrayado predeterminado */
-  color: #23005C; /* Color del texto en tema claro */
-  transition: color 0.3s ease; /* Transición suave al cambiar el color */
-}
-
-/* Estilos de enlace en hover (href) */
-a:hover {
-  color: #fba64b; /* Cambia el color al pasar el mouse */
-}
-
-/* Estilos de enlace (href) externos */
-.links-external { 
-  text-decoration: underline;
-  display: flex;
-  color: #181632;
-}
-
-/* Estilos de enlace en modo oscuro */
-body[data-bs-theme="dark"] #links-external {
-  color: #f9f8f1; /* Color claro para enlaces en tema oscuro */
-}
-
-body[data-bs-theme="light"] #links-external {
-  color: #ff5b8a; /* Color de hover en modo oscuro */
-}
-
-a {
-  display: inline !important;
-}
-
-/* Estilos de enlace en modo oscuro */
-body[data-bs-theme="dark"] a {
-  color: #f9f8f1; /* Color claro para enlaces en tema oscuro */
-}
-
-body[data-bs-theme="dark"] a:hover {
-  color: #ff5b8a; /* Color de hover en modo oscuro */
-}
-
-/* Estilos para los enlaces dentro del navbar */
-.navbar-nav .nav-item .nav-link {
-  font-size: 1rem; /* Tamaño de fuente para los enlaces del navbar */
-  font-weight: 500;
-  font-family: "Inter Display", "Inter Display Placeholder", sans-serif; /* Tipografía específica para el navbar */
-  transition: color 0.3s ease, text-decoration 0.3s ease;
-  padding: 2rem; /* Espaciado para los enlaces */
-  text-decoration: none !important; /* Sin subrayado */
-}
-
-.navbar-brand {
-  margin-right: 0;
-}
-
-body[data-bs-theme="dark"] .navbar-nav .nav-item .nav-link {
-  color: #f9f8f1; /* Color claro para enlaces en tema oscuro */
-}
-
-body[data-bs-theme="light"] .navbar-nav .nav-item .nav-link {
-  color: #23005C; /* Color claro para enlaces en tema oscuro */
-}
-
-/* Hover en enlaces del navbar */
-.navbar-nav .nav-item .nav-link:hover {
-  color: #fba64b; /* Cambia el color al pasar el mouse */
-  text-decoration: underline; /* Añade subrayado al hover */
-}
-
-/* Estilos en modo oscuro para el navbar */
-body[data-bs-theme="dark"] .navbar-nav .nav-link {
-  color: #f8f9fa; /* Texto claro para modo oscuro */
-}
-
-body[data-bs-theme="dark"] .navbar-nav .nav-link:hover {
-  color: #ff5b8a; /* Color de hover para el modo oscuro */
-}
-
 /* Estilos generales para los botones */
 .btn-primary {
   font-weight: 600!important;
@@ -1306,9 +1286,47 @@ body[data-bs-theme="dark"] .btn-primary:hover {
 
 .underlined {
     text-decoration: underline !important;
-    background-image: linear-gradient(130deg, rgb(241, 58, 238) -9.41449%, rgb(44, 90, 255) 110.686%, rgb(100, 246, 255) 175.912%);    
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: 1px #5800E5;
+    -webkit-text-stroke: 0.5px #5800E5;
+    background-image: linear-gradient(130deg, rgb(241, 58, 238) -9.41449%, rgb(44, 90, 255) 110.686%, rgb(100, 246, 255) 175.912%);    
+
 }
 
+#page-my-work {
+  margin-top: 10rem;
+}
+
+/* === DESKTOP === */
+#title-about {
+  display: flex;
+}
+
+.gif-office-container {
+  position: relative;
+  width: 10rem; /* Ajusta el ancho según necesites */
+  height: 8rem; /* Set a fixed height */
+  overflow: hidden;
+}
+
+.gif-office-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 95%;
+  height: 100%;
+  object-fit: cover; /* Cubre todo el contenedor */
+  border: none;
+}
+
+@media (max-width: 768px) {
+  .gif-office-container {
+    width: 10rem; /* Ajusta el ancho según necesites */
+    height: 8rem; /* Set a fixed height */
+    align-items: center;
+  }
+
+  #title-about {
+  flex-direction: column;
+  }
+} 
