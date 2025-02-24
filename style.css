@@ -1286,12 +1286,13 @@ body[data-bs-theme="dark"] .btn-primary:hover {
 
 .underlined {
     text-decoration: underline !important;
+    background-clip: text;
     -webkit-background-clip: text;
+    color: transparent;
     -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: 0.5px #5800E5;
+    -webkit-text-stroke: 0.5px #5800E5; /* For WebKit browsers (Chrome, Safari) */
     background-image: linear-gradient(130deg, rgb(241, 58, 238) -9.41449%, rgb(44, 90, 255) 110.686%, rgb(100, 246, 255) 175.912%);    
-
-}
+} 
 
 #page-my-work {
   margin-top: 10rem;
