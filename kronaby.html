@@ -10,7 +10,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-        <!-- Google Fonts -->
+        <!-- Google Fonts (usa display=swap para cargar texto antes)-->
         <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
         <!-- Bootstrap y Bootstrap Icons -->
@@ -20,17 +20,37 @@
         <!-- Local stylesheet -->
         <link rel="stylesheet" href="style.css"/>
 
-        <!-- Typed.js (manteniendo sin defer para ejecución inmediata) -->
+        <!-- 🌗 Carga rápida del tema guardado -->
+        <script>
+          (function() {
+            const userTheme = localStorage.getItem('theme');
+            if (userTheme) {
+              document.documentElement.setAttribute('data-bs-theme', userTheme);
+            }
+          })();
+        </script>
+
+        <!-- ⚡ Typed.js carga rápida (sin async ni defer) -->
         <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-            
-        <!-- Bootstrap JS with defer for non-blocking -->
+
+        <!-- ✅ Bootstrap JS con defer -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
 
-        <!-- Twemoji (carga asincrónica) -->
+        <!-- ✅ Twemoji cargado diferido -->
         <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous" defer></script>
 
-        <!-- Script para cambiar el tema -->
+        <!-- ✅ Tu script principal con defer -->
         <script src="js.js" defer></script>
+
+        <!-- ✅ Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y1KMG7E11J"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-Y1KMG7E11J');
+        </script>
       
     </head>
 
@@ -151,17 +171,17 @@
                 <section id="ux-decisions" class="pb-5 mb-3">
                     <div class="row align-items-start">
                             <h3 class="col-lg-4 h3-pag-portfolio">1. UX Decisions at Kronaby</h3>
-                            <div class="col-lg-8 no-padding">
-                                <p>When I embarked on this project, I understood that while a UI redesign was possible, it was important to consider the existing app's design and ensure alignment with the brand guidelines. Also, the Kronaby webpage needed to be integrated into the Festina ecosystem. This meant adhering to certain constraints, such as maintaining consistency in the product grid and product pages across all brands due to technical limitations.<br><br>
-                                Therefore, my focus was on preserving what was working effectively while  improving areas that were required.<br><br> Unfortunately, the original webpage lacked integration with Google Analytics or any other performance tracking tools. The only available data indicated a lack of online purchases, prompting my initial steps to focus on:</p>
+                            <div class="col-lg-8">
+                                <p class="lead">Kicking off this project, I knew the Kronaby website needed a refresh and a strategic overhaul to drive business results.  It also had to fit within Festina's existing digital ecosystem (which meant some design constraints, especially for product grids and pages). My focus was on improving what needed it while keeping what worked. Since the old site lacked any tracking, I started by:</p><br>
                                 <ul>
                                     <li>
-                                    Investigation: Interviews with users provided insights into their expectations, and on the other hand, interviews with stakeholders and the team that was working with this brans since it was born. This both points of view helped me to align the website with what mattered most.</li><br>
+                                        <p class="lead">Talking to users, stakeholders, and the Kronaby team to understand what was most important for both users and the business.</p>
+                                    </li>
                                     <li> 
-                                    Benchmarking: We benchmarked competitor websites to gather ideas and ensure our ecommerce strategy was optimized for user engagement and conversion.
-                                    </li><br>
+                                        <p class="lead">Checking out competitor sites to get ideas and optimize our e-commerce strategy for engagement and conversions.</p>
+                                    </li>
                                     <li> 
-                                    Simplifying content structure: One major design improvement was simplifying the site's typography and content hierarchy. The previous design had eight different heading styles, twelve subtitles, and five paragraph styles. I reduced them on number, creating a more cohesive and readable experience without compromising on brand expression.
+                                        <p class="lead">The site's old content structure was a mess, which I simplified for a much better user experience and a stronger sales funnel. Also, the site had a crazy number of heading and paragraph styles which I streamlined for a cleaner and more readable experience.</p>
                                     </li>
                                 </ul>
                             </div>
@@ -171,25 +191,28 @@
                 <section id="ux-decisions" class="pb-5 mb-3">
                     <div class="row align-items-start">
                             <h3 class="col-lg-4 h3-pag-portfolio">2. High-level problems</h3>
-                            <div class="col-lg-8 no-padding">
-                                <p>After the investigation, the main problems I found were:</p>
-                                <ul class="problem-items">
-                                    <li> ❌ Difficult navigation.</li>
-                                    <li> ❌ Unorganized content.</li>
-                                    <li> ❌ Too much information per page.</li>
-                                    <li> ❌ Lack of knowledge about what is a hibrid watch.</li>
-                                    <li> ❌ Lack of SEO strategy.</li>
-                                </ul>
-                            </div>
+                            <div class="col-lg-8 colum-beside rectangle">
+                                <div>
+                                    <p class="lead">After the investigation, the main problems I found were:</p>
+                                    <ul class="problem-items">
+                                        <li><p class="lead"> ❌ Difficult navigation.</p></li>
+                                        <li><p class="lead"> ❌ Unorganized content.</p></li>
+                                        <li><p class="lead"> ❌ Too much information per page.</p></li>
+                                        <li> <p class="lead"> ❌ Lack of knowledge about what is a hibrid watch.</p></li>
+                                        <li> <p class="lead"> ❌ Lack of SEO strategy.</p></li>
+                                    </ul>
+                                </div>
+                                <div class="emoji-meh-container">
+                                    <span class="emoji-meh">🫤</span>
+                                </div>
                     </div>
                 </section> 
 
                 <section id="hypothesis-findings" class="pb-5 mb-3">
                         <div class="row align-items-start">
                                 <h3 class="col-lg-4 h3-pag-portfolio">3. Hypothesis and Findings</h3>
-                                <div class="col-lg-8 no-padding">
-                                    <p>If we provide users with quick navigation on the homepage and expose high-value features, we can improve user engagement. By presenting  content in a less overwhelming manner and explainining the meaning and features of these watches, we can boost user engagement. <br>
-                                    On the other hand, it was important to work in a seo strategy align with the content. This way, we could revitalize a site that was previously underperforming and inactive, generating minimal revenue.
+                                <div class="col-lg-8">
+                                    <p class="lead">➡️ User engagement can be boosted by streamlining homepage navigation and showcasing high-value features. Clear content and watch explanations will further enhance engagement. Finally, a content-driven SEO strategy will revitalize the site's overall performance.
                                     </p>
                                 </div>
                         </div>
@@ -198,8 +221,8 @@
                 <section id="hypothesis-findings" class="pb-5 mb-3">
                     <div class="row align-items-start">
                             <h3 class="col-lg-4 h3-pag-portfolio">4. Structure</h3>
-                            <div class="col-lg-8 no-padding">
-                                <p>I began with low-fidelity wireframes to establish the key user flows. The focus was on explain the Kronaby's hybrid watches are and creating a seamless way to process to see the watches features. The initial wireframes explored the structure of the home page, product page, and the landing pages. Once the wireframes were validated, we moved to high-fidelity designs.
+                            <div class="col-lg-8">
+                                <p class="lead">I used low-fidelity wireframes to define the user flows, focusing on explaining Kronaby's hybrid watches and showcasing their features. These wireframes covered the homepage and landing pages because of the product and the carousel pages had to follow the Festina webpage.  Once these were validated, I proceeded with high-fidelity designs.
                                 </p>
                             </div>
                     </div>
@@ -209,15 +232,15 @@
 
                     <div class="row align-items-start pb-5">
                             <h3 class="col-lg-4 h3-pag-portfolio">5. UI Decisions: Colors, Typography, and Aesthetics</h3>
-                            <div class="col-lg-8 no-padding">
-                                <p>The color scheme was carefully crafted to reflect Kronaby's premium and modern identity. Neutral tones were paired with accent colors that highlighted the brand's innovative character.<br><br>For typography, the goal was to achieve an elegant yet readable style that complemented the overall aesthetic without overwhelming users. While the Kronaby app originally used Avenir Next for titles, buttons, and headers, and Minion for body text, these fonts were not part of Google Fonts and posed performance challenges. To address this, I chose DM Sans—a minimalist font that embodies Kronaby's refined personality while maintaining clarity and readability.<br><br></p>
+                            <div class="col-lg-8">
+                                <p class="lead">The Kronaby app used Avenir Next and Minion for its typography, but these fonts weren't available through Google Fonts and caused performance issues.  My solution was DM Sans, a clean and minimalist font that reflects Kronaby's style and maintains readability.<br><br>The color scheme was crafted to reflect Kronaby's premium and modern identity. Neutral tones were paired with accent colors that highlighted the brand's innovative character.<br><br></p>
                             </div>
                     </div>
 
                     <div class="row align-items-center pb-5">
                         <div class="col-lg-4">
-                            <p>
-                            The color palette was central to the design's success.  The primary palette, anchored by mint-cool-500 (#417178), established a sophisticated foundation.  The accent color, brown-500 (#785954), was selected as its complement.  A secondary palette, derived from the primary colors by adjusting their saturation and luminosity, was developed to provide visual interest and variety.<br>In addition to these, semantic colors played an important role.  The final palette is both elegant and effective.
+                            <p class="lead">
+                            Kronaby's color palette is built around a sophisticated mint green (#417178) and a complementary brown (#785954).  A secondary palette, derived from the primary colors by adjusting their saturation and luminosity, was developed to provide visual interest and variety.<br>In addition to these, semantic colors played an important role. 
                             </p>
                         </div>
 
@@ -228,7 +251,7 @@
 
                     <div class="row align-items-center pb-5">
                         <div class="col-lg-4">
-                                <p>
+                                <p class="lead">
                                 The grill page uses its primary color mint-cool-100 on the back layer, and the primary mint-cool-900 for typography and iconography. A secondary color brown-vivid-500 is applied as an accent to the like iteractive icon.
                                 </p>
                         </div>
@@ -244,7 +267,7 @@
                     <div class="row align-items-start">
                             <h3 class="col-lg-4 h3-pag-portfolio">6. Collaboration with Teams</h3>
                             <div class="col-lg-8 no-padding">
-                                <p>
+                                <p class="lead">
                                     I collaborated with the marketing manager in Spain and Swedish strategic team  (including the Kronaby app team) to bring the brand to life online.  Bi-weekly meetings kept us aligned and the project moving forward.
                                 </p>
                             </div>
@@ -257,9 +280,9 @@
 
                             <div class="col-lg-4 ">
                                 <h3 class="h3-pag-portfolio">7. Adherence to Bootstrap Guidelines and components</h3>
-                                <p>
-                                    We kept the Kronaby redesign within the Bootstrap framework, aligning with the future move to Tailwind CSS across the Festina ecosystem. This helped maintain consistency and made it easier to integrate with other Festina brands. To save time and effort, we reused components whenever possible. We only created new ones when absolutely necessary, always thinking about how they could be useful for other projects within the Festina family.<br>
-                                    Since Kronaby offers hybrid connected watches, which can be a bit confusing for some, we needed a clear way to explain their features. There wasn't an existing component that could do this, so I designed a new one specifically for that purpose. I believe this component will be valuable for other Festina brands as well, especially as they start to incorporate more connected features into their watches.
+                                <p class="lead">
+                                    The Kronaby redesign used Bootstrap for consistency and future compatibility with Festina's planned Tailwind CSS migration.<br>
+                                    Component reuse was a priority, creating new ones only when essential and designing them to be scalable across other Festina projects.  To clearly explain Kronaby's hybrid watch features, I designed a new component that I believe will be a valuable asset for other Festina brands as they add more features to their products.
                                 </p>
                             </div>
 

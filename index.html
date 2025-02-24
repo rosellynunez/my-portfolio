@@ -10,7 +10,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-        <!-- Google Fonts -->
+        <!-- Google Fonts (usa display=swap para cargar texto antes)-->
         <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
         <!-- Bootstrap y Bootstrap Icons -->
@@ -20,19 +20,29 @@
         <!-- Local stylesheet -->
         <link rel="stylesheet" href="style.css"/>
 
-        <!-- Typed.js (manteniendo sin defer para ejecución inmediata) -->
+        <!-- 🌗 Carga rápida del tema guardado -->
+        <script>
+          (function() {
+            const userTheme = localStorage.getItem('theme');
+            if (userTheme) {
+              document.documentElement.setAttribute('data-bs-theme', userTheme);
+            }
+          })();
+        </script>
+
+        <!-- ⚡ Typed.js carga rápida (sin async ni defer) -->
         <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-            
-        <!-- Bootstrap JS with defer for non-blocking -->
+
+        <!-- ✅ Bootstrap JS con defer -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
 
-        <!-- Twemoji (carga asincrónica) -->
+        <!-- ✅ Twemoji cargado diferido -->
         <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous" defer></script>
 
-        <!-- Script para cambiar el tema -->
+        <!-- ✅ Tu script principal con defer -->
         <script src="js.js" defer></script>
 
-        <!-- Google tag (gtag.js) -->
+        <!-- ✅ Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y1KMG7E11J"></script>
         <script>
           window.dataLayer = window.dataLayer || [];

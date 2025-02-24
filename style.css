@@ -872,14 +872,6 @@ a i {
   text-align: center;
 }
 
-/* Remove padding and margins from the image container */
-.no-padding {
-    padding-left: 0;
-    padding-right: 0;
-    margin-left: 0;
-    margin-right: 0;
-}
-
 /* Make sure the image covers the full width */
 .text-image img {
     height: auto;
@@ -1328,6 +1320,34 @@ body[data-bs-theme="dark"] .btn-primary:hover {
   }
 
   #title-about {
-  flex-direction: column;
+    flex-direction: column;
+  }
+
+  .colum-beside {
+    flex-direction: column;
   }
 } 
+
+.colum-beside {
+  display: flex;
+}
+
+.emoji-meh {
+  font-size: 4rem; /* Ajusta el tamaño según necesites */
+}
+
+.rectangle {
+  background-color: rgb(96, 77, 128, 0.2);
+  padding: 2rem;
+  border-radius: 0.8rem;
+  display: flex; /* Enable Flexbox for the rectangle */
+  justify-content: space-between; /* Distribute space between content and emoji */
+}
+
+.emoji-meh-container {
+  display: flex; /* Enable Flexbox for the emoji container */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  margin-top: 1rem; /* Add some space above the emoji */
+
+}

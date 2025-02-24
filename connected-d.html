@@ -10,7 +10,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-        <!-- Google Fonts -->
+        <!-- Google Fonts (usa display=swap para cargar texto antes)-->
         <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
         <!-- Bootstrap y Bootstrap Icons -->
@@ -20,17 +20,37 @@
         <!-- Local stylesheet -->
         <link rel="stylesheet" href="style.css"/>
 
-        <!-- Typed.js (manteniendo sin defer para ejecución inmediata) -->
+        <!-- 🌗 Carga rápida del tema guardado -->
+        <script>
+          (function() {
+            const userTheme = localStorage.getItem('theme');
+            if (userTheme) {
+              document.documentElement.setAttribute('data-bs-theme', userTheme);
+            }
+          })();
+        </script>
+
+        <!-- ⚡ Typed.js carga rápida (sin async ni defer) -->
         <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-            
-        <!-- Bootstrap JS with defer for non-blocking -->
+
+        <!-- ✅ Bootstrap JS con defer -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
 
-        <!-- Twemoji (carga asincrónica) -->
+        <!-- ✅ Twemoji cargado diferido -->
         <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous" defer></script>
 
-        <!-- Script para cambiar el tema -->
+        <!-- ✅ Tu script principal con defer -->
         <script src="js.js" defer></script>
+
+        <!-- ✅ Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y1KMG7E11J"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-Y1KMG7E11J');
+        </script>
       
     </head>
 
@@ -100,7 +120,6 @@
                     <div class="case-study">
                         <div class="col-sm-12 col-md-10 col-lg-8">
                             <h1 class="pb-3">Festina and Lotus Connected D Landing Pages Design</h1>
-                            <p class="lead pb-3">Festina Group is a leading name in the watchmaking world with a long history and a global reach spanning over 90 countries. This project is due to Festina Group wanted to introduce two New Connected Watch Models: the Festina Connected D and the Lotus Hybrid Connected.</p>
                         </div>
                     </div>
 
@@ -121,7 +140,7 @@
 
                         <div class="col-lg-8 lead">
                                 <p>
-                                    The Festina Connected D watch and the Lotus Connected D watch both belong to their respective brand's connected watch collections, each with its unique style and audience appeal. The Festina Connected D is part of a more classic and premium collection, while the Lotus Hybrid Connected targets a younger demographic with a more modern design. These landing pages were integral to the introduction to these two new collections.  
+                                    Festina and Lotus, two distinct brands under the Festina Group, each launched new connected watch collections.  Festina's classic Connected D targeted a different audience than Lotus's modern, youthful Hybrid Connected.  The challenge was to create landing pages that reflected each brand's unique style and target demographic while maintaining a cohesive user experience.  A unified page structure was key to meeting tight deadlines and ensuring efficient development.
                                 </p>    
                         <div class="links-container">
                             <a href="https://festina.com/en-GB/festina-connected-d-watch" target="_blank" class="links-external pb-1">Go Festina project alive
@@ -143,8 +162,7 @@
 
                         <div class="col-lg-8 lead">
                             <p>
-                                I was tasked with creating landing pages for two distinct brands under the Festina Group umbrella: Festina and Lotus. These two brands have completely different styles and target audiences, but both required cohesive yet unique digital experiences that reflected their individual identities. Despite the differences in branding, the landing pages needed to follow a unified structure. This decision helped us meet the deadline while ensuring that each page respected the distinct branding.<br>
-                                Working with the Spain-based marketing team and the strategy team in Sweden, I was responsible for the UI design and also collaborated closely with the development team, which maintained the pages using Bootstrap.
+                                I handled the UI design for both landing pages, collaborating with the development team, the marketing team in Spain, and the strategy team in Sweden. This close partnership ensured a cohesive user experience and integration with the Festina platform.
                             </p>
                         </div>
                     </div>
@@ -163,8 +181,9 @@
                                 <h3 class="h3-pag-portfolio">1. Strategic Design for Connected D</h3>
                             </div>
                             <div class="col-lg-8 no-padding">
-                                <p>
-                                To design the Festina Connected D page, the focus was on aligning Festina's core values—Quality, Tradition, and Technology—with the product's modern features. The goal was to balance timeless elegance with smart functionality, crafting a user-friendly design that highlights the watch's classic appeal and tech innovations. This involved creating a structure that could also showcase the benefits of the Lotus Connected D, ensuring a consistent visual and communication guideline across both products. Despite time constraints, we successfully emphasized the watches as smarter tools for daily life, showcasing features like health monitoring, exercise tracking, and ease of use, while maintaining Festina's hallmark elegance.
+                                <p class="lead">
+                                The Festina Connected D page design focused on blending the brand's core values (Quality, Tradition, Technology) with the watch's modern features.  The goal: a user-friendly design that balances timeless elegance and smart functionality.
+                                The page structure was designed to also showcase the Lotus Connected D, ensuring a consistent user journey across both products. Despite tight deadlines, we successfully presented the watches as smart tools for daily life, highlighting features like health monitoring and activity tracking, all while maintaining Festina's signature elegance.
                                 </p>
                             </div>
                         </div>
@@ -193,8 +212,8 @@
 
                             </div>
                             <div class="col-lg-8 no-padding">
-                                <p>
-                                    For the Lotus Connected D page, the concept revolved around modernity and elegance—key values deeply tied to the Lotus brand. In addition, it emphasized cutting-edge technology, seamlessly integrated to enhance the user's daily life. The watch combines advanced hybrid features, such as smart notifications and activity tracking, with a sleek design, making it a versatile companion for various scenarios, from professional settings to sports activities. This approach reinforces its adaptability and functionality across multiple contexts, ensuring that style and innovation go hand in hand.
+                                <p class="lead">
+                                    The Lotus Connected D landing page concept centered around the watch's versatilitY and how its cutting-edge technology fits seamlessly into users' lives. The watch's advanced hybrid features, including smart notifications and activity tracking, are paired with a sleek design, making it a versatile accessory for everything from work to workouts.
                                 </p>
                             </div>
                         </div>
