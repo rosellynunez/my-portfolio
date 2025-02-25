@@ -187,7 +187,8 @@ font-weight: 700;
 
 body {
   font-family: "Inter Display", "Inter Display Placeholder", sans-serif;
-  font-size: 1rem;
+  font-size: 1.25rem;
+  font-weight: 300;
 }
 
 .subtitle-1 {
