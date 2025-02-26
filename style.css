@@ -192,7 +192,7 @@ body {
 }
 
 .subtitle-1 {
-  font-size: 1.5em;
+  font-size: 3rem;
   font-family: "Inter Display", "Inter Display Placeholder", sans-serif;
 }
 
@@ -718,10 +718,6 @@ h3 {
   align-items: center;
 }
 
-#about h3 {
-  font-weight: 300;
-}
-
 #about img {
   display: block; 
   margin: auto;
@@ -747,12 +743,16 @@ h3 {
 }
 
 #contact-me {
-  font-size: 1em;
   display: flex;
   justify-content: center; /* Center horizontally with display:flex */
   align-items: center;     /* Center vertically with display:flex */
   position: relative; /* El contenedor principal tiene posición relativa */
   overflow: hidden; /* Para evitar que los gradientes desborden */
+  text-align: center;
+}
+
+#contact-me .subtitle-1 {
+  line-height: 103%;
 }
 
 /* Modo claro */
@@ -793,19 +793,7 @@ z-index: 2;
 
 @media (max-width: 991px) {
   .rounded-block {
-    font-size: 4.8em;
-    line-height: 98%;
-    padding-top: 0.5rem; /* Para que aparezca la ñ */  
     max-width: 90%;
-  }
-}
-
-@media (min-width: 992px) {
-  .rounded-block {
-    font-size: 6rem;
-    line-height: 98%;
-    padding-top: 0.5rem; /* Para que aparezca la ñ */
-    max-width: 70%;
   }
 }
 
