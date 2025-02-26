@@ -100,7 +100,7 @@
 
   .navbar-nav .nav-item .nav-link {
     font-size: 2.6rem;
-    font-family: "Libre Caslon Text", serif;
+    font-family:  "Inter Display", "Inter Display Placeholder", sans-serif;
     text-decoration: none !important;
   }
 
@@ -470,7 +470,7 @@ h3 {
 
 .highlight-text-2 {
   line-height: 115% !important;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 400;
   font-family: "Inter Display", "Inter Display Placeholder", sans-serif;
 }
@@ -485,7 +485,7 @@ h3 {
   
   .highlight-text-2 {
     line-height: 105% !important;
-    font-size: 3.3rem;
+    font-size: 2rem;
     font-weight: 400;
     font-family: "Inter Display", "Inter Display Placeholder", sans-serif;
   }
@@ -507,7 +507,7 @@ h3 {
   
   .highlight-text-2 {
     line-height: 105% !important;
-    font-size: 3.3rem;
+    font-size: 2.6rem;
     font-weight: 400;
     font-family: "Inter Display", "Inter Display Placeholder", sans-serif;
   }
@@ -817,6 +817,7 @@ footer {
   text-align: center;
   clear: both;
   padding: 1em;
+  font-size: 0.9rem;
 }
 
 footer p {
@@ -886,10 +887,7 @@ a i {
 }
 
 /* More proyects */
-#more-proyects {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-}
+
 
 /* Estilos para la navegación de proyectos (mobile por defecto) */
 .project-navigation {
@@ -897,14 +895,6 @@ a i {
   flex-direction: column;
   align-items: center;
   text-align: center;
-}
-
-.col-align {
-  margin-bottom: 4rem; /* Espacio entre los elementos */
-}
-
-#more-proyects .subtitle-1 {
-  font-weight: bold;
 }
 
 /* ABOUT ME - PAGE  */
@@ -1350,5 +1340,18 @@ body[data-bs-theme="dark"] .btn-primary:hover {
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
   margin-top: 1rem; /* Add some space above the emoji */
+}
 
+#next-project {
+  text-align: center;
+  padding: 4rem 0rem;
+}
+
+#next-project h2{
+  text-align: center;
+  padding: 2rem;
+}
+
+#next-project a {
+  margin: 2rem;
 }
