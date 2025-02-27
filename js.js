@@ -108,17 +108,39 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 
+// for home
 document.addEventListener("DOMContentLoaded", function () {
   const elements = document.querySelectorAll(".fade-in");
 
   const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
+    entries.forEach((entry, index) => {
       if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
+        setTimeout(() => {
+          entry.target.classList.add("visible");
+        }, index * 200); // Retrasa cada línea 200ms para un efecto escalonado
       }
     });
-  }, { threshold: 0.9 }); // Se activa cuando el 30% del elemento es visible
+  }, { threshold: 0.3 }); // Se activa cuando el 30% del elemento es visible
 
   elements.forEach((el) => observer.observe(el));
+});
+
+
+// for about me page
+document.addEventListener("DOMContentLoaded", function () {
+  const highlights = document.querySelectorAll(".spotlight");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible"); // Agrega la clase cuando entra en la vista
+        }
+      });
+    },
+    { threshold: 0.9 } // Se activa cuando el 90% del elemento está visible
+  );
+
+  highlights.forEach((el) => observer.observe(el));
 });
 
