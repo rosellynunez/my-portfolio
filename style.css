@@ -187,7 +187,7 @@ font-weight: 700;
 
 body {
   font-family: "Inter Display", "Inter Display Placeholder", sans-serif;
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   font-weight: 300;
 }
 
@@ -1379,7 +1379,7 @@ body[data-bs-theme="dark"] .btn-primary:hover {
 }
 
 .font-weight-bold {
-  font-weight: 700;
+  font-weight: 600;
 }
 
 
