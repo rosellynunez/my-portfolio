@@ -293,7 +293,7 @@ body[data-bs-theme="dark"] .navbar-nav .nav-link:hover {
 
 h2 {
   text-align: left;
-  font-size: 3rem!important;
+  font-size: 3rem;
   font-family: "Inter Display", "Inter Display Placeholder", sans-serif;
 }
 
@@ -834,6 +834,10 @@ a i {
   font-weight: 600;
 }
 
+.h2-pag-portfolio {
+  font-size: 2rem;
+}
+
 @media (min-width: 769px) and (max-width: 1199px) {
   .case-study h1 {
     font-size: 3.5rem !important;
@@ -844,6 +848,10 @@ a i {
   .case-study h1 {
     font-size: 4.4rem !important;
   }
+
+  .h2-pag-portfolio {
+    font-size: 2.4rem;
+  }
 }
 
 .case-study {
@@ -853,6 +861,10 @@ a i {
 .center-image {
   display: flex; 
   justify-content: center; 
+}
+
+.text-align {
+  text-align: center;
 }
 
 /* Icon arrow alineado */
@@ -866,10 +878,6 @@ a i {
     object-fit: cover;
     width: 880px;
     height: auto;
-}
-
-.h3-pag-portfolio {
-  font-size: 2.4rem;
 }
 
 /* More proyects */
@@ -1169,6 +1177,15 @@ body[data-bs-theme="dark"] .btn-primary:hover {
     list-style-type: none;
 }
 
+ul li {
+  margin-bottom: 0.6rem; /* Ajusta el valor según el espacio que desees */
+}
+
+/* Si no quieres margen en el último elemento, puedes eliminarlo así: */
+ul li:last-child {
+  margin-bottom: 0;
+}
+
 /* Alinear el menú en el centro en desktop */
 @media (min-width: 992px) {
   .desktop-menu {
@@ -1382,4 +1399,19 @@ body[data-bs-theme="dark"] .btn-primary:hover {
   font-weight: 600;
 }
 
+.alert-info {
+  border: 1px solid #4dd0e1; /* Un borde azul más oscuro */
+  padding: 1rem;
+  border-radius: 0.25rem;
+}
 
+.callout-info-raya {
+  border-left: 4px solid #4dd0e1; /* Ajusta el grosor y el color según tus preferencias */
+  padding-left: 1rem; /* Agrega un poco de espacio entre la raya y el texto */
+  /* ... otros estilos del callout ... */
+}
+
+.fs-6 {
+  font-size: 1rem !important;
+  margin-bottom: 0;
+}

@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Roselly Nuñez's Portfolio</title>
+        <link rel="icon" type="image/png" href="images/favicon.png"/>
+
+        <!-- Preconnect for faster Google Fonts loading -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <!-- Google Fonts (usa display=swap para cargar texto antes)-->
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+        <!-- Bootstrap y Bootstrap Icons -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" />
+
+        <!-- Local stylesheet -->
+        <link rel="stylesheet" href="style.css"/>
+
+        <!-- 🌗 Carga rápida del tema guardado -->
+        <script>
+          (function() {
+            const userTheme = localStorage.getItem('theme');
+            if (userTheme) {
+              document.documentElement.setAttribute('data-bs-theme', userTheme);
+            }
+          })();
+        </script>
+
+        <!-- ⚡ Typed.js carga rápida (sin async ni defer) -->
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+        <!-- ✅ Bootstrap JS con defer -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+
+        <!-- ✅ Twemoji cargado diferido -->
+        <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous" defer></script>
+
+        <!-- ✅ Tu script principal con defer -->
+        <script src="js.js" defer></script>
+
+        <!-- ✅ Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y1KMG7E11J"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-Y1KMG7E11J');
+        </script>
+      
+    </head>
+
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg bg-transparent fixed-top">
+                <div class="container-fluid">
+            
+                <!-- Logo -->
+                <a class="navbar-brand" href="index.html">
+                    <svg id="logo" width="150" height="50" viewBox="0 0 39.8 24" xmlns="http://www.w3.org/2000/svg">
+                    <path class="st0" d="M12.5,1v5.2c-3.4,0-6.1,2.7-6.1,6.1v10.9H1.1V1.1h5.2v1.7c1.8-1.1,3.9-1.8,6.1-1.8Z" fill="currentColor"/>
+                    <path class="st0" d="M20.3,23.1v-10.8c0-3.4,2.8-6.1,6.1-6.1h.7c2.4,0,4.4,1.4,5.5,3.3.4.8.6,1.7.7,2.7,0,0,0,0,0,0v5.3c0,0,0,5.5,0,5.5h5.1v-9.5c0-2-.3-3.8-.9-5.4-.2-.5-.4-1-.6-1.4-1-1.9-2.4-3.4-4.2-4.3-1.8-1-3.8-1.5-6-1.5s-3.1.3-4.5.9h0c-.7.3-1.4.6-2,1v-1.7h-5.2v22h5.2Z" 
+                    fill="currentColor"/>
+                    </svg>
+                </a>
+
+                <!-- Botón para cambiar entre modo claro y oscuro -->
+                <button onclick="cambiarTema()" class="btn-vibe order-2 order-sm-1 order-lg-3">
+                    <span class="label">Change the Vibe</span>
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                    width="16" 
+                    height="16" 
+                    fill="#fab04e" 
+                    class="icon-vibe" 
+                    viewBox="0 0 16 16">
+                        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16M2.31 5.243A1 1 0 0 1 3.28 4H6a1 1 0 0 1 1 1v.116A4.2 4.2 0 0 1 8 5c.35 0 .69.04 1 .116V5a1 1 0 0 1 1-1h2.72a1 1 0 0 1 .97 1.243l-.311 1.242A2 2 0 0 1 11.439 8H11a2 2 0 0 1-1.994-1.839A3 3 0 0 0 8 6c-.393 0-.74.064-1.006.161A2 2 0 0 1 5 8h-.438a2 2 0 0 1-1.94-1.515zM4.969 9.75A3.5 3.5 0 0 0 8 11.5a3.5 3.5 0 0 0 3.032-1.75.5.5 0 1 1 .866.5A4.5 4.5 0 0 1 8 12.5a4.5 4.5 0 0 1-3.898-2.25.5.5 0 0 1 .866-.5z"/>
+                    </svg>
+                </button>  
+                
+                <!-- Botón navbar-toggler visible sólo en mobile -->
+                <button 
+                    id="menu-mobile-color"
+                    class="navbar-toggler order-3" 
+                    aria-controls="navbarSupportedContent" 
+                    aria-expanded="false" 
+                    aria-label="Toggle navigation">
+                    <span id="menu-style">MENU</span>
+                </button>  
+
+                <!-- Menú colapsable en pantallas pequeñas, visible en pantallas grandes -->
+                <div class="collapse navbar-collapse desktop-menu order-lg-2" id="navbarSupportedContent">
+
+                    <ul class="navbar-nav text-center mx-auto">
+                        <li class="nav-item">
+                          <a class="nav-link active" href="my-work.html">My Work</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link active" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link active" href="images/cv/CV_Roselly_Nunez_UX_UI_Designer-en.pdf" target="_blank" >Resume<i class="bi bi-box-arrow-up-right ms-2"></i></a>
+                        </li>
+                    </ul>
+
+                </div>
+
+                </div>
+            </nav>
+        </header>
+
+        <main>
+        
+            <article id="connected-d-study-case" class="container">
+
+                <section>
+                    <div class="case-study">
+                        <div class="col-sm-12 col-md-10 col-lg-8">
+                            <h1 class="pb-3">Case Study: Redesigning Transactional Emails & Newsletters</h1>
+                        </div>
+                    </div>
+
+                    <div class="pb-5">
+                        <img src="images/connected/hero-image-connected.jpg" alt="About Image" class="border-radius hero-image">
+                    </div>
+                </section>
+
+<!-- Case study -->
+
+                <section id="info-project" class="pb-5">
+
+                    <div class="row">
+
+                        <div class="col-lg-4">
+                                <h2 class="small-title text-uppercase">Project Overview</h2>
+                        </div>
+
+                        <div class="col-lg-8 lead">
+                            <p>
+                                The transactional emails and newsletters for Festina Group had several UX/UI issues: they lacked accessibility standards, had poor visual hierarchy, and were inconsistent across the different brands under the company. Additionally, they were not optimized for dark mode and had semantic coding issues.
+                            </p>     
+                        </div>
+
+                    <div class="row mt-5">
+
+                        <div class="col-lg-4">
+                            <h2 class="small-title text-uppercase">My Role & Contributions</h2>
+                        </div>
+
+                        <div class="col-lg-8 lead">
+                            <p>
+                                As the sole designer on the team, I led the redesign of transactional emails  transactional emails (purchase confirmations, password resets, etc.) and newsletters for five brands. While the implementation in Mailjet was handled by the development team, my role included:
+                            </p>
+                            <ul>
+                                <li>Modular Design (Figma) → Created scalable templates.</li>
+                                <li>Dev Collaboration (Mailjet) → Worked closely with developers to ensure implementation and visual fidelity.</li>
+                                <li>Multi-Device Testing → Ensured consistency across desktop, iOS, and Android.</li>
+                                <li>Email Compatibility Research → Tested leading Spanish & French email providers.</li>
+                                <li>Dark Mode Adaptation → Designed for optimal readability.</li>
+                                <li>Accessibility Improvements → Optimized for WCAG standards.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </section>
+
+                <section class="pb-5">
+                    <img src="images/connected/hero-5.jpg" class="img-fluid border-radius" alt="About Image">
+                </section>
+
+                <section>
+                    <article class="text-image pb-5">
+
+                        <div class="row align-items-start pb-3">
+                            <div class="row align-items-start">
+
+                                <h2 class="col-lg-4 h2-pag-portfolio">Analyzing the Previous Design</h2>
+                                <div class="col-lg-8 colum-beside rectangle">
+
+                                    <div>
+                                        <p>Before the redesign, the emails had the following issues:</p>
+                                        <ul>
+                                            <li><span class="font-weight-bold">Poor accessibility</span> → Low contrast, small typography, and non-optimized structure for screen readers.</li>
+                                            <li><span class="font-weight-bold">Weak visual hierarchy</span> → Key elements like CTAs and messages were not easily noticeable.</li>
+                                            <li><span class="font-weight-bold">Inconsistent branding</span> → Each brand had a different structure, leading to confusion.</li>
+                                            <li><span class="font-weight-bold">No dark mode support</span> → The design wasn't optimized for dark mode, affecting readability.</li>
+                                            <li><span class="font-weight-bold">Lack of semantic code</span> → Impacting both accessibility and compatibility across email clients.</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="emoji-meh-container ps-3">
+                                        <span class="emoji-meh">😵</span>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </article>
+
+                    <article class="text-image pb-5">
+
+                        <div class="row align-items-start pb-3">
+                            <div class="col-lg-4">
+                                <h2 class="h2-pag-portfolio">Research & Benchmarking</h2>
+                            </div>
+                            <div class="col-lg-8 no-padding">
+                                <p>To find the best approach, I conducted a research phase that included:</p>
+                                <ul>
+                                    <li><span class="font-weight-bold">Competitor analysis</span> → Examining how similar brands structured their emails.
+                                    </li>
+                                    <li><span class="font-weight-bold">Email marketing best practices</span> → Following WCAG accessibility standards and UX ecommendations.</li>
+                                    <li><span class="font-weight-bold">Dark mode adaptation research</span> → Studying how major brands optimized their emails for dark mode.</li>
+                                </ul>
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    </article>
+
+                </section>
+
+                <section>
+                    <div class="text-image pb-5">
+                        <div class="row align-items-start">
+                            <div class="col-lg-4">
+                                <h2 class="h2-pag-portfolio">The Solution & Implementation</h2>
+                                <p>To address these issues, I developed a modular structure based on reusable components. This approach allowed for:
+                                </p>
+
+                                <ul>
+                                    <li>✅ Consistent branding across all five brands while maintaining individuality.</li>
+                                    <li>✅ Enhanced accessibility by improving contrast, typography, and semantic code.</li>
+                                    <li>✅ Dark mode support, ensuring optimal readability in all conditions.</li>
+                                    <li>✅ Standardized templates for both transactional and marketing emails.</li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-8 no-padding">
+                                <img src="images/connected/value-your-time_880x600.jpg" class="img-fluid border-radius mb-4" alt="About Image">
+                            </div>
+                        </div>
+                    </div>    
+                </section>
+
+                <section>
+                    <div class="text-image pb-5">
+                        <div class="row align-items-start">
+                            <div class="col-lg-4">
+                                <h2 class="h2-pag-portfolio">Unexpected Challenge: Dark Mode Discovery</h2>
+                                <p>Midway through the project, I decided to review the emails on my personal iPhone, which is when I noticed they weren't optimized for dark mode. This issue hadn't been initially considered, as most testing was done on desktop. Upon this discovery, I:
+                                </p>
+
+                                <ul>
+                                    <li>✅ Researched how major brands adapted emails for dark mode</li>
+                                    <li>✅ Tested rendering issues across different email clients</li>
+                                </ul>
+                                <p>By integrating dark mode support, I ensured an improved experience across different viewing conditions.</p>
+                            </div>
+
+                            <div class="col-lg-8 no-padding">
+                                <img src="images/connected/value-your-time_880x600.jpg" class="img-fluid border-radius mb-4" alt="About Image">
+                            </div>
+                        </div>
+                    </div>    
+                </section>
+
+                <section>
+                    <div class="py-5 col-lg-8 mx-auto">
+                            <h2 class="h2-pag-portfolio">Final Results & Key Improvements</h2>
+                            <p>A detailed breakdown of the enhancements:</p>
+                                <table class="table table-bordered">
+                                    <thead>
+                                      <tr>
+                                        <th scope="col">Feature</th>
+                                        <th scope="col">Before Redesign</th>
+                                        <th scope="col">After Redesign</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <th scope="row">Accessibility</th>
+                                        <td>Low contrast, small fonts, lacked screen reader support</td>
+                                        <td>WCAG-compliant colors, optimized typography, semantic HTML
+                                        </td>
+                                        
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">Visual Hierarchy</th>
+                                        <td>Disorganized, weak CTA visibility</td>
+                                        <td>Structured content, Clear layout, strong CTA emphasis</td>
+
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">Brand Consistency</th>
+                                        <td>Unified structure with unique brand identities</td>
+                                        <td>Unified structure with unique brand identities</td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">Dark Mode Support</th>
+                                        <td>Not optimized, colors rendered incorrectly</td>
+                                        <td>Fully optimized with CSS variables</td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">Transactional Emails</th>
+                                        <td>Hard to read, lacked personalization</td>
+                                        <td>Improved readability, clearer messaging, user-friendly layout
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                </table>
+                    </div>    
+                </section>
+
+                <section>
+                    <div class="text-image pb-5">
+                        <div class="row align-items-start">
+                            <div class="col-lg-4">
+                                <h2 class="h2-pag-portfolio">Key Takeaways & Learnings</h2>
+                            </div>
+                            <div class="col-lg-8 no-padding">
+                                <ul class="problem-items">
+                                    <li>📌 A modular approach helps maintain consistency while allowing flexibility.</li>
+                                    <li>📌 Dark mode optimization is more than just inverting colors—contrast and readability must be carefully planned.
+                                    </li>
+                                    <li>📌 Sometimes, even with a clear plan, unexpected challenges arise. When testing on my phone, I discovered that dark mode wasn't working as expected. This taught me the importance of testing across real devices early and being adaptable to make quick design adjustments.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>    
+                </section>
+
+                <section>
+                    <article class="text-image pb-5">
+
+                        <div class="row align-items-start">
+                            <div class="col-lg-4">
+                                <h2 class="h2-pag-portfolio">Conclusion & Impact</h2>
+                            </div>
+                            <div class="col-lg-8 no-padding">
+                                <p>Although I didn't have access to post-implementation metrics, this redesign significantly improved clarity, accessibility, and brand consistency across all email communications.
+                                By creating a modular structure, I ensured that each brand maintained its unique style while benefiting from a cohesive and user-friendly system that could scale efficiently.</p>
+                            </div>
+                        </div>
+                    </article>
+                </section>
+            
+            </article>
+
+            <!-- Next Project -->
+            <section id="next-project" class="container-fluid">
+                <section class="mb-5">
+                    <h2><span class="section-title text-gradient">Next project</h2>
+                    <a href="kronaby.html" class="btn btn-secondary" role="button">Go to the next project <i id="dl-icon-arrow" class="bi bi-arrow-right-circle-fill"></i>
+                    </a>
+                </section>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact-me" class="container-fluid d-flex align-items-center justify-content-left py-5">
+                
+                <article class="row justify-content-center rounded-block container-lg my-5 px-md-5">
+                <div class="text-center py-4 px-md-5">
+
+                    <h2 class="py-2 border-bottom"><span class="section-title text-gradient">Let's connect!</span></h2>
+
+                    <p class="subtitle-1 my-4">
+                    Drop it like it's hot and hit me at <span class="colorful-text underlined"><a href="mailto:roselly.nunezg@gmail.com">my email</a></span> or find me on my <span><a class="colorful-text underlined" href="https://www.linkedin.com/in/rosellynunez/" class ="links-external" target="_blank">linkedin</a></span> account.
+                    </p>
+
+                </div>
+                </article>
+            </section>
+            
+
+        </main>
+
+        <!-- Overlay para menú mobile -->
+        <div id="menu-overlay">
+            <ul class="overlay-menu">
+              <li><a href="my-work.html">My Work</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a class="nav-link active" href="images/cv/CV_Roselly_Nunez_UX_UI_Designer-en.pdf" target="_blank" >Resume<i class="bi bi-box-arrow-up-right ms-2"></i></a></li>
+            </ul>
+        </div>
+
+        <footer>
+            <p>This site is hand-made by me, Roselly Nuñez. Built with 💖, HTML, CSS, JS and Bootstrap.</p>
+        </footer>
+        
+    </body>
+
+</html>
