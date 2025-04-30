@@ -191,6 +191,14 @@ body {
   font-weight: 300;
 }
 
+.paragraph-s{
+  font-size: 0.9rem;
+}
+
+.paragraph-xs{
+  font-size: 0.8rem;
+}
+
 .subtitle-1 {
   font-size: 3rem;
   font-family: "Inter Display", "Inter Display Placeholder", sans-serif;
@@ -850,7 +858,11 @@ a i {
   }
 
   .h2-pag-portfolio {
-    font-size: 2.4rem;
+    font-size: 2.7rem;
+  }
+
+  .h3-pag-portfolio {
+    font-size: 1.8rem;
   }
 }
 
@@ -870,6 +882,12 @@ a i {
 /* Icon arrow alineado */
 .p-note {
   text-align: center;
+}
+
+.decision-line {
+  border-top: 1px solid #8e8e8e; /* Ajusta el grosor y el color según necesites */
+  padding-top: 1.5rem; /* Opcional: añade espacio encima del borde */
+  margin-top: 1.5rem; /* Opcional: añade espacio entre el borde y el párrafo anterior */
 }
 
 /* Make sure the image covers the full width */
@@ -1174,7 +1192,7 @@ body[data-bs-theme="dark"] .btn-primary:hover {
 }
 
 .problem-items {
-    list-style-type: none;
+  list-style-type: none;
 } 
 
 .list li {
@@ -1326,8 +1344,71 @@ ul li:last-child {
   display: flex;
 }
 
-.emoji-meh {
+.emoji-end {
   font-size: 4rem; /* Ajusta el tamaño según necesites */
+  margin-left: 1rem;
+}
+
+.emoji-start {
+  font-size: 4rem; /* Ajusta el tamaño según necesites */
+  margin-right: 2rem;
+}
+
+/* Media query para móviles (ancho máximo de 768px, por ejemplo) */
+@media (max-width: 991px) {
+  .emoji-start {
+    margin-right: 0; /* Anula el margen en móviles */
+  }
+
+  .emoji-end {
+    margin-right: 0; /* Anula el margen en móviles */
+}
+}
+
+.emoji-container {
+  margin-bottom: 0.5rem;
+}
+
+.icon-center {
+  display: flex;
+  justify-content: center;
+}
+
+.title-margin-top {
+  margin-top: 0.4rem;
+  margin-bottom: 0rem;
+}
+
+/* Para desktop: 3 columnas */
+.row-rectangles-v1 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+  gap: 1rem; /* Espaciado entre las tarjetas */
+}
+
+/* Solo afecta a col-4 dentro de row-rectangles */
+.row-rectangles-v1 .col-4-rectangles {
+  width: 100%; /* Hace que cada col-4 se adapte al grid */
+}
+
+/* Para tablet: 2 columnas */
+@media (max-width: 991px) {
+  .row-rectangles-v1 {
+    grid-template-columns: repeat(2, 1fr); /* En tablet, 2 columnas */
+  }
+}
+
+/* Para móvil: cada col-4 ocupa el ancho completo */
+@media (max-width: 768px) {
+  .row-rectangles-v1 {
+    grid-template-columns: repeat(1, 1fr); /* Solo una columna en móvil */
+  }
+}
+
+/* Para desktop: 3 columnas */
+.row-rectangles {
+  display: flex;
+  gap: 1rem; /* Espaciado entre las tarjetas */
 }
 
 .rectangle {
@@ -1338,11 +1419,35 @@ ul li:last-child {
   justify-content: space-between; /* Distribute space between content and emoji */
 }
 
+.rectangle-2 {
+  background-color: rgb(96, 77, 128, 0.2);
+  border-radius: 0.8rem;
+  justify-content: space-between; /* Distribute space between content and emoji */
+  padding: 1rem 1.8rem;
+}
+
+.responsive-video {
+  max-width: 100%;
+  height: auto;
+}
+
+.center-image {
+  text-align: center;
+}
+
+.images-gap {
+  display: flex; /* O display: grid; según tu diseño */
+  gap: 1rem; /* Ajusta el valor según necesites */
+}
+
+.span-block {
+  display: block; /* Convierte el span en bloque */
+}
+
 .emoji-meh-container {
   display: flex; /* Enable Flexbox for the emoji container */
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
-  margin-top: 1rem; /* Add some space above the emoji */
 }
 
 #next-project {
