@@ -3,7 +3,20 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Roselly Nuñez's Portfolio</title>
+        <title>Roselly Nuñez - UX, UI & Web Designer</title>
+        <meta name="description" content="Roselly Nuñez is a UX, UI & Web Designer based in Barcelona, passionate about creating accessible, beautiful and conversion-focused digital products." />
+        <meta name="author" content="Roselly Nuñez" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://rosellynunez.com/" />
+
+        <!-- Open Graph (for social media previews) -->
+        <meta property="og:title" content="Roselly Nuñez - UX, UI & Web Designer" />
+        <meta property="og:description" content="Explore the portfolio of Roselly Nuñez - a Barcelona-based UX, UI & Web Designer who blends creativity and code to build memorable digital experiences." />
+        <meta property="og:image" content="https://rosellynunez.com/images/og-image.jpg" />
+        <meta property="og:url" content="https://rosellynunez.com/" />
+        <meta property="og:type" content="website" />
+
+        <!-- Favicon -->
         <link rel="icon" type="image/png" href="images/favicon.png"/>
 
         <!-- Preconnect for faster Google Fonts loading -->
@@ -43,15 +56,10 @@
         <script src="js.js" defer></script>
 
         <!-- ✅ Google Analytics -->
+        <!-- Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y1KMG7E11J"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
+        <script src="assets/js/tracking.js"></script>
 
-          gtag('config', 'G-Y1KMG7E11J');
-        </script>
-      
     </head>
 
     <body>
@@ -119,7 +127,7 @@
                 <section>
                     <div class="case-study">
                         <div class="col-sm-12 col-md-10 col-lg-8">
-                            <h1 class="pb-3">Kronaby Web Page Redesing</h1>
+                            <h1 class="pb-3">Kronaby Website Refresh</h1>
                         </div>
                     </div>
 
@@ -132,19 +140,37 @@
 
                 <section id="info-project" class="pb-5">
 
-                    <div class="row">
+                    <div class="row mt-4">
+
+                        <div class="col-lg-4">
+                            <h2 class="small-title text-uppercase">Background</h2>
+                        </div>
+
+                        <div class="col-lg-8">
+                            <p>Kronaby, a Swedish brand known for its technologically advanced and minimalist hybrid watches, required a significant digital update to better align with Festina's overall brand strategy. The existing PrestaShop platform presented notable design and development inefficiencies, which were impeding the brand's growth potential.</p>
+                        </div>
+                    </div>
+
+                    <div class="row mt-4">
 
                         <div class="col-lg-4">
                                 <h2 class="small-title text-uppercase">Project Overview</h2>
                         </div>
 
                         <div class="col-lg-8">
-                                    <p>Kronaby designs hybrid watches that blend cutting-edge technology with minimalist Swedish design.</p>
+                            <p class="font-weight-bold">⚠️ Problem:</p>
+                            <ul>
+                                <li>The Kronaby website was not aligned with Festina's ecosystem.</li>
+                                <li>The PrestaShop platform led to inefficiencies in design, development, and delivery workflows.
+                                </li>
+                                <li>Low direct traffic and sales hindered business growth.</li>
+                            </ul>
 
-                                    <p><span class="font-weight-bold">Low direct traffic and sales hindered their growth.</span> The <span class="font-weight-bold">PrestaShop platform created inefficiencies</span> in design, development, and delivery processes.</p>
-
-                                    <p>💡<span class="font-weight-bold">Our solution:</span> A complete website redesign and migration to Festina's unified, Bootstrap-based digital ecosystem. This created a cohesive brand experience and streamlined design and development workflows.</p>
-                                </p>    
+                            <p class="font-weight-bold">💡 Solution:</p>
+                            <ul>
+                                <li>Launched a phased redesign.</li>
+                                <li>Migrated the site into Festina's Bootstrap ecosystem, ensuring consistency across brands.</li>
+                            </ul>   
                         <div class="links-container">
                             <a href="https://kronaby.com/en-GB" target="_blank" class="links-external">See it alive
                                 <i id="dl-icon-arrow" class="bi bi-box-arrow-up-right"></i> 
@@ -160,13 +186,12 @@
                         </div>
 
                         <div class="col-lg-8">
-                            <p>I was responsible for the entire UX/UI process for the Kronaby website redesign.
+                            <p>As the UX/UI designer, I led the redesign of Kronaby's website, handling:</p>
                             <ul>
-                                <li>User research and competitive analysis to identify pain points.</li>
-                                <li>Designed wireframes and prototypes to test findigs.</li>
-                                <li>Worked closely with strategy, marketing, and development teams to ensure a smooth implementation.</li>
+                                <li>User research and competitive analysis to identify key issues.</li>
+                                <li>Wireframing and prototyping in Figma.</li>
+                                <li>Collaboration with strategy, marketing, and development teams to ensure smooth implementation.</li>
                             </ul>
-                            </p>
                         </div>
                     </div>
 
@@ -176,231 +201,500 @@
                         <img src="images/kronaby/hero-image-3.jpg" class="img-fluid border-radius" alt="About Image">
                 </section>
 
-                <section id="research" class="pb-5 mb-3">
-                    <div class="row align-items-start">
+                <section id="project-scope" class="pb-5 mb-5">
+                    
+                    <section class="col-lg-8 mx-auto">
+                        <h2 class="h2-pag-portfolio text-center pb-3">1. Project Scope & Constraints</h2>
+                        <p>
+                        To address these challenges and ensure a successful integration within Festina's digital ecosystem, we adopted a phased approach. The project's scope was defined by the limitations of Festina's existing platform.
+                        </p>
+                        <ul class="list li">
+                            <li><span class="font-weight-bold">We prioritized the redesign of elements that could be modified independently</span>, focusing on the homepage, landing pages, and other user-facing sections that were underperforming.</span>
+                            <li>Sections deeply integrated with Festina's core systems, such as product pages and the checkout process, were reserved for a subsequent phase. <span class="font-weight-bold">This approach allowed us to implement swift improvements while minimizing disruption to Festina's overall online presence.</span></li>
+                        </ul>
+                    </section>
+                </section>
 
-                            <h2 class="col-lg-4 h2-pag-portfolio">Rebuilding blind</h2>
+                <section id="hypothesis-research-goals" class="pb-5 mb-5">
+                    
+                    <section class="col-lg-8 mx-auto">
 
-                            <div class="col-lg-8">
-                                
-                                <div>
-                                    <p>Kicking off this project, I knew the Kronaby website needed a refresh and a strategic overhaul to drive business results. It also had to fit within Festina's existing (and rigid)digital ecosystem, which meant working within certain design constraints—especially for product pages. My focus was on improving what needed it while keeping what worked.</p>
+                        <h2 class="h2-pag-portfolio text-center pb-3">2. Hypothesis & Research Goals</h2>
+                        <p class="pb-3">To understand the initial issues, I checked it out myself, saw what competitors were doing, talked to people inside the company, chatted with potential users and my coworkers, and read through reviews online.</p>
 
-                                    <p>Since the old site lacked tracking, I relied on <span class="font-weight-bold">qualitative methods</span> to uncover key issues. I conducted <span class="font-weight-bold">user and stakeholder interviews</span> to identify frustrations, <span class="font-weight-bold">benchmarked competitor websites</span> to gather best practices, and <span class="font-weight-bold">reviewed the site's structure and content</span> to spot inconsistencies.</p>
+                        <h3 class="h3-pag-portfolio">Hypothesis</h3>
+                        <p>From this initial analysis, I formulated the following hypothesis:</p>
+                        <p>We believe that navigation on the Kronaby site is confusing, that users do not fully understand the concept of hybrid watches, and that the website has low visibility in search engines.</p>   
+                        <p class="pb-3">By improving site structure, refining content, and optimizing SEO, we can create a better user experience, increase engagement, and drive more conversions.</p>
+
+                        <h3 class="h3-pag-portfolio">Research Goals</h3>
+                        <p>The research focused on three key areas designed to validate a hypothesis about usability and conversion issues.</p>
+
+                        <section class="colum-beside rectangle list">
+                                    <div class="emoji-meh-container">
+                                        <span class="emoji-start">🎯</span>
+                                    </div>
+                                    <div>
+                                        <ul>
+                                            <li><span class="font-weight-bold">Enhacing site navigation and usability</span> - I need to assess how users currently interact with the site and identify pain points in the structure.</li>
+                                            <li><span class="font-weight-bold">Improving product messaging so users clearly understand hybrid watches</span> - I need to understand users' expectations and how they perceive hybrid watches.</li>
+                                            <li><span class="font-weight-bold">Strengthening SEO strategies to increase organic traffic</span> - I need to analyze search performance and identify opportunities for optimization.</li>
+                                        </ul>
+                                    </div>
+                        </section>
+
+                    </section>
+
+                </section>
+
+                <section id="research" class="pb-5 mb-5">
+
+                    <section class="col-lg-8 pb-4 mb-4 mx-auto">
+                        <h2 class="h2-pag-portfolio text-center pb-3">3. UX Research</h2>
+                        <p>Since <span class="font-weight-bold">previous site did not have tracking tools installed, I used qualitative methods</span> to discover the main problems with the website.</p>
+                    </section>
+
+                    <section class="col-lg-8 pb-4 mb-4 mx-auto">
+                        <h3>Methods Used</h3>
+                            <ul>
+                                <li>Identified key concerns via user and stakeholder interviews.</li>
+                                <li>Observed user website interactions.</li>
+                                <li>Competitive benchmarking: analyzed industry best practices.</li>
+                                <li>Determined usability inconsistencies through content and architecture review.</li>
+                            </ul>
+                    </section>
+
+                    <section id="benchmarking" class="pb-4 mb-4">
+                        <section class="col-lg-8 pb-4 mb-4 mx-auto">
+                            <h3>Competitive benchmarking</h3>
+                            <p>I wanted to get a really good look at what others were doing, so I checked out minimalist websites from both direct and indirect competitors, and even some e-commerce sites outside the watch world. The table below shows an UX benchmarking comparison between Kronaby and a mix of luxury, medium-range, and conversion-driven brands UX.
+                            </p> 
+                        </section>
+
+                        <section id="tabla-bench">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th scope="col"><p class="paragraph-s">Feature/Platform</p></th>
+                                        <th scope="col"><p class="paragraph-s">Kronaby Goal</p></th>
+                                        <th scope="col"><p class="paragraph-s">Montblanc</p></th>
+                                        <th scope="col"><p class="paragraph-s">Tag Heuer</p></th>
+                                        <th scope="col"><p class="paragraph-s">Daniel Wellington</p></th>
+                                        <th scope="col"><p class="paragraph-s">ASOS</p></th>
+                                        <th scope="col"><p class="paragraph-s">Nike</p></th>
+                                    </tr>
+                                </thead>
+                                    <tbody>
+                                    <tr>
+                                        <th scope="row"><p class="paragraph-s">Information Architecture	</p></th>
+                                        <td><p class="paragraph-s">Simple and clear value proposition.</p></td>
+                                        <td><p class="paragraph-s">Premium feel with rich storytelling and engaging content.</p></td>
+                                        <td><p class="paragraph-s">Performance-focused with clear and detailed product organization.</p></td>
+                                        <td><p class="paragraph-s">Clean design with a focus on style and easy shopping.</p></td>
+                                        <td><p class="paragraph-s">Designed to sell fast with powerful search and filter options.</p></td>
+                                        <td><p class="paragraph-s">Sports-focused with easy navigation to key products.</p></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><p class="paragraph-s">Homepage Storytelling</p></th>
+                                        <td><p class="paragraph-s">Communicates Scandinavian design, and smart benefits without overwhelming tech.</p></td>
+                                        <td><p class="paragraph-s">Heritage-focused, premium lifestyle branding.</p></td>
+                                        <td><p class="paragraph-s">Energetic and powerful way of telling the brand's story.</p></td>
+                                        <td><p class="paragraph-s">Clean and modern look that fits everyday life.</p></td>
+                                        <td><p class="paragraph-s">Focus on the latest trends and limited-time collections.</p></td>
+                                        <td><p class="paragraph-s">Sports storytelling, dynamic visuals.</p></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><p class="paragraph-s">Landing Page Experience</p></th>
+                                        <td><p class="paragraph-s">Highlights features: Connected, not distracted philosophy.</p></td>
+                                        <td><p class="paragraph-s">Premium product with lifestyle integration.</p></td>
+                                        <td><p class="paragraph-s">Ads and images designed to drive sales.</p></td>
+                                        <td><p class="paragraph-s">Focused on the product without distractions.</p></td>
+                                        <td><p class="paragraph-s">Flash sales and conversion-driven UI.</p></td>
+                                        <td><p class="paragraph-s">Interactive way of presenting products.</p></td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <th scope="row"><p class="paragraph-s">Product Page UX</p></th>
+                                        <td><p class="paragraph-s">Images with lifestyle + close-ups, clear hybrid functionalities, clear "buy now" and "learn more" buttons.</p></td>
+                                        <td><p class="paragraph-s">Images with lifestyle context, brand story videos.</p></td>
+                                        <td><p class="paragraph-s">Dynamic visuals, 360º views, detailed specifications, influencers collaborations.</p></td>
+                                        <td><p class="paragraph-s">Minimalist, fashion-oriented display.</p></td>
+                                        <td><p class="paragraph-s">Content easy to scan, user reviews, community images.</p></td>
+                                        <td><p class="paragraph-s">Zoom, customization, lifestyle imagery, interactive way to explain features.</p></td>
+                                    </tr>
+
+                                    <tr>
+                                        <th scope="row"><p class="paragraph-s">Navigation & Menu</p></th>
+                                        <td><p class="paragraph-s">Simple structure, fast access to key features.</p></td>
+                                        <td><p class="paragraph-s">Luxury-driven, storytelling-oriented menu.</p></td>
+                                        <td><p class="paragraph-s">Easy-to-use filters with detailed product options.</p></td>
+                                        <td><p class="paragraph-s">Simple, fast product access.</p></td>
+                                        <td><p class="paragraph-s">Quick-access menus to help users find what they need.</p></td>
+                                        <td><p class="paragraph-s">Well-organized menu with clear sections. Easy-to-find product categories.</p></td>
+                                    </tr>
+
+                                    <tr>
+                                        <th scope="row"><p class="paragraph-s">Trust & Credibility Elements</p></th>
+                                        <td><p class="paragraph-s">Scandinavian manufacturing, clear warranty, quality and security.</p></td>
+                                        <td><p class="paragraph-s">High-trust, luxury brand exclusivity.</p></td>
+                                        <td><p class="paragraph-s">Warranties and customer service emphasized.</p></td>
+                                        <td><p class="paragraph-s">Focus on affordability + lifestyle credibility.</p></td>
+                                        <td><p class="paragraph-s">Social proof, reviews, strong return policies.</p></td>
+                                        <td><p class="paragraph-s">Trusted brand with ambassadors and strong guarantees.</p></td>
+                                    </tr>
+                                    </tbody>
+                            </table>
+                        </section>
+                    </section>
+
+                    <section id="interviews" class="pb-4 mb-4">
+                        <section class="col-lg-6">
+                            <h3 class="h3-pag-portfolio">User interviews & stakeholder discussions</h3>
+                            <p>After speaking with users and stakeholders, these were the key comments that emerged:</p>
+                        </section>
+                        
+                        <section class="row-rectangles justify-content-center">
+
+                                        <div class="col-4 rectangle-2">
+                                            <div class="icon-center"><p><span class="font-weight-bold">Users</span> 🧑🏻</p></div>
+                                            <ul>
+                                                <li>"What exactly is a 'hybrid' watch?".</li>
+                                                <li>"The descriptions's texts are too long, I don't want to read long texts"</li>
+                                                <li>"I didn't understand the features, so I held back."</li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="col-4 rectangle-2">
+                                            <div class="icon-center"><p><span class="font-weight-bold">Stakeholders</span> 🧑🏻‍💼</p></div>
+                                            <ul>
+                                                <li>"Our competitors have really good content"</li>
+                                                <li>"Our sales are lower than expected".</li>
+                                                <li>"We need to clearly communicate the value proposition of our hybrid watches".</li>
+                                            </ul>
+                                        </div>
+
+                        </div>
+                        </section>
+                    </section>
+
+                    <section id="inconsistencies">
+                        <h3 class="h3-pag-portfolio">Usability inconsistencies</h3>
+
+                        <section class="videos">
+
+                            <section class="row mb-5 pb-2">
+                                <div class="col-lg-6">
+
+                                    <video class="responsive-video" autoplay muted loop>
+                                        <source src="videos/home-page-desktop.mp4" type="video/mp4">
+                                        <source src="videos/home-page-desktop.ogg" type="video/ogg">
+                                        Your browser does not support the video tag.
+                                    </video>
+
+                                    <p class="paragraph-xs font-weight-bold title-margin-top">Before</p>
+                                    <p class="paragraph-xs">The previous Kronaby desktop homepage presented a confusing dual-menu structure. The primary menu combined links to watch collections with an app marketplace (which was not a priority at this stage). Meanwhile, with a less visible secondary menu redundantly linked to collections and also included pages explaining the hybrid watch concept, along with customer support. Adding to the confusion, the primary menu obscured an uncontrolled image slider.</p>
                                 </div>
 
-                                <div class="pt-3">
-                                    <div class="alert alert-info callout-info-raya" role="alert">
-                                            <p class="fs-6">
-                                                <span class="font-weight-bold">Future Considerations:</span> A strategic vision for this project also included redesigning the including product pages and checkout. However, like a mentioned, <span class="font-weight-bold"> because those parts are linked to other Festina websites, they'll be tackled in a separate, larger project.</span> For now, we focused on improving the home and landing pages.</span>
-                                            </p>
+                                <div class="col-lg-6">
+                                    <img src="https://placehold.co/640x457" class="border-radius mb-2 img-fluid" alt="Imagen Temporal">
+                                    <p class="paragraph-xs font-weight-bold title-margin-top">After</p>
+                                    <p class="paragraph-xs">
+                                    The previous Kronaby desktop homepage presented a confusing dual-menu structure. The primary menu combined links to watch collections with an app marketplace (which was not a priority at this stage). Meanwhile, with a less visible secondary menu redundantly linked to collections and also included pages explaining the hybrid watch concept, along with customer support. Adding to the confusion, the primary menu obscured an uncontrolled image slider.
+                                    </p>
+                                </div>
+                            </section>
+
+                            <section class="row justify-content-center mb-5 pb-2">
+
+                                <div class="col-lg-4">
+                                    <div class="center-image">
+                                        <img src="https://placehold.co/220x400" class="border-radius mb-2 img-fluid" alt="Imagen Temporal">
+                                    </div>
+                                    <div>
+                                        <p class="paragraph-xs font-weight-bold title-margin-top">Before</p>
+                                        <p class="paragraph-xs">The previous Kronaby desktop homepage presented a confusing dual-menu structure. The primary menu combined links to watch collections with an app marketplace (which was not a priority at this stage). Meanwhile, with a less visible secondary menu redundantly linked to collections and also included pages explaining the hybrid watch concept, along with customer support. Adding to the confusion, the primary menu obscured an uncontrolled image slider.</p>
                                     </div>
                                 </div>
+
+                                <div class="col-lg-4">
+                                    <div class="center-image">
+                                        <img src="https://placehold.co/220x400" class="border-radius mb-2 img-fluid" alt="Imagen Temporal">
+                                    </div>
+                                    <div>
+                                        <p class="paragraph-xs font-weight-bold title-margin-top">After</p>
+                                        <p class="paragraph-xs">The previous Kronaby desktop homepage presented a confusing dual-menu structure. The primary menu combined links to watch collections with an app marketplace (which was not a priority at this stage). Meanwhile, with a less visible secondary menu redundantly linked to collections and also included pages explaining the hybrid watch concept, along with customer support. Adding to the confusion, the primary menu obscured an uncontrolled image slider.</p>
+                                    </div>
+                                </div>
+                            
+                                
+                            </section>
+
+                            <section class="row">
+                                <div class="col-lg-6">
+
+                                    <video class="responsive-video" autoplay muted loop>
+                                        <source src="videos/product-page-desktop.mp4" type="video/mp4">
+                                        <source src="videos/home-page-desktop.ogg" type="video/ogg">
+                                        Your browser does not support the video tag.
+                                    </video>
+
+                                    <p class="paragraph-xs font-weight-bold title-margin-top">Before</p>
+                                    <p class="paragraph-xs">The old Kronaby product page on desktop had a few problems. It used a yellow color that wasn't in the brand's style, didn't show enough lifestyle photos, explained features with too much text, and even showed pictures of the wrong kind of watch. Plus, the product photos themselves were kind of hidden, making it hard to really see the watch.</p>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <img src="https://placehold.co/640x457" class="border-radius mb-2 img-fluid" alt="Imagen Temporal">
+                                    <p class="paragraph-xs font-weight-bold title-margin-top">After</p>
+                                    <p class="paragraph-xs">
+                                    The previous Kronaby desktop homepage presented a confusing dual-menu structure. The primary menu combined links to watch collections with an app marketplace (which was not a priority at this stage). Meanwhile, with a less visible secondary menu redundantly linked to collections and also included pages explaining the hybrid watch concept, along with customer support. Adding to the confusion, the primary menu obscured an uncontrolled image slider.
+                                    </p>
+                                </div>
+                            </section>
+
+                        </section>
+
+                    </section>
+
+                </section>
+
+                <section id="insights-decisions" class="pb-5 mb-5">
+                    <section class="col-6 pb-3 mb-3 mx-auto">
+                        <h2 class="h2-pag-portfolio text-center pb-3">4. Insights and UX Decisions</h2>
+                    </section>
+
+                    <section class="row-rectangles-v1">
+
+                        <div class="col-4-rectangles">
+                            <h3>Insight 1</h3>
+                            <div class="rectangle-2">
+                                <div class="icon-center"><p>💡</p></div>
+
+                                    <p class="font-weight-bold">🚩 Confusing Navigation → High drop-off rate</p>
+                                                    
+                                    <p class="font-weight-bold title-p">Findings:</p> 
+                                    <p>Users struggled to find key sections and product details.</p>
+                                    <p>Benchmark: Montblanc & Tag Heuer use structured menus; Nike & ASOS have quick-access navigation.</p>
+
+                                    <p class="font-weight-bold title-p">Impact:</p> 
+                                    <p>Users left the site early without exploring products.</p>
+                                    
+                                    <p class="font-weight-bold title-p decision-line">➡️ Decision:</p>
+                                    <p>Simplified categories & improved user flow.</p>
+                                    <p>Added quick-access menus for easier discovery.</p>
+                                </div>
                             </div>
-                    </div>
+
+                        <div class="col-4-rectangles">
+                            <h3>Insight 2</h3>
+                            <div class="rectangle-2">
+                                <div class="icon-center"><p>💡</p></div>
+                                    <p class="font-weight-bold">🚩 Unclear Product Concept → Missed Sales</p>
+                                                    
+                                    <p class="font-weight-bold title-p">Findings:</p>
+                                    <p>Users didn't get what a 'hybrid watch' was.</p> 
+                                    <p>Stakeholders highlighted the need to explain the value of hybrid watches.</p>
+                                    <p>Benchmark: Nike & ASOS use engaging storytelling; Tag Heuer & Montblanc combine visuals with concise text.</p>
+
+                                    <p class="font-weight-bold title-p">Impact:</p>
+                                    <p>The value proposition was not immediately clear, reducing engagement.</p>
+
+                                    <p class="font-weight-bold title-p decision-line">➡️ Decision:</p>
+                                    <p>I added educational content.</p>
+                                    <p>Simplified descriptions into short and scannable text.</p>
+                                </div>
+                            </div>
+
+                        <div class="col-4-rectangles">
+                            <h3>Insight 3</h3>
+                            <div class="rectangle-2">
+                                <div class="icon-center"><p>💡</p></div>
+
+                                    <p class="font-weight-bold">🚩 Weak SEO & Low Visibility → Few Direct Visits</p>
+                                                    
+                                    <p class="font-weight-bold title-p">Findings:</p>
+                                    <p>Users struggled to find the site organically.</p>
+                                    <p>Benchmark: Nike & ASOS use SEO-driven content; Montblanc & Tag Heuer focus on brand storytelling.</p>
+
+                                    <p class="font-weight-bold title-p">Impact:</p> 
+                                    <p>Limited brand awareness, leading to fewer direct visitors.</p>
+
+                                    <p class="font-weight-bold title-p decision-line">➡️ Decision:</p>
+                                    <p>Collaborated with an SEO specialist to create an optimized content strategy.</p>
+                                    <p>Added product guides & educational content to boost rankings.</p>
+
+                                </div>
+                        </div>
+
+                    </section>
+
                 </section> 
 
-                <section id="problems" class="pb-5 mb-3">
-                    <div class="row align-items-start">
-                            <h2 class="col-lg-4 h2-pag-portfolio">Core issues</h2>
-                            <div class="col-lg-8 colum-beside rectangle list">
-                                <div>
-                                    <p>Through qualitative research, I identified three key issues:</p>
-                                    <ul>
-                                        <li> ❌ Confusing Navigation: Users struggled to find information due to poor site structure.
-                                        </li>
-                                        <li> ❌ Unclear Product Concept: Many visitors didn't fully understand hybrid watches.</li>
-                                        <li> ❌ Weak SEO & Low Visibility: The site lacked optimization, limiting its reach.</li>
-                                    </ul>
-                                </div>
-                                <div class="emoji-meh-container">
-                                    <span class="emoji-meh">🫤</span>
-                                </div>
-                    </div>
-                </section> 
+                <section class="ui">
 
-                <section id="insights-decisions" class="pb-5 mb-3">
-                        <div class="row align-items-start">
+                    <section class="mx-auto col-lg-6">
+                        <h2 class="pb-5 mb-3 h2-pag-portfolio text-center">5. UI Decisions: Typography, colors and aesthetics
+                        </h2>
+                    </section>
 
-                                <h2 class="col-lg-4 h2-pag-portfolio">Insights and UX Decisions</h2>
+                    <section>
+                            <div class="row align-items-center pb-5 mb-5">
+                                <div class="col-lg-4">
+                                    <h3 class="h3-pag-portfolio">Typography: Balancing aesthetics and performance</h3>
+                                    <p>Kronaby's style guide specified Avenir Next and Minion fonts,<span class="font-weight-bold"> But the website was a mess! They were using Avenir Next, Lucida Grande, Iconochive, and sometimes even Roboto when the others weren't working.</span> This inconsistency also<span class="font-weight-bold"> impacted performance, as some of these fonts were not available on Google Fonts.</span> So, I fixed it by switching to DM Sans. It's clean, kinda like Avenir Next, and it made the site look consistent and load faster.</p>
+                                </div>
 
                                 <div class="col-lg-8">
-                                    <p class="pb-4">To address these core challenges, I identified key insights and made data-driven UX decisions:</p>
-
-                                    <section class="pb-4">
-                                        <p><span class="font-weight-bold">Insight:</span> Confusing navigation → High drop-offs</p>
-                                        <ul class="list">
-                                                <li><span class="font-weight-bold">Findings: </span> User testing (including A/B sketches) of different menu structures, highlighted difficulties in navigating the site.</li>
-                                                <li><span class="font-weight-bold"> ➡️ Decision:</span> I simplified the site structure, I simplified categories and improved user flow.</li>
-                                            </ul>
-                                    </section>
-
-                                    <section class="pb-4">
-                                        <p><span class="font-weight-bold">Insight:</span> Unclear product concept → Missed sales</p>
-                                            <ul class="list">
-                                                <li><span class="font-weight-bold">Findings:</span> User feedback and stakeholder interviews showed confusion about hybrid watches's concept. </li>
-                                                <li><span class="font-weight-bold"> ➡️ Decision:</span> I added educational content with clear explanations and visuals to boost engagement and confidence.</li>
-                                            </ul>
-
-                                        <div>
-                                            <div class="alert alert-info callout-info-raya" role="alert">
-                                                    <p class="fs-6"><span class="font-weight-bold">Since development was about to start, I had to act fast. I conducted a quick guerrilla validation</span> to confirm the issue. Ideally, I would have done a more in-depth study, but the tight timeline made that impossible. Still, the rapid insights were valuable and confirmed the need for clearer explanations.</p>
-                                            </div>
-                                        </div>
-                                    </section>
-
-                                    <section>
-                                        <p><span class="font-weight-bold">Insight:</span> Weak SEO → Low visibility</p>
-                                            <ul class="list">
-                                                <li><span class="font-weight-bold">Findings:</span> Stakeholders reported low inquiries. A manual review of the site's content showed a lack of SEO best practices, potentially limiting online visibility. Competitor analysis showed stronger SEO.</li>
-                                                <li><span class="font-weight-bold"> ➡️ Decision:</span> Working closely with my team, we implemented a keyword-optimized content strategy to improve search rankings and organic reach.</li>
-                                            </ul>
-                                    </section>
+                                    <img src="images/kronaby/use-of-multiple-fonts.jpg" class="border-radius mb-2 img-fluid " alt="This image showcases the inconsistent and chaotic typography found on the original Kronaby website. Notice the jarring mix of Avenir Next, Lucida Grande, Iconochive, and even Roboto used throughout the site. This not only disrupted the visual flow but also hindered the website's performance.">
+                                    <p class="paragraph-xs font-weight-bold title-margin-top">Before</p>
+                                    <p class="paragraph-xs">This image showcases the inconsistent and chaotic typography found on the original Kronaby website. Notice the jarring mix of Avenir Next, Lucida Grande, Iconochive, and even Roboto used throughout the site. This not only disrupted the visual flow but also hindered the website's performance.
+                                    </p>
                                 </div>
-                        </div>
-                </section> 
+                            </div>
+                    </section>
 
-                <section id="ux-summarized" class="pb-5 mb-3">
-                    <div class="row align-items-start">
-                            <h2 class="col-lg-4 h2-pag-portfolio">Key UX decisions (Summarized)</h2>
-                            <div class="col-lg-8 colum-beside rectangle mb-3">
-                                    <ul class="list">
-                                        <li><span class="font-weight-bold">Navigation:</span> Simplified site structure to significantly improve usability and user flow.</li>
-                                        <li><span class="font-weight-bold">Content:</span> Developed and implemented educational content to clarify hybrid watch features, and standardized heading styles to enhance readability. </li>
-                                        <li><span class="font-weight-bold">E-commerce Optimization:</span> Revamped home and landing pages to increase user engagement and drive conversions.</li>
+                    <section>
+                        <div class="title-text pb-5 mb-5">
+                            <div class="row align-items-center">
+                                <div class="col-lg-4">
+                                    <h3 class="h3-pag-portfolio">Color Palette</h3>
+                                    <p>Kronaby's brand identity is rooted in elegance and innovation, which I translated into a refined color scheme:</p>
+
+                                <ul class="pb-3 list">
+                                    <li><span class="font-weight-bold">Primary Colors:</span> A mint green (#417178), representing precision and technology, paired with a complementary brown (#785954) that adds warmth.</li>
+                                    <li><span class="font-weight-bold">Secondary Palette:</span> Developed by adjusting the saturation and luminosity of the primary colors, creating depth and visual variety.</li>
+                                    <li><span class="font-weight-bold">Semantic Colors:</span> Used strategically to enhance usability and reinforce key actions.</li>
+                                </ul>
+                                    
+                                </div>
+
+                                <div class="col-lg-8 order-first">
+                                    <img src="images/kronaby/color-palette.jpg" class="img-fluid border-radius" alt="About Image">
+                                </div>
+                            </div>
+                        </div>    
+                    </section>
+
+                    <section>
+                        <div class="title-text pb-5 mb-5">
+                            <div class="row align-items-center">
+                                <div class="col-lg-4">
+                                    <h3 class="h3-pag-portfolio">Application of colors</h3>
+                                    <p>On the product grid page, I applied the brand colors to enhance clarity and engagement:</p>
+
+                                    <ul class="pb-3 list">
+                                        <li><span class="font-weight-bold">Background:</span> Mint-cool-100 provides a subtle, elegant foundation. </li>
+                                        <li><span class="font-weight-bold">Typography & Icons:</span> Mint-cool-900, ensuring strong contrast and readability.</li>
+                                        <li><span class="font-weight-bold">Interactive Elements:</span> Brown-vivid-500 as an accent for interactive icons like the “like” button, creating a visually cohesive experience.</li>
                                     </ul>
+                                    
+                                </div>
+
+                                <div class="col-lg-8 no-padding">
+                                    <img src="images/kronaby/use-colors.jpg" class="img-fluid border-radius" alt="About Image">
+                                </div>
                             </div>
-
-                    </div>   
-                </section> 
-
-                <section class="pb-5 mb-3 col-lg-8 mx-auto">
-
-                    <h2 class="h2-pag-portfolio pb-5 text-align">UI Decisions: Typography, colors and aesthetics</h2>
-
-                    <section class="pb-3">
-
-                            <h3 class="pb-2 text-align">Typography: Balancing aesthetics and performance</h3>
-                            <p>The Kronaby app originally used <span class="font-weight-bold">Avenir Next and Minion, but this font was unavailable on Google Fonts, causing performance issues. My solution was DM Sans</span>, a modern, minimalist typeface that aligns with Kronaby's aesthetic while ensuring better readability.</p>
-
+                        </div>    
                     </section>
 
-                    <section class="pt-4 pb-3">
+                </section>
 
-                            <h3 class="pb-2 text-align">Color Palette: A modern identity</h3>
-                            <p>Kronaby's brand identity is rooted in elegance and innovation, which I translated into a refined color scheme:</p>
+                <section class="ui">
 
-                            <ul class="problem-items pb-3 list">
-                                <li> ✔ Primary Colors: A mint green (#417178), representing precision and technology, paired with a complementary brown (#785954) that adds warmth.</li>
-                                <li> ✔ Secondary Palette: Developed by adjusting the saturation and luminosity of the primary colors, creating depth and visual variety.</li>
-                                <li> ✔ Semantic Colors: Used strategically to enhance usability and reinforce key actions.</li>
-                            </ul>
-
-                            <div>
-                                <img src="images/kronaby/color-palette.jpg" class="img-fluid border-radius" alt="About Image">
-                            </div>
-                        
+                    <section class="mx-auto col-lg-6">
+                        <h2 class="pb-5 mb-3 h2-pag-portfolio text-center">6. Hybrid Watch features: A new component
+                        </h2>
                     </section>
 
-                    <section class="pt-5">
+                    <section>
+                            <div class="row align-items-center pb-5 mb-5">
+                                <div class="col-lg-4">
+                                    <h3 class="h3-pag-portfolio">A design that fills a gap, and works for more than just Kronaby.</h3>
+                                    <p>
+                                    I used all the existing components. But I noticed we needed a new piece. So, I designed a component to explain Kronaby's hybrid watch features. And the best part? It's modular, super adaptable, and, get this, totally shareable across all of Festina's brands.
+                                    </p>
+                                </div>
 
-                        <h3 class="pb-2 text-align">Application of colors in UI</h3>
-                        <p>On the product grid page, I applied the brand colors to enhance clarity and engagement:</p>
+                                <div class="col-lg-8 no-padding">
+                                    <div id="carouselExampleIndicators2" class="carousel slide">
+    
+                                        <div class="carousel-indicators">
+                                            <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                            <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                        </div>
+    
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <img src="images/kronaby/component-1.jpg" class="d-block w-100 image-in-portfolio" alt="...">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="images/kronaby/component-2.jpg" class="d-block w-100 image-in-portfolio" alt="...">
+                                        </div>
+    
+    
+                                        <!-- Botones para el segundo carrusel -->
+                                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Next</span>
+                                        </button>
+    
+                                    </div>
+                                </div>
+    
+                                </div>
+                            </div>
+                    </section>
+                    
+                </section>
 
-                        <ul class="problem-items pb-3 list">
-                            <li> ✔ Background: Mint-cool-100 provides a subtle, elegant foundation. </li>
-                            <li> ✔ Typography & Icons: Mint-cool-900, ensuring strong contrast and readability.</li>
-                            <li> ✔ Interactive Elements: Brown-vivid-500 as an accent for interactive icons like the “like” button, creating a visually cohesive experience.</li>
+                <section id="collaboration-teams" class="pb-5 mb-5">
+
+                    <section class="col-lg-8 pb-4 mb-4 mx-auto">
+                        <h2 class="h2-pag-portfolio text-center pb-3">7. Collaboration with multiple teams</h2>
+                        <p>Bringing Kronaby's brand to life online required close collaboration with multiple teams across different locations:</p>
+
+                        <ul>
+                            <li><span class="font-weight-bold">Spain (Marketing Team):</span> Ensured the new website aligned with Festina Group's ecosystem.</li>
+                            <li><span class="font-weight-bold">Sweden (Strategic Team):</span> Maintained consistency between the website and Kronaby's mobile app experience.</li>
                         </ul>
 
-                        <div>
-                            <img src="images/kronaby/use-colors.jpg" class="img-fluid border-radius" alt="About Image">
+                        <div class="pt-3">
+                            <div class="alert alert-info callout-info-raya" role="alert">
+                                <p class="fs-6">Bi-weekly meetings kept us aligned and the project moving forward. <span class="font-weight-bold">I acted as a bridge between design, marketing, and strategy teams</span>, facilitating decision-making and maintaining a user-centric approach throughout the process.</p>
+                            </div>
                         </div>
+
                     </section>
 
                 </section>
 
-                <section id="bootstrap-guidelines" class="text-image fgp-ui-item-card pb-5 mb-3">
-                    <div class="container">
-                        <div class="row align-items-start">
-
-                            <div class="col-lg-4 ">
-                                <h2 class="h2-pag-portfolio">Bootstrap rules, building blocks, creating one component</h2>
-                                <p>
-                                    I used all the existing components. But I noticed we needed a new piece. So, I designed a component to explain Kronaby's hybrid watch features. And the best part? It's modular, super adaptable, and, get this, totally shareable across all of Festina's brands.
-                                </p>
-                            </div>
-
-                            <div class="col-lg-8 no-padding">
-                                <div id="carouselExampleIndicators2" class="carousel slide">
-
-                                    <div class="carousel-indicators">
-                                        <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                                        <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                    </div>
-
-                                    <div class="carousel-inner">
-                                        <div class="carousel-item active">
-                                            <img src="images/kronaby/component-1.jpg" class="d-block w-100 image-in-portfolio" alt="...">
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img src="images/kronaby/component-2.jpg" class="d-block w-100 image-in-portfolio" alt="...">
-                                    </div>
-
-
-                                    <!-- Botones para el segundo carrusel -->
-                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide="prev">
-                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                        <span class="visually-hidden">Previous</span>
-                                    </button>
-                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide="next">
-                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                        <span class="visually-hidden">Next</span>
-                                    </button>
-
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>    
-                </section>
-
-                <section id="collaboration-teams" class="py-5 mb-3">
-                    <div class="row align-items-start">
-                            <h2 class="col-lg-4 h2-pag-portfolio">Collaboration with teams</h2>
-                            <div class="col-lg-8">
-                                <p>Bringing Kronaby's brand to life online required close collaboration with multiple teams across different locations:</p>
-                                <ul>
-                                    <li><span class="font-weight-bold">Spain (Marketing Team):</span> Ensured the new website aligned with Festina Group's ecosystem.</li>
-                                    <li><span class="font-weight-bold">Sweden (Strategic Team):</span> Maintained consistency between the website and Kronaby's mobile app experience.</li>
-                                </ul>
-
-                                <div class="pt-3">
-                                    <div class="alert alert-info callout-info-raya" role="alert">
-                                            <p class="fs-6">
-                                                Bi-weekly meetings kept us aligned and the project moving forward. <span class="font-weight-bold">I acted as a bridge between design, marketing, and strategy teams</span>, facilitating decision-making and maintaining a user-centric approach throughout the process.
-                                            </p>
-                                    </div>
-                                </div>
-                            </div>
-                    </div>
-                </section> 
-
                 <section id="results" class="pb-5 mb-3">
-                    <div class="text-image mb-3 row align-items-start">
-                        <h2>Final Results</h2>
-                    </div>
+                
+                    <h2 class="h2-pag-portfolio text-center">8. Final Results</h2>
+                    
+                    <section>
+                        <video width="640" height="412" controls>
+                            <source src="videos/home-compressed.mp4" type="video/mp4">
+                            <source src="home-compressed.ogg" type="video/ogg">
+                            Your browser does not support the video tag.
+                        </video>
+                    </section>
 
                     <div class="mb-4">
                         <img src="images/kronaby/portafolio-home-desktop.jpg" class="img-fluid border-radius" alt="Festina Image">
                     </div>
+
                     <div class="mb-4">
                         <img src="images/kronaby/portafolio-grid.jpg" class="img-fluid border-radius" alt="Lotus Image">
                     </div>
+
                     <div class="mb-4">
                         <img src="images/kronaby/portafolio-ficha-producto.jpg" class="img-fluid border-radius" alt="Lotus Image">
                     </div>
+
                     <div class="mb-4">
                         <img src="images/kronaby/landing-desktop.jpg" class="img-fluid border-radius" alt="Lotus Image">
                     </div>
@@ -408,14 +702,14 @@
 
                 <section id="metrics" class="pb-5 mb-3">
                     <div class="row align-items-start">
-                        <h2 class="col-lg-4 h2-pag-portfolio">What about metrics?</h2>
+                        <h2 class="col-lg-4 h2-pag-portfolio">9. What about metrics?</h2>
                         <div class="col-lg-8">
                             <p>I finished this project in my last week at Festina Group, so I didn't have time to track final metrics. However, if I had stayed, I would have measured:</p>
-                            <ul class="problem-items list">
-                                <li>📊 Direct Traffic → How many users visited the site directly.</li>
-                                <li>📊 Conversion Rate → How many visitors completed a purchase.</li>
-                                <li>📊 Average Session Duration → How long users stayed on the site.</li>
-                                <li>📊 Bounce Rate → How quickly users left the site.</li>
+                            <ul class="list">
+                                <li><span class="font-weight-bold">Average Session Duration</span> → How long users stayed on the site.</li>
+                                <li><span class="font-weight-bold">Conversion Rate</span> → Percentage of visitors who initiated the checkout process. While ideally I'd track completed purchases, the checkout's UX remained largely unchanged, limiting the potential impact of the UI refresh on final sales.</li>
+                                <li><span class="font-weight-bold">Bounce Rate</span> → How quickly users left the site.</li>
+                                <li><span class="font-weight-bold">Direct Traffic</span> → How many users visited the site directly.</li>
                             </ul>
                         </div>
                     </div>
@@ -423,7 +717,7 @@
 
                 <section id="metrics" class="pb-5 mb-3">
                     <div class="row align-items-start">
-                        <h2 class="col-lg-4 h2-pag-portfolio">Next steps for Kronaby</h2>
+                        <h2 class="col-lg-4 h2-pag-portfolio">10. Next steps for Kronaby</h2>
                         <div class="col-lg-8">
                             <p>Honestly, the big thing would be tracking user behavior and refine the site. More engaging content, like videos and a blog, would boost SEO and explain the product. Building a community with reviews and forums would be great. And of course, tying it all in better with the rest of Festina's world, especially that checkout redesign, would make the whole experience smoother.
                             </p>
@@ -436,17 +730,17 @@
                     <div class="text-image pb-5">
                         <div class="row align-items-start">
                             <div class="col-lg-4">
-                                <h2 class="h2-pag-portfolio">Key takeaways & learnings</h2>
+                                <h2 class="h2-pag-portfolio">11. Key takeaways & learnings</h2>
                             </div>
                             <div class="col-lg-8 no-padding">
                                 <ul class="list">
-                                    <li><span class="font-weight-bold">Getting Insights Without Analytics:</span> Even without Google Analytics, we gathered valuable insights from stakeholder feedback, manual reviews, and competitor analysis. This showed me that research doesn't always need big data—there are many ways to understand what works.</li>
+                                    <li><span class="font-weight-bold">Getting insights without analytics:</span> Even without analytics, I got valuable insights from qualitative methods. This showed me that research doesn't always need big data, and I can do something that works with what I have on hands.</li>
 
-                                    <li><span class="font-weight-bold">Being Flexible with Research:</span>  I had to do some last-minute user testing right before development started. It wasn't ideal, but it was essential. This showed me that even under tight deadlines, finding ways to include user feedback is crucial.</li>
+                                    <li><span class="font-weight-bold">Being flexible with research:</span>  I had to do some last-minute user testing right before development started. It wasn't ideal, but it was essential. This showed me that even under tight deadlines, finding ways to include user feedback is better than nothing.</li>
 
-                                    <li><span class="font-weight-bold">Working Around Technical Limits:</span> Festina's existing digital setup required creative problem-solving. Collaborating with developers helped me find solutions that balanced design and technical limitations.</li>
+                                    <li><span class="font-weight-bold">Working around technical limits:</span> Festina's existing digital setup required creative problem-solving and a lot of communnication. Collaborating with developers helped me find solutions that balanced design and technical limitations.</li>
 
-                                    <li><span class="font-weight-bold">Focusing on What Matters Most:</span>  Instead of trying to fix everything, we focused on improving the homepage, landing pages, and UI. Prioritizing key areas helped us make a real impact within the project's scope, which is something I'll take forward in future projects.</li>
+                                    <li><span class="font-weight-bold">Focusing on what matters most:</span>  Instead of trying to fix everything, I priotized areas that were feasible in that moment.</li>
 
                                     <li><span class="font-weight-bold">SEO is Non-Negotiable:</span> Even without analytics, it was clear SEO plays a huge role in success. This reinforced that SEO should be a priority from the start.</li>
                                 </ul>
