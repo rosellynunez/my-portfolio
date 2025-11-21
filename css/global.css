@@ -10,10 +10,10 @@
 :root {
 /* =========================================================
     SPACES
-    =======================================================
-    */
+    ========================================================
+*/
 
-  /* Spacing Scale (1rem = 16px) */
+/* Spacing Scale (1rem = 16px) */
    /* Espacios base - incrementos pequeños */
   --space-1: 0.25rem;   /* 4px Iconos internos, padding mínimo */
   --space-2: 0.5rem;    /* 8px Elementos pequeños, márgenes tight */
@@ -29,13 +29,19 @@
   --space-10: 8rem;     /* 128px Separación media */  
   
   /* Espacios grandes - para secciones */
-  --space-12: 10rem;    /* 160px Heroes, espacios dramáticos */
-  --space-14: 12rem;    /* 192px Espaciado máximo */
+  --space-11: 10rem;    /* 160px Heroes, espacios dramáticos */
+  --space-12: 12rem;    /* 192px Espaciado máximo */
 
 /* Section spacing */
-  --section-space-md: var(--space-6);
-  --section-space-lg: var(--space-9);   
+  --section-space-xl: var(--space-12); /* hero */
+  --section-space-lg: var(--space-9);  /* grandes */
+  --section-space-md: var(--space-8);  /* secciones normales */
+  --section-space-sm: var(--space-5);  /* subsecciones */
 } 
+
+.padding-block-lg { padding-block: var(--space-9); }
+.padding-block-md { padding-block: var(--space-7); }
+.margin-bottom-lg { margin-bottom: var(--space-9); }
 
 /* TEMA CLARO */
 [data-bs-theme="light"] {
@@ -1456,44 +1462,40 @@ ul li:last-child {
    ========================================  */
 /* Containers, grid system, section, header, hero, footer, sections */
 
-/* Containers */
-.container {
+/* ----- Containers ----- */
+.container-full {
   width: 100%;
-  max-width: 90%;
   margin-inline: auto;
 }
 
-/* Variants */
-.container--sm { max-width: 60%; }
-.container--md { max-width: 70%; }
-.container--lg { max-width: 80%; }
-.container--full { max-width: 100%; }
+/* Variants (percent + max-width) */
+.container--sm { width: 48%; max-width: 40rem; margin-inline: auto;}
+.container--md { width: 52%; max-width: 52rem; margin-inline: auto;}
+.container--lg { width: 80%; max-width: 70rem; margin-inline: auto;}
+.container--xl { width: 92%;   max-width: 90rem; margin-inline: auto;}
 
 /* Responsive override */
-@media (max-width: 1200px) {
+/* ----- Between 992px and 1200px → all containers = 80% ----- */
+@media (min-width: 992px) and (max-width: 1200px){
   .container--sm,
   .container--md,
-  .container--lg {
-    max-width: 100%;
+  .container--lg,
+  .container--xl {
+    width: 70%;
+    max-width: unset; /* ← opcional pero recomendado */
   }
 }
 
-
-@media (max-width: 1200px) {
-  .container--md {
-    width: 100%;
+/* ----- Below 992px → all containers = 90% ----- */
+@media (max-width: 991px) {
+  .container--sm,
+  .container--md,
+  .container--lg,
+  .container--xl {
+    width: 88%;
+    max-width: unset; /* ← opcional pero recomendado */
   }
 }
-
-.container--full {
-    width: 95%;
-    max-width: 95%;
-    margin-inline: auto;
-}
-
-
-
-
 
 .container img {
     max-width: 100%;
@@ -1501,24 +1503,26 @@ ul li:last-child {
     display: block;
 }
 
-/* Sections */
+/* ----- Sections ----- */
 /* Space between big sections */
-.section-block {
-  margin-block: var(--section-space-lg);
+section + section {
+  margin-block-start: var(--section-space-lg);
 }
 
 /* Space between sub-sections */
-.subsection {
-  padding-block: var(--section-space-md);
+.subsection + .subsection {
+  margin-block-start: var(--section-space-md);
 }
 
 /* ========================================
     7️⃣ PAGE SECTIONS
    ======================================== */
 /* PORTFOLIO PAGE */ 
+.case-study {
+  padding-top: var(--space-11);
+}
 
 .case-study h1 {
-  padding-top: var(--space-7);
   font-size: 3em!important;
   font-family: "Inter Display", "Inter Display Placeholder", sans-serif;
   line-height: 100%;
