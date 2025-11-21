@@ -146,7 +146,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 // CONFIGURACIÓN - REEMPLAZA ESTO CON TU ID REAL
-const CLARITY_PROJECT_ID = 'TU_ID_DE_CLARITY_AQUI';
+const CLARITY_PROJECT_ID = 'rc9pe4uosu';
 
 // 1. Configurar Google Consent Mode por defecto (sin consentimiento)
 window.dataLayer = window.dataLayer || [];
