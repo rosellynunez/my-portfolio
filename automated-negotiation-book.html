@@ -202,17 +202,37 @@
             <section id="ux-approach">
                 <div class="container--md subsection">
                     <h2 class="h2-pag-portfolio">1. UX Approach</h2>
-                    <p>Before moving into the visual design, I spent time understanding user needs through conversations with the author and students. Insights revealed that users needed quick access to the latest book version for frequent downloads, along with clear version history to track updates.</p>
-                    <p>I also learned that researchers often need to cite the book immediately, so providing the BibTeX entry in a clear and accessible way was a key requirement.</p>
-                    <p>Because these users may work on different devices—sometimes reading from mobile, but often downloading materials from desktop—it was important to design an interface that adapts across screen sizes.</p>
-                    <p>With these insights in mind, I made some key decisions:</p>
+                    <p>Before diving into the visual design, I focused on understanding user needs through conversations with the author and students. Key insights revealed a demand for quick access to the latest book version for frequent downloads, paired with a clear version history to track updates.</p>
+                    <p>I also discovered that researchers often need to cite the book immediately, making an easily accessible BibTeX entry a critical requirement. Since these users switch between devices—reading on mobile but often downloading on desktop—a responsive design was essential.</p>
+                    <p>Guided by these findings, I made several key design decisions:</p>
                     <ul class="list">
-                        <li>The primary CTA (“Download v0.2”) is placed directly in the hero section so returning visitors can access it instantly.</li>
+                        <li>The primary CTA ("Download v0.2") is placed prominently in the hero section, allowing returning visitors instant access.</li>
                         <li>The “Book Versions” section uses a structured table on desktop, and transforms into stacked cards on mobile to support easier scanning.</li>
                         <li>I added ARIA labels, clear keyboard focus states, and a live status message for the copy-to-clipboard interaction, making the experience reliable for screen reader users.</li>
                         <li>The overall layout follows a consistent vertical rhythm and spacing scale to help users understand each section at a glance.</li>
                     </ul>
+                    <p>Furthermore, considering the site's current state as a single, simple page, I designed the navigation menu to smoothly scroll to the relevant section upon click, creating a seamless, one-page experience instead of multi-page navigation.</p>
+                    <p>The overall layout employs a consistent vertical rhythm and spacing scale, making each section easy to grasp at a glance.</p>
                 </div>
+
+                <div class="subsection container--lg">
+                    <div class="row align-items-center">
+
+                        <div class="col-xl-4 col-12">
+                            <h3 class="h3-pag-portfolio"></h3>
+                            <p><p class="strong">Creating a visual structure</strong> - A top bar in the primary color frames the interface, providing a clear and consistent structure for global navigation.</p>
+                            <p><strong>Establishing a clear focus</strong> - A bold banner defines the screen's purpose with the title and a prominent button, intuitively guiding the user's next step.</p> 
+                            <p><strong>Prioritizing the message</strong> - A neutral and simple treatment of all other elements ensures the core content takes center stage, creating a clean and focused experience.</p>
+                        </div>
+
+                        <div class="col-xl-8">
+                            <div class="image-placeholder border-radius">
+                                <span class="placeholder-text">Image: Colour System</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </section>
 
             <!-- SECTION 03 -->
@@ -438,15 +458,40 @@
 
             <!-- SECTION 08 -->
             <section>
-                <section class="subsection container--md">
+                <div class="subsection container--md">
+                    <h2 class="h2-pag-portfolio">7. CSS Architecture - Client-Friendly & Maintainable</h2>
+                    <p>For this project, I designed a CSS architecture that balances two important needs: professional code organization and easy maintenance for a client who is not a developer.</p>
+                    <p>Instead of delivering a single, very large CSS file (which becomes hard to maintain), or a highly fragmented advanced architecture (which can feel overwhelming), I chose a clear and practical middle-ground approach:</p>
+                </div>
+                <div class="container--md">
+                    <div class="image-placeholder border-radius">
+                        <span class="placeholder-text">Image: </span>
+                    </div>
+                </div>
+                <div class="subsection container--md">
+                    <p>This structure allows for:</p>
+                    <ul>
+                        <li>A scalable and organized system, similar to a lightweight design system.</li>
+                        <li>Easy and safe editing for the client, who can update colors or small styles without breaking the layout.</li>
+                        <li>Professional maintainability, making future updates cleaner and more efficient.</li>
+                        <li>Clear separation of responsibilities, so each file has a single, intuitive purpose.</li>
+                    </ul>
+                    <p>In all my projects, I focus not only on the user experience and visual design, but also on the quality and clarity of the final deliverable.</p>
+                    <p>My goal is always to create solutions that work beautifully today and remain easy to maintain tomorrow—both for teams and for clients with different levels of technical knowledge.</p>
+                </div>
+            </section>
+
+            <!-- SECTION 09 -->
+            <section>
+                <div class="subsection container--md">
                     <h2 class="h2-pag-portfolio">7. Outcome</h2>
                     <p>The final result is a clean, structured, and accessible website that effectively serves both students and researchers. The design is built on a solid system foundation, allowing the site to grow alongside the book's content, while intentional UI and UX choices ensure navigation is simple and clear.</p>
                     <p>Technically, the structure is crafted with semantic HTML, custom CSS, and minimal vanilla JavaScript. We deliberately avoided heavy frameworks to guarantee fast load times. Furthermore, the consistent use of design tokens for all spacing, colors, and typography reduces CSS duplication and makes the codebase easy to maintain.</p>
                     <p>This project was more than a single-page website; it was about creating a clear, trustworthy, and scalable platform for an evolving academic resource. Through thoughtful UX, a strong visual system, and accessible coding practices, the site is now equipped to support both immediate needs and future expansion. It showcases my ability to design cohesive interfaces, structure information effectively, and build flexible, long-lasting design systems.</p>
-                </section>
+                </div>
             </section>
 
-            <!-- SECTION 09 -->
+            <!-- SECTION 10 -->
             <section>
                 <div class="subsection container--md">
                     <h2 class="h2-pag-portfolio">8. What I Learned</h2>
@@ -459,7 +504,7 @@
                 </div>
             </section>
 
-            <!-- SECTION 10 -->
+            <!-- SECTION 11 -->
             <section>
                 <div class="container--md">
                     <div class="image-placeholder border-radius">
