@@ -198,7 +198,7 @@
                 </div>
             </section>
 
-            <!-- SECTION 02 -->
+            <!-- SECTION 02 - UX Approach -->
             <section id="ux-approach">
                 <div class="container--md subsection">
                     <h2 class="h2-pag-portfolio">1. UX Approach</h2>
@@ -209,25 +209,24 @@
                         <li>The primary CTA ("Download v0.2") is placed prominently in the hero section, allowing returning visitors instant access.</li>
                         <li>The “Book Versions” section uses a structured table on desktop, and transforms into stacked cards on mobile to support easier scanning.</li>
                         <li>I added ARIA labels, clear keyboard focus states, and a live status message for the copy-to-clipboard interaction, making the experience reliable for screen reader users.</li>
-                        <li>The overall layout follows a consistent vertical rhythm and spacing scale to help users understand each section at a glance.</li>
+                        <li>The layout follows a consistent vertical rhythm and spacing scale to help users understand each section at a glance.</li>
+                        <li>Since the site currently functions as a single, simple page, the navigation menu smoothly scrolls to each section, creating a seamless one-page experience.</li>
                     </ul>
-                    <p>Furthermore, considering the site's current state as a single, simple page, I designed the navigation menu to smoothly scroll to the relevant section upon click, creating a seamless, one-page experience instead of multi-page navigation.</p>
-                    <p>The overall layout employs a consistent vertical rhythm and spacing scale, making each section easy to grasp at a glance.</p>
                 </div>
 
                 <div class="subsection container--lg">
-                    <div class="row align-items-center">
+                    <div class="row">
 
                         <div class="col-xl-4 col-12">
-                            <h3 class="h3-pag-portfolio"></h3>
-                            <p><p class="strong">Creating a visual structure</strong> - A top bar in the primary color frames the interface, providing a clear and consistent structure for global navigation.</p>
+                            <p>To strengthen clarity and guide attention, I also defined the foundational structure of the page:</p>
+                            <p><strong>Creating a visual structure</strong> - A top bar in the primary color frames the interface, providing a clear and consistent structure for global navigation.</p>
                             <p><strong>Establishing a clear focus</strong> - A bold banner defines the screen's purpose with the title and a prominent button, intuitively guiding the user's next step.</p> 
                             <p><strong>Prioritizing the message</strong> - A neutral and simple treatment of all other elements ensures the core content takes center stage, creating a clean and focused experience.</p>
                         </div>
 
-                        <div class="col-xl-8">
+                        <div class="col-xl-8 col-12">
                             <div class="image-placeholder border-radius">
-                                <span class="placeholder-text">Image: Colour System</span>
+                                <span class="placeholder-text">User journey map showing key insights: quick downloads, version history, BibTeX access, and device switching patterns</span>
                             </div>
                         </div>
                     </div>
@@ -243,42 +242,48 @@
                 </div>
 
                 <div class="subsection container--lg">
-                    <div class="row align-items-center">
+                    <div class="row">
 
                         <div class="col-xl-4 col-12">
                             <h3 class="h3-pag-portfolio">Colour system</h3>
                             <p>I established a two-tone colour strategy that separates structure from interaction:</p>
                             <ul>
-                                <li>Primary (blue): structure, titles, and base text</li>
-                                <li>Secondary (teal): interactive elements such as buttons, links, focus rings</li>
+                                <li>Primary (Blue): Used for structure, titles and body text</li>
+                                <li>Secondary (Turquoise): Reserved for interactive elements like buttons, links, and focus indicators</li>
+                                <li>Neutral (Gray): Features light and dark tones to create contrast and establish visual hierarchy</li>
                             </ul>
                             <p>This contrast helps users immediately distinguish content from actions while maintaining a consistent academic tone.</p>
                         </div>
 
                         <div class="col-xl-8">
-                            <div class="image-placeholder border-radius">
-                                <span class="placeholder-text">Image: Colour System</span>
+                            <div class="image-container border-radius">
+                                <img 
+                                    src="images/automated-negotiation-book/colour-system.jpg"
+                                    alt="Quality service illustration showing our design principles in action"
+                                    class="img-fluid"
+                                    loading="lazy"
+                                >
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="subsection container--lg">
-                    <div class="row align-items-center">
+                    <div class="row">
 
                         <div class="col-xl-4 col-12">
                             <h3 class="h3-pag-portfolio">Typography</h3>
                             <p>I chose two complementary typefaces:</p>
                             <ul>
-                                <li>Plus Jakarta Sans for headings (clarity and modern tone).</li>
-                                <li>Lato for paragraphs (high readability).</li>
+                                <li>Plus Jakarta Sans for headings (clarity and modern tone)</li>
+                                <li>Lato for paragraphs (high readability)</li>
                             </ul>
                             <p>A clear typographic scale supports hierarchy and consistency across sections.</p>
                         </div>
 
                         <div class="col-xl-8 col-12">
                             <div class="image-placeholder border-radius">
-                                <span class="placeholder-text">Image: </span>
+                                <span class="placeholder-text"><span class="placeholder-text">IMAGE: Typography scale showing Plus Jakarta Sans headings and Lato body text with size hierarchy</span>
                             </div>
                         </div>
 
@@ -286,7 +291,7 @@
                 </div>
 
                 <div class="container--lg subsection">
-                    <div class="row align-items-center">
+                    <div class="row">
 
                         <div class="col-xl-4 col-12">
                             <h3 class="h3-pag-portfolio">Component visual design</h3>
@@ -303,7 +308,7 @@
 
                         <div class="col-xl-8 col-12">
                             <div class="image-placeholder border-radius">
-                                <span class="placeholder-text">Image: </span>
+                                <span class="placeholder-text">IMAGE: Component library showing navigation bar, primary/secondary buttons, version cards, and BibTeX code block</span>
                             </div>  
                         </div>
 
@@ -319,56 +324,102 @@
                     <p>Beyond the visual decisions, I developed a lightweight design system that gives the site long-term scalability. Even though this phase of the project is a single page, the design system lays the foundation for future chapters, downloadable resources, and potential interactive tools.</p>
                 </div>
 
+                <!-- SUBSECTION 1: FOUNDATION TOKENS - COLOR & TYPOGRAPHY -->
                 <div class="subsection container--lg">
-                    <div class="row align-items-center">
-
+                    <div class="row">
                         <div class="col-xl-4 col-12">
-                            <h3 class="h3-pag-portfolio">Semantic design tokens</h3>
-                            <p>I built a token structure to ensure consistency and simplify future updates</p>
-                            <ul>
-                                <li>Colour tokens: roles for text, surfaces, interactive states</li>
-                                <li>Surfaces: hover, focus, active states</li>
-                                <li>Typography: base, interactive, button text, sizes, weights, and hierarchy</li>
-                                <li>Borders: separator and interactive widths</li>
-                                <li>Spacing scale: applied across sections and cards</li>
-                                <li>Interactive surfaces: unified hover, focus, and active states</li>
-                            </ul>
-                            <p>By naming tokens semantically (e.g., --surface-link-interaction, --border-width-interactive), I ensured that the design scales while staying easy to maintain.</p>
+                            <h3 class="h3-pag-portfolio">Foundation Tokens</h3>
+                            <p>These are our foundational design elements—the raw materials for building all user interfaces. This structured palette and scale system ensure visual harmony and consistency from the start.</p>
+                            <p><strong>Color & Typography:</strong> The essential palette and type scale that form our visual language.</p>
                         </div>
-
                         <div class="col-xl-8 col-12">
                             <div class="image-placeholder border-radius">
-                                <span class="placeholder-text">Image: </span>
+                                <span class="placeholder-text">IMAGE: Design tokens chart showing color palette (primary blue, secondary turquoise, neutral grays) and typography scale with CSS variables</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
+                <!-- SUBSECTION 2: FOUNDATION TOKENS - SPACING & STRUCTURE -->
                 <div class="subsection container--lg">
-                    <div class="row align-items-center">
-
+                    <div class="row">
                         <div class="col-xl-4 col-12">
-                            <h3 class="h3-pag-portfolio">Component architecture</h3>
-                            <p>Each component was built as a reusable module:</p>
-                            <ul>
-                                <li>Buttons share the same focus states, and interaction rules</li>
-                                <li>Cards follow a consistent internal structure</li>
-                                <li>Tables adapt to mobile through a token-based responsive system</li>
-                                <li>The navigation is fully keyboard-accessible and screen-reader friendly</li>
-                            </ul>
-                            <p>This modular approach ensures consistency and simplifies future updates.</p>
+                            <h3 class="h3-pag-portfolio">Spacing & Layout System</h3>
+                            <p>Continuing our foundation tokens, a consistent spacing scale creates rhythm and balance across all layouts.</p>
+                            <p>This predictable framework provides structure for both designers and developers.</p>
                         </div>
 
                         <div class="col-xl-8 col-12">
                             <div class="image-placeholder border-radius">
-                                <span class="placeholder-text">Image: </span>
+                                <span class="placeholder-text">IMAGE: Spacing scale visualization (8-point grid) + Layout examples showing --space tokens application</span>
                             </div>
                         </div>
+                    </div>
+                </div>
+
+                <!-- SUBSECTION 3: SEMANTIC TOKENS -->
+                <div class="subsection container--lg">
+                    <div class="row">
+                        <div class="col-xl-4 col-12">
+                            <h3 class="h3-pag-portfolio">Semantic design tokens</h3>
+                            <p>I built a comprehensive token structure to ensure visual consistency and simplify future updates across the platform.</p>
+                            <ul>
+                                <li><strong>Surface Tokens:</strong> --surface-card, --surface-header, --surface-app</li>
+                                <li><strong>Text Colors:</strong> Semantic roles for different contexts</li>
+                                <li><strong>Border System:</strong> Separator vs interactive widths</li>
+                            </ul>
+                        </div>
+
+                        <div class="col-xl-8 col-12">
+                            <div class="image-placeholder border-radius">
+                                <span class="placeholder-text">IMAGE: Token architecture diagram mapping raw colors (--color-primary-500) to semantic tokens (--surface-card) to UI components</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SUBSECTION 4: INTERACTIVE STATES -->
+                <div class="subsection container--lg">
+                    <div class="row">
+                        <div class="col-xl-4 col-12">
+                            <h3 class="h3-pag-portfolio">Interactive States & Feedback</h3>
+                            <p>Tokens that define dynamic behaviors—hover, focus, and active states that bring the interface to life with consistent interactions.</p>
+                        </div>
+
+                        <div class="col-xl-8 col-12">
+                            <div class="image-placeholder border-radius">
+                                <span class="placeholder-text">IMAGE: Interactive states showcase with button hover, focus, active states using --surface-interactive tokens and focus indicators</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SUBSECTION 5: COMPONENT ARCHITECTURE -->
+                <div class="subsection container--lg">
+                    <div class="row">
+
+                        <div class="col-xl-4 col-12">
+                            <h3 class="h3-pag-portfolio">Component architecture</h3>
+                            <p>Reusable modules built on our token system ensuring consistency and accessibility across all interface elements.</p>
+                            <ul>
+                                <li><strong>Buttons</strong> share the same focus states and interaction rules</li>
+                                <li><strong>Cards</strong> follow a consistent internal structure and spacing</li>
+                                <li><strong>Tables</strong> adapt to mobile through a token-based responsive system</li>
+                                <li><strong>Navigation</strong> is fully keyboard-accessible and screen-reader friendly</li>
+                            </ul>
+                        </div>
+
+                        <div class="col-xl-8 col-12">
+                            <div class="image-placeholder border-radius">
+                                <span class="placeholder-text">IMAGE: Annotated component system showing how tokens apply to buttons, cards, tables, and navigation with accessibility features</span>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
 
                 <div class="subsection container--md">
-                    <h3 class="h3-pag-portfolio">Scalability</h3>
+                    <h3 class="h3-pag-portfolio">Scalability & Future Growth</h3>
                     <div>
                         <p>This foundation allows the author to add new book versions without redesigning the page, integrate future interactive tools, maintain visual consistency across new pages and evolve the site while keeping accessibility at the core.</p>
                         <p>The design system ensures that the project can grow in a structured way, rather than becoming a collection of disconnected screens.</p>
