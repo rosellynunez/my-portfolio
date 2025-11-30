@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- SEO -->
+        <meta name="keywords" content="UX design, UI design, web design, portfolio, design system, accessibility">
+        <meta name="description" content="Portfolio of Roselly Nuñez — UX, UI & Web Designer based in Barcelona." />
+        <meta name="author" content="Roselly Nuñez" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://rosellynunez.com/" />
+
+        <!-- Open Graph (social media previews) -->
+        <meta property="og:title" content="Roselly Nuñez - UX, UI & Web Designer" />
+        <meta property="og:description" content="Explore the portfolio of Roselly Nuñez - a Barcelona-based UX, UI & Web Designer who blends creativity and code to build memorable digital experiences." />
+        <meta property="og:image" content="https://rosellynunez.com/images/og-image.jpg" />
+        <meta property="og:url" content="https://rosellynunez.com/" />
+        <meta property="og:type" content="website" />
+
+        <!-- Title -->
+        <title>Roselly Nuñez - UX, UI & Web Designer</title>
+
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" href="images/favicon.png"/>
+
+        <!-- Preconnect for faster Google Fonts loading -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <!-- Google Fonts (usa display=swap para cargar texto antes)-->
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+        <!-- Bootstrap + Bootstrap Icons -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" />
+
+        <!-- Global Styles (tokens, reset, typography, containers) -->
+        <link rel="stylesheet" href="css/global.css">
+
+        <!-- Components (navbar, buttons, cards, placeholders…) -->
+        <link rel="stylesheet" href="css/components.css">
+
+        <!-- 🌗 Carga rápida del tema guardado -->
+        <script>
+            (function() {
+                const userTheme = localStorage.getItem('theme');
+                if (userTheme) {
+                    document.documentElement.setAttribute('data-bs-theme', userTheme);
+                }
+            })();
+        </script>
+
+        <!-- Typed.js (performance) -->
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+
+        <!-- Twemoji-->
+        <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous" defer></script>
+
+        <!-- Main Script -->
+        <script src="js.js" defer></script>
+
+        <!-- Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y1KMG7E11J"></script>
+        <script src="assets/js/tracking.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg bg-transparent fixed-top">
+                <div class="container-fluid">
+            
+                <!-- Logo -->
+                <a class="navbar-brand" href="index.html">
+                    <svg id="logo" width="150" height="50" viewBox="0 0 39.8 24" xmlns="http://www.w3.org/2000/svg">
+                    <path class="st0" d="M12.5,1v5.2c-3.4,0-6.1,2.7-6.1,6.1v10.9H1.1V1.1h5.2v1.7c1.8-1.1,3.9-1.8,6.1-1.8Z" fill="currentColor"/>
+                    <path class="st0" d="M20.3,23.1v-10.8c0-3.4,2.8-6.1,6.1-6.1h.7c2.4,0,4.4,1.4,5.5,3.3.4.8.6,1.7.7,2.7,0,0,0,0,0,0v5.3c0,0,0,5.5,0,5.5h5.1v-9.5c0-2-.3-3.8-.9-5.4-.2-.5-.4-1-.6-1.4-1-1.9-2.4-3.4-4.2-4.3-1.8-1-3.8-1.5-6-1.5s-3.1.3-4.5.9h0c-.7.3-1.4.6-2,1v-1.7h-5.2v22h5.2Z" 
+                    fill="currentColor"/>
+                    </svg>
+                </a>
+
+                <!-- Botón para cambiar entre modo claro y oscuro -->
+                <button onclick="cambiarTema()" class="btn-vibe order-2 order-sm-1 order-lg-3">
+                    <span class="label">Change the Vibe</span>
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                    width="16" 
+                    height="16" 
+                    fill="#fab04e" 
+                    class="icon-vibe" 
+                    viewBox="0 0 16 16">
+                        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16M2.31 5.243A1 1 0 0 1 3.28 4H6a1 1 0 0 1 1 1v.116A4.2 4.2 0 0 1 8 5c.35 0 .69.04 1 .116V5a1 1 0 0 1 1-1h2.72a1 1 0 0 1 .97 1.243l-.311 1.242A2 2 0 0 1 11.439 8H11a2 2 0 0 1-1.994-1.839A3 3 0 0 0 8 6c-.393 0-.74.064-1.006.161A2 2 0 0 1 5 8h-.438a2 2 0 0 1-1.94-1.515zM4.969 9.75A3.5 3.5 0 0 0 8 11.5a3.5 3.5 0 0 0 3.032-1.75.5.5 0 1 1 .866.5A4.5 4.5 0 0 1 8 12.5a4.5 4.5 0 0 1-3.898-2.25.5.5 0 0 1 .866-.5z"/>
+                    </svg>
+                </button>  
+                
+                <!-- Botón navbar-toggler visible sólo en mobile -->
+                <button 
+                    id="menu-mobile-color"
+                    class="navbar-toggler order-3" 
+                    aria-controls="navbarSupportedContent" 
+                    aria-expanded="false" 
+                    aria-label="Toggle navigation">
+                    <span id="menu-style">MENU</span>
+                </button>  
+
+                <!-- Menú colapsable en pantallas pequeñas, visible en pantallas grandes -->
+                <div class="collapse navbar-collapse desktop-menu order-lg-2" id="navbarSupportedContent">
+
+                    <ul class="navbar-nav text-center mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="my-work.html">My Work</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="images/cv/CV_Roselly_Nunez_UX_UI_Designer-en.pdf" target="_blank" >Resume<i class="bi bi-box-arrow-up-right ms-2"></i></a>
+                        </li>
+                    </ul>
+
+                </div>
+
+                </div>
+            </nav>
+        </header>
+
+    <main>
+        <!-- CASE STUDY -->
+        <article id="negotiation-book" class="case-study container-full">
+
+            <!-- SECTION 01 -->
+            <section>
+                <div id="title-project" class="subsection container--lg">
+                    <h1 class="col-sm-12 col-lg-8">My Web Page Design System</h1>
+                    <div class="image-placeholder border-radius">
+                        <span class="placeholder-text">Hero Image - Project Overview</span>
+                    </div>
+                </div>
+
+                <div id="project-overview" class="subsection container--lg">            
+                    <div class="row">
+                        <div class="col-lg-4 col-12">
+                            <h2 class="small-title text-uppercase">Project Overview</h2>
+                        </div>
+                        <div class="col-lg-8 col-12">
+                            <p>From the beginning of my career as a UX/UI Designer, the idea of creating my own Design System has been a constant dream. In many teams where I worked, we didn't even have a Style Guide, which led me to take the initiative in this crucial aspect of design.</p>
+                            <p>One day, while designing a landing page for a client, I realized that the best Design Systems available were paid, which pushed me to create a free, open-source alternative. Thus, "Yuru" was born, a word that means "little cup" in Quechua. This project aimed not only to facilitate the adoption of Design Systems but also to promote accessibility, consistency, and scalability in design and development teams.</p>
+                            <p>For several months, I immersed myself in analyzing other Design Systems and frontend frameworks, uncovering their secrets and designing my system in Figma. Simultaneously, I documented components and styles in CSS, striving to maintain a consistent naming convention between design and development.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="project-goals" class="subsection container--lg">            
+                    <div class="row">
+                        <div class="col-lg-4 col-12">
+                            <h2 class="small-title text-uppercase">project goals</h2>
+                        </div>
+                        <div class="col-lg-8 col-12">
+                            <ul>
+                                <li>Present academic content in a clear and structured way.</li>
+                                <li>Offer an intuitive downloading experience for students and researchers.</li>
+                                <li>Build a scalable design system using semantic tokens and reusable components.</li>
+                                <li>Ensure WCAG AA accessibility through colour contrast, keyboard support, and semantic HTML.</li>
+                                <li>Create a responsive interface that works well across devices and keeps a clean visual hierarchy.</li>
+                                <li>Add subtle micro-interactions to improve usability without distracting from scholarly content.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="my-role" class="subsection container--lg">            
+                    <div class="row">
+                        <div class="col-lg-4 col-12">
+                            <h2 class="small-title text-uppercase">mi role</h2>
+                        </div>
+                        <div class="col-lg-8 col-12">
+                            <p>As the UI Designer, Design System Architect, and Frontend Developer, I led the project end-to-end. My responsibilities included:</p>
+                            <ul>
+                                <li>Defining the visual language.</li>
+                                <li>Creating the token-based design system,</li>
+                                <li>Building reusable components</li>
+                                <li>Implementing responsive layouts,</li>
+                                <li>Ensuring accessibility compliance.</li>
+                                <li>Translating static concepts into living, interactive experiences</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subsection container--lg">
+                    <div class="image-placeholder border-radius">
+                        <span class="placeholder-text">Image: </span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 02 -->
+            <section id="ux-approach">
+                <div class="container--md subsection">
+                    <h2 class="h2-pag-portfolio">1. UX Approach</h2>
+                    <p>Before moving into the visual design, I spent time understanding user needs through conversations with the author and students. Insights revealed that users needed quick access to the latest book version for frequent downloads, along with clear version history to track updates.</p>
+                    <p>I also learned that researchers often need to cite the book immediately, so providing the BibTeX entry in a clear and accessible way was a key requirement.</p>
+                    <p>Because these users may work on different devices—sometimes reading from mobile, but often downloading materials from desktop—it was important to design an interface that adapts across screen sizes.</p>
+                    <p>With these insights in mind, I made some key decisions:</p>
+                    <ul class="list">
+                        <li>The primary CTA (“Download v0.2”) is placed directly in the hero section so returning visitors can access it instantly.</li>
+                        <li>The “Book Versions” section uses a structured table on desktop, and transforms into stacked cards on mobile to support easier scanning.</li>
+                        <li>I added ARIA labels, clear keyboard focus states, and a live status message for the copy-to-clipboard interaction, making the experience reliable for screen reader users.</li>
+                        <li>The overall layout follows a consistent vertical rhythm and spacing scale to help users understand each section at a glance.</li>
+                    </ul>
+                </div>
+                <div class="container--md subsection">
+                    <div class="image-placeholder border-radius">
+                        <span class="placeholder-text">Image: Colour System</span>
+                    </div>
+                    <div>
+                        <p class="paragraph-xs">This image showcases the...</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 03 -->
+            <section>
+                <div class="subsection container--md">
+                    <h2 class="h2-pag-portfolio">2. UI Design & Visual Language</h2>
+                    <p>The visual direction needed to feel academic, modern, and easy to read. To achieve this, I created a clean interface where colours, typography, and spacing work together to support readability and trust.</p>
+                </div>
+
+                <div class="subsection container--lg">
+                    <div class="row align-items-center">
+
+                        <div class="col-xl-4 col-12">
+                            <h3 class="h3-pag-portfolio">Colour system</h3>
+                            <p>I established a two-tone colour strategy that separates structure from interaction:</p>
+                            <ul>
+                                <li>Primary (blue): structure, titles, and base text</li>
+                                <li>Secondary (teal): interactive elements such as buttons, links, focus rings</li>
+                            </ul>
+                            <p>This contrast helps users immediately distinguish content from actions while maintaining a consistent academic tone.</p>
+                        </div>
+
+                        <div class="col-xl-8">
+                            <div class="image-placeholder border-radius">
+                                <span class="placeholder-text">Image: Colour System</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subsection container--lg">
+                    <div class="row align-items-center">
+
+                        <div class="col-xl-4 col-12">
+                            <h3 class="h3-pag-portfolio">Typography</h3>
+                            <p>I chose two complementary typefaces:</p>
+                            <ul>
+                                <li>Plus Jakarta Sans for headings (clarity and modern tone).</li>
+                                <li>Lato for paragraphs (high readability).</li>
+                            </ul>
+                            <p>A clear typographic scale supports hierarchy and consistency across sections.</p>
+                        </div>
+
+                        <div class="col-xl-8 col-12">
+                            <div class="image-placeholder border-radius">
+                                <span class="placeholder-text">Image: </span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="container--lg subsection">
+                    <div class="row align-items-center">
+
+                        <div class="col-xl-4 col-12">
+                            <h3 class="h3-pag-portfolio">Component visual design</h3>
+                            <p>I designed a small but coherent visual library, including:</p>
+                            <ul>
+                                <li>Navigation bar.</li>
+                                <li>Primary and secondary buttons</li>
+                                <li>Information cards</li>
+                                <li>Version table layout</li>
+                                <li>Code block with copy interaction</li>
+                            </ul>
+                            <p>These components were styled with consistent colour use, border radius, spacing, and typography to create a unified visual language.</p>
+                        </div>
+
+                        <div class="col-xl-8 col-12">
+                            <div class="image-placeholder border-radius">
+                                <span class="placeholder-text">Image: </span>
+                            </div>  
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 04 -->
+            <section id="design-systems-foundations">
+
+                <div class="subsection container--md">
+                    <h2 class="h2-pag-portfolio">3. Design Systems Foundations</h2>
+                    <p>Beyond the visual decisions, I developed a lightweight design system that gives the site long-term scalability. Even though this phase of the project is a single page, the design system lays the foundation for future chapters, downloadable resources, and potential interactive tools.</p>
+                </div>
+
+                <div class="subsection container--lg">
+                    <div class="row align-items-center">
+
+                        <div class="col-xl-4 col-12">
+                            <h3 class="h3-pag-portfolio">Semantic design tokens</h3>
+                            <p>I built a token structure to ensure consistency and simplify future updates</p>
+                            <ul>
+                                <li>Colour tokens: roles for text, surfaces, interactive states</li>
+                                <li>Surfaces: hover, focus, active states</li>
+                                <li>Typography: base, interactive, button text, sizes, weights, and hierarchy</li>
+                                <li>Borders: separator and interactive widths</li>
+                                <li>Spacing scale: applied across sections and cards</li>
+                                <li>Interactive surfaces: unified hover, focus, and active states</li>
+                            </ul>
+                            <p>By naming tokens semantically (e.g., --surface-link-interaction, --border-width-interactive), I ensured that the design scales while staying easy to maintain.</p>
+                        </div>
+
+                        <div class="col-xl-8 col-12">
+                            <div class="image-placeholder border-radius">
+                                <span class="placeholder-text">Image: </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subsection container--lg">
+                    <div class="row align-items-center">
+
+                        <div class="col-xl-4 col-12">
+                            <h3 class="h3-pag-portfolio">Component architecture</h3>
+                            <p>Each component was built as a reusable module:</p>
+                            <ul>
+                                <li>Buttons share the same focus states, and interaction rules</li>
+                                <li>Cards follow a consistent internal structure</li>
+                                <li>Tables adapt to mobile through a token-based responsive system</li>
+                                <li>The navigation is fully keyboard-accessible and screen-reader friendly</li>
+                            </ul>
+                            <p>This modular approach ensures consistency and simplifies future updates.</p>
+                        </div>
+
+                        <div class="col-xl-8 col-12">
+                            <div class="image-placeholder border-radius">
+                                <span class="placeholder-text">Image: </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subsection container--md">
+                    <h3 class="h3-pag-portfolio">Scalability</h3>
+                    <div>
+                        <p>This foundation allows the author to add new book versions without redesigning the page, integrate future interactive tools, maintain visual consistency across new pages and evolve the site while keeping accessibility at the core.</p>
+                        <p>The design system ensures that the project can grow in a structured way, rather than becoming a collection of disconnected screens.</p>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- SECTION 05 -->
+            <section id="accessibility">
+
+                <div class="subsection container--md">
+                    <h2 class="h2-pag-portfolio">4. Accessibility</h2>
+                    <p>Since the target audience includes students and researchers working in academic environments, the website needed to be usable by everyone — including people using screen readers, keyboard navigation, or high-contrast settings.</p>
+                </div>
+                
+                <div class="subsection container--md">
+                    <h3 class="h3-pag-portfolio">Semantic structure</h3>
+                    <p>I built the entire page using meaningful HTML elements such as &lt;nav&gt;, &lt;header&gt;, &lt;section&gt;, &lt;table&gt;, and &lt;footer&gt;. Clear section titles and consistent hierarchy help both users and assistive technologies understand the structure of the content.</p>
+                </div>
+                
+                <div class="subsection container--md">
+                    <h3 class="h3-pag-portfolio">Keyboard Navigation & Focus States</h3>
+                    <p>Every interactive element — links, buttons, the mobile navigation menu, and the copy-to-clipboard component — is fully operable with a keyboard.</p>
+                    <p>I implemented visible focus rings using semantic design tokens to ensure users always know where they are on the page. Hover and focus states share the same interactive surface, but focus adds an accessible outline for clarity.</p>
+                </div>
+                
+                <div class="subsection container--md">
+                    <h3 class="h3-pag-portfolio">Screen Reader Labels & ARIA</h3>
+                    <p>To improve the experience for users relying on screen readers, I added:</p>
+                    <ul>
+                        <li>Descriptive ARIA labels for buttons such as “Open menu”, “Close menu”, and “Copy BibTeX entry”.</li>
+                        <li>Additional labels for the mobile version table, where each row becomes a card.</li>
+                    </ul>
+                    <p>These enhancements make sure that all content is communicated clearly, even when the layout changes.</p>
+                </div>
+                
+                <div class="subsection container--md">
+                    <h3 class="h3-pag-portfolio">Colour contrast</h3>
+                    <p>All colour combinations follow WCAG AA standards. I used tokens for text, surfaces, and interactive elements to maintain predictable contrast across the interface.</p>
+                    <p>The teal secondary colour was chosen specifically because it provides accessible contrast on both light and dark surfaces.</p>
+                </div>
+                
+                <div class="subsection container--md">
+                    <h3 class="h3-pag-portfolio">Responsive Behaviour with Accessibility in Mind</h3>
+                    <p>The version table transforms into accessible cards on mobile.
+                    Each card includes descriptive labels, ensuring the information hierarchy remains intact regardless of the layout.</p>
+                    <ul>
+                        <li>Hero layout adapts with repositioned text for readability</li>
+                        <li>Cards become a grid or single column depending on width</li>
+                        <li>The version table transforms into stacked cards, each row becoming a readable block</li>
+                        <li>Navigation becomes a hamburger menu with accessible toggling</li>
+                    </ul>
+                </div>
+
+            </section>
+
+            <!-- SECTION 06 -->
+            <section>
+                <div class="subsection container--md">
+                    <h2 class="h2-pag-portfolio">5. Responsive Web Layout</h2>
+                    <p>While the site is designed primarily for desktop use as a practical book resource, I implemented a comprehensive responsive strategy:</p>
+                    <ul>
+                        <li>Hero sections adapt with repositioned text for optimal readability on all devices</li>
+                        <li>Content cards transform into a flexible grid or single column based on viewport width</li>
+                        <li>The version table becomes stacked cards, converting each row into readable blocks on smaller screens</li>
+                        <li>Navigation condenses into an accessible hamburger menu with smooth toggling</li>
+                        <li>This ensures the website remains functional and accessible across all devices when needed</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- SECTION 07 -->
+            <section>
+                <div class="subsection container--md">
+                    <h2 class="h2-pag-portfolio">6. Interaction design</h2>
+                    <p>Small micro-interactions support usability:</p>
+                    <ul>
+                        <li>Buttons lift slightly on hover</li>
+                        <li>Smooth transitions for the navigation menu</li>
+                        <li>Copy button turns into a checkmark on success</li>
+                        <li>Surfaces use subtle transparency via color-mix() for softer UI feedback</li>
+                    </ul>
+                    <p>These interactions stay subtle to avoid overwhelming the academic tone of the site.</p>
+                </div>
+            </section>
+
+            <!-- SECTION 08 -->
+            <section>
+                <section class="subsection container--md">
+                    <h2 class="h2-pag-portfolio">7. Outcome</h2>
+                    <p>The final result is a clean, structured, and accessible website that effectively serves both students and researchers. The design is built on a solid system foundation, allowing the site to grow alongside the book's content, while intentional UI and UX choices ensure navigation is simple and clear.</p>
+                    <p>Technically, the structure is crafted with semantic HTML, custom CSS, and minimal vanilla JavaScript. We deliberately avoided heavy frameworks to guarantee fast load times. Furthermore, the consistent use of design tokens for all spacing, colors, and typography reduces CSS duplication and makes the codebase easy to maintain.</p>
+                    <p>This project was more than a single-page website; it was about creating a clear, trustworthy, and scalable platform for an evolving academic resource. Through thoughtful UX, a strong visual system, and accessible coding practices, the site is now equipped to support both immediate needs and future expansion. It showcases my ability to design cohesive interfaces, structure information effectively, and build flexible, long-lasting design systems.</p>
+                </section>
+            </section>
+
+            <!-- SECTION 09 -->
+            <section>
+                <div class="subsection container--md">
+                    <h2 class="h2-pag-portfolio">8. What I Learned</h2>
+                    <p>This process taught me a lot about the importance of documentation and consistency in a Design System. I spent countless nights fine-tuning details, adjusting components, and ensuring everything aligned with industry best practices.</p>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <div class="subsection container--md">
+                    <h2 class="h2-pag-portfolio">9. Redemption and Research</h2>
+                    <p>After a pause to reflect on the mistakes made, I wondered how things could have been different. This gave birth to the "redemption" story with the Space Design System.</p>
+                    </p>For my second attempt, I resolved the issues with Yuru. I chose a more evocative name related to space, improving its positioning: "Space Design System". This new approach allowed me to connect better with my audience and position the project more effectively.</p>
+                    </p>I mapped out reference Design Systems, like Atlassian DS, IBM's Carbon, and GitHub, and from frameworks like TailwindCSS and Bootstrap. I also took specialized courses and read articles to educate myself, allowing me to improve and refine my approach.</p>
+                </div>
+            </section>
+
+            <!-- SECTION 10 -->
+            <section>
+                <div class="container--md">
+                    <div class="image-placeholder border-radius">
+                        <span class="placeholder-text">Image: </span>
+                    </div>
+                </div>
+            </section>
+            
+        </article>
+
+        <!-- Next Project -->
+        <section id="next-project" class="container-lg">
+            <div>
+                <h2><span class="section-title text-gradient">Next project</span></h2>
+                <a href="kronaby.html" class="btn btn-secondary" role="button">Go to the next project <i id="dl-icon-arrow" class="bi bi-arrow-right-circle-fill"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact-me" class="container--full d-flex align-items-center justify-content-left">
+            <div class="row justify-content-center rounded-block container-lg my-5 px-md-5">
+                <div class="text-center py-4 px-md-5">
+                    <h2 class="py-2 border-bottom"><span class="section-title text-gradient">Let's connect!</span></h2>
+                    <p class="subtitle-1 my-4">
+                    Drop it like it's hot and hit me at <span class="colorful-text underlined"><a href="mailto:roselly.nunezg@gmail.com">my email</a></span> or find me on my <span><a class="colorful-text underlined" href="https://www.linkedin.com/in/rosellynunez/" class ="links-external" target="_blank">linkedin</a></span> account.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Overlay para menú mobile -->
+    <div id="menu-overlay">
+        <ul class="overlay-menu">
+            <li><a href="my-work.html">My Work</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a class="nav-link active" href="images/cv/CV_Roselly_Nunez_UX_UI_Designer-en.pdf" target="_blank" >Resume<i class="bi bi-box-arrow-up-right ms-2"></i></a></li>
+        </ul>
+    </div>
+
+    <footer role="contentinfo" aria-label="Site footer">
+        <p>This site is hand-made by me, Roselly Nuñez. Built with 💖, HTML, CSS, JS and Bootstrap.</p>
+    </footer>
+</body>
+
+</html>

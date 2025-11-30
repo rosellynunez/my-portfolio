@@ -144,3 +144,55 @@ document.addEventListener("DOMContentLoaded", function () {
   highlights.forEach((el) => observer.observe(el));
 });
 
+
+// CONFIGURACIÓN - REEMPLAZA ESTO CON TU ID REAL
+const CLARITY_PROJECT_ID = 'rc9pe4uosu';
+
+// 1. Configurar Google Consent Mode por defecto (sin consentimiento)
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('consent', 'default', {
+  'analytics_storage': 'denied',
+  'ad_storage': 'denied'
+});
+
+// 2. Mostrar banner si no hay decisión previa
+document.addEventListener('DOMContentLoaded', function() {
+    if (!localStorage.getItem('cookieConsent')) {
+        document.getElementById('cookieBanner').style.display = 'block';
+    } else if (localStorage.getItem('cookieConsent') === 'accepted') {
+        // Si ya aceptó antes, cargar Clarity inmediatamente
+        loadClarityWithConsent();
+    }
+});
+
+// 3. Funciones para manejar consentimiento
+function acceptCookies() {
+    localStorage.setItem('cookieConsent', 'accepted');
+    document.getElementById('cookieBanner').style.display = 'none';
+    
+    // Actualizar consentimiento y cargar Clarity
+    gtag('consent', 'update', {
+        'analytics_storage': 'granted'
+    });
+    loadClarityWithConsent();
+    
+    console.log('Cookies aceptadas - Clarity activado');
+}
+
+function declineCookies() {
+    localStorage.setItem('cookieConsent', 'declined');
+    document.getElementById('cookieBanner').style.display = 'none';
+    
+    // Mantener consentimiento denegado
+    console.log('Cookies rechazadas - Clarity no se cargará');
+}
+
+// 4. Función para cargar Clarity con consentimiento
+function loadClarityWithConsent() {
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", CLARITY_PROJECT_ID);
+}
