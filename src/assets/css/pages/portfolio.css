@@ -1,0 +1,65 @@
+/* PORTFOLIO PAGE */ 
+
+.case-study h1 {
+  text-align: left;
+  font-size: 3em!important;
+  font-family: "Inter Display", "Inter Display Placeholder", sans-serif;
+  line-height: 100%;
+  font-weight: 600;
+}
+
+.h2-pag-portfolio {
+  font-size: 2rem;
+}
+
+@media (min-width: 769px) and (max-width: 1199px) {
+  .case-study h1 {
+    font-size: 3.5rem !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .case-study h1 {
+    font-size: 4.4rem !important;
+  }
+
+  .h2-pag-portfolio {
+    font-size: 2.7rem;
+  }
+
+  .h3-pag-portfolio {
+    font-size: 1.8rem;
+  }
+}
+
+.case-study {
+  padding-top: 9rem;
+}
+
+.center-image {
+  display: flex; 
+  justify-content: center; 
+}
+
+.text-align {
+  text-align: center;
+}
+
+/* Icon arrow alineado */
+.p-note {
+  text-align: center;
+}
+
+.decision-line {
+  border-top: 1px solid #8e8e8e; /* Ajusta el grosor y el color según necesites */
+  padding-top: 1.5rem; /* Opcional: añade espacio encima del borde */
+  margin-top: 1.5rem; /* Opcional: añade espacio entre el borde y el párrafo anterior */
+}
+
+/* Make sure the image covers the full width */
+.text-image img {
+    height: auto;
+    object-fit: cover;
+    width: 880px;
+    height: auto;
+}

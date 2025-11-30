@@ -1,0 +1,77 @@
+/* TEMA CLARO */
+[data-bs-theme="light"] {
+  --bs-body-bg: #F5F4EB; /* Fondo claro personalizado */
+  --bs-body-color: #23005C; /* Color del texto en tema claro */
+  --bs-link-color-rgb: #ff5b8a;
+
+  button.btn-vibe  {
+    /* Estilos para el botón del menú móvil en modo claro */
+    color: #23005C; 
+    border: none;
+    background: linear-gradient(90deg, rgba(243, 202, 77, 0.5) 0%, rgba(255, 152, 154, 0.5) 42.88%, rgba(203, 171, 255, 0.5) 94.62%), linear-gradient(0deg, rgb(255, 255, 255), rgb(255, 255, 255))
+  } 
+
+  button#menu-mobile-color {
+    /* Estilos para el botón del menú móvil en modo claro */
+    color: #F5F4EB; 
+    background: #5800E5; 
+  }
+
+  #logo {
+    fill: #23005C; 
+  }
+}
+
+/* TEMA OSCURO*/
+[data-bs-theme="dark"] {
+  --bs-body-bg: #020005; /* Fondo oscuro personalizado */
+  --bs-body-color: #F5F4EB; 
+  --bs-link-color-rgb: #ff5b8a;
+
+  button.btn-vibe  {
+    /* Estilos para el botón del menú móvil en modo claro */
+    color: #F5F4EB; 
+    border: none;
+    background: linear-gradient(94deg, rgba(128, 47, 126, 0.7) 0%, rgba(255, 255, 255, 0.1) 100%); 
+  }; 
+
+  button#menu-mobile-color {
+    /* Estilos para el botón del menú móvil en modo claro */
+    color: #5800E5; 
+    background: #F5F4EB; 
+    border: none;
+  }
+
+  #logo {
+    fill: #F5F4EB; 
+  }
+
+  body[data-bs-theme="dark"] a {
+    color: #f9f8f1!important; /* Color claro para enlaces en tema oscuro */
+  }
+}
+
+/* Degradado radial en modo oscuro */
+[data-bs-theme="dark"]::before {
+  content: "";
+  position: fixed;
+  top: 40%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  width: 1845px;
+  height: 1230px;
+  background: radial-gradient(50% 50% at 50% 50%, #23005C 0%, rgba(158, 110, 230, 0) 100%);
+  opacity: 0.8;
+  z-index: -1; /* Para que quede detrás del contenido */
+  pointer-events: none; /* Para que no interfiera con la interacción */
+}
+
+/* Estilos en modo oscuro para botones */
+body[data-bs-theme="dark"] .btn-primary {
+  color: #212529!important; /* Color de texto oscuro en el botón */
+}
+
+body[data-bs-theme="dark"] .btn-primary:hover {
+  background: linear-gradient(79deg, #f9f8f1, #ff5b8a 30%, #ff5b8a 50%, #fba64b 77%, #f99b52);
+}
+

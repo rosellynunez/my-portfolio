@@ -1,0 +1,224 @@
+#intro h1 {
+font-weight: 700;
+}
+
+body {
+  font-family: "Inter Display", "Inter Display Placeholder", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+.paragraph-s{
+  font-size: 0.9rem;
+}
+
+.paragraph-xs{
+  font-size: 0.8rem;
+}
+
+.subtitle-1 {
+  font-size: 3rem;
+  font-family: "Inter Display", "Inter Display Placeholder", sans-serif;
+}
+
+.subtitle-2 {
+  font-size: 2rem;
+  font-family: "Inter Display", "Inter Display Placeholder", sans-serif;
+}
+
+.section-title {
+  font-family: "Inter Display", "Inter Display Placeholder", sans-serif;
+  font-optical-sizing: auto;
+  letter-spacing: -1.75px;
+  font-weight: 400;
+}
+
+h2 {
+  text-align: left;
+  font-size: 3rem;
+  font-family: "Inter Display", "Inter Display Placeholder", sans-serif;
+}
+
+h3 {
+  text-align: left;
+  font-weight: 400;
+  font-family: "Inter Display", "Inter Display Placeholder", sans-serif;
+  padding: 0.4rem 0rem 0.4rem 0rem;
+}
+
+/* Mobile-specific style */
+@media (max-width: 389px) {
+  #intro .btn-primary {
+    position: absolute;
+    top: 30em; /* Adjust this value for mobile */
+    z-index: 10; /* Make sure it's above other content */
+  }
+
+  #intro h1 {
+    font-size: 2em;
+    line-height: 100%;
+  }
+
+  #intro h2 {
+    font-size: 1.6em !important;
+    text-align: center;
+  }
+
+  .subtitle-2 {
+  font-size: 1.2rem;
+  font-family: "Inter Display", "Inter Display Placeholder", sans-serif;
+  }
+}
+
+/* Mobile-specific style */
+@media (min-width: 577px) and (max-width: 768px) {
+
+  #intro .btn-primary {
+    position: absolute;
+    top: 28em; /* Adjust this value for mobile */
+    z-index: 10; /* Make sure it's above other content */
+  }
+
+  #intro h1 {
+    font-size: 3.2em;
+    line-height: 99%; 
+  }
+
+  #intro h2 {
+    font-size: 2em !important;
+    text-align: center;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  #intro h1 {
+    font-size: 3.8em;
+    line-height: 98%;
+    padding-top: 0.5rem; /* Para que aparezca la ñ */  }
+
+  #intro h2 {
+    font-size: 2.4em !important;
+    text-align: center;
+  }
+
+  #intro .btn-primary {
+    position: absolute;
+    top: 24em; /* Adjust this value for mobile */
+    z-index: 1; /* Make sure it's above other content */
+  }
+
+  .mobile-break {
+    display: none; /* By default (desktop), the span behaves like an inline element (no break) */
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+  #intro h1 {
+    font-size: 4.2em;
+    line-height: 98%;
+    padding-top: 0.5rem; /* Para que aparezca la ñ */  }
+
+  #intro .btn-primary {
+    position: absolute;
+    top: 28em; /* Adjust this value for mobile */
+    z-index: 10; /* Make sure it's above other content */
+  }
+
+  .mobile-break {
+    display: none; /* By default (desktop), the span behaves like an inline element (no break) */
+  }
+
+  #intro h2 {
+    font-size: 2.4em !important;
+    text-align: center;
+  }
+}
+
+@media (min-width: 1400px) {
+  #intro h1 {
+    font-size: 5.2rem;
+    line-height: 99%;
+    padding-top: 0.5rem; /* Para que aparezca la ñ */
+  }
+
+  .text-intro {
+    margin-top: 2.8rem;
+  }
+
+  #intro .btn-primary {
+    position: absolute;
+    z-index: 10; /* Make sure it's above other content */
+    top: 34em; /* Adjust this value for mobile */
+  }
+
+  #intro h2 {
+    font-size: 2.4em !important;
+    text-align: center;
+  }
+
+  .mobile-break {
+    display: none; /* By default (desktop), the span behaves like an inline element (no break) */
+  }
+}
+
+.highlight-text-1 {
+  line-height: 105% !important;
+  font-size: 2.6rem;
+  font-weight: 600;
+  font-family: "Inter Display", "Inter Display Placeholder", sans-serif;
+}
+
+.highlight-text-2 {
+  line-height: 115% !important;
+  font-size: 1.8rem;
+  font-weight: 400;
+  font-family: "Inter Display", "Inter Display Placeholder", sans-serif;
+}
+
+.colorful-text {
+  color: transparent;
+  background-image: linear-gradient(130deg, rgb(241, 58, 238) -9.41449%, rgb(44, 90, 255) 110.686%, rgb(100, 246, 255) 175.912%);
+  background-repeat: no-repeat;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .highlight-text-1 {
+    line-height: 105% !important;
+    font-size: 3.8rem;
+    font-weight: 600;
+    font-family: "Inter Display", "Inter Display Placeholder", sans-serif;
+  }
+  
+  .highlight-text-2 {
+    line-height: 105% !important;
+    font-size: 2rem;
+    font-weight: 400;
+    font-family: "Inter Display", "Inter Display Placeholder", sans-serif;
+  }
+}
+
+@media (min-width: 1400px) {
+  #intro h1 {
+    font-size: 6rem;
+    line-height: 99%;
+    padding-top: 0.5rem; /* Para que aparezca la ñ */
+  }
+
+  .highlight-text-1 {
+    line-height: 105% !important;
+    font-size: 4.2rem;
+    font-weight: 600;
+    font-family: "Inter Display", "Inter Display Placeholder", sans-serif;
+  }
+  
+  .highlight-text-2 {
+    line-height: 105% !important;
+    font-size: 2.6rem;
+    font-weight: 400;
+    font-family: "Inter Display", "Inter Display Placeholder", sans-serif;
+  }
+}
