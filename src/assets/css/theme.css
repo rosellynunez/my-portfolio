@@ -75,3 +75,21 @@ body[data-bs-theme="dark"] .btn-primary:hover {
   background: linear-gradient(79deg, #f9f8f1, #ff5b8a 30%, #ff5b8a 50%, #fba64b 77%, #f99b52);
 }
 
+
+body[data-bs-theme="dark"] .navbar-nav .nav-item .nav-link {
+  color: #f9f8f1; /* Color claro para enlaces en tema oscuro */
+}
+
+body[data-bs-theme="light"] .navbar-nav .nav-item .nav-link {
+  color: #23005C; /* Color claro para enlaces en tema oscuro */
+}
+
+/* Estilos en modo oscuro para el navbar */
+body[data-bs-theme="dark"] .navbar-nav .nav-link {
+  color: #f8f9fa; /* Texto claro para modo oscuro */
+}
+
+body[data-bs-theme="dark"] .navbar-nav .nav-link:hover {
+  color: #ff5b8a; /* Color de hover para el modo oscuro */
+}
+

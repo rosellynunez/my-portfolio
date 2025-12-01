@@ -1,0 +1,8 @@
+/* Utilidades básicas */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+.mt-2 { margin-top: 1rem; }
+.mt-4 { margin-top: 2rem; }
+.pt-4 { padding-top: 2rem; }

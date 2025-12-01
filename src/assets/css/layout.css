@@ -1,4 +1,61 @@
-/* Estilos generales */
+/* ========================================
+    4️⃣ LAYOUT
+   ========================================  */
+/* Containers, grid system, section, header, hero, footer, sections */
+
+/* ----- Containers ----- */
+.container-full {
+  width: 100%;
+  margin-inline: auto;
+}
+
+/* Variants (percent + max-width) */
+.container--sm { width: 48%; max-width: 40rem; margin-inline: auto;}
+.container--md { width: 54%; max-width: 52rem; margin-inline: auto;}
+.container--lg { width: 80%; max-width: 80rem; margin-inline: auto;}
+.container--xl { width: 92%;   max-width: 90rem; margin-inline: auto;}
+
+/* Responsive override */
+/* ----- Between 992px and 1200px → all containers = 80% ----- */
+@media (min-width: 992px) and (max-width: 1200px){
+  .container--sm,
+  .container--md,
+  .container--lg,
+  .container--xl {
+    width: 76%;
+    max-width: unset; /* ← opcional pero recomendado */
+  }
+}
+
+/* ----- Below 992px → all containers = 90% ----- */
+@media (max-width: 991px) {
+  .container--sm,
+  .container--md,
+  .container--lg,
+  .container--xl {
+    width: 86%;
+    max-width: unset; /* ← opcional pero recomendado */
+  }
+}
+
+.container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ----- Sections ----- */
+/* Space between big sections */
+section + section {
+  margin-block-start: var(--section-space-lg);
+}
+
+/* Space between sub-sections */
+.subsection + .subsection {
+  margin-block-start: var(--section-space-md);
+}
+
+
 
 /* Media query para pantallas extra grandes (ajusta el breakpoint según necesites) */
 .two-hero-images-container {

@@ -1,4 +1,10 @@
-/* HOME - About me */
+/* SECCIÓN 1 -  */
+
+#intro h1 {
+font-weight: 700;
+}
+
+/* SECCIÓN # - ABOUT ME */
 
 #about {
   padding: 2rem 2rem;

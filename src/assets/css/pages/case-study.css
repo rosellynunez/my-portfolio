@@ -1,9 +1,10 @@
-/* PORTFOLIO PAGE */ 
 
-.case-study h1 {
-  text-align: left;
-  font-size: 3em!important;
-  font-family: "Inter Display", "Inter Display Placeholder", sans-serif;
+/* ------------------------------
+    SECTION 1
+--------------------------------*/
+
+#case-study h1 {
+  font-size: 6em;
   line-height: 100%;
   font-weight: 600;
 }
@@ -62,4 +63,10 @@
     object-fit: cover;
     width: 880px;
     height: auto;
+}
+
+h1 {
+  font-size: 8em;
+  line-height: 100%;
+  font-weight: 600;
 }
