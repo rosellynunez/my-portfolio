@@ -3,18 +3,23 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Roselly Nuñez - UX, UI & Web Designer</title>
-        <meta name="description" content="Roselly Nuñez is a UX, UI & Web Designer based in Barcelona, passionate about creating accessible, beautiful and conversion-focused digital products." />
+
+        <!-- SEO -->
+        <meta name="keywords" content="UX design, UI design, web design, portfolio, design system, accessibility">
+        <meta name="description" content="Portfolio of Roselly Nuñez — UX, UI & Web Designer based in Barcelona." />
         <meta name="author" content="Roselly Nuñez" />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://rosellynunez.com/" />
 
-        <!-- Open Graph (for social media previews) -->
+        <!-- Open Graph (social media previews) -->
         <meta property="og:title" content="Roselly Nuñez - UX, UI & Web Designer" />
         <meta property="og:description" content="Explore the portfolio of Roselly Nuñez - a Barcelona-based UX, UI & Web Designer who blends creativity and code to build memorable digital experiences." />
         <meta property="og:image" content="https://rosellynunez.com/images/og-image.jpg" />
         <meta property="og:url" content="https://rosellynunez.com/" />
         <meta property="og:type" content="website" />
+
+        <!-- Title -->
+        <title>Roselly Nuñez - UX, UI & Web Designer</title>
 
         <!-- Favicon -->
         <link rel="icon" type="image/png" href="images/favicon.png"/>
@@ -26,102 +31,106 @@
         <!-- Google Fonts (usa display=swap para cargar texto antes)-->
         <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
-        <!-- Bootstrap y Bootstrap Icons -->
+        <!-- Bootstrap + Bootstrap Icons -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" />
 
-        <!-- Local stylesheet -->
-        <link rel="stylesheet" href="style.css"/>
+        <!-- Global CSS -->
+        <link rel="stylesheet" href="../assets/css/global.css">
+
+        <!-- Page CSS (case-study.css) -->
+        <link rel="stylesheet" href="../assets/css/pages.css">
 
         <!-- 🌗 Carga rápida del tema guardado -->
         <script>
-          (function() {
-            const userTheme = localStorage.getItem('theme');
-            if (userTheme) {
-              document.documentElement.setAttribute('data-bs-theme', userTheme);
-            }
-          })();
+            (function() {
+                const userTheme = localStorage.getItem('theme');
+                if (userTheme) {
+                    document.documentElement.setAttribute('data-bs-theme', userTheme);
+                }
+            })();
         </script>
 
-        <!-- ⚡ Typed.js carga rápida (sin async ni defer) -->
+        <!-- Typed.js (performance) -->
         <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
-        <!-- ✅ Bootstrap JS con defer -->
+        <!-- Bootstrap JS -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
 
-        <!-- ✅ Twemoji cargado diferido -->
-        <script src="https://cdn.jsdelivr.net/npm/twemoji@latest/dist/twemoji.min.js" crossorigin="anonymous"></script>
+        <!-- Twemoji-->
+        <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous" defer></script>
 
-        <!-- ✅ Tu script principal con defer -->
-        <script src="js.js" defer></script>
+        <!-- Script -->
+        <script src="../assets/js/theme.js"></script>
+        <script src="../assets/js/main.js"></script>
 
-        <!-- ✅ Google Analytics -->
         <!-- Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y1KMG7E11J"></script>
         <script src="assets/js/tracking.js"></script>
-
-      
     </head>
 
     <body>
-      <header>
-        <nav class="navbar navbar-expand-lg bg-transparent fixed-top">
-            <div class="container-fluid">
-        
-              <!-- Logo -->
-              <a class="navbar-brand" href="index.html">
-                <svg id="logo" width="150" height="50" viewBox="0 0 39.8 24" xmlns="http://www.w3.org/2000/svg">
-                  <path class="st0" d="M12.5,1v5.2c-3.4,0-6.1,2.7-6.1,6.1v10.9H1.1V1.1h5.2v1.7c1.8-1.1,3.9-1.8,6.1-1.8Z" fill="currentColor"/>
-                  <path class="st0" d="M20.3,23.1v-10.8c0-3.4,2.8-6.1,6.1-6.1h.7c2.4,0,4.4,1.4,5.5,3.3.4.8.6,1.7.7,2.7,0,0,0,0,0,0v5.3c0,0,0,5.5,0,5.5h5.1v-9.5c0-2-.3-3.8-.9-5.4-.2-.5-.4-1-.6-1.4-1-1.9-2.4-3.4-4.2-4.3-1.8-1-3.8-1.5-6-1.5s-3.1.3-4.5.9h0c-.7.3-1.4.6-2,1v-1.7h-5.2v22h5.2Z" 
-                  fill="currentColor"/>
-                </svg>
-              </a>
+        <header>
+            <nav class="navbar navbar-expand-lg bg-transparent fixed-top">
+                <div class="container-fluid">
+            
+                <!-- Logo -->
+                <a class="navbar-brand" href="index.html">
+                    <svg id="logo" width="150" height="50" viewBox="0 0 39.8 24" xmlns="http://www.w3.org/2000/svg">
+                    <path class="st0" d="M12.5,1v5.2c-3.4,0-6.1,2.7-6.1,6.1v10.9H1.1V1.1h5.2v1.7c1.8-1.1,3.9-1.8,6.1-1.8Z" fill="currentColor"/>
+                    <path class="st0" d="M20.3,23.1v-10.8c0-3.4,2.8-6.1,6.1-6.1h.7c2.4,0,4.4,1.4,5.5,3.3.4.8.6,1.7.7,2.7,0,0,0,0,0,0v5.3c0,0,0,5.5,0,5.5h5.1v-9.5c0-2-.3-3.8-.9-5.4-.2-.5-.4-1-.6-1.4-1-1.9-2.4-3.4-4.2-4.3-1.8-1-3.8-1.5-6-1.5s-3.1.3-4.5.9h0c-.7.3-1.4.6-2,1v-1.7h-5.2v22h5.2Z" 
+                    fill="currentColor"/>
+                    </svg>
+                </a>
 
-              <!-- Botón para cambiar entre modo claro y oscuro -->
-              <button onclick="cambiarTema()" class="btn-vibe order-2 order-sm-1 order-lg-3">
-                <span class="label">Click and Switch Mode</span>
-                <svg xmlns="http://www.w3.org/2000/svg"
-                  width="16" 
-                  height="16" 
-                  fill="#fab04e" 
-                  class="icon-vibe" 
-                  viewBox="0 0 16 16">
-                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16M2.31 5.243A1 1 0 0 1 3.28 4H6a1 1 0 0 1 1 1v.116A4.2 4.2 0 0 1 8 5c.35 0 .69.04 1 .116V5a1 1 0 0 1 1-1h2.72a1 1 0 0 1 .97 1.243l-.311 1.242A2 2 0 0 1 11.439 8H11a2 2 0 0 1-1.994-1.839A3 3 0 0 0 8 6c-.393 0-.74.064-1.006.161A2 2 0 0 1 5 8h-.438a2 2 0 0 1-1.94-1.515zM4.969 9.75A3.5 3.5 0 0 0 8 11.5a3.5 3.5 0 0 0 3.032-1.75.5.5 0 1 1 .866.5A4.5 4.5 0 0 1 8 12.5a4.5 4.5 0 0 1-3.898-2.25.5.5 0 0 1 .866-.5z"/>
-                </svg>
-              </button>  
-              
-              <!-- Botón navbar-toggler visible sólo en mobile -->
-              <button 
-                id="menu-mobile-color"
-                class="navbar-toggler order-3" 
-                aria-controls="navbarSupportedContent" 
-                aria-expanded="false" 
-                aria-label="Toggle navigation">
-                  <span id="menu-style">MENU</span>
-              </button>  
+                <!-- Botón para cambiar entre modo claro y oscuro -->
+                <button onclick="cambiarTema()" class="btn-vibe order-2 order-sm-1 order-lg-3">
+                    <span class="label">Change the Vibe</span>
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                    width="16" 
+                    height="16" 
+                    fill="#fab04e" 
+                    class="icon-vibe" 
+                    viewBox="0 0 16 16">
+                        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16M2.31 5.243A1 1 0 0 1 3.28 4H6a1 1 0 0 1 1 1v.116A4.2 4.2 0 0 1 8 5c.35 0 .69.04 1 .116V5a1 1 0 0 1 1-1h2.72a1 1 0 0 1 .97 1.243l-.311 1.242A2 2 0 0 1 11.439 8H11a2 2 0 0 1-1.994-1.839A3 3 0 0 0 8 6c-.393 0-.74.064-1.006.161A2 2 0 0 1 5 8h-.438a2 2 0 0 1-1.94-1.515zM4.969 9.75A3.5 3.5 0 0 0 8 11.5a3.5 3.5 0 0 0 3.032-1.75.5.5 0 1 1 .866.5A4.5 4.5 0 0 1 8 12.5a4.5 4.5 0 0 1-3.898-2.25.5.5 0 0 1 .866-.5z"/>
+                    </svg>
+                </button>  
+                
+                <!-- Botón navbar-toggler visible sólo en mobile -->
+                <button 
+                    id="menu-mobile-color"
+                    class="navbar-toggler order-3" 
+                    aria-controls="navbarSupportedContent" 
+                    aria-expanded="false" 
+                    aria-label="Toggle navigation">
+                    <span id="menu-style">MENU</span>
+                </button>  
 
-              <!-- Menú colapsable en pantallas pequeñas, visible en pantallas grandes -->
-              <div class="collapse navbar-collapse desktop-menu order-lg-2" id="navbarSupportedContent">
+                <!-- Menú colapsable en pantallas pequeñas, visible en pantallas grandes -->
+                <div class="collapse navbar-collapse desktop-menu order-lg-2" id="navbarSupportedContent">
 
-                <ul class="navbar-nav text-center mx-auto">
-                    <li class="nav-item">
-                      <a class="nav-link active" href="my-work.html">My Work</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link active" href="about.html">About</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link active" href="images/cv/CV_UX-UI-WEB_Roselly-Nunez.pdf" target="_blank" >Résumé<i class="bi bi-box-arrow-up-right ms-2"></i></a>
-                    </li>
-                </ul>
+                    <ul class="navbar-nav text-center mx-auto">
+                        <li class="text"> class="nav-item">
+                            <a class="nav-link active" href="my-work.html">My Work</a>
+                        </li>
+                        <li class="text"> class="nav-item">
+                            <a class="nav-link active" href="about.html">About</a>
+                        </li>
+                        <li class="text"> class="nav-item">
+                            <a class="nav-link active" href="images/cv/CV_Roselly_Nunez_UX_UI_Designer-en.pdf" target="_blank" >Resume<i class="bi bi-box-arrow-up-right ms-2"></i></a>
+                        </li>
+                    </ul>
 
-              </div>
+                </div>
 
-            </div>
-        </nav>
-      </header>
+                </div>
+            </nav>
+        </header>
 
     <main>
+
+
+
       <section id="intro" class="container">         
         <article id="presentation" class="mt-5 pt-lg-2">
 
@@ -171,7 +180,7 @@
             </p>
 
             <div class="mt-5 pt-4">
-            <a href="about.html" class="btn btn-primary" role="button">Learn more about me</a>
+            <a href="about.html" class="btn-primary" role="button">Learn more about me</a>
             </div>
         </article>
 

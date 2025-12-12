@@ -1,0 +1,531 @@
+
+
+
+/* ========================================
+    7️⃣ PAGE SECTIONS
+   ======================================== */
+/* PORTFOLIO PAGE */ 
+.case-study {
+  padding-top: var(--space-11);
+}
+
+
+.center-image {
+  display: flex; 
+  justify-content: center; 
+}
+
+.text-align {
+  text-align: center;
+}
+
+/* Icon arrow alineado */
+.p-note {
+  text-align: center;
+}
+
+.decision-line {
+  border-top: 1px solid #8e8e8e; /* Ajusta el grosor y el color según necesites */
+  padding-top: 1.5rem; /* Opcional: añade espacio encima del borde */
+  margin-top: 1.5rem; /* Opcional: añade espacio entre el borde y el párrafo anterior */
+}
+
+/* Make sure the image covers the full width */
+.text-image img {
+    height: auto;
+    object-fit: cover;
+    width: 880px;
+    height: auto;
+}
+
+/* placeholder */
+.image-placeholder {
+    background-color: #f0f0f0;
+    border: 2px dashed #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 500px;
+    width: 100%;
+}
+
+.placeholder-text {
+    color: #666;
+    font-style: italic;
+}
+
+/* Mantener bordes redondeados */
+.border-radius {
+    border-radius: 0.5rem;
+}
+
+
+/* Estilos para la navegación de proyectos (mobile por defecto) */
+.project-navigation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.custom-col {
+  flex: 1;
+  padding: 5px;
+}
+
+#about-me img {
+  width: 100%;
+}
+
+
+/* ------------------------------
+    CASE STUDY PAGE
+--------------------------------*/
+
+#case-study {
+  padding-top: var(--space-11);
+}
+
+#overview .text-lead {
+  font-style: italic;
+  color: var(--text-secondary);
+}
+
+.center-image {
+  display: flex; 
+  justify-content: center; 
+}
+
+.text-align {
+  text-align: center;
+}
+
+/* Icon arrow alineado */
+.p-note {
+  text-align: center;
+}
+
+.decision-line {
+  border-top: 1px solid #8e8e8e; /* Ajusta el grosor y el color según necesites */
+  padding-top: 1.5rem; /* Opcional: añade espacio encima del borde */
+  margin-top: 1.5rem; /* Opcional: añade espacio entre el borde y el párrafo anterior */
+}
+
+/* Make sure the image covers the full width */
+.text-image img {
+    height: auto;
+    object-fit: cover;
+    width: 880px;
+    height: auto;
+}
+
+
+/* ----- NEXT PROJECT SECTION ---- */
+
+#next-project {
+  padding: var(--space-2) 0rem;
+}
+
+#next-project h2{
+  text-align: center;
+  padding: 0rem 0rem var(--space-7);
+}
+
+article#case-study {
+  margin-bottom: var(--section-space-lg);
+}
+
+
+
+/* ----- CONTACT CARD SECTION ---- */
+
+#contact-me h2 {
+  padding: 0rem 0rem var(--space-5);
+}
+
+#contact-me .text-lead {
+  padding: 0rem 0rem var(--space-5);
+}
+
+
+
+/*OUR SERVICES*/
+
+.bd-placeholder-img {
+  font-size: 4em;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+
+.b-example-divider {
+  width: 100%;
+  height: 3rem;
+  background-color: rgba(0, 0, 0, .1);
+  border: solid rgba(0, 0, 0, .15);
+  border-width: 1px 0;
+  box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+}
+
+.b-example-vr {
+  flex-shrink: 0;
+  width: 1.5rem;
+  height: 100vh;
+}
+
+
+
+#page-my-work {
+  margin-top: 10rem;
+}
+
+
+
+
+/* HOME */
+
+
+
+
+/* === DESKTOP === */
+#title-about {
+  display: flex;
+}
+
+.gif-office-container {
+  position: relative;
+  width: 10rem; /* Ajusta el ancho según necesites */
+  height: 8rem; /* Set a fixed height */
+  overflow: hidden;
+}
+
+.gif-office-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 95%;
+  height: 100%;
+  object-fit: cover; /* Cubre todo el contenedor */
+  border: none;
+}
+
+@media (max-width: 768px) {
+  .gif-office-container {
+    width: 10rem; /* Ajusta el ancho según necesites */
+    height: 8rem; /* Set a fixed height */
+    align-items: center;
+  }
+
+  #title-about {
+    flex-direction: column;
+  }
+
+  .colum-beside {
+    flex-direction: column;
+  }
+} 
+
+
+
+
+.colum-beside {
+  display: flex;
+}
+
+.emoji-end {
+  font-size: 4rem; /* Ajusta el tamaño según necesites */
+  margin-left: 1rem;
+}
+
+.emoji-start {
+  font-size: 4rem; /* Ajusta el tamaño según necesites */
+  margin-right: 2rem;
+}
+
+
+.emoji-container {
+  margin-bottom: 0.5rem;
+}
+
+.icon-center {
+  display: flex;
+  justify-content: center;
+}
+
+.title-margin-top {
+  margin-top: 0.4rem;
+  margin-bottom: 0rem;
+}
+
+/* Para desktop: 3 columnas */
+.row-rectangles-v1 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+  gap: 1rem; /* Espaciado entre las tarjetas */
+}
+
+/* Solo afecta a col-4 dentro de row-rectangles */
+.row-rectangles-v1 .col-4-rectangles {
+  width: 100%; /* Hace que cada col-4 se adapte al grid */
+}
+
+/* Para tablet: 2 columnas */
+@media (max-width: 991px) {
+  .row-rectangles-v1 {
+    grid-template-columns: repeat(2, 1fr); /* En tablet, 2 columnas */
+  }
+}
+
+/* Para móvil: cada col-4 ocupa el ancho completo */
+@media (max-width: 768px) {
+  .row-rectangles-v1 {
+    grid-template-columns: repeat(1, 1fr); /* Solo una columna en móvil */
+  }
+}
+
+/* Para desktop: 3 columnas */
+.row-rectangles {
+  display: flex;
+  gap: 1rem; /* Espaciado entre las tarjetas */
+}
+
+.rectangle {
+  background-color: rgb(96, 77, 128, 0.2);
+  padding: 2rem;
+  border-radius: 0.8rem;
+  display: flex; /* Enable Flexbox for the rectangle */
+  justify-content: space-between; /* Distribute space between content and emoji */
+}
+
+.rectangle-2 {
+  background-color: rgb(96, 77, 128, 0.2);
+  border-radius: 0.8rem;
+  justify-content: space-between; /* Distribute space between content and emoji */
+  padding: 1rem 1.8rem;
+}
+
+.responsive-video {
+  max-width: 100%;
+  height: auto;
+}
+
+.center-image {
+  text-align: center;
+}
+
+.images-gap {
+  display: flex; /* O display: grid; según tu diseño */
+  gap: 1rem; /* Ajusta el valor según necesites */
+}
+
+.span-block {
+  display: block; /* Convierte el span en bloque */
+}
+
+.emoji-meh-container {
+  display: flex; /* Enable Flexbox for the emoji container */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+
+
+/* Estilos para el intro */
+#intro {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+  max-width: 80vw;
+  position: relative; /* Ensures that the button is positioned relative to this section */
+  overflow: hidden;
+}
+
+#presentation {
+  place-items: center;
+  align-items: center;
+  justify-content: center;
+  top: 2.6em;
+  position: absolute;
+  text-align: center;
+}
+
+.text-intro {
+  align-items: center;
+}
+
+
+
+.img-intro {
+  width: 8rem;
+  height: 4.3rem;
+  border-radius: 3rem;
+  object-fit: cover;
+}
+
+
+
+
+/* Laptop - Tablet */
+@media (max-width: 1024px) {
+
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    #intro .btn-primary {
+    position: absolute;
+    top: 30em; /* Adjust this value for mobile */
+    z-index: 10; /* Make sure it's above other content */
+  }
+
+  #intro h1 {
+    font-size: 2em;
+    line-height: 100%;
+  }
+
+  #intro h2 {
+    font-size: 1.6em !important;
+    text-align: center;
+  }
+
+  .subtitle-2 {
+  font-size: 1.2rem;
+  font-family: "Inter Display", "Inter Display Placeholder", sans-serif;
+  }
+}
+
+/* Mobile-specific style */
+@media (min-width: 767px) {
+  #intro .btn-primary {
+    position: absolute;
+    top: 36em; /* Adjust this value for mobile */
+    z-index: 10; /* Make sure it's above other content */
+  }
+
+  #intro h1 {
+    font-size: 2.2em;
+    line-height: 110%;
+  }
+
+  #intro h2 {
+    font-size: 1.6em !important;
+    text-align: center;
+  }
+}
+
+/* Mobile-specific style */
+@media (min-width: 767px) {
+
+  #intro .btn-primary {
+    position: absolute;
+    top: 28em; /* Adjust this value for mobile */
+    z-index: 10; /* Make sure it's above other content */
+  }
+
+  #intro h1 {
+    font-size: 3.2em;
+    line-height: 99%; 
+  }
+
+  #intro h2 {
+    font-size: 2em !important;
+    text-align: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  #intro h1 {
+    font-size: 3.9em;
+    line-height: 99%;
+  }
+
+  #intro h2 {
+    font-size: 2.4em !important;
+    text-align: center;
+  }
+
+  #intro .btn-primary {
+    position: absolute;
+    top: 36em; /* Adjust this value for mobile */
+    z-index: 10; /* Make sure it's above other content */
+  }
+}
+
+@media (min-width: 1024px) {
+  #intro h1 {
+    font-size: 3.8em;
+    line-height: 98%;
+    padding-top: 0.5rem; /* Para que aparezca la ñ */  }
+
+  #intro h2 {
+    font-size: 2.4em !important;
+    text-align: center;
+  }
+
+  #intro .btn-primary {
+    position: absolute;
+    top: 24em; /* Adjust this value for mobile */
+    z-index: 1; /* Make sure it's above other content */
+  }
+
+  .mobile-break {
+    display: none; /* By default (desktop), the span behaves like an inline element (no break) */
+  }
+}
+
+@media (min-width: 1024px) {
+  #intro h1 {
+    font-size: 4.2em;
+    line-height: 98%;
+    padding-top: 0.5rem; /* Para que aparezca la ñ */  }
+
+  #intro .btn-primary {
+    position: absolute;
+    top: 28em; /* Adjust this value for mobile */
+    z-index: 10; /* Make sure it's above other content */
+  }
+
+  .mobile-break {
+    display: none; /* By default (desktop), the span behaves like an inline element (no break) */
+  }
+
+  #intro h2 {
+    font-size: 2.4em !important;
+    text-align: center;
+  }
+}
+
+@media (min-width: 1400px) {
+  #intro h1 {
+    font-size: 5.2rem;
+    line-height: 99%;
+    padding-top: 0.5rem; /* Para que aparezca la ñ */
+  }
+
+  .text-intro {
+    margin-top: 2.8rem;
+  }
+
+  #intro .btn-primary {
+    position: absolute;
+    z-index: 10; /* Make sure it's above other content */
+    top: 34em; /* Adjust this value for mobile */
+  }
+
+  #intro h2 {
+    font-size: 2.4em !important;
+    text-align: center;
+  }
+
+  .mobile-break {
+    display: none; /* By default (desktop), the span behaves like an inline element (no break) */
+  }
+}

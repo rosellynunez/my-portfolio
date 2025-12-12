@@ -36,10 +36,10 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" />
 
         <!-- Global CSS -->
-        <link rel="stylesheet" href="../src/assets/css/global.css">
+        <link rel="stylesheet" href="../assets/css/global.css">
 
         <!-- Page CSS (case-study.css) -->
-        <link rel="stylesheet" href="../src/assets/css/pages/case-study.css">
+        <link rel="stylesheet" href="../assets/css/pages.css">
 
         <!-- 🌗 Carga rápida del tema guardado -->
         <script>
@@ -110,13 +110,13 @@
                 <div class="collapse navbar-collapse desktop-menu order-lg-2" id="navbarSupportedContent">
 
                     <ul class="navbar-nav text-center mx-auto">
-                        <li class="nav-item">
+                        <li class="text"> class="nav-item">
                             <a class="nav-link active" href="my-work.html">My Work</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="text"> class="nav-item">
                             <a class="nav-link active" href="about.html">About</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="text"> class="nav-item">
                             <a class="nav-link active" href="images/cv/CV_Roselly_Nunez_UX_UI_Designer-en.pdf" target="_blank" >Resume<i class="bi bi-box-arrow-up-right ms-2"></i></a>
                         </li>
                     </ul>
@@ -132,42 +132,57 @@
         <article id="case-study" class="container-full">
 
             <!-- SECTION 01 -->
-            <section>
+            <section id="overview">
+                <!-- Case study hero-->
                 <div class="subsection container--lg">
-                    <h1 class="col-sm-12 col-lg-8">Design System for Academic Book</h1>
-                    <p>Website Design & Development for “Introduction to Automated Negotiation”</p>
-                    <div class="image-placeholder border-radius">
-                        <span class="placeholder-text">Hero Image - Project Overview</span>
-                    </div>
-                </div>  
+                    <!-- Semantic H1 with visual clase .title (40px) -->        
+                    <h1 class="title col-sm-12 col-lg-8 mb-4">Design System for Academic Book</h1>
 
+                    <!-- Subtitle .text-lead (20px) -->
+                    <p class="text-lead" class="text-lead mb-5">
+                    Website Design & Development for "Introduction to Automated Negotiation"</p>
+
+                    <!-- Image -->
+                    <div class="image-placeholder border-radius mt-6">
+                        <span class="placeholder-text text-small">
+                            Hero Image - Project Overview
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Project Overview -->
                 <div class="subsection container--lg">            
                     <div class="row">
-                        <div class="col-lg-4 col-12">
-                            <h2 class="small-title text-uppercase">Project Overview</h2>
+                        <div class="col-lg-4 col-12 mb-lg-0">
+                            <!-- semantic H2 with visual clases title-lg -->
+                            <h2 class="section-label">Project Overview</h2>
                         </div>
                         <div class="col-lg-8 col-12">
-                            <p>Introduction to Automated Negotiation is an academic book that explores negotiation systems, agent-based models, and computational strategies.</p>
-                            <p>The authors needed a simple, modern website that presents the book, makes the downloadable resources easy to find and and can grow later with new chapters and interactive tools.</p>
-                            <p>Even though the current version is a single-page site, I treated it like the foundation of a larger product.I built the entire visual identity, created a lightweight design system, and implemented the full responsive layout.</p>
+                            <!-- Paragraph with .text (16px) -->
+                            <p class="text">Introduction to Automated Negotiation is an academic book that explores negotiation systems, agent-based models, and computational strategies.</p>
+                            <p class="text">The authors needed a simple, modern website that presents the book, makes the downloadable resources easy to find and and can grow later with new chapters and interactive tools.</p>
+                            <p class="text">Even though the current version is a single-page site, I treated it like the foundation of a larger product. I built the entire visual identity, created a lightweight design system, and implemented the full responsive layout.</p>
                             </ul>
                         </div>
                     </div>
                 </div>
 
+                <!-- Project Goals -->
                 <div class="subsection container--lg">            
                     <div class="row">
                         <div class="col-lg-4 col-12">
-                            <h2 class="small-title text-uppercase">project goals</h2>
+                            <!-- H2 semantic H2 with visual clases title-lg -->
+                            <h2 class="section-label">project goals</h2>
                         </div>
                         <div class="col-lg-8 col-12">
+                            <!-- Lista con items en .text-small -->
                             <ul>
-                                <li>Present academic content in a structured and easy-to-understand way.</li>
-                                <li>Offer an intuitive downloading experience.</li>
-                                <li>Build a scalable design system based on semantic tokens and reusable components.</li>
-                                <li>Meet WCAG AA accessibility standards.</li>
-                                <li>Create a responsive interface with a clean visual hierarchy.</li>
-                                <li>Introduce micro-interactions that support usability without distracting from the academic tone.</li>
+                                <li class="text">Present academic content in a structured and easy-to-understand way.</li>
+                                <li class="text">Offer an intuitive downloading experience.</li>
+                                <li class="text">Build a scalable design system based on semantic tokens and reusable components.</li>
+                                <li class="text">Meet WCAG AA accessibility standards.</li>
+                                <li class="text">Create a responsive interface with a clean visual hierarchy.</li>
+                                <li class="text">Introduce micro-interactions that support usability without distracting from the academic tone.</li>
                             </ul>
                         </div>
                     </div>
@@ -176,26 +191,29 @@
                 <div id="my-role" class="subsection container--lg">            
                     <div class="row">
                         <div class="col-lg-4 col-12">
-                            <h2 class="small-title text-uppercase">my role</h2>
+                            <h2 class="section-label">my role</h2>
                         </div>
                         <div class="col-lg-8 col-12">
-                            <p>UI & Design System Designer — Front-End Implementation</p>
-                            <p>I led the project end-to-end:</p>
+                            <p class="text">UI & Design System Designer — Front-End Implementation</p>
+                            <p class="text">I led the project end-to-end:</p>
                             <ul>
-                                <li>Defined the visual language and interaction patterns.</li>
-                                <li>Created the full design system using semantic and base tokens.</li>
-                                <li>Designed and built reusable components.</li>
-                                <li>Developed all responsive layouts.</li>
-                                <li>Ensured accessibility compliance through color contrast, semantics, and keyboard support.</li>
-                                <li>Translated static designs into a live experience.</li>
+                                <li class="text">Defined the visual language and interaction patterns.</li>
+                                <li class="text">Created the full design system using semantic and base tokens.</li>
+                                <li class="text">Designed and built reusable components.</li>
+                                <li class="text">Developed all responsive layouts.</li>
+                                <li class="text">Ensured accessibility compliance through color contrast, semantics, and keyboard support.</li>
+                                <li class="text">Translated static designs into a live experience.</li>
                             </ul>
                         </div>
                     </div>
                 </div>
 
+                <!-- Image -->
                 <div class="subsection container--lg">
                     <div class="image-placeholder border-radius">
-                        <span class="placeholder-text">Image: </span>
+                        <span class="text-caption">
+                            Image: Project deliverables or process
+                        </span>
                     </div>
                 </div>
             </section>
@@ -203,8 +221,9 @@
             <!-- SECTION 02 - UX Approach -->
             <section id="ux-approach">
                 <div class="subsection container--md">
-                    <h2 class="h2-pag-portfolio">1. UX Approach & Key Insights</h2>
-                    <p>To understand the needs of both the author and the students, I conducted conversations and feedback sessions. I learned that users needed quick access to the latest book version, a clear version history, and an immediate way to copy the BibTeX citation. These insights guided the design decisions:
+                    <!-- Título sección: .subtitle (28px) -->
+                    <h2 class="subtitle">1. UX Approach & Key Insights</h2>
+                    <p class="text">To understand the needs of both the author and the students, I conducted conversations and feedback sessions. I learned that users needed quick access to the latest book version, a clear version history, and an immediate way to copy the BibTeX citation. These insights guided the design decisions:
                     </p>
                 </div>
 
@@ -212,18 +231,18 @@
                     <div class="row">
                         <div class="col-xl-4 col-12">
                             <ul class="list">
-                                <li>A prominent “Download v0.2” button in the hero for instant access.</li>
-                                <li>Version history presented as a table on desktop and adaptive cards on mobile.</li>
-                                <li>A BibTeX section with copy-to-clipboard, ARIA labels, focus states, and live confirmation.</li>
-                                <li>Consistent vertical rhythm to keep the academic content readable and distraction-free.</li>
-                                <li>Since the site works as a one-page flow, navigation scrolls to each section.</li>
+                                <li class="text">A prominent “Download v0.2” button in the hero for instant access.</li>
+                                <li class="text">Version history presented as a table on desktop and adaptive cards on mobile.</li>
+                                <li class="text">A BibTeX section with copy-to-clipboard, ARIA labels, focus states, and live confirmation.</li>
+                                <li class="text">Consistent vertical rhythm to keep the academic content readable and distraction-free.</li>
+                                <li class="text">Since the site works as a one-page flow, navigation scrolls to each section.</li>
                             </ul>
                         </div>
 
                         <div class="col-xl-8">
                             <div class="image-container border-radius">
                                 <img 
-                                    src="images/automated-negotiation-book/ux-decisions.jpg"
+                                    src="../assets/images/automated-negotiation-book/1-ux-approach.jpg"
                                     alt="Quality service illustration showing our design principles in action"
                                     class="img-fluid"
                                     loading="lazy"
@@ -237,27 +256,27 @@
             <!-- SECTION 03 - NAVIGATION STRUCTURE -->
             <section id="navigation-structure">
                 <div class="subsection container--md">
-                    <h2 class="h2-pag-portfolio">3. Navigation & Structure</h2>
-                    The site is organized into seven clear sections, using surfaces and spacing tokens to create a smooth visual rhythm.</p>
+                    <h2 class="subtitle">2. Navigation & Structure</h2>
+                    <p class="text">The site is organized into seven clear sections, using surfaces and spacing tokens to create a smooth visual rhythm.</p>
                 </div>
 
                 <div class="subsection container--lg">
                     <div class="row">
                         <div class="col-xl-4 col-12">
-                            <p>To support the one-page flow, the layout follows three key principles:</p>
+                            <p class="text">To support the one-page flow, the layout follows three key principles:</p>
                             <ul>
-                                <li>A strong header band in the primary color frames the interface and anchors the navigation.</li>
-                                <li>A bold hero section sets the purpose of the site and guides users toward the next steps.</li>
-                                <li>Secondary sections remain simple to keep the academic content at the center.</li>
+                                <li class="text"> class="text">A strong header band in the primary color frames the interface and anchors the navigation.</li>
+                                <li class="text"> class="text">A bold hero section sets the purpose of the site and guides users toward the next steps.</li>
+                                <li class="text"> class="text">Secondary sections remain simple to keep the academic content at the center.</li>
                             </ul>
-                            <p>These principles shaped how each part of the page is organized. The final structure is divided into</p>
-                            <p>Hero Banner / Book Overview / Downloads / Citation / Contact & Feedback / Book versions / Author</p>
+                            <p class="text">These principles shaped how each part of the page is organized. The final structure is divided into</p>
+                            <p class="text">Hero Banner / Book Overview / Downloads / Citation / Contact & Feedback / Book versions / Author</p>
                         </div>
 
                         <div class="col-xl-8">
                             <div class="image-container border-radius">
                                 <img 
-                                    src="images/automated-negotiation-book/structure.jpg"
+                                    src="../assets/images/automated-negotiation-book/2-structure.jpg"
                                     alt="Quality service illustration showing our design principles in action"
                                     class="img-fluid"
                                     loading="lazy"
@@ -271,27 +290,27 @@
             <!-- SECTION 04 - UI DESIGN -->
             <section id="ui-design">
                 <div class="subsection container--md">
-                    <h2 class="h2-pag-portfolio">2. UI design & visual language</h2>
-                    <p>The visual direction needed to balance academic seriousness with modern usability.</p>
+                    <h2 class="subtitle">3. UI design & visual language</h2>
+                    <p class="text" $&class="text">The visual direction needed to balance academic seriousness with modern usability.</p>
                 </div>
 
                 <div class="subsection container--lg">
                     <div class="row">
                         <div class="col-xl-4 col-12">
                             <ul>
-                                <li>Primary color: deep blue → represents trust and research</li>
-                                <li>Secondary color: turquoise → highlights interactions and active states</li>
-                                <li>Neutral scale: gray → supports clean reading and accessible contrast</li>
-                                <li>Rounded corners: soften the scientific tone</li>
-                                <li>Shadows: minimal, used only where needed</li>
-                                <li>Typography: Plus Jakarta Sans for a geometric, modern academic feel</li>
+                                <li class="text">>Primary color: deep blue → represents trust and research</li>
+                                <li class="text">>Secondary color: turquoise → highlights interactions and active states</li>
+                                <li class="text">>Neutral scale: gray → supports clean reading and accessible contrast</li>
+                                <li class="text">>Rounded corners: soften the scientific tone</li>
+                                <li class="text">>Shadows: minimal, used only where needed</li>
+                                <li class="text">>Typography: Plus Jakarta Sans for a geometric, modern academic feel</li>
                             </ul>
                         </div>
 
                         <div class="col-xl-8">
                             <div class="image-container border-radius">
                                 <img 
-                                    src="images/automated-negotiation-book/visual-language.jpg"
+                                    src="../assets/images/automated-negotiation-book/3-visual-language.jpg"
                                     alt="Quality service illustration showing our design principles in action"
                                     class="img-fluid"
                                     loading="lazy"
@@ -308,34 +327,34 @@
             <section id="design-systems-foundations">
 
                 <div class="subsection container--md">
-                    <h2 class="h2-pag-portfolio">4. Design Tokens & Foundations</h2>
-                    <p>This website is supported by a lightweight but robust token system. All components — buttons, cards, tables, spacing, interactions — come from this foundation. 
-                    <p>Below is the full breakdown of what I built and why.</p>
+                    <h2 class="subtitle">4. Design Tokens & Foundations</h2>
+                    <p class="text">This website is supported by a lightweight but robust token system. All components — buttons, cards, tables, spacing, interactions — come from this foundation. 
+                    <p class="text">Below is the full breakdown of what I built and why.</p>
                 </div>
 
                 <!-- SUBSECTION 05.1 -->
                 <div class="subsection container--md">
-                    <h3>4.1 Foundations (Base Tokens)</h3>
-                    <p>I defined the fundamental values that control the entire UI: spacing, radii, shadows, breakpoints, typography rules, and line heights. These foundations make layouts predictable.</p>
+                    <h3 class="heading">4.1 Foundations (Base Tokens)</h3>
+                    <p class="text">I defined the fundamental values that control the entire UI: spacing, radii, shadows, breakpoints, typography rules, and line heights. These foundations make layouts predictable.</p>
                 </div>
 
                 <!-- SUBSECTION 05.2 -->
                 <div class="subsection container--lg">
                     <div class="row">
                         <div class="col-xl-4 col-12">
-                            <h4>Font family & weights tokens</h4>
-                            <p>I defined a full type scale—from hero titles to labels—using CSS variables like --fs-heading-1, --fs-body, and --fs-small.</p>
+                            <h4 class="text">Font family & weights tokens</h4>
+                            <p class="text">I defined a full type scale—from hero titles to labels—using CSS variables like --fs-heading-1, --fs-body, and --fs-small.</p>
 
-                            <h4>Line-height tokens</h4>
-                            I created two spacing rules for readability: --line-height-base for paragraphs,  --line-height-tight for titles and --line-height-relaxed for long text.
+                            <h4 class="text">Line-height tokens</h4>
+                            <p class="text">I created two spacing rules for readability: --line-height-base for paragraphs,  --line-height-tight for titles and --line-height-relaxed for long text.</p>
 
-                            <h4>Type scale tokens</h4>
-                            <p>A responsive font size system from hero titles to small text, ensuring hierarchy and readability.</p>
+                            <h4 class="text">Type scale tokens</h4>
+                            <p class="text">A responsive font size system from hero titles to small text, ensuring hierarchy and readability.</p>
                         </div>
                         <div class="col-xl-8 col-12">
                             <div class="image-container border-radius">
                                 <img 
-                                src="images/automated-negotiation-book/font_base_tokens.jpg"
+                                src="../assets/images/automated-negotiation-book/4-1-foundations-font.jpg"
                                 alt="Quality service illustration showing our design principles in action"
                                 class="img-fluid"
                                 loading="lazy"
@@ -349,17 +368,17 @@
                 <div class="subsection container--lg">
                     <div class="row">
                         <div class="col-xl-4 col-12">
-                            <h4>Spacing Scale Tokens</h4>
-                            <p>I built a spacing scale that covers from compact UI elements to large sections. For example, --space-1 and --space-2 work well for buttons and icons, while --space-5 and --space-6 handle section spacing, and --space-7 with --space-8 structure hero and footer areas.</p>
+                            <h4 class="text">Spacing Scale Tokens</h4>
+                            <p class="text">I built a spacing scale that covers from compact UI elements to large sections. For example, --space-1 and --space-2 work well for buttons and icons, while --space-5 and --space-6 handle section spacing, and --space-7 with --space-8 structure hero and footer areas.</p>
                             
-                            <h4>Border Width Tokens</h4>
-                            <p>The system uses --border-width-separator (1px) for subtle dividers and  outlines components that add structure without attracting attention. --border-width-interactive (2px) to make buttons to stand out on focus, improving accessibility. And and --border-width-strong (3px) for highlighted components and alerts.</p>
+                            <h4 class="text">Border Width Tokens</h4>
+                            <p class="text">The system uses --border-width-separator (1px) for subtle dividers and  outlines components that add structure without attracting attention. --border-width-interactive (2px) to make buttons to stand out on focus, improving accessibility. And and --border-width-strong (3px) for highlighted components and alerts.</p>
                         </div>
 
                         <div class="col-xl-8 col-12">
                             <div class="image-container border-radius">
                                 <img 
-                                src="images/automated-negotiation-book/spacing-borders_base_tokens.jpg"
+                                src="../assets/images/automated-negotiation-book/4-1-foundations-spacing-border.jpg"
                                 alt="Quality service illustration showing our design principles in action"
                                 class="img-fluid"
                                 loading="lazy"
@@ -373,16 +392,16 @@
                 <div class="subsection container--lg">
                     <div class="row">
                         <div class="col-xl-4 col-12">
-                            <h4>Radii, shadow, media queries...</h4>
-                            <p>I defined radius tokens for different component families (small for buttons and inputs, medium for cards, and large for highlighted blocks).</p>
-                            <p>Shadow tokens add subtle hierarchy without making the interface heavy. They are usable for different intents—cards, sticky elements, and interactive components.</p>
-                            <p>Breakpoints tokens document the responsive breakpoints for design-dev alignment. Note: They're currently reference-only since CSS custom properties don't work in media queries.</p>
+                            <h4 class="text">Radii, shadow, media queries...</h4>
+                            <p class="text">I defined radius tokens for different component families (small for buttons and inputs, medium for cards, and large for highlighted blocks).</p>
+                            <p class="text">Shadow tokens add subtle hierarchy without making the interface heavy. They are usable for different intents—cards, sticky elements, and interactive components.</p>
+                            <p class="text">Breakpoints tokens document the responsive breakpoints for design-dev alignment. Note: They're currently reference-only since CSS custom properties don't work in media queries.</p>
                         </div>
 
                         <div class="col-xl-8 col-12">
                             <div class="image-container border-radius">
                                 <img 
-                                src="images/automated-negotiation-book/radius-shadow-bp_base_tokens.jpg"
+                                src="../assets/images/automated-negotiation-book/4-1-foundations-radii-shadow-queries.jpg"
                                 alt="Quality service illustration showing our design principles in action"
                                 class="img-fluid"
                                 loading="lazy"
@@ -396,21 +415,21 @@
             <!-- SECTION RAW COLORS -->
             <section>
                 <div class="subsection container--md">
-                    <h3>2. Color Tokens (Raw Palette)</h3>
-                    <p>Instead of arbitrary colors, I created structured scales:</p>
+                    <h3 class="heading">4.2 Color Tokens (Raw Palette)</h3>
+                    <p class="text">Instead of arbitrary colors, I created structured scales:</p>
                             <ul>
-                                <li>Primary (blues 50 → 900): Used for structure, titles and body text</li>
-                                <li>Secondary (turquoise 50 → 800): Adds a more expressive, aqua-like accent. Used for interaction: hovers, active states, links.</li>
-                                <li>Neutrals (0 → 200): Used for backgrounds, section alternation, table headers, and cards.
+                                <li class="text">>Primary (blues 50 → 900): Used for structure, titles and body text</li>
+                                <li class="text">>Secondary (turquoise 50 → 800): Adds a more expressive, aqua-like accent. Used for interaction: hovers, active states, links.</li>
+                                <li class="text">>Neutrals (0 → 200): Used for backgrounds, section alternation, table headers, and cards.
                                 </li>
                             </ul>
-                    <p>This structure gives the UI a clean tone while supporting AAA contrast where needed.</p>
+                    <p class="text">This structure gives the UI a clean tone while supporting AAA contrast where needed.</p>
                 </div>
 
                 <div class="subsection container--md">
                     <div class="image-container border-radius">
                         <img 
-                            src="images/automated-negotiation-book/colour-system.jpg"
+                            src="../assets/images/automated-negotiation-book/4-1-raw-colours.jpg"
                             alt="Quality service illustration showing our design principles in action"
                             class="img-fluid"
                             loading="lazy"
@@ -422,31 +441,31 @@
             <!-- SECTION SEMANTIC -->
             <section>
                 <div class="subsection container--md">
-                    <h3>4. Semantic tokens</h3>
-                    <p>Semantic tokens translate raw values into meaningful roles used across the interface.</p>
-                    <p>Instead of using raw color values, semantic tokens describe the purpose of a style — for example “surface”, “interactive”, or “subtle”.</p>
-                    <p>I created several semantic categories:</p>
+                    <h3 class="heading">4.3 Semantic tokens</h3>
+                    <p class="text">Semantic tokens translate raw values into meaningful roles used across the interface.</p>
+                    <p class="text">Instead of using raw color values, semantic tokens describe the purpose of a style — for example “surface”, “interactive”, or “subtle”.</p>
+                    <p class="text">I created several semantic categories:</p>
                 </div>
 
                 <!-- SUBSECTION 05.9 -->
                 <div class="subsection container--lg">
                     <div class="row">
                         <div class="col-xl-4 col-12">
-                            <h4>Surface tokens</h4>
-                            <p>Surface tokens define background layers used across the interface. Used for sections, cards, headers, and gradients.</p>
-                            <p>For example:</p>
+                            <h4 class="text">Surface tokens</h4>
+                            <p class="text">Surface tokens define background layers used across the interface. Used for sections, cards, headers, and gradients.</p>
+                            <p class="text">For example:</p>
                             <ul>
-                                <li>--surface-section-primary and --surface-section-alt create a clean alternation pattern.</li>
-                                <li>--surface-hero-gradient and --surface-gradient give the site a unique visual identity using controlled color mixing.</li>
-                                <li>--surface-interactive-primary and its hover state ensure clear feedback on buttons.</li>
+                                <li class="text">--surface-section-primary and --surface-section-alt create a clean alternation pattern.</li>
+                                <li class="text">--surface-hero-gradient and --surface-gradient give the site a unique visual identity using controlled color mixing.</li>
+                                <li class="text">--surface-interactive-primary and its hover state ensure clear feedback on buttons.</li>
                             </ul>
-                            <p>There are others tokens for the high structured areas, components, etc but I don't want to make this text so long, so better check them out on my github.</p>
+                            <p class="text">There are others tokens for the high structured areas, components, etc but I don't want to make this text so long, so better check them out on my github.</p>
                         </div>
 
                         <div class="col-xl-8 col-12">
                             <div class="image-container border-radius">
                                 <img 
-                                src="images/automated-negotiation-book/semantic-surfaces.jpg"
+                                src="../assets/images/automated-negotiation-book/4-3-semantic-surfaces.jpg"
                                 alt="Quality service illustration showing our design principles in action"
                                 class="img-fluid"
                                 loading="lazy"
@@ -460,18 +479,18 @@
                 <div class="subsection container--lg">
                     <div class="row">
                         <div class="col-xl-4 col-12">
-                            <h4>Text tokens</h4>
-                            <p>Created for maximum readability:</p>
+                            <h4 class="text">Text tokens</h4>
+                            <p class="text" class="text">Created for maximum readability:</p>
                             <ul>
-                                <li>--text-color-primary for content</li>
-                                <li>--text-color-button with AAA contrast</li>
-                                <li>interactive colors for links and hover states</li>
+                                <li class="text">--text-color-primary for content</li>
+                                <li class="text">--text-color-button with AAA contrast</li>
+                                <li class="text"> class="text">interactive colors for links and hover states</li>
                             </ul>
                             <ul>
-                                <li>--text-default for paragraphs</li>
-                                <li>--text-muted for secondary information</li>
-                                <li>--text-accent for the book's highlight color</li>
-                                <li>--text-on-dark for hero/contrast areas</li>
+                                <li class="text">--text-default for paragraphs</li>
+                                <li class="text">--text-muted for secondary information</li>
+                                <li class="text">--text-accent for the book's highlight color</li>
+                                <li class="text">--text-on-dark for hero/contrast areas</li>
 
                             </ul>
                         </div>
@@ -479,7 +498,7 @@
                         <div class="col-xl-8 col-12">
                             <div class="image-container border-radius">
                                 <img 
-                                src="images/automated-negotiation-book/semantic_text-color.jpg"
+                                src="../assets/images/automated-negotiation-book/4-3-semantic-text-color.jpg"
                                 alt="Quality service illustration showing our design principles in action"
                                 class="img-fluid"
                                 loading="lazy"
@@ -493,14 +512,14 @@
                 <div class="subsection container--lg">
                     <div class="row">
                         <div class="col-xl-4 col-12">
-                            <h4>Border tokens</h4>
-                            <p>Useful for dividers, tables, and interactive elements—ensuring borders feel consistent instead of arbitrary.</p>
+                            <h4 class="text">Border tokens</h4>
+                            <p class="text">Useful for dividers, tables, and interactive elements—ensuring borders feel consistent instead of arbitrary.</p>
                         </div>
 
                         <div class="col-xl-8 col-12">
                             <div class="image-container border-radius">
                                 <img 
-                                src="images/automated-negotiation-book/semantic_borders.jpg"
+                                src="../assets/images/automated-negotiation-book/4-3-semantic-borders.jpg"
                                 alt="Quality service illustration showing our design principles in action"
                                 class="img-fluid"
                                 loading="lazy"
@@ -515,8 +534,8 @@
                     <div class="row">
 
                         <div class="col-xl-4 col-12">
-                            <h4>Interactive states</h4>
-                            <p>To ensure clear and consistent feedback across buttons, links, and interactive elements, I created tokens for:</p>
+                            <h4 class="text">Interactive states</h4>
+                            <p class="text">To ensure clear and consistent feedback across buttons, links, and interactive elements, I created tokens for:</p>
                         </div>
 
                         <div class="col-xl-8 col-12">
@@ -533,13 +552,13 @@
                     <div class="row">
 
                         <div class="col-xl-4 col-12">
-                            <h4>Component architecture</h4>
-                            <p>Reusable modules built on our token system ensuring consistency and accessibility across all interface elements.</p>
+                            <h4 class="text">Component architecture</h4>
+                            <p class="text" class="text">Reusable modules built on our token system ensuring consistency and accessibility across all interface elements.</p>
                             <ul>
-                                <li><strong>Buttons</strong> share the same focus states and interaction rules</li>
-                                <li><strong>Cards</strong> follow a consistent internal structure and spacing</li>
-                                <li><strong>Tables</strong> adapt to mobile through a token-based responsive system</li>
-                                <li><strong>Navigation</strong> is fully keyboard-accessible and screen-reader friendly</li>
+                                <li class="text">><strong>Buttons</strong> share the same focus states and interaction rules</li>
+                                <li class="text">><strong>Cards</strong> follow a consistent internal structure and spacing</li>
+                                <li class="text"><strong>Tables</strong> adapt to mobile through a token-based responsive system</li>
+                                <li class="text"><strong>Navigation</strong> is fully keyboard-accessible and screen-reader friendly</li>
                             </ul>
                         </div>
 
@@ -557,16 +576,16 @@
             <!-- SECTION SEMANTIC -->
             <section id="accessibility">
                 <div class="subsection container--md">
-                    <h3>4. Accessibility</h3>
-                    <p>I followed a set of practical guidelines to make sure everyone can use the website comfortably.</p>
+                    <h2 class="subtitle">5. Accessibility</h2>
+                    <p class="text">I followed a set of practical guidelines to make sure everyone can use the website comfortably.</p>
                 </div>
 
                 <!-- SUBSECTION 05.9 -->
                 <div class="subsection container--lg">
                     <div class="row">
                         <div class="col-xl-4 col-12">
-                            <h4>Colour contrast</h4>
-                            <p>All colours follow WCAG AA contrast standards. Using tokens for text, surfaces, and interactive elements helps maintain consistent, accessible contrast across light and dark backgrounds.</p>
+                            <h3 class="heading">Colour contrast</h3>
+                            <p class="text">All colours follow WCAG AA contrast standards. Using tokens for text, surfaces, and interactive elements helps maintain consistent, accessible contrast across light and dark backgrounds.</p>
                         </div>
 
                         <div class="col-xl-8 col-12">
@@ -581,8 +600,8 @@
                 <div class="subsection container--lg">
                     <div class="row">
                         <div class="col-xl-4 col-12">
-                            <h4>Semantic structure</h4>
-                            <p>I built the page using meaningful HTML elements like &lt;nav&gt;, &lt;header&gt;, &lt;section&gt;, &lt;table&gt;, and &lt;footer&gt;. Clear titles and a consistent hierarchy help both users and assistive technologies understand how the content is organized.</p>
+                            <h3 class="heading">Semantic structure</h3>
+                            <p class="text">I built the page using meaningful HTML elements like &lt;nav&gt;, &lt;header&gt;, &lt;section&gt;, &lt;table&gt;, and &lt;footer&gt;. Clear titles and a consistent hierarchy help both users and assistive technologies understand how the content is organized.</p>
                         </div>
 
                         <div class="col-xl-8 col-12">
@@ -598,8 +617,8 @@
                     <div class="row">
 
                         <div class="col-xl-4 col-12">
-                            <h4>Keyboard navigation & focus states</h4>
-                            <p>All interactive elements—buttons, links, the mobile menu, and the copy-to-clipboard action—are fully usable with a keyboard. I added visible focus rings based on design tokens so users always know where they are on the page.</p>
+                            <h3 class="heading">Keyboard navigation & focus states</h3>
+                            <p class="text">All interactive elements—buttons, links, the mobile menu, and the copy-to-clipboard action—are fully usable with a keyboard. I added visible focus rings based on design tokens so users always know where they are on the page.</p>
                         </div>
 
                         <div class="col-xl-8 col-12">
@@ -616,8 +635,8 @@
                     <div class="row">
 
                         <div class="col-xl-4 col-12">
-                            <h4>Screen Reader Labels & ARIA</h4>
-                            <p>I included descriptive ARIA labels such as “Open menu”, “Close menu”, and “Copy BibTeX entry”. On mobile, where the version table becomes cards, additional labels ensure screen readers still communicate the information clearly.</p>
+                            <h3 class="heading">Screen Reader Labels & ARIA</h3>
+                            <p class="text">I included descriptive ARIA labels such as “Open menu”, “Close menu”, and “Copy BibTeX entry”. On mobile, where the version table becomes cards, additional labels ensure screen readers still communicate the information clearly.</p>
                         </div>
 
                         <div class="col-xl-8 col-12">
@@ -634,8 +653,8 @@
             <!-- SECTION 06 -->
             <section>
                 <div class="subsection container--md">
-                    <h2 class="h2-pag-portfolio">5. Responsive Web Layout</h2>
-                    <p>Although the site is primarily desktop-first, I designed a flexible responsive system. The hero adapts for better readability, cards rearrange into grids or single-column layouts, and the version table becomes stacked cards on smaller screens. Navigation turns into an accessible mobile menu, ensuring the page remains functional across devices whenever needed.</p>
+                    <h2 class="subtitle">6. Responsive Web Layout</h2>
+                    <p class="text">Although the site is primarily desktop-first, I designed a flexible responsive system. The hero adapts for better readability, cards rearrange into grids or single-column layouts, and the version table becomes stacked cards on smaller screens. Navigation turns into an accessible mobile menu, ensuring the page remains functional across devices whenever needed.</p>
                 </div>
                 <div class="subsection container--md">
                     <div class="image-container border-radius">
@@ -652,13 +671,13 @@
             <!-- SECTION 07 -->
             <section>
                 <div class="subsection container--md">
-                    <h2 class="h2-pag-portfolio">6. Interaction design</h2>
-                    <p>Small micro-interactions support usability:</p>
+                    <h2 class="subtitle">7. Interaction design</h2>
+                    <p class="text">Small micro-interactions support usability:</p>
                     <ul>
-                        <li>Buttons lift slightly on hover</li>
-                        <li>Smooth transitions for the navigation menu</li>
-                        <li>Copy button turns into a checkmark on success</li>
-                        <li>Surfaces use subtle transparency via color-mix() for softer UI feedback</li>
+                        <li class="text">>Buttons lift slightly on hover</li>
+                        <li class="text">>Smooth transitions for the navigation menu</li>
+                        <li class="text">>Copy button turns into a checkmark on success</li>
+                        <li class="text">>Surfaces use subtle transparency via color-mix() for softer UI feedback</li>
                     </ul>
                 </div>
             </section>
@@ -666,13 +685,13 @@
             <!-- SECTION 08 -->
             <section>
                 <div class="subsection container--md">
-                    <h2 class="h2-pag-portfolio">7. CSS Architecture - Client-friendly & maintainable</h2>
-                    <p>I designed a CSS structure that is clean, scalable, and easy for the client to maintain. Instead of a single large file or an overly complex system, I created a lightweight, modular architecture with clear responsibilities for each file. This makes updates safer, supports long-term growth, and allows non-technical users to adjust simple styles without breaking the layout.</p>
+                    <h2 class="subtitle">8. CSS Architecture - Client-friendly & maintainable</h2>
+                    <p class="text">I designed a CSS structure that is clean, scalable, and easy for the client to maintain. Instead of a single large file or an overly complex system, I created a lightweight, modular architecture with clear responsibilities for each file. This makes updates safer, supports long-term growth, and allows non-technical users to adjust simple styles without breaking the layout.</p>
                 </div>
                 <div class="subsection container--md">
                     <div class="image-container border-radius">
                         <img 
-                        src="images/automated-negotiation-book/css-structure.jpg"
+                        src="../assets/images/automated-negotiation-book/8-css-architecture.jpg"
                         alt="Quality service illustration showing our design principles in action"
                         class="img-fluid"
                         loading="lazy"
@@ -684,20 +703,20 @@
             <!-- SECTION 09 -->
             <section>
                 <div class="subsection container--md">
-                    <h2 class="h2-pag-portfolio">7. Outcome</h2>
-                    <p>The result is a clean, accessible, and scalable website built with semantic HTML, custom CSS, and minimal JavaScript. A small design-token system for spacing, colour, and typography keeps the interface consistent and easy to maintain. Beyond being a single-page site, this project became a solid foundation for a growing academic resource.</p>
+                    <h2 class="subtitle">9. Outcome</h2>
+                    <p class="text">The result is a clean, accessible, and scalable website built with semantic HTML, custom CSS, and minimal JavaScript. A small design-token system for spacing, colour, and typography keeps the interface consistent and easy to maintain. Beyond being a single-page site, this project became a solid foundation for a growing academic resource.</p>
                 </div>
             </section>
 
             <!-- SECTION 10 -->
             <section>
                 <div class="subsection container--md">
-                    <h2 class="h2-pag-portfolio">8. What I Learned</h2>
-                    <p>This project reinforced three key ideas:</p>
+                    <h2 class="subtitle">10. What I Learned</h2>
+                    <p class="text">This project reinforced three key ideas:</p>
                     <ul class="list">
-                        <li>Consistent mathematical systems improve visual harmony</li>
-                        <li>Designing for scale means thinking beyond immediate needs</li>
-                        <li>A good design system prevents future problems before they appear</li>
+                        <li class="text">>Consistent mathematical systems improve visual harmony</li>
+                        <li class="text">>Designing for scale means thinking beyond immediate needs</li>
+                        <li class="text">>A good design system prevents future problems before they appear</li>
                     </ul>
                 </div>
             </section>
@@ -713,38 +732,81 @@
             
         </article>
 
-        <!-- Next Project -->
-        <section id="next-project" class="container-lg">
-            <div>
-                <h2><span class="section-title text-gradient">Next project</span></h2>
-                <a href="kronaby.html" class="btn btn-secondary" role="button">Go to the next project <i id="dl-icon-arrow" class="bi bi-arrow-right-circle-fill"></i>
-                </a>
+        <!-- Next Project Section -->
+        <section id="next-project" class="next-project-section">
+            <div class="container text-center">
+                <h2 class="subtitle fw-bold">
+                    <span class="subtitle text-gradient-secondary">Next Project</span>
+                </h2>
+                <div class="btn-container">
+                    <a href="kronaby.html" 
+                    class="btn btn-solid btn-primary-icon"
+                    aria-label="Go to Kronaby project">
+                        <span class="btn-text">Go to the next project</span>
+                        <i class="btn-icon bi bi-arrow-right-circle"></i>
+                    </a>
+                </div>
             </div>
         </section>
 
         <!-- Contact Section -->
-        <section id="contact-me" class="container--full d-flex align-items-center justify-content-left">
-            <div class="row justify-content-center rounded-block container-lg my-5 px-md-5">
-                <div class="text-center py-4 px-md-5">
-                    <h2 class="py-2 border-bottom"><span class="section-title text-gradient">Let's connect!</span></h2>
-                    <p class="subtitle-1 my-4">
-                    Drop it like it's hot and hit me at <span class="colorful-text underlined"><a href="mailto:roselly.nunezg@gmail.com">my email</a></span> or find me on my <span><a class="colorful-text underlined" href="https://www.linkedin.com/in/rosellynunez/" class ="links-external" target="_blank">linkedin</a></span> account.</p>
+        <section id="contact-me" class="contact-section bg-ornament">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-10 col-lg-8">
+        
+                    <!-- Card única -->
+                    <div class="contact-card card shadow p-4 p-4">
+                        <div class="card-body text-center">
+
+                            <!-- Título mejorado -->
+                            <h2 class="subtitle fw-bold">
+                                <span class="text-gradient-secondary">Let's connect!</span>
+                            </h2>
+
+                            <!-- Contenido ORIGINAL pero optimizado -->
+                            <p class="text-lead">
+                            Drop it like it's hot—pitch me your project, your collab idea, or whatever you're working on through the links below.
+                            </p>
+
+                            <!-- Contenido ORIGINAL pero optimizado -->
+                            <div class="contact-actions mt-4">
+                                <div class="hstack gap-3 justify-content-center">
+                                    <a href="mailto:roselly.nunezg@gmail.com" 
+                                        class="btn btn-solid btn-primary btn-primary-sm btn-icon btn-icon-left">
+                                        <span class="btn-icon-element"><i class="bi bi-envelope"></i></span>
+                                        <span class="btn-text">Quick Email</span>
+                                    </a>
+
+                                    <a href="https://www.linkedin.com/in/rosellynunez/"
+                                        class="btn btn-solid btn-secondary btn-primary-sm btn-icon btn-icon-left"
+                                        target="_blank">
+                                        <span class="btn-icon-element"><i class="bi bi-linkedin"></i></span>
+                                        <span class="btn-text">View Profile</span>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
+
     </main>
 
     <!-- Overlay para menú mobile -->
     <div id="menu-overlay">
         <ul class="overlay-menu">
-            <li><a href="my-work.html">My Work</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a class="nav-link active" href="images/cv/CV_Roselly_Nunez_UX_UI_Designer-en.pdf" target="_blank" >Resume<i class="bi bi-box-arrow-up-right ms-2"></i></a></li>
+            <li class="text">><a href="my-work.html">My Work</a></li>
+            <li class="text">><a href="about.html">About</a></li>
+            <li class="text">><a class="nav-link active" href="images/cv/CV_Roselly_Nunez_UX_UI_Designer-en.pdf" target="_blank" >Resume<i class="bi bi-box-arrow-up-right ms-2"></i></a></li>
         </ul>
     </div>
 
     <footer role="contentinfo" aria-label="Site footer">
-        <p>This site is hand-made by me, Roselly Nuñez. Built with 💖, HTML, CSS, JS and Bootstrap.</p>
+        <p class="text">This site is hand-made by me, Roselly Nuñez. Built with 💖, HTML, CSS, JS and Bootstrap.</p>
     </footer>
 </body>
 

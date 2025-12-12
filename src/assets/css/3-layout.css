@@ -44,6 +44,22 @@
     display: block;
 }
 
+
+
+
+
+/* ----- Sections ----- */
+/* Space between big sections */
+section + section {
+  margin-block-start: var(--section-space-lg);
+}
+
+/* Space between sub-sections */
+.subsection + .subsection {
+  margin-block-start: var(--section-space-md);
+}
+
+
 /* ----- Sections ----- */
 /* Space between big sections */
 section + section {
@@ -193,4 +209,160 @@ section + section {
 /* Si no quieres margen en el último elemento, puedes eliminarlo así: */
 ul li:last-child {
   margin-bottom: 0;
+}
+
+h1 {
+    font-size: large;
+}
+
+
+
+/* Alinear el menú en el centro en desktop */
+@media (min-width: 992px) {
+  .desktop-menu {
+    flex-grow: 1;
+    justify-content: center;
+  }
+  
+  .navbar .container-fluid {
+    display: flex;
+    align-items: center;
+  }
+
+  /* Logo a la izquierda, menú al centro, botón a la derecha */
+  .navbar-brand {
+    order: 1;
+  }
+
+  .desktop-menu {
+    order: 2;
+  }
+
+  .btn-vibe {
+    order: 3;
+  }
+}
+
+/* Overlay inicial (oculto) */
+#menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgb(35, 0, 92, 0.8); /* Fondo oscuro semitransparente */
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Overlay activo (visible) */
+#menu-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Estilos del menú en el overlay */
+.overlay-menu {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+}
+
+.overlay-menu li {
+  margin: 1rem 0;
+}
+
+.overlay-menu li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-family: "Inter Display", "Inter Display Placeholder", sans-serif;
+  transition: color 0.3s;
+  font-weight: 400;
+}
+
+.overlay-menu li a:hover {
+  color: #fba64b;
+}
+
+.hidden {
+  opacity: 0.3;
+  transform: translateY(30px); /* Pequeño desplazamiento hacia abajo */
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+/* Overlay inicial (oculto) */
+#menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgb(35, 0, 92, 0.8); /* Fondo oscuro semitransparente */
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Overlay activo (visible) */
+#menu-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Estilos del menú en el overlay */
+.overlay-menu {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+}
+
+.overlay-menu li {
+  margin: 1rem 0;
+}
+
+.overlay-menu li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-family: "Inter Display", "Inter Display Placeholder", sans-serif;
+  transition: color 0.3s;
+  font-weight: 400;
+}
+
+.overlay-menu li a:hover {
+  color: #fba64b;
+}
+
+.hidden {
+  opacity: 0.3;
+  transform: translateY(30px); /* Pequeño desplazamiento hacia abajo */
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.bg-ornament {
+  position: relative;
+    z-index: 0;
+
 }

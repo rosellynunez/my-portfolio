@@ -1,0 +1,220 @@
+/* =========================================================
+    THEME: DARK (DEFAULT)
+   ========================================================= */
+
+:root,
+[data-bs-theme="dark"] {
+
+  /* BACKGROUND */
+  --bg-primary: var(--purple-900);
+  --bg-secondary: var(--purple-800);
+
+
+  /* TEXT */
+  --color-text: var(--gray-100);
+  --color-text-secondary: var(--gray-300);
+
+
+  /* LINKS & ACCENT */
+  --color-link: var(--peach-500);
+  --color-link-hover: var(--peach-400);
+
+  --color-border: var(--gray-600);
+
+
+  /* COMPONENT SEMÁNTICOS */
+  --navbar-text: var(--cream-100);
+  --navbar-text-hover: var(--pink-500);
+
+
+  /* BUTTONS */
+  --btn-primary-bg: var(--purple-700);
+  --btn-primary-text: var(--teal-300);
+  --btn-primary-bg-hover: var(--purple-800);
+
+
+  --btn-secondary-bg: var(--purple-700);
+  --btn-secondary-text: var(--teal-300);
+  --btn-secondary-bg-hover: var(--purple-800);
+  
+
+  /* =============== TEXT GRADIENT TOKENS =============== */
+
+/* Light theme default */
+  --gradient-text-start: var(--purple-700);
+  --gradient-text-end: var(--rose-500);
+}
+
+
+
+/* =========================================================
+    DARK THEME SPECIFIC STYLES
+   ========================================================= */
+
+/* ================== BUTTONS ================== */
+
+/* -------------- PRIMARY BUTTONS -------------- */
+
+[data-bs-theme="dark"] .btn-primary,
+[data-bs-theme="dark"] .btn-primary-icon,
+[data-bs-theme="dark"] .btn-primary-sm {
+  background: var(--btn-primary-bg);
+  color: var(--btn-primary-text);
+}
+
+[data-bs-theme="dark"] .btn-primary:hover,
+[data-bs-theme="dark"] .btn-primary-icon:hover {
+  background: var(--btn-primary-bg-hover)!important;
+}
+
+[data-bs-theme="dark"] .btn-primary:active,
+[data-bs-theme="dark"] .btn-primary-icon:active,
+[data-bs-theme="dark"] .btn-primary-sm:active {
+  background: var(--btn-primary-bg-active);
+}
+
+/* -------------- SECONDARY BUTTON -------------- */
+
+[data-bs-theme="dark"] .btn-secondary:hover {
+  background: var(--btn-secondary-hover-bg);
+}
+
+[data-bs-theme="dark"] .btn-secondary:active {
+  background: var(--btn-secondary-active-bg);
+}
+
+
+/* ---------- LINK BUTTON GRADIENT ---------- */
+[data-bs-theme="dark"] .btn-link {
+  background: linear-gradient(
+    135deg,
+    var(--rose-300),
+    var(--teal-300)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+
+/* =============== CARD =============== */
+
+/* -------- CONTACT CARD -------- */
+
+[data-bs-theme="dark"] .contact-card {
+  background: var(--purple-900);
+  backdrop-filter: blur(16px) saturate(140%);
+  -webkit-backdrop-filter: blur(96px) saturate(140%);
+
+  border-radius: 1rem;
+  padding: 2rem;
+
+  /* Borde más visible en teal, combinación ligera */
+  border: 1px solid rgba(20, 184, 196, 0.35); /* teal-500 with transparency */
+  color: var(--text-primary);
+
+  position: relative;
+  overflow: hidden;
+}
+
+/* Sutil overlay decorativo (teal ripple) */
+[data-bs-theme="dark"] .contact-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: radial-gradient(
+    circle at 80% 60%,
+    rgba(20, 184, 196, 0.18), /* teal-500 */
+    transparent 60%
+  );
+
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.7;
+}
+
+
+
+/* =============== TEXT & LINKS =============== */
+
+[data-bs-theme="dark"] .subtitle {
+  color: var(--text-primary);
+}
+
+[data-bs-theme="dark"] .text-lead {
+  color: var(--text-primary);
+}
+
+[data-bs-theme="dark"] a {
+  color: var(--teal-300);
+}
+
+/* =============== TEXT GRADIENTS =============== */
+
+[data-bs-theme="dark"] .text-gradient-primary {
+  background: linear-gradient(120deg, var(--rose-300), var(--teal-300));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+[data-bs-theme="dark"] .text-gradient-secondary {
+  background: linear-gradient(120deg, var(--gray-300), var(--gray-200));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+
+
+
+/* =============== LOGO =============== */
+
+#logo { fill: var(----white); }
+
+
+
+/* =============== GLOBAL BACKGROUND =============== */
+
+[data-bs-theme="dark"] body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+
+
+/* =============== ORNAMENT BACKGROUND =============== */
+
+/* Dark theme override */
+[data-bs-theme="dark"] {
+  --gradient-text-start: var(--rose-300);
+  --gradient-text-end: var(--teal-300);
+}
+
+[data-bs-theme="dark"] .bg-ornament::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background:
+    /* Glow rosado-violeta */
+    radial-gradient(
+      circle at 70% 20%,
+      rgba(218, 110, 220, 0.12),
+      transparent 55%
+    ),
+    /* Glow turquesa */
+    radial-gradient(
+      circle at 30% 80%,
+      rgba(20, 184, 196, 0.18),
+      transparent 60%
+    ),
+    /* Base gradient */
+    linear-gradient(
+      var(--purple-900) 100%
+    );
+
+  opacity: 0.55;
+  z-index: -1;
+  pointer-events: none;
+}

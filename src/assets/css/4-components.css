@@ -1,0 +1,701 @@
+/* =========================================================
+    COMPONENTS
+   ========================================================= */
+
+/* -------- LOGO -------- */
+#logo {
+  height: 2rem;
+  width: 4rem;
+  fill: var(--logo-color);
+}
+
+
+
+/* -------- NAVBAR -------- */
+.navbar {
+  transition: background-color .3s ease, backdrop-filter .3s ease;
+}
+
+
+
+.navbar-nav .nav-link {
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 2rem;
+  font-family: "Inter Display", sans-serif;
+  color: var(--navbar-text);
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--navbar-text-hover);
+}
+
+.navbar.scrolled {
+  background-color: rgba(255,255,255,0.1) !important;
+  backdrop-filter: blur(10px);
+}
+
+
+
+/* ================== BUTTONS ================== */
+
+/* Base button (neutral, not visual) */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: none;
+
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.3s ease;
+}
+
+/* Visual general button (solo para variantes sólidas) */
+.btn-solid {
+  padding: 0.8rem 1.6rem;
+  border-radius: 0.75rem;
+  box-shadow:
+    0 4px 6px rgba(0, 0, 0, 0.15),
+    0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.btn-solid:active {
+  transform: scale(0.97);
+}
+
+/* -------------- PRIMARY BUTTON -------------- */
+.btn-primary {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.15s ease;
+}
+
+/* Shine effect: Preparamos el brillo pero sin animación por defecto */
+.btn-primary::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.25) 50%,
+    transparent 100%
+  );
+  transform: skewX(-20deg);
+  opacity: 0;
+  pointer-events: none; /* para que no afecte clics */
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+}
+
+/* Reiniciar animación en hover */
+.btn-primary:hover::after {
+  opacity: 1;
+  animation: none;                  /* primero la apagamos */
+  animation: shine 5s ease;       /* y luego la encendemos */
+}
+
+/* Desaparece suave cuando sales del hover */
+.btn-primary:not(:hover)::after {
+  transition: opacity 0.25s ease;
+  opacity: 0;
+}
+
+.btn-primary:active {
+  transform: scale(0.96);
+}
+
+/* -------------- SECONDARY BUTTON -------------- */
+.btn-secondary {
+  border: 1px solid currentColor; /* borde genérico */
+}
+
+.btn-secondary:hover {
+  transform: translateY(-2px);
+}
+
+/* -------------- ICON BUTTON -------------- */
+.btn-icon {
+  gap: 0.6rem;
+  align-items: center;
+}
+
+/* Left Icon button */
+.btn-icon-left .btn-icon-element {
+  order: 0; /* icono primero */
+}
+.btn-icon-left .btn-text {
+  order: 1;
+}
+
+/* Right Icon button */
+.btn-icon-right .btn-icon-element {
+  order: 2; /* icono después del texto */
+}
+.btn-icon-right .btn-text {
+  order: 1;
+}
+
+/* -------------- PRIMARY BUTTON WITH ICON -------------- */
+.btn-primary-icon {
+  position: relative;
+  overflow: hidden;
+  transition: background 0.35s ease, transform 0.2s ease;
+}
+
+.btn-primary-icon::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.25) 50%,
+    transparent 100%
+  );
+  transform: skewX(-20deg);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.btn-primary-icon:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary-icon:hover::after {
+  opacity: 1;
+  animation: none;
+  animation: shine 5s ease;
+}
+
+.btn-primary-icon:not(:hover)::after {
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.btn-primary-icon:active {
+  transform: scale(0.96);
+}
+
+.btn-primary-icon:active::after {
+  opacity: 0 !important;
+  animation: none !important;
+}
+
+/* -------------- SMALL BUTTON -------------- */
+.btn-primary-sm {
+  padding: 0.5rem 1.2rem;
+  font-size: 0.875rem;
+  border-radius: 0.65rem;
+}
+
+/* -------------- SMALL BUTTON WITH ICON -------------- */
+.btn-primary-sm .btn-icon-element {
+  font-size: 0.9rem;
+}
+
+/* Icono a la izquierda */
+.btn-icon-left .btn-icon-element {
+  order: 0;
+}
+.btn-icon-left .btn-text {
+  order: 1;
+}
+
+/* El botón pequeño NO debe tener shine-hover ni levantamiento */
+.btn-primary-sm:hover {
+  transform: none !important;
+}
+
+.btn-primary-sm:hover::after {
+  animation: none !important;
+  opacity: 0 !important;
+}
+
+
+/* -------------- ANIMATIONS -------------- */
+@keyframes shine {
+  0%   { left: -150%; }
+  50%  { left: 150%; }
+  100% { left: 150%; opacity: 0; }
+}
+
+/* -------------- LINK BUTTON GRADIENT -------------- */
+.btn-link {
+  padding: 0;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-decoration: none;
+}
+
+.btn-link:hover {
+  opacity: 0.7;
+}
+
+
+
+
+.btn-vibe {
+  padding: .3rem .5rem;
+  font-size: .75rem;
+  border-radius: 1rem;
+  background: none;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  border: 1px solid var(--navbar-text);
+}
+
+.btn-vibe:hover .icon-vibe {
+  animation: spin 1s infinite;
+}
+
+
+.btn-vibe {
+  padding: 0.3rem 0.5rem;
+  font-size: small;
+  cursor: pointer;
+  background: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: 1px solid;
+  border-radius: 1rem;
+  transition: border-color 0.5s ease;
+}
+
+
+
+body[data-bs-theme="dark"] .icon-vibe {
+  color: #faffc3!important; 
+}
+
+/* -------- BUTTONS para cambiar entre modo claro y oscuro */
+
+.theme-icon-text-container {
+  display: flex;
+  align-items: center; /* Alinea los elementos verticalmente al centro */
+  gap: 10px; /* Añade un espacio de 10 píxeles entre el icono y el texto */
+}
+
+.bi {
+  vertical-align: 0rem;
+}
+  
+.dl-icon-arrow {
+  width: 32px;
+  height: 32px;
+}
+
+.bd-mode-toggle {
+  z-index: 1500;
+}
+
+.bd-mode-toggle .dropdown-menu .active .bi {
+  display: block !important;
+}
+
+
+
+
+
+footer {
+  background: var(--color-bg);
+  color: var(--color-text);
+  padding: 1em;
+  text-align: center;
+}
+
+
+
+/* Estilos generales para los enlaces (href) */
+a nav{
+  text-decoration: none; /* Elimina el subrayado predeterminado */
+  color: #23005C; /* Color del texto en tema claro */
+  transition: color 0.3s ease; /* Transición suave al cambiar el color */
+}
+
+/* Estilos de enlace en hover (href) */
+a:hover {
+  color: #fba64b; /* Cambia el color al pasar el mouse */
+}
+
+a {
+  display: inline !important;
+}
+
+/* Estilos para los enlaces dentro del navbar */
+.navbar-nav .nav-item .nav-link {
+  font-size: 1rem; /* Tamaño de fuente para los enlaces del navbar */
+  font-weight: 500;
+  font-family: "Inter Display", "Inter Display Placeholder", sans-serif; /* Tipografía específica para el navbar */
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+  padding: 2rem; /* Espaciado para los enlaces */
+  text-decoration: none !important; /* Sin subrayado */
+}
+
+.navbar-brand {
+  margin-right: 0;
+}
+
+
+
+
+/* -------- CARD CONTACT -------- */
+
+.contact-section {
+  display: flex;
+  align-items: center;
+}
+
+.contact-card {
+  margin: var(--space-8) var(--space-2);
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+}
+
+.contact-card .text-lead {
+  line-height: var(--line-height-normal);
+}
+
+.contact-card:hover {
+  box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
+}
+
+.text-gradient {
+  background: linear-gradient(
+    135deg,
+    var(--gradient-text-start),
+    var(--gradient-text-end)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+
+/* -------- NEXT PROJECT -------- */
+
+
+
+
+
+
+
+
+/* Personalización del botón navbar-toggler */
+.navbar-toggler {
+  border: 1px solid; /* Quita el borde predeterminado */
+  border-radius: 2rem; /* Ajusta el border-radius */
+  padding: 0.5rem 0.5rem; /* Espaciado interno para centrar el texto */
+  font-weight: bold;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+
+.navbar-toggler {
+  position: relative;
+  z-index: 1051; /* Más alto que el overlay */
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar {
+  --bs-navbar-color: none;
+}
+
+/* Oculta el ícono predeterminado de Bootstrap */
+.navbar-toggler-icon {
+  display: none;
+}
+
+/* Ajustes cuando el menú está abierto */
+.navbar-toggler[aria-expanded="true"] #menu-style {
+  content: "CLOSE"; /* Puedes cambiarlo a "CERRAR" si prefieres en español */
+}
+
+
+
+/* More proyects */
+
+
+.project-navigation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.underlined {
+    text-decoration: underline !important;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 0.5px #5800E5; /* For WebKit browsers (Chrome, Safari) */
+    background-image: linear-gradient(130deg, rgb(241, 58, 238) -9.41449%, rgb(44, 90, 255) 110.686%, rgb(100, 246, 255) 175.912%);    
+} 
+
+
+
+
+
+
+
+/* NAVBAR */
+.navbar.scrolled {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(10px); /* Añade el efecto de blur */
+}
+
+/* Alineación de logo a la izquierda y menú a la derecha */
+.navbar .container-fluid {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 992px) {
+/* Alinear el menú mobile al centro cuando esté desplegado */
+  .desktop-menu .navbar-nav {
+    flex-direction: column;
+    align-items: center;
+    margin-left: inherit !important;
+    text-decoration: none !important;
+  }
+  
+  .desktop-menu  .navbar-nav .nav-item {
+    margin: 1em 0;
+    text-decoration: none !important; /* Espaciado horizontal */
+  }
+
+  .navbar-nav .nav-item .nav-link {
+    font-size: 2.6rem;
+    font-family:  "Inter Display", "Inter Display Placeholder", sans-serif;
+    text-decoration: none !important;
+  }
+
+  .navbar-nav .nav-item .nav-link:hover {
+    color: #fba64b;
+    text-decoration: none !important;
+  }
+}
+
+.navbar-expand-lg {
+  padding-top: 1rem;
+}
+
+/* Mobile-specific style */
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border-radius: 2rem;
+  padding: 0.5rem 0.8rem;
+}
+
+.navbar {
+  transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+/* Versión escritorio sigue con el menú al centro*/
+@media (min-width: 1024px) {
+  .navbar-nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    text-decoration: none !important;
+  }
+}
+
+/* Estilos para los enlaces dentro del navbar */
+.navbar-nav .nav-item .nav-link {
+  font-size: 1rem; /* Tamaño de fuente para los enlaces del navbar */
+  font-weight: 500;
+  font-family: "Inter Display", "Inter Display Placeholder", sans-serif; /* Tipografía específica para el navbar */
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+  padding: 2rem; /* Espaciado para los enlaces */
+  text-decoration: none !important; /* Sin subrayado */
+}
+
+.navbar-brand {
+  margin-right: 0;
+}
+
+/* Hover en enlaces del navbar */
+.navbar-nav .nav-item .nav-link:hover {
+  color: #fba64b; /* Cambia el color al pasar el mouse */
+  text-decoration: underline; /* Añade subrayado al hover */
+}
+
+
+
+
+.btn-vibe {
+  padding: 0.3rem 0.5rem;
+  font-size: small;
+  cursor: pointer;
+  background: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: 1px solid;
+  border-radius: 1rem;
+  transition: border-color 0.5s ease;
+}
+
+.label {
+  font-size: 0.7rem;
+}
+
+.icon-vibe {
+  display: inline-block;
+}
+
+body[data-bs-theme="dark"] .icon-vibe {
+  color: #faffc3!important; 
+}
+
+body[data-bs-theme="light"] .icon-vibe {
+  fill: #ffe100!important;  
+}
+
+.btn-vibe:hover .icon-vibe {
+  animation: spin 1s infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#menu-style {
+  font-size: 0.8rem;
+}
+
+/* Personalización del botón navbar-toggler */
+.navbar-toggler {
+  border: 1px solid; /* Quita el borde predeterminado */
+  border-radius: 2rem; /* Ajusta el border-radius */
+  padding: 0.5rem 0.5rem; /* Espaciado interno para centrar el texto */
+  font-weight: bold;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+
+.navbar-toggler {
+  position: relative;
+  z-index: 1051; /* Más alto que el overlay */
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar {
+  --bs-navbar-color: none;
+}
+
+/* Oculta el ícono predeterminado de Bootstrap */
+.navbar-toggler-icon {
+  display: none;
+}
+
+/* Ajustes cuando el menú está abierto */
+.navbar-toggler[aria-expanded="true"] #menu-style {
+  content: "CLOSE"; /* Puedes cambiarlo a "CERRAR" si prefieres en español */
+}
+
+/* Alinear el menú en el centro en desktop */
+@media (min-width: 1024px) {
+  .desktop-menu {
+    flex-grow: 1;
+    justify-content: center;
+  }
+  
+  .navbar .container-fluid {
+    display: flex;
+    align-items: center;
+  }
+
+  /* Logo a la izquierda, menú al centro, botón a la derecha */
+  .navbar-brand {
+    order: 1;
+  }
+
+  .desktop-menu {
+    order: 2;
+  }
+
+  .btn-vibe {
+    order: 3;
+  }
+}
+
+/* Footer */
+footer {
+  background-color: #020005;
+  color: #fff;
+  text-align: center;
+  clear: both;
+  padding: 1em;
+  font-size: 0.9rem;
+}
+
+footer p {
+  margin: 0em !important;
+}
+
+
+
+
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #ebeced;
+  border-top: 1px solid #dee2e6;
+  padding: 0.5rem 0 1rem;
+  z-index: 1000;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+}
+
+.cookie-banner p {
+  font-size: 1rem;
+  color: #020005;
+}

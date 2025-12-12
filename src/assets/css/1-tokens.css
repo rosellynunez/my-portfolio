@@ -1,0 +1,241 @@
+/* =========================================================
+    GLOBAL DESIGN SYSTEM
+    Author: Roselly Nuñez
+   ========================================================= */
+
+/*  ========================================
+    1️⃣ DESIGN TOKENS
+    ======================================== */
+
+:root {
+
+/* =========================================================
+    TOKENS BASE (FOUNDATIONS)
+   ========================================================= */
+
+/* ===== FONT TOKENS ===== */
+--font-family-base: "Inter Display", sans-serif;
+--font-family-heading: "Inter Display", sans-serif;
+
+
+/* ===== FONT WEIGHT ===== */
+--fw-thin: 300;         /* Estilo ligero, elegante (hero, UI light) */
+--fw-regular: 400;      /* Texto cuerpo */
+--fw-medium: 500;       /* Navegación, botones, labels */
+--fw-semibold: 600;     /* Headings pequeños, subtítulos */
+--fw-bold: 700;         /* Títulos medios y grandes */
+--fw-black: 800;        /* Display-home, hero, secciones WOW */
+
+
+/* ===== FONT SIZE ===== */
+/* Base: 18px = 1.125rem */
+--font-size-xs: 0.75rem;        /* 12px - metadata */
+--font-size-sm: 1rem;       /* 14px - labels */
+--font-size-base: 1.25rem;     /* 18px - texto cuerpo */
+/* Escala 1.45x — se siente grande, visual, moderna */
+--font-size-lg: 1.875rem;        /* ~26px – lead grande */
+--font-size-xl: 2.8125rem;        /* ~38px – subtítulos fuertes */
+--font-size-2xl: 4.21875rem;       /* ~55px – títulos destacados */
+--font-size-3xl: 4.95rem;       /* ~80px – sección super-impactante */
+--font-size-hero: 6.5rem;       /* ~104px – hero cinematográfico */
+
+
+
+/* =========================================================
+    TOKENS SEMANTICS
+   ========================================================= */
+  
+  /* CONTENIDO (3 esenciales) */
+  --font-size-text: var(--font-size-base);
+  --font-size-lead: var(--font-size-lg);
+  --font-size-caption: var(--font-size-sm);
+  
+
+  /* ENCABEZADOS (solo 3 niveles) */
+  --font-size-title: var(--font-size-2xl);    /* 40px - Título página */
+  --font-size-subtitle: var(--font-size-xl);  /* 28px - Subtítulo/sección */
+  --font-size-heading: var(--font-size-lg);   /* 20px - Título pequeño */
+  
+
+  /* ESPECIALES (por contexto) */
+  --font-size-display-home: var(--font-size-hero);  /* 67.2px - Solo home */
+  --font-size-display-page: var(--font-size-2xl);   /* 40px - Otras páginas */
+  
+
+  /* ===== LINE HEIGHTS (solo 3) ===== */
+  --line-height-tight: 1.1;     /* Display/títulos */
+  --line-height-normal: 1.5;    /* Texto normal */
+  --line-height-loose: 1.7;     /* Texto largo */
+
+
+/* ===== LETTER SPACING ===== */
+  --letter-spacing-tight: -0.02em;
+  --letter-spacing-normal: 0em;
+  --letter-spacing-wide: 0.02em;
+
+
+  /* ===== RADII ===== */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+  --radius-full: 9999px;
+
+
+  /* ===== SOMBRAS ===== */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.25);
+  --shadow-inner: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+
+
+/* =========================================================
+    SPACES
+    ======================================================== */
+
+/* Spacing Scale (1rem = 16px) */
+   /* Espacios base - incrementos pequeños */
+  --space-1: 0.25rem;   /* 4px Iconos internos, padding mínimo */
+  --space-2: 0.5rem;    /* 8px Elementos pequeños, márgenes tight */
+  --space-3: 0.75rem;   /* 12px */
+  --space-4: 1rem;      /* 16px Padding estándar, márgenes base */
+  --space-5: 1.5rem;    /* 24px */
+  
+  /* Espacios medios - incrementos más grandes */
+  --space-6: 2rem;      /* 32px Subsecciones */
+  --space-7: 3rem;      /* 48px Secciones internas, grupos */    
+  --space-8: 4rem;      /* 64px */    
+  --space-9: 6rem;      /* 96px Secciones principales */   
+  --space-10: 8rem;     /* 128px Separación media */  
+  
+  /* Espacios grandes - para secciones */
+  --space-11: 10rem;    /* 160px Heroes, espacios dramáticos */
+  --space-12: 12rem;    /* 192px Espaciado máximo */
+
+/* Section spacing */
+  --section-space-xl: var(--space-12); /* hero */
+  --section-space-lg: var(--space-9);  /* grandes */
+  --section-space-md: var(--space-8);  /* secciones normales */
+  --section-space-sm: var(--space-5);  /* subsecciones */
+
+
+/* =========================================================
+    COLORS
+    ======================================================== */
+  /* -------- COLORS (RAW PALETTE) -------- */
+
+  /*  --- DARK THEME – Core Colors ---  */
+
+  /* Purple */
+  /* Purples (base dark theme) */
+--purple-950: #0A0018;
+--purple-900: #11002b;
+--purple-850: #1a003f;
+--purple-800: #2b0067;
+--purple-700: #5300d8;
+
+/* Rose-Purple accents */
+--rose-500: #d96fd8;
+--rose-300: #ea9aea;
+
+/* Peach warm accent */
+--peach-500: #FBA64B;
+--peach-300: #FDC285;
+
+/* Turquoise balance accents */
+--teal-700: #007f88;
+--teal-500: #14b8c4;
+--teal-300: #5fe4ee;
+--teal-100: #d9fafd;
+
+  
+  /*  --- LIGHT THEME – Core Colors ---  */
+
+  /* Green */
+  --green-700: #0A9A70;
+  --green-500: #20C997;
+  --green-300: #84E8C8;
+  --green-100: #DFFEF4;
+
+  /* Lavender */
+  --lavender-600: #8E79C6;
+  --lavender-400: #B19CD9;
+  --lavender-200: #D8C3F0;
+  --lavender-100: #F4ECFF;
+
+  /* Cyan */
+  --cyan-600: #3BAEDC;
+  --cyan-400: #7DD9F4;
+  --cyan-200: #C8F1FF;
+  --cyan-100: #E9FAFF;
+
+  /*  --- Grises (COMPARTIDOS entre Light y Dark) ---  */
+  --gray-900: #0D0D12;
+  --gray-700: #1A1A2E;
+  --gray-600: #2D2D3A;
+  --gray-500: #6C757D;
+  --gray-300: #ADB5BD;
+  --gray-200: #D6DBDF;
+  --gray-100: #F1F3F5;
+
+  --white: #ffffff;
+  --cream-100: #F5F4EB;
+
+  
+
+ /* -------- RAW GRADIENTS -------- */
+
+  --gradient-button-dark: linear-gradient(94deg, rgba(128,47,126,.7), rgba(255,255,255,.1));
+  --gradient-button-light: linear-gradient(90deg,
+      rgba(243,202,77,.5),
+      rgba(255,152,154,.5) 43%,
+      rgba(203,171,255,.5) 95%);
+
+  --gradient-hero-radial: radial-gradient(
+    50% 50% at 50% 50%,
+    #23005C 0%,
+    rgba(158,110,230,0) 100%
+  );
+
+  --gradient-brand-multi: linear-gradient(
+      130deg,
+      rgb(241,58,238) -9%,
+      rgb(44,90,255) 110%,
+      rgb(100,246,255) 176%
+  );
+
+
+
+  /* TEXT COLORS */
+  --text-primary: #ffffff;
+  --text-secondary: #d4c8ff;
+  --text-muted: #8e84a8;
+
+
+  /* GLOW HELPERS */
+  --glow-rose: rgba(218, 110, 220, 0.22);
+  --glow-teal: rgba(20, 184, 196, 0.18);
+
+  /* BACKGROUNDS */
+  --color-bg-light: #F5F4EB;
+  --color-bg-dark: #020005;
+
+  /* ACCENT / LINKS */
+  --color-accent: #ff5b8a;
+  --color-accent-hover: #fba64b;
+
+  /* BRAND */
+  --color-brand: #5800E5;
+
+
+
+/* =========================================================
+    BREAKPOINTS
+    ======================================================== */
+  --breakpoint-mobile: 768px;
+  --breakpoint-tablet: 991px;
+  --breakpoint-desktop: 1400px;
+}
+
+
+
+

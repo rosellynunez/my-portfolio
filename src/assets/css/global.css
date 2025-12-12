@@ -1,6 +1,9 @@
-@import url("tokens.css");  /* 1. Variables, design tokens */
-@import url("theme.css"); /* 2. Tema (light/dark) — usa variables definidas en tokens */
-@import url("base.css"); /* 3. Estilos base: reset, tipografías, elementos HTML */
-@import url("layout.css"); /* 4. Estructura de la página: grids, contenedores, secciones */
-@import url("components.css"); /* 5. Componentes globales: navbar, footer, botones */
-@import url("utilities.css"); /* 6. Utilidades: helpers, clases rápidas (text-center, mt-3…) */
+@import url("1-tokens.css");         
+@import url("2-base.css");          
+@import url("3-layout.css");      
+@import url("4-components.css");    
+@import url("5-utilities.css");   
+@import url("6-page-specific-styles.css");        
+
+@import url("dark-theme.css");        
+@import url("theme-light.css");  
