@@ -1,10 +1,60 @@
-
-
-
 /* ========================================
     7️⃣ PAGE SECTIONS
    ======================================== */
-/* PORTFOLIO PAGE */ 
+
+/* ============ HOME ============*/ 
+
+
+/* INTRO */ 
+#intro title {
+  font-weight: var(--fw-semibold);
+  text-align: left;
+}
+
+@media (min-width: 992px) {
+  #intro .intro-content {
+    max-width: 76rem;
+  }
+}
+
+/* Home intro is tighter */
+#intro .subsection + .subsection {
+  margin-block-start: var(--section-space-sm);
+}
+
+
+/* PROJECTS*/ 
+#projects h2 {
+  font-weight: var(--fw-medium);
+  text-align: center;
+}
+
+
+/* SERVICES */ 
+#services h2 {
+  font-weight: var(--fw-medium);
+  text-align: center;
+}
+
+/* CONTACT-ME */ 
+#contact-me h2 {
+  font-weight: var(--fw-bold);
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ============ PORTFOLIO PAGE ============*/ 
+
+
 .case-study {
   padding-top: var(--space-11);
 }
@@ -30,52 +80,7 @@
   margin-top: 1.5rem; /* Opcional: añade espacio entre el borde y el párrafo anterior */
 }
 
-/* Make sure the image covers the full width */
-.text-image img {
-    height: auto;
-    object-fit: cover;
-    width: 880px;
-    height: auto;
-}
 
-/* placeholder */
-.image-placeholder {
-    background-color: #f0f0f0;
-    border: 2px dashed #ccc;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 500px;
-    width: 100%;
-}
-
-.placeholder-text {
-    color: #666;
-    font-style: italic;
-}
-
-/* Mantener bordes redondeados */
-.border-radius {
-    border-radius: 0.5rem;
-}
-
-
-/* Estilos para la navegación de proyectos (mobile por defecto) */
-.project-navigation {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.custom-col {
-  flex: 1;
-  padding: 5px;
-}
-
-#about-me img {
-  width: 100%;
-}
 
 
 /* ------------------------------
@@ -103,12 +108,6 @@
 /* Icon arrow alineado */
 .p-note {
   text-align: center;
-}
-
-.decision-line {
-  border-top: 1px solid #8e8e8e; /* Ajusta el grosor y el color según necesites */
-  padding-top: 1.5rem; /* Opcional: añade espacio encima del borde */
-  margin-top: 1.5rem; /* Opcional: añade espacio entre el borde y el párrafo anterior */
 }
 
 /* Make sure the image covers the full width */
@@ -149,6 +148,41 @@ article#case-study {
 
 
 
+
+/* ------------------------------
+    ABOUT ME PAGE
+--------------------------------*/
+
+#about-me {
+  padding-top: var(--space-11);
+}
+
+#about-me h1 {
+  padding-bottom: var(--space-5);
+}
+
+#about-me h2 {
+  font-weight: var(--fw-bold);
+}
+
+#about-me-intro .title {
+  font-weight: var(--fw-medium);
+  line-height:  var(--line-height-tight);
+}
+
+#about-me .text-lead {
+  line-height: var(--line-height-normal);
+  font-weight: var(--fw-thin);
+}
+
+
+
+
+
+
+
+
+
 /*OUR SERVICES*/
 
 .bd-placeholder-img {
@@ -180,16 +214,6 @@ article#case-study {
   height: 100vh;
 }
 
-
-
-#page-my-work {
-  margin-top: 10rem;
-}
-
-
-
-
-/* HOME */
 
 
 
@@ -316,165 +340,18 @@ article#case-study {
   height: auto;
 }
 
-.center-image {
-  text-align: center;
-}
-
-.images-gap {
-  display: flex; /* O display: grid; según tu diseño */
-  gap: 1rem; /* Ajusta el valor según necesites */
-}
-
 .span-block {
   display: block; /* Convierte el span en bloque */
 }
 
-.emoji-meh-container {
-  display: flex; /* Enable Flexbox for the emoji container */
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-}
-
-
-
-/* Estilos para el intro */
-#intro {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  height: 100vh;
-  max-width: 80vw;
-  position: relative; /* Ensures that the button is positioned relative to this section */
-  overflow: hidden;
-}
-
-#presentation {
-  place-items: center;
-  align-items: center;
-  justify-content: center;
-  top: 2.6em;
-  position: absolute;
-  text-align: center;
-}
-
-.text-intro {
-  align-items: center;
-}
-
-
-
-.img-intro {
-  width: 8rem;
-  height: 4.3rem;
-  border-radius: 3rem;
-  object-fit: cover;
-}
 
 
 
 
-/* Laptop - Tablet */
-@media (max-width: 1024px) {
 
-}
 
-/* Mobile */
-@media (max-width: 767px) {
-    #intro .btn-primary {
-    position: absolute;
-    top: 30em; /* Adjust this value for mobile */
-    z-index: 10; /* Make sure it's above other content */
-  }
-
-  #intro h1 {
-    font-size: 2em;
-    line-height: 100%;
-  }
-
-  #intro h2 {
-    font-size: 1.6em !important;
-    text-align: center;
-  }
-
-  .subtitle-2 {
-  font-size: 1.2rem;
-  font-family: "Inter Display", "Inter Display Placeholder", sans-serif;
-  }
-}
-
-/* Mobile-specific style */
-@media (min-width: 767px) {
-  #intro .btn-primary {
-    position: absolute;
-    top: 36em; /* Adjust this value for mobile */
-    z-index: 10; /* Make sure it's above other content */
-  }
-
-  #intro h1 {
-    font-size: 2.2em;
-    line-height: 110%;
-  }
-
-  #intro h2 {
-    font-size: 1.6em !important;
-    text-align: center;
-  }
-}
-
-/* Mobile-specific style */
-@media (min-width: 767px) {
-
-  #intro .btn-primary {
-    position: absolute;
-    top: 28em; /* Adjust this value for mobile */
-    z-index: 10; /* Make sure it's above other content */
-  }
-
-  #intro h1 {
-    font-size: 3.2em;
-    line-height: 99%; 
-  }
-
-  #intro h2 {
-    font-size: 2em !important;
-    text-align: center;
-  }
-}
 
 @media (min-width: 1024px) {
-  #intro h1 {
-    font-size: 3.9em;
-    line-height: 99%;
-  }
-
-  #intro h2 {
-    font-size: 2.4em !important;
-    text-align: center;
-  }
-
-  #intro .btn-primary {
-    position: absolute;
-    top: 36em; /* Adjust this value for mobile */
-    z-index: 10; /* Make sure it's above other content */
-  }
-}
-
-@media (min-width: 1024px) {
-  #intro h1 {
-    font-size: 3.8em;
-    line-height: 98%;
-    padding-top: 0.5rem; /* Para que aparezca la ñ */  }
-
-  #intro h2 {
-    font-size: 2.4em !important;
-    text-align: center;
-  }
-
-  #intro .btn-primary {
-    position: absolute;
-    top: 24em; /* Adjust this value for mobile */
-    z-index: 1; /* Make sure it's above other content */
-  }
 
   .mobile-break {
     display: none; /* By default (desktop), the span behaves like an inline element (no break) */
@@ -482,50 +359,19 @@ article#case-study {
 }
 
 @media (min-width: 1024px) {
-  #intro h1 {
-    font-size: 4.2em;
-    line-height: 98%;
-    padding-top: 0.5rem; /* Para que aparezca la ñ */  }
-
-  #intro .btn-primary {
-    position: absolute;
-    top: 28em; /* Adjust this value for mobile */
-    z-index: 10; /* Make sure it's above other content */
-  }
 
   .mobile-break {
     display: none; /* By default (desktop), the span behaves like an inline element (no break) */
   }
 
-  #intro h2 {
-    font-size: 2.4em !important;
-    text-align: center;
-  }
 }
 
 @media (min-width: 1400px) {
-  #intro h1 {
-    font-size: 5.2rem;
-    line-height: 99%;
-    padding-top: 0.5rem; /* Para que aparezca la ñ */
-  }
-
-  .text-intro {
-    margin-top: 2.8rem;
-  }
-
-  #intro .btn-primary {
-    position: absolute;
-    z-index: 10; /* Make sure it's above other content */
-    top: 34em; /* Adjust this value for mobile */
-  }
-
-  #intro h2 {
-    font-size: 2.4em !important;
-    text-align: center;
-  }
 
   .mobile-break {
     display: none; /* By default (desktop), the span behaves like an inline element (no break) */
   }
 }
+
+
+

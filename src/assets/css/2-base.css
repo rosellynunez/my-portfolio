@@ -23,78 +23,86 @@ body {
    ============================================ */
 
 /* ---------- 1. BASE TEXTS ---------- */
-.text {
-  font-size: var( --font-size-text);          /* 16px */
+
+.text-micro {
+  font-size: var(--font-size-micro);
+  /* 15.75px — Small caption, meta information */
+  line-height: var(--line-height-normal);
+  letter-spacing: var(--letter-spacing-wide);
+  font-weight: var(--fw-regular);
+}
+
+.text-caption {
+  font-size: var(--font-size-caption);
+  /* 15.75px — Small caption, meta information */
+  line-height: var(--line-height-normal);
+  letter-spacing: var(--letter-spacing-wide);
+  font-weight: var(--fw-regular);
+}
+
+.text-base {
+  font-size: var(--font-size-text);
   line-height: var(--line-height-loose);
   letter-spacing: var(--letter-spacing-normal);
   font-weight: var(--fw-regular);
 }
 
 .text-lead {
-  font-size: var(--font-size-lead);          /* 18px */
-  line-height: var(--line-height-loose);
+  font-size: var(--font-size-lead);
+  /* 26.1px — Lead paragraph, highlighted intro */
   letter-spacing: var(--letter-spacing-normal);
-  font-weight: var(--fw-thin);
 }
 
-.text-caption {
-  font-size: var(--font-size-caption);       /* 14px */
-  line-height: var(--line-height-normal);
-  letter-spacing: var(--letter-spacing-wide);
+/* ---------- 2. HEADINGS ---------- */
+
+.heading {
+  font-size: var(--font-size-heading); /* Small section heading */
+  line-height: var(--line-height-tight);
   font-weight: var(--fw-regular);
+  letter-spacing: var(--letter-spacing-normal);
 }
 
+.subtitle {
+  font-size: var(--font-size-subtitle); /* Section subtitle */
+  line-height: var(--line-height-tight);
+  font-weight: var(--fw-regular);
+  letter-spacing: var(--letter-spacing-normal);
+  padding-bottom: var(--space-4);
+}
+
+.title {
+  font-size: var(--font-size-title); /* Main page title */
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-normal);
+}
+
+
+/* ---------- 3. SPECIAL DISPLAYS ---------- */
+
+.display-alt {
+  font-size: var(--font-size-display-md); /*  Main title for secondary pages (About, Contact, Work, etc.) */
+  line-height: var(--line-height-tight);
+  font-weight: var(--fw-bold);
+  letter-spacing: var(--letter-spacing-normal);
+}
+
+.display {
+  font-size: var(--font-size-display-lg); /* Homepage hero text (cinematic scale) */
+  font-weight: var(--fw-regular);
+  letter-spacing: var(--letter-spacing-normal);
+}
+
+
+/* ---------- SPECIAL FOR SOME SEC AND PAGES ---------- */
 /* Nueva: section-label (eyebrow / overline / kicker) */
 .section-label {
   font-size: var(--font-size-base);         /* 0.875rem = 14px */
-  font-weight: var(--fw-semibold);        /* 600 */
+  font-weight: var(--fw-regular);        /* 600 */
   line-height: var(--line-height-normal);
   letter-spacing: var(--letter-spacing-wide);
   text-transform: uppercase;
   line-height: 1.2;
   margin: 0 0 0.5rem 0;                   /* separacion del titulo o texto siguiente */
-}
-
-
-/* ---------- 2. ENCABEZADOS ---------- */
-/* Para case studies y páginas de contenido */
-.title {
-  font-size: var(--font-size-title);        /* 40px */
-  line-height: var(--line-height-tight);
-  font-weight: var(--fw-bold);
-  letter-spacing: var(--  --letter-spacing-normal);
-}
-
-.subtitle {
-  font-size: var(--font-size-subtitle);      /* 28px */
-  line-height: var(--line-height-tight);
-  font-weight: var(--fw-semibold);
-  letter-spacing: var(--letter-spacing-normal);
-  padding-bottom: var(--space-4);
-}
-
-.heading {
-  font-size: var(--font-size-heading);       /* 20px */
-  line-height: var(--line-height-tight);
-  font-weight: var(--fw-semibold);
-  letter-spacing: var(--letter-spacing-normal);
-}
-
-/* ---------- 3. DISPLAY ESPECIALES ---------- */
-/* EXCLUSIVO para home page */
-.display-home {
-  font-size: var(--font-size-display-home);   /* 67.2px - ¡WOW! */
-  line-height: 1;
-  font-weight: var(--fw-black);
-  letter-spacing: var(--letter-spacing-normal);
-}
-
-/* Para páginas secundarias (about, contact) */
-.display-page {
-  font-size: var(--font-size-display-page);   /* 40px */
-  line-height: var(--line-height-tight);
-  font-weight: var(--fw-bold);
-  letter-spacing: var(--letter-spacing-normal);
 }
 
 
@@ -119,227 +127,78 @@ body {
   letter-spacing: 0.05em;
 }
 
-/* Navegación usando token específico */
-.nav-link {
-  font-size: var(--font-size-navigation);
-  font-weight: var(--fw-medium, 500);
-}
-
-/* Links */
-a {
-  color: var(--color-link);
-  text-decoration: none;
-}
-
-a:hover {
-  opacity: 0.7;
-}
-
 /* Imágenes */
 img {
   max-width: 100%;
   height: auto;
 }
 
-
-h2 {
-  text-align: left;
-  font-size: 3rem;
-  font-family: "Inter Display", "Inter Display Placeholder", sans-serif;
+/* Links */
+.link-underline {
+  position: relative;
+  display: inline-block;
+  text-decoration: none !important;  
+  color: var(--link-color);
+  transition: color var(--link-transition);
 }
 
-h3 {
-  font-weight: 400;
-  font-size: 2.2rem;
-  font-family: "Inter Display", "Inter Display Placeholder", sans-serif;
-  padding: 0.4rem 0rem 0.4rem 0rem;
+.link-underline--text {
+  font-size: var(--font-size-text);
 }
 
-h4 {
-  font-weight: 400;
-  font-size: 1.6rem;
-  font-family: "Inter Display", "Inter Display Placeholder", sans-serif;
-  padding: 0.4rem 0rem 0.4rem 0rem;
+.link-underline--lead {
+  font-size: var(--font-size-lead);
+}
+
+.link-underline::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform var(--link-transition);
+}
+
+.link-underline:hover {
+  color: var(--link-hover-color);
+}
+
+.link-underline:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
 }
 
 
 
-#intro h1 {
-font-weight: 700;
+
+
+
+
+
+
+
+
+
+
+.text-line--2 {
+  padding-left: var(--space-8);
 }
 
-body {
-  font-family: "Inter Display", "Inter Display Placeholder", sans-serif;
-  font-size: 1.2rem;
-  font-weight: 300;
+.text-line--3 {
+  padding-left: var(--space-12);
 }
 
-.paragraph-s{
-  font-size: 0.9rem;
+
+.section-secondary {
+  background: var(--bg-secondary);
+  padding: var(--space-8) 0;
 }
 
-.paragraph-xs{
-  font-size: 0.8rem;
-}
 
-.subtitle-1 {
-  font-size: 3rem;
-  font-family: "Inter Display", "Inter Display Placeholder", sans-serif;
-}
-
-.subtitle-2 {
-  font-size: 2rem;
-  font-family: "Inter Display", "Inter Display Placeholder", sans-serif;
-}
-
-.section-title {
-  font-family: "Inter Display", "Inter Display Placeholder", sans-serif;
-  font-optical-sizing: auto;
-  letter-spacing: -1.75px;
-  font-weight: 400;
-}
-
-h2 {
-  text-align: left;
-  font-size: 3rem;
-  font-family: "Inter Display", "Inter Display Placeholder", sans-serif;
-}
-
-h3 {
-  text-align: left;
-  font-weight: 400;
-  font-family: "Inter Display", "Inter Display Placeholder", sans-serif;
-  padding: 0.4rem 0rem 0.4rem 0rem;
-}
-
-/* Mobile-specific style */
-@media (max-width: 389px) {
-  #intro .btn-primary {
-    position: absolute;
-    top: 30em; /* Adjust this value for mobile */
-    z-index: 10; /* Make sure it's above other content */
-  }
-
-  #intro h1 {
-    font-size: 2em;
-    line-height: 100%;
-  }
-
-  #intro h2 {
-    font-size: 1.6em !important;
-    text-align: center;
-  }
-
-  .subtitle-2 {
-  font-size: 1.2rem;
-  font-family: "Inter Display", "Inter Display Placeholder", sans-serif;
-  }
-}
-
-/* Mobile-specific style */
-@media (min-width: 577px) and (max-width: 768px) {
-
-  #intro .btn-primary {
-    position: absolute;
-    top: 28em; /* Adjust this value for mobile */
-    z-index: 10; /* Make sure it's above other content */
-  }
-
-  #intro h1 {
-    font-size: 3.2em;
-    line-height: 99%; 
-  }
-
-  #intro h2 {
-    font-size: 2em !important;
-    text-align: center;
-  }
-}
-
-@media (min-width: 992px) and (max-width: 1199px) {
-  #intro h1 {
-    font-size: 3.8em;
-    line-height: 98%;
-    padding-top: 0.5rem; /* Para que aparezca la ñ */  }
-
-  #intro h2 {
-    font-size: 2.4em !important;
-    text-align: center;
-  }
-
-  #intro .btn-primary {
-    position: absolute;
-    top: 24em; /* Adjust this value for mobile */
-    z-index: 1; /* Make sure it's above other content */
-  }
-
-  .mobile-break {
-    display: none; /* By default (desktop), the span behaves like an inline element (no break) */
-  }
-}
-
-@media (min-width: 1200px) and (max-width: 1399px) {
-  #intro h1 {
-    font-size: 4.2em;
-    line-height: 98%;
-    padding-top: 0.5rem; /* Para que aparezca la ñ */  }
-
-  #intro .btn-primary {
-    position: absolute;
-    top: 28em; /* Adjust this value for mobile */
-    z-index: 10; /* Make sure it's above other content */
-  }
-
-  .mobile-break {
-    display: none; /* By default (desktop), the span behaves like an inline element (no break) */
-  }
-
-  #intro h2 {
-    font-size: 2.4em !important;
-    text-align: center;
-  }
-}
-
-@media (min-width: 1400px) {
-  #intro h1 {
-    font-size: 5.2rem;
-    line-height: 99%;
-    padding-top: 0.5rem; /* Para que aparezca la ñ */
-  }
-
-  .text-intro {
-    margin-top: 2.8rem;
-  }
-
-  #intro .btn-primary {
-    position: absolute;
-    z-index: 10; /* Make sure it's above other content */
-    top: 34em; /* Adjust this value for mobile */
-  }
-
-  #intro h2 {
-    font-size: 2.4em !important;
-    text-align: center;
-  }
-
-  .mobile-break {
-    display: none; /* By default (desktop), the span behaves like an inline element (no break) */
-  }
-}
-
-.highlight-text-1 {
-  line-height: 105% !important;
-  font-size: 2.6rem;
-  font-weight: 600;
-  font-family: "Inter Display", "Inter Display Placeholder", sans-serif;
-}
-
-.highlight-text-2 {
-  line-height: 115% !important;
-  font-size: 1.8rem;
-  font-weight: 400;
-  font-family: "Inter Display", "Inter Display Placeholder", sans-serif;
-}
 
 
 .link-gradient {
@@ -364,50 +223,7 @@ h3 {
 }
 
 
-#auto-typing-output {
-  font-size: 24px;
-  font-weight: bold;
-}
 
-.header-item-2 {
-  justify-items: right;
-  align-items: right;
-  justify-content: right;
-  align-content: right;
-}
-
-.header-item-1-2 {
-  display: flex;
-  align-items: center;
-}
-
-
-
-
-.spotlight {
-  position: relative;
-  display: inline-block;
-  z-index: 1;
-}
-
-.spotlight::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0.1em;
-  width: 100%;
-  height: 0.1em;
-  background-color: #FFE6FA; /* Color del resaltado */
-  z-index: -1;
-  transform: scaleX(0);  /* Inicia invisible */
-  transform-origin: left;
-  transition: transform 0.6s ease-out;
-}
-
-/* La clase 'visible' se agregará con JS para mostrar el efecto */
-.spotlight.visible::before {
-  transform: scaleX(1); /* Se despliega al aparecer en pantalla */
-}
 
 .fade-in {
   opacity: 0.3; /* En lugar de invisible, empieza con baja opacidad */
@@ -441,18 +257,6 @@ h3 {
 
 
 
-/* Definir colores para el elemento #typed-output según el tema */
-.light-theme #typed-output {
-  color: #23005C;
-}
-
-.dark-theme #typed-output {
-  color: white;
-}
-
-[data-bs-theme="light"] #intro .custom-dark {
-  color: #23005C;
-}
 
 [data-bs-theme="dark"] .text-gradient {
   color: transparent;
@@ -464,155 +268,10 @@ h3 {
 
 
 
-/* Estilos generales para los enlaces (href) */
-a nav{
-  text-decoration: none; /* Elimina el subrayado predeterminado */
-  color: #23005C; /* Color del texto en tema claro */
-  transition: color 0.3s ease; /* Transición suave al cambiar el color */
-}
-
-/* Estilos de enlace en hover (href) */
-a:hover {
-  color: #fba64b; /* Cambia el color al pasar el mouse */
-}
-
-a {
-  display: inline !important;
-}
 
 
 
 
-.highlight-text-1 {
-  line-height: 105% !important;
-  font-size: 2.6rem;
-  font-weight: 600;
-  font-family: "Inter Display", "Inter Display Placeholder", sans-serif;
-}
-
-.highlight-text-2 {
-  line-height: 115% !important;
-  font-size: 1.8rem;
-  font-weight: 400;
-  font-family: "Inter Display", "Inter Display Placeholder", sans-serif;
-}
-
-
-
-
-
-/* PORFOLIO PAGE */
-
-.hero-image-portfolio {
-  align-items: center;
-  display: block; 
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 3rem;
-  width: 90%;
-}
-
-.width-90 {
-  width: 90%;
-}
-
-
-
-.carousel-inner {
-  border-radius: 1.2rem; /* Aplica borde redondeado al contenedor */
-}
-
-.carousel-item {
-  border-radius: 1.2rem; /* Asegura que el borde redondeado sea consistente */
-}
-
-.border-radius {
-  border-radius: 1.2rem; /* Asegura que el borde redondeado sea consistente */
-}
-
-.image-item {
-  border-radius: 1.2rem; /* Asegura que el borde redondeado sea consistente */
-}
-
-#my-work .project-card {
-  transition: transform 0.2s;
-  --bs-card-border-color: none;
-}
-
-.image-container {
-  position: relative;
-  overflow: hidden;
-  border-radius: 1.2rem;
-}
-
-
-/* Go icons styles */
-.go-icon-container {
-  position: absolute;
-  width: 5rem;
-  height: 5rem;
-  background-color: rgba(255, 255, 255);
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: bold;
-  text-transform: uppercase;
-  font-size: 1.5rem;
-  color: black;
-  opacity: 0;
-  transition: opacity 0.2s ease-out, transform 0.1s ease-out;
-  pointer-events: none; /* No interfiere con el cursor */
-}
-
-/* Posición inicial en el centro */
-.image-container:hover .go-icon-container {
-  opacity: 1;
-}
-
-
-/* Estilos generales */
-
-/* Media query para pantallas extra grandes (ajusta el breakpoint según necesites) */
-.two-hero-images-container {
-  max-width: 1000px; /* Ancho máximo en pantallas grandes */
-}
-
-.hero-image-container {
-  max-width: 2000px; /* Ancho máximo en pantallas grandes */
-}
-
-/* Estilos para las imágenes hero */
-.hero-image {
-  width: 100%;
-  display: block;
-  object-fit: cover; /* O contain, según prefieras */
-}
-
-/*OUR SERVICES*/
-
-.bd-placeholder-img {
-  font-size: 4em;
-  text-anchor: middle;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
-}
-
-.b-example-divider {
-  width: 100%;
-  height: 3rem;
-  background-color: rgba(0, 0, 0, .1);
-  border: solid rgba(0, 0, 0, .15);
-  border-width: 1px 0;
-  box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-}
-
-.b-example-vr {
-  flex-shrink: 0;
-  width: 1.5rem;
-  height: 100vh;
-}
 
 /* Botón para cambiar entre modo claro y oscuro */
 .theme-icon-text-container {
@@ -638,113 +297,10 @@ a {
   display: block !important;
 }
 
-/* HOME - About me */
 
-#about {
-  padding: 2rem 2rem;
-  align-items: center;
-}
-
-#about img {
-  display: block; 
-  margin: auto;
-  max-width: 80%;
-}
-
-.objects-right-2 {
-  float: right;
-}
-
-.objects-right {
-  position: relative;
-}
-
-.col-lg-5 img {
-  margin: 10px; /* Adds space between images */
-}
 
 /* HOME - CONTACT ME */
 
-#contact-me h2 {
-  text-align: center;
-}
-
-#contact-me {
-  display: flex;
-  justify-content: center; /* Center horizontally with display:flex */
-  align-items: center;     /* Center vertically with display:flex */
-  position: relative; /* El contenedor principal tiene posición relativa */
-  overflow: hidden; /* Para evitar que los gradientes desborden */
-  text-align: center;
-}
-
-#contact-me .subtitle-1 {
-  line-height: 103%;
-}
-
-/* Modo claro */
-[data-bs-theme="light"] #contact-me {
-  background-color: #F5F4EB;
-  color: #23005C;
-}
-
-[data-bs-theme="light"] .rounded-block {
-border-radius: 20px;
-box-shadow: 10 10px 10px 20px rgba(0, 0, 0, 0.1); /* Optional shadow */
-text-align: center;      /* Center text inside the block */
-background-color: #ffffff;
-align-items: center;
-z-index: 2;
-}
-
-[data-bs-theme="light"] #contact-me .rounded-block h2 {
-  color: #23005C !important;
-}
-
-/* Modo oscuro */
-[data-bs-theme="dark"] #contact-me {
-  background-color: #020005;
-  color: white;
-}
-
-[data-bs-theme="dark"] .rounded-block {
-  border-radius: 20px;
-  background: radial-gradient(65% 62% at -22.4% -3.3%, rgb(45, 0, 61) 0%, rgb(13, 13, 28) 100%);
-  text-align: center;      /* Center text inside the block */
-  z-index: 2;
-}
-
-[data-bs-theme="dark"] #contact-me .rounded-block h2 {
-  color: #f9f8f1 !important;;
-}
-
-@media (max-width: 1024px) {
-  .rounded-block {
-    max-width: 90%;
-  }
-}
-
-a i {
-  margin-left: 0.4rem; /* Puedes ajustar este valor según el espacio que desees */
-}
-
-#hero {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 70vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-
-/* General de gifs e imgs*/
-.image-container {
-  display:flex; /*Para usar align-self*/
-  justify-content: center; /* Centrado horizontal */
-  align-items: center; /* Centrado vertical */
-}
 
 .gif-image-wrap {
   width: 100%;
@@ -774,12 +330,6 @@ a i {
   justify-content: center;
 }
 
-.image-about-container {
-  border-radius: 1.2rem;
-  display:flex; /*Para usar align-self*/
-  justify-content: center; /* Centrado horizontal */
-  align-items: center; /* Centrado vertical */
-}
 
 
 
@@ -841,9 +391,7 @@ ul li:last-child {
 }
 
 /* === DESKTOP === */
-#title-about {
-  display: flex;
-}
+
 
 .gif-office-container {
   position: relative;
@@ -912,10 +460,6 @@ ul li:last-child {
   justify-content: center;
 }
 
-.title-margin-top {
-  margin-top: 0.4rem;
-  margin-bottom: 0rem;
-}
 
 /* Para desktop: 3 columnas */
 .row-rectangles-v1 {
@@ -967,15 +511,6 @@ ul li:last-child {
 .responsive-video {
   max-width: 100%;
   height: auto;
-}
-
-.center-image {
-  text-align: center;
-}
-
-.images-gap {
-  display: flex; /* O display: grid; según tu diseño */
-  gap: 1rem; /* Ajusta el valor según necesites */
 }
 
 .span-block {
@@ -1038,11 +573,6 @@ ul li:last-child {
   border-left: 4px solid #4dd0e1; /* Ajusta el grosor y el color según tus preferencias */
   padding-left: 1rem; /* Agrega un poco de espacio entre la raya y el texto */
   /* ... otros estilos del callout ... */
-}
-
-.fs-6 {
-  font-size: 1rem !important;
-  margin-bottom: 0;
 }
 
 

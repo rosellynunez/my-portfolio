@@ -2,7 +2,7 @@
     COMPONENTS
    ========================================================= */
 
-/* -------- LOGO -------- */
+/* ================== LOGO ================== */
 #logo {
   height: 2rem;
   width: 4rem;
@@ -10,24 +10,37 @@
 }
 
 
+/* ================== NAV LINK COMPONENT ================== */
 
-/* -------- NAVBAR -------- */
 .navbar {
   transition: background-color .3s ease, backdrop-filter .3s ease;
 }
 
-
-
-.navbar-nav .nav-link {
-  font-size: 1rem;
-  font-weight: 500;
-  padding: 2rem;
-  font-family: "Inter Display", sans-serif;
-  color: var(--navbar-text);
+.container-fluid {
+  --bs-gutter-x: 0 !important;
 }
 
-.navbar-nav .nav-link:hover {
-  color: var(--navbar-text-hover);
+.nav-link {
+  font-weight: var(--fw-semibold);
+  text-decoration: none;
+  color: var(--nav-link-color);
+  padding: var(--space-2) var(--space-3);
+  transition: color var(--link-transition);
+}
+
+.nav-link:hover {
+  color: var(--nav-link-hover-color);
+}
+
+.nav-link--active {
+  color: var(--nav-link-active-color);
+}
+
+.navbar-nav {
+  display: flex;
+  gap: var(--space-4) var(--space-6);
+  list-style: none;
+  justify-content: space-between;
 }
 
 .navbar.scrolled {
@@ -42,15 +55,14 @@
 /* Base button (neutral, not visual) */
 .btn {
   display: inline-flex;
-  align-items: center;
   justify-content: center;
 
   cursor: pointer;
-  font-weight: 600;
   text-decoration: none;
 
   border: none;
-  background: none;
+  background: transparent;
+
   padding: 0;
   margin: 0;
 
@@ -66,6 +78,8 @@
   box-shadow:
     0 4px 6px rgba(0, 0, 0, 0.15),
     0 2px 4px rgba(0, 0, 0, 0.08);
+  display: inline-block;
+  white-space: nowrap;
 }
 
 .btn-solid:active {
@@ -77,6 +91,9 @@
   position: relative;
   overflow: hidden;
   transition: transform 0.15s ease;
+  background: var(--btn-primary-bg);
+  color: var(--btn-primary-text);
+  font-weight: var(--fw-bold);
 }
 
 /* Shine effect: Preparamos el brillo pero sin animación por defecto */
@@ -84,8 +101,8 @@
   content: "";
   position: absolute;
   top: 0;
-  left: -150%;
-  width: 100%;
+  left: -50%;
+  width: 200%;
   height: 100%;
   background: linear-gradient(
     120deg,
@@ -96,6 +113,7 @@
   transform: skewX(-20deg);
   opacity: 0;
   pointer-events: none; /* para que no afecte clics */
+  z-index: -1; /* brillo detrás del texto */
 }
 
 .btn-primary:hover {
@@ -230,11 +248,99 @@
 }
 
 
+/* -------------- SHINE EFFECT (GENERIC) -------------- */
+.btn-shine {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-shine::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  left: -150%;
+  width: 200%;
+  height: 100%;
+
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.35) 50%,
+    transparent 100%
+  );
+
+  transform: skewX(-20deg);
+  pointer-events: none;
+  opacity: 0;
+
+  z-index: 1; /* 👈 entre background y contenido */
+}
+
+.btn-shine > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* -------------- CHANGE MODE BUTTON -------------- */
+.btn-vibe {
+  position: relative;
+  padding: var(--space-1) var(--space-3);
+  cursor: pointer;
+
+  background-color: var(--btn-vibe-bg);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+
+  transition:
+    background-color 0.25s ease,
+    transform 0.2s ease,
+    border-color 0.4s ease;
+}
+
+/* idle shine */
+.btn-shine[data-idle="true"]::before {
+  opacity: 1;
+  animation: shine 4s ease infinite;
+}
+
+.btn-vibe:hover {
+  background-color: var(--btn-vibe-bg-hover);
+  transform: translateY(-2px);
+}
+
+.btn-vibe:hover::before {
+  animation: shine 2s ease;
+}
+
+.btn-vibe:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
+.icon-vibe {
+  display: inline-block;
+}
+
 /* -------------- ANIMATIONS -------------- */
 @keyframes shine {
   0%   { left: -150%; }
   50%  { left: 150%; }
   100% { left: 150%; opacity: 0; }
+}
+
+/* icon button vibe */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /* -------------- LINK BUTTON GRADIENT -------------- */
@@ -251,42 +357,192 @@
 }
 
 
+/* -------- CARD PROJECTS -------- */
+
+.section-title {
+  margin-bottom: 2rem;
+}
+
+.projects-group {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+}
+
+@media (min-width: 640px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.project-card {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--surface-card-primary);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+/* media */
+.project-media {
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+}
+
+.project-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
 
 
-.btn-vibe {
-  padding: .3rem .5rem;
-  font-size: .75rem;
-  border-radius: 1rem;
-  background: none;
+/* body */
+.project-body {
+  padding: 1rem;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.project-title {
+  padding-block-start: 0.5rem;
+}
+
+.project-description {
+  color: var(--color-text-secondary);
+  margin-block-end: var(--space-1);
+}
+
+
+/* footer */
+.project-footer {
   display: flex;
-  align-items: center;
-  gap: .5rem;
-  border: 1px solid var(--navbar-text);
+  gap: 0.75rem;
+  padding-block-start: var(--space-1);
+  padding-block-end: var(--space-5);
+  padding-inline: var(--space-4);
+  border-top: 1px solid rgba(0,0,0,0.06);
 }
 
-.btn-vibe:hover .icon-vibe {
-  animation: spin 1s infinite;
+
+
+
+/* -------- CARD SERVICES -------- */
+
+.service-card {
+  padding: var(--space-3);
+  border-radius: var(--radius-lg);
+  transition: transform 0.15s ease, box-shadow 0.3s ease;
+  background: var(--surface-card-secondary);
+}
+
+.service-card p {
+  color: var(--color-text-secondary);
+}
+
+.service-card h3 {
+  color: var(--color-text-brand);
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+}
+
+.service-icon {
+  background: #222634;
 }
 
 
-.btn-vibe {
-  padding: 0.3rem 0.5rem;
-  font-size: small;
-  cursor: pointer;
-  background: none;
+/* icono del servicio */
+
+.service-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-md);
+
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
-  border: 1px solid;
-  border-radius: 1rem;
-  transition: border-color 0.5s ease;
+
+  font-size: 2.5rem;
+  margin-bottom: 1.25rem;
+  transition: transform 0.2s ease;
+}
+
+.service-card:hover .service-icon {
+  transform: scale(1.08);
 }
 
 
 
-body[data-bs-theme="dark"] .icon-vibe {
-  color: #faffc3!important; 
+
+/* -------- CARD CONTACT -------- */
+
+.contact-section {
+  display: flex;
+  align-items: center;
+}
+
+.contact-card {
+  margin: var(--space-8) var(--space-2);
+  border-radius: var(--radius-lg);
+  transition: all 0.3s ease;
+  border-radius: 1rem;
+  padding-block: var(--space-6);
+  padding-inline: var(--space-8);
+}
+
+.contact-card .text-lead {
+  line-height: var(--line-height-normal);
+}
+
+.contact-card:hover {
+  box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
+}
+
+.group-two-buttons {
+  display: flex;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+
+
+/* -------- NEXT PROJECT -------- */
+
+
+
+
+
+
+
+
+
+/* -------- FOOTER -------- */
+
+footer {
+  background: var(--color-bg);
+  color: var(--color-text);
+  text-align: center;
+  padding-block: var(--space-4);
+}
+
+footer p{
+  margin-block-end: 0;
 }
 
 /* -------- BUTTONS para cambiar entre modo claro y oscuro */
@@ -314,95 +570,6 @@ body[data-bs-theme="dark"] .icon-vibe {
   display: block !important;
 }
 
-
-
-
-
-footer {
-  background: var(--color-bg);
-  color: var(--color-text);
-  padding: 1em;
-  text-align: center;
-}
-
-
-
-/* Estilos generales para los enlaces (href) */
-a nav{
-  text-decoration: none; /* Elimina el subrayado predeterminado */
-  color: #23005C; /* Color del texto en tema claro */
-  transition: color 0.3s ease; /* Transición suave al cambiar el color */
-}
-
-/* Estilos de enlace en hover (href) */
-a:hover {
-  color: #fba64b; /* Cambia el color al pasar el mouse */
-}
-
-a {
-  display: inline !important;
-}
-
-/* Estilos para los enlaces dentro del navbar */
-.navbar-nav .nav-item .nav-link {
-  font-size: 1rem; /* Tamaño de fuente para los enlaces del navbar */
-  font-weight: 500;
-  font-family: "Inter Display", "Inter Display Placeholder", sans-serif; /* Tipografía específica para el navbar */
-  transition: color 0.3s ease, text-decoration 0.3s ease;
-  padding: 2rem; /* Espaciado para los enlaces */
-  text-decoration: none !important; /* Sin subrayado */
-}
-
-.navbar-brand {
-  margin-right: 0;
-}
-
-
-
-
-/* -------- CARD CONTACT -------- */
-
-.contact-section {
-  display: flex;
-  align-items: center;
-}
-
-.contact-card {
-  margin: var(--space-8) var(--space-2);
-  border-radius: 1rem;
-  transition: all 0.3s ease;
-}
-
-.contact-card .text-lead {
-  line-height: var(--line-height-normal);
-}
-
-.contact-card:hover {
-  box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
-}
-
-.text-gradient {
-  background: linear-gradient(
-    135deg,
-    var(--gradient-text-start),
-    var(--gradient-text-end)
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-
-
-/* -------- NEXT PROJECT -------- */
-
-
-
-
-
-
-
-
 /* Personalización del botón navbar-toggler */
 .navbar-toggler {
   border: 1px solid; /* Quita el borde predeterminado */
@@ -426,9 +593,6 @@ a {
   box-shadow: none;
 }
 
-.navbar {
-  --bs-navbar-color: none;
-}
 
 /* Oculta el ícono predeterminado de Bootstrap */
 .navbar-toggler-icon {
@@ -441,16 +605,6 @@ a {
 }
 
 
-
-/* More proyects */
-
-
-.project-navigation {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
 
 .underlined {
     text-decoration: underline !important;
@@ -468,12 +622,6 @@ a {
 
 
 
-/* NAVBAR */
-.navbar.scrolled {
-  background-color: rgba(255, 255, 255, 0.1) !important;
-  backdrop-filter: blur(10px); /* Añade el efecto de blur */
-}
-
 /* Alineación de logo a la izquierda y menú a la derecha */
 .navbar .container-fluid {
   display: flex;
@@ -488,35 +636,10 @@ a {
     margin-left: inherit !important;
     text-decoration: none !important;
   }
-  
-  .desktop-menu  .navbar-nav .nav-item {
-    margin: 1em 0;
-    text-decoration: none !important; /* Espaciado horizontal */
-  }
-
-  .navbar-nav .nav-item .nav-link {
-    font-size: 2.6rem;
-    font-family:  "Inter Display", "Inter Display Placeholder", sans-serif;
-    text-decoration: none !important;
-  }
-
-  .navbar-nav .nav-item .nav-link:hover {
-    color: #fba64b;
-    text-decoration: none !important;
-  }
 }
 
 .navbar-expand-lg {
-  padding-top: 1rem;
-}
-
-/* Mobile-specific style */
-.navbar-nav {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  border-radius: 2rem;
-  padding: 0.5rem 0.8rem;
+  padding-top: var(--space-5);
 }
 
 .navbar {
@@ -533,75 +656,7 @@ a {
   }
 }
 
-/* Estilos para los enlaces dentro del navbar */
-.navbar-nav .nav-item .nav-link {
-  font-size: 1rem; /* Tamaño de fuente para los enlaces del navbar */
-  font-weight: 500;
-  font-family: "Inter Display", "Inter Display Placeholder", sans-serif; /* Tipografía específica para el navbar */
-  transition: color 0.3s ease, text-decoration 0.3s ease;
-  padding: 2rem; /* Espaciado para los enlaces */
-  text-decoration: none !important; /* Sin subrayado */
-}
 
-.navbar-brand {
-  margin-right: 0;
-}
-
-/* Hover en enlaces del navbar */
-.navbar-nav .nav-item .nav-link:hover {
-  color: #fba64b; /* Cambia el color al pasar el mouse */
-  text-decoration: underline; /* Añade subrayado al hover */
-}
-
-
-
-
-.btn-vibe {
-  padding: 0.3rem 0.5rem;
-  font-size: small;
-  cursor: pointer;
-  background: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  border: 1px solid;
-  border-radius: 1rem;
-  transition: border-color 0.5s ease;
-}
-
-.label {
-  font-size: 0.7rem;
-}
-
-.icon-vibe {
-  display: inline-block;
-}
-
-body[data-bs-theme="dark"] .icon-vibe {
-  color: #faffc3!important; 
-}
-
-body[data-bs-theme="light"] .icon-vibe {
-  fill: #ffe100!important;  
-}
-
-.btn-vibe:hover .icon-vibe {
-  animation: spin 1s infinite;
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-#menu-style {
-  font-size: 0.8rem;
-}
 
 /* Personalización del botón navbar-toggler */
 .navbar-toggler {
@@ -666,22 +721,9 @@ body[data-bs-theme="light"] .icon-vibe {
   }
 }
 
-/* Footer */
-footer {
-  background-color: #020005;
-  color: #fff;
-  text-align: center;
-  clear: both;
-  padding: 1em;
-  font-size: 0.9rem;
-}
-
-footer p {
-  margin: 0em !important;
-}
 
 
-
+/* -------- COOKIE BANNER -------- */
 
 .cookie-banner {
   position: fixed;

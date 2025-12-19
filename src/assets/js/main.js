@@ -1,21 +1,27 @@
+
 // TYPED-OUTPUT
-document.addEventListener('DOMContentLoaded', function() {
-    var options = {
-      strings: [
-        "design interfaces that delight 🎨",
-        "craft experiences that captivate 🚀",
-        "build design systems that scale 🛠️"
-      ],
-      typeSpeed: 50,  // Velocidad de escritura un poco más rápida
-      backSpeed: 40,  // Borra más rápido
-      backDelay: 1200, // Menos pausa antes de borrar
-      startDelay: 300,  // Menos espera inicial
-      loop: true,
-      showCursor: true
-    };
-  
-    new Typed("#typed-output", options);
-  });
+  document.addEventListener('DOMContentLoaded', function () {
+  var options = {
+    strings: [
+      "Design meant to live beyond the mockup",
+      "Design systems that grow with teams",
+      "UI crafted with care and code in mind",
+      "Design meant to live beyond the mockup",
+      "Design made to be used and maintained",
+      "Interfaces built for real products",
+    ],
+    typeSpeed: 45,
+    backSpeed: 30,
+    backDelay: 1400,
+    startDelay: 300,
+    loop: true,
+    showCursor: false
+  };
+
+  new Typed("#typed-output", options);
+});
+
+
 
 // MENU MOBILE OVERLAY
 const toggleButton = document.querySelector('.navbar-toggler');

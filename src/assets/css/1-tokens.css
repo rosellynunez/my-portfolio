@@ -3,67 +3,51 @@
     Author: Roselly Nuñez
    ========================================================= */
 
-/*  ========================================
-    1️⃣ DESIGN TOKENS
-    ======================================== */
+/*  ======================================================== 
+    1️⃣ DESIGN TOKENS 
+    ======================================================== */
 
 :root {
 
 /* =========================================================
-    TOKENS BASE (FOUNDATIONS)
+    TOKENS BASE - FOUNDATIONS(THEME-AGNOSTIC)
    ========================================================= */
 
-/* ===== FONT TOKENS ===== */
---font-family-base: "Inter Display", sans-serif;
---font-family-heading: "Inter Display", sans-serif;
-
-
-/* ===== FONT WEIGHT ===== */
---fw-thin: 300;         /* Estilo ligero, elegante (hero, UI light) */
---fw-regular: 400;      /* Texto cuerpo */
---fw-medium: 500;       /* Navegación, botones, labels */
---fw-semibold: 600;     /* Headings pequeños, subtítulos */
---fw-bold: 700;         /* Títulos medios y grandes */
---fw-black: 800;        /* Display-home, hero, secciones WOW */
-
-
-/* ===== FONT SIZE ===== */
-/* Base: 18px = 1.125rem */
---font-size-xs: 0.75rem;        /* 12px - metadata */
---font-size-sm: 1rem;       /* 14px - labels */
---font-size-base: 1.25rem;     /* 18px - texto cuerpo */
-/* Escala 1.45x — se siente grande, visual, moderna */
---font-size-lg: 1.875rem;        /* ~26px – lead grande */
---font-size-xl: 2.8125rem;        /* ~38px – subtítulos fuertes */
---font-size-2xl: 4.21875rem;       /* ~55px – títulos destacados */
---font-size-3xl: 4.95rem;       /* ~80px – sección super-impactante */
---font-size-hero: 6.5rem;       /* ~104px – hero cinematográfico */
-
+  /* ===== FONT TOKENS ===== */
+  --font-family-base: "Inter Display", sans-serif;
+  --font-family-heading: "Inter Display", sans-serif;
 
 
 /* =========================================================
-    TOKENS SEMANTICS
+    FONT SIZE SCALE (base 18px = 1rem)
    ========================================================= */
-  
-  /* CONTENIDO (3 esenciales) */
-  --font-size-text: var(--font-size-base);
-  --font-size-lead: var(--font-size-lg);
-  --font-size-caption: var(--font-size-sm);
-  
 
-  /* ENCABEZADOS (solo 3 niveles) */
-  --font-size-title: var(--font-size-2xl);    /* 40px - Título página */
-  --font-size-subtitle: var(--font-size-xl);  /* 28px - Subtítulo/sección */
-  --font-size-heading: var(--font-size-lg);   /* 20px - Título pequeño */
-  
+  /* Small sizes */
+  --font-size-xs: 0.75rem;      /*— Labels, captions */
+  --font-size-sm: 1rem;      /*— Labels, captions */
+  --font-size-base: 1.25rem;        /* — Body text */
 
-  /* ESPECIALES (por contexto) */
-  --font-size-display-home: var(--font-size-hero);  /* 67.2px - Solo home */
-  --font-size-display-page: var(--font-size-2xl);   /* 40px - Otras páginas */
-  
+  /* Visual scale 1.45x */
+  --font-size-lg: 1.63rem;       /* 26.1px — Lead text, intros */
+  --font-size-xl: 2.36rem;       /* 37.8px — Strong section subtitles */
+  --font-size-2xl: 3.05rem;      /* 54.9px — Page titles / internal displays */
+
+  /* Adjusted as requested */
+  --font-size-3xl: 3.55rem;      /* 64px — Main title for secondary pages (About, Contact, Case Studies, etc.) */
+  --font-size-4xl: 4.5rem;       /* 81px — High-impact section display */
+
+
+  /* ===== FONT WEIGHT ===== */
+  --fw-thin: 300;         /* Estilo ligero, elegante (hero, UI light) */
+  --fw-regular: 400;      /* Texto cuerpo */
+  --fw-medium: 500;       /* Navegación, botones, labels */
+  --fw-semibold: 600;     /* Headings pequeños, subtítulos */
+  --fw-bold: 700;         /* Títulos medios y grandes */
+  --fw-black: 800;        /* Display-home, hero, secciones WOW */
+
 
   /* ===== LINE HEIGHTS (solo 3) ===== */
-  --line-height-tight: 1.1;     /* Display/títulos */
+  --line-height-tight: 1.2;     /* Display/títulos */
   --line-height-normal: 1.5;    /* Texto normal */
   --line-height-loose: 1.7;     /* Texto largo */
 
@@ -86,6 +70,42 @@
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.25);
   --shadow-inner: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+
+
+/* =========================================================
+    SEMANTIC TOKENS FOR TYPOGRAPHY
+   ========================================================= */
+  
+/* --- BASE TEXT --- */
+  --font-size-micro: var(--font-size-xs);
+
+  --font-size-caption: var(--font-size-sm);
+  /* 15.75px — Image captions, notes, metadata */
+
+  --font-size-text: var(--font-size-base);
+  /* 18px — Standard body copy */
+
+  --font-size-lead: var(--font-size-lg);
+  /* 26.1px — Intro paragraphs, strong opening text */
+
+
+  /* --- HEADINGS (3-level system) --- */
+  --font-size-heading: var(--font-size-lg);
+  /* 26.1px — Small section heading (H3/H4) */
+
+  --font-size-subtitle: var(--font-size-xl);
+  /* 37.8px — Section subtitle */
+
+  --font-size-title: var(--font-size-2xl);
+  /* 54.9px — Standard main page title */
+
+
+  /* --- SPECIAL DISPLAYS --- */
+  --font-size-display-md: var(--font-size-3xl);
+  /* 81px — Largest title for internal pages */
+
+  --font-size-display-lg: var(--font-size-4xl);
+  /* 104.4px — Giant homepage hero */
 
 
 /* =========================================================
@@ -125,13 +145,13 @@
 
   /*  --- DARK THEME – Core Colors ---  */
 
-  /* Purple */
-  /* Purples (base dark theme) */
+  /* Purples */
 --purple-950: #0A0018;
 --purple-900: #11002b;
 --purple-850: #1a003f;
 --purple-800: #2b0067;
 --purple-700: #5300d8;
+--purple-300: #a166ff;
 
 /* Rose-Purple accents */
 --rose-500: #d96fd8;
@@ -157,6 +177,7 @@
   --green-100: #DFFEF4;
 
   /* Lavender */
+  --lavender-700: #615092;
   --lavender-600: #8E79C6;
   --lavender-400: #B19CD9;
   --lavender-200: #D8C3F0;
@@ -180,52 +201,6 @@
   --white: #ffffff;
   --cream-100: #F5F4EB;
 
-  
-
- /* -------- RAW GRADIENTS -------- */
-
-  --gradient-button-dark: linear-gradient(94deg, rgba(128,47,126,.7), rgba(255,255,255,.1));
-  --gradient-button-light: linear-gradient(90deg,
-      rgba(243,202,77,.5),
-      rgba(255,152,154,.5) 43%,
-      rgba(203,171,255,.5) 95%);
-
-  --gradient-hero-radial: radial-gradient(
-    50% 50% at 50% 50%,
-    #23005C 0%,
-    rgba(158,110,230,0) 100%
-  );
-
-  --gradient-brand-multi: linear-gradient(
-      130deg,
-      rgb(241,58,238) -9%,
-      rgb(44,90,255) 110%,
-      rgb(100,246,255) 176%
-  );
-
-
-
-  /* TEXT COLORS */
-  --text-primary: #ffffff;
-  --text-secondary: #d4c8ff;
-  --text-muted: #8e84a8;
-
-
-  /* GLOW HELPERS */
-  --glow-rose: rgba(218, 110, 220, 0.22);
-  --glow-teal: rgba(20, 184, 196, 0.18);
-
-  /* BACKGROUNDS */
-  --color-bg-light: #F5F4EB;
-  --color-bg-dark: #020005;
-
-  /* ACCENT / LINKS */
-  --color-accent: #ff5b8a;
-  --color-accent-hover: #fba64b;
-
-  /* BRAND */
-  --color-brand: #5800E5;
-
 
 
 /* =========================================================
@@ -234,6 +209,72 @@
   --breakpoint-mobile: 768px;
   --breakpoint-tablet: 991px;
   --breakpoint-desktop: 1400px;
+}
+
+
+
+:root {
+
+/*  ======================================================== 
+    SEMANTIC TOKENS — DEFAULT THEME (DARK)
+    ======================================================== */
+  /*  ---------------------------------------------------------
+    Surfaces
+    --------------------------------------------------------- */
+  --bg-primary: var(--purple-950);
+  --bg-secondary: var(--purple-900);
+
+/*  ---------------------------------------------------------
+    UI components
+    --------------------------------------------------------- */
+  --surface-card-primary: var(--purple-850);
+  --surface-card-secondary: var(--purple-950);
+
+/*  ---------------------------------------------------------
+    Borders
+    --------------------------------------------------------- */
+  --border-color-card: var(--lavender-700);
+
+
+/*  ---------------------------------------------------------
+    Text
+    --------------------------------------------------------- */
+  --color-text: var(--gray-100);
+  --color-text-secondary: var(--gray-300);
+  --color-text-brand: var(--purple-300);
+
+  --color-border: var(--gray-600);
+
+
+  /* NAV */
+  --nav-link-color: var(--gray-100);
+  --nav-link-hover-color: var(--gray-200);
+  --nav-link-active-color: var(--color-brand-600);
+
+
+  /* LINKS & ACCENT */
+  --link-color: var(--peach-300);
+  --link-hover-color: var(--peach-500);
+  --link-transition: 0.3s ease;
+
+
+  /* BUTTONS */
+  --btn-primary-bg: var(--purple-700);
+  --btn-primary-text: var(--teal-300);
+  --btn-primary-bg-hover: var(--purple-800);
+
+  --btn-secondary-bg: var(--purple-700);
+  --btn-secondary-text: var(--teal-300);
+  --btn-secondary-bg-hover: var(--purple-800);
+
+  --btn-vibe-bg: var(--purple-800);
+  --btn-vibe-bg-hover: rgba(255,255,255,.1);
+  
+
+  /* =============== TEXT GRADIENT TOKENS =============== */
+
+  --gradient-text-start: var(--purple-700);
+  --gradient-text-end: var(--rose-500);
 }
 
 

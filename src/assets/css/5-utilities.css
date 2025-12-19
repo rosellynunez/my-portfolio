@@ -52,5 +52,106 @@
   }
 }
 
+/* BUTTONS */
+.btn-group {
+  display: flex;
+  gap: var(--space-5); /* separación real entre botones */
+  flex-wrap: wrap; /* para móviles */
+  padding-block-start: var(--space-2);
+}
+
+.btn-group.btn {
+  margin: 0; /* evitar márgenes heredados */
+}
+
+
+/* MANO */
+.wave {
+  display: inline-block;
+  animation: wave-hand 2s infinite ease-in-out;
+  transform-origin: 70% 70%;
+  color: initial !important;
+  background: none !important;
+}
+
+/* ANIMACIÓN DE LA MANO */
+@keyframes wave-hand {
+  0% { transform: rotate(0deg); }
+  10% { transform: rotate(14deg); }
+  20% { transform: rotate(-8deg); }
+  30% { transform: rotate(14deg); }
+  40% { transform: rotate(-4deg); }
+  50% { transform: rotate(10deg); }
+  60% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}
+
+
+/* -------- MY PICTURE -------- */
+
+
+.hero-photo-inline {
+  display: inline-block;
+  vertical-align: middle;
+  width: 130px;
+  height: 65px;
+  border-radius: var(--radius-full);
+  object-fit: cover;
+}
+
+
+/* ------- GRADIENT PRIMARY  -------*/
+
+/* SIMPLE */
+.text-gradient {
+  background: linear-gradient(
+    135deg,
+    var(--gradient-text-start),
+    var(--gradient-text-end)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* GRADIENT WRAPPER*/
+.text-gradient-primary-wrapper {
+  background-size: 300% 100%;
+  animation: gradientFlow 6s ease infinite;
+  transition: animation-duration 0.3s ease;
+}
+
+.text-gradient-primary-wrapper:hover {
+  animation-duration: 2s;
+  filter: brightness(1.1); /* un poquito más de luz */
+}
+
+/* ANIMACIÓN DEL GRADIENTE */
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+/* ------- GRADIENT PRIMARY  -------*/
+#typed-output {
+  display: inline-block;
+  min-width: 18ch;
+}
+
+@media (max-width: 992px) {
+  #typed-output {
+    min-width: 14ch;
+  }
+}
+
+@media (max-width: 576px) {
+  #typed-output {
+    min-width: 10ch;
+  }
+}
+
+
 
 

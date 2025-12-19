@@ -3,49 +3,7 @@
    ========================================================= */
 
 :root,
-[data-bs-theme="dark"] {
-
-  /* BACKGROUND */
-  --bg-primary: var(--purple-900);
-  --bg-secondary: var(--purple-800);
-
-
-  /* TEXT */
-  --color-text: var(--gray-100);
-  --color-text-secondary: var(--gray-300);
-
-
-  /* LINKS & ACCENT */
-  --color-link: var(--peach-500);
-  --color-link-hover: var(--peach-400);
-
-  --color-border: var(--gray-600);
-
-
-  /* COMPONENT SEMÁNTICOS */
-  --navbar-text: var(--cream-100);
-  --navbar-text-hover: var(--pink-500);
-
-
-  /* BUTTONS */
-  --btn-primary-bg: var(--purple-700);
-  --btn-primary-text: var(--teal-300);
-  --btn-primary-bg-hover: var(--purple-800);
-
-
-  --btn-secondary-bg: var(--purple-700);
-  --btn-secondary-text: var(--teal-300);
-  --btn-secondary-bg-hover: var(--purple-800);
-  
-
-  /* =============== TEXT GRADIENT TOKENS =============== */
-
-/* Light theme default */
-  --gradient-text-start: var(--purple-700);
-  --gradient-text-end: var(--rose-500);
-}
-
-
+[data-bs-theme="dark"] 
 
 /* =========================================================
     DARK THEME SPECIFIC STYLES
@@ -54,13 +12,6 @@
 /* ================== BUTTONS ================== */
 
 /* -------------- PRIMARY BUTTONS -------------- */
-
-[data-bs-theme="dark"] .btn-primary,
-[data-bs-theme="dark"] .btn-primary-icon,
-[data-bs-theme="dark"] .btn-primary-sm {
-  background: var(--btn-primary-bg);
-  color: var(--btn-primary-text);
-}
 
 [data-bs-theme="dark"] .btn-primary:hover,
 [data-bs-theme="dark"] .btn-primary-icon:hover {
@@ -83,6 +34,11 @@
   background: var(--btn-secondary-active-bg);
 }
 
+/* ---------- CHANGE MODE GRADIENT ---------- */
+body[data-bs-theme="dark"] {
+  --btn-vibe-bg: var(--purple-300);
+  --btn-vibe-bg-hover: rgba(255, 255, 255, 0.1);
+}
 
 /* ---------- LINK BUTTON GRADIENT ---------- */
 [data-bs-theme="dark"] .btn-link {
@@ -96,23 +52,23 @@
   color: transparent;
 }
 
+/* =============== LINKS TOKENS =============== */
+[data-theme="dark"] {
+  /* Semantic tokens — dark mode */
+  --link-color: var(--peach-300);
+  --link-hover-color: var(--peach-500);
+}
+
 
 /* =============== CARD =============== */
 
 /* -------- CONTACT CARD -------- */
 
 [data-bs-theme="dark"] .contact-card {
-  background: var(--purple-900);
+  background: var(--purple-950);
   backdrop-filter: blur(16px) saturate(140%);
   -webkit-backdrop-filter: blur(96px) saturate(140%);
-
-  border-radius: 1rem;
-  padding: 2rem;
-
-  /* Borde más visible en teal, combinación ligera */
-  border: 1px solid rgba(20, 184, 196, 0.35); /* teal-500 with transparency */
   color: var(--text-primary);
-
   position: relative;
   overflow: hidden;
 }
@@ -123,12 +79,6 @@
   position: absolute;
   inset: 0;
 
-  background: radial-gradient(
-    circle at 80% 60%,
-    rgba(20, 184, 196, 0.18), /* teal-500 */
-    transparent 60%
-  );
-
   pointer-events: none;
   z-index: -1;
   opacity: 0.7;
@@ -136,19 +86,7 @@
 
 
 
-/* =============== TEXT & LINKS =============== */
 
-[data-bs-theme="dark"] .subtitle {
-  color: var(--text-primary);
-}
-
-[data-bs-theme="dark"] .text-lead {
-  color: var(--text-primary);
-}
-
-[data-bs-theme="dark"] a {
-  color: var(--teal-300);
-}
 
 /* =============== TEXT GRADIENTS =============== */
 
@@ -158,11 +96,29 @@
   -webkit-text-fill-color: transparent;
 }
 
+
+[data-bs-theme="dark"] .text-gradient-primary-wrapper {
+  background: linear-gradient(
+    90deg,
+    var(--rose-300),
+    var(--teal-300),
+    var(--rose-300)
+  );
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientFlow 6s ease-in-out infinite;
+}
+
+
+
 [data-bs-theme="dark"] .text-gradient-secondary {
   background: linear-gradient(120deg, var(--gray-300), var(--gray-200));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+
 
 
 
@@ -180,6 +136,7 @@
   background: var(--bg-primary);
   color: var(--text-primary);
 }
+
 
 
 
@@ -217,4 +174,42 @@
   opacity: 0.55;
   z-index: -1;
   pointer-events: none;
+
+
+
+
+/* dark-theme.css */
+
+
+
+
+
+ /* -------- RAW GRADIENTS -------- */
+
+  --gradient-button-dark: linear-gradient(94deg, rgba(128,47,126,.7), rgba(255,255,255,.1));
+  --gradient-button-light: linear-gradient(90deg,
+      rgba(243,202,77,.5),
+      rgba(255,152,154,.5) 43%,
+      rgba(203,171,255,.5) 95%);
+
+  --gradient-hero-radial: radial-gradient(
+    50% 50% at 50% 50%,
+    #23005C 0%,
+    rgba(158,110,230,0) 100%
+  );
+
+  --gradient-brand-multi: linear-gradient(
+      130deg,
+      rgb(241,58,238) -9%,
+      rgb(44,90,255) 110%,
+      rgb(100,246,255) 176%
+  );
+
+  /* GLOW HELPERS */
+  --glow-rose: rgba(218, 110, 220, 0.22);
+  --glow-teal: rgba(20, 184, 196, 0.18);
+
 }
+
+
+

@@ -15,6 +15,13 @@
 .container--lg { width: 80%; max-width: 80rem; margin-inline: auto;}
 .container--xl { width: 92%;   max-width: 90rem; margin-inline: auto;}
 
+.container--md-right {
+  width: 54%;
+  max-width: 52rem;
+  margin-left: auto;
+  margin-right: 12%;
+}
+
 /* Responsive override */
 /* ----- Between 992px and 1200px → all containers = 80% ----- */
 @media (min-width: 992px) and (max-width: 1200px){
@@ -36,6 +43,11 @@
     width: 86%;
     max-width: unset; /* ← opcional pero recomendado */
   }
+
+  .container--lg-left {
+    width: 100%;
+    margin-inline: auto;
+  }
 }
 
 .container img {
@@ -45,13 +57,16 @@
 }
 
 
+main {
+  padding-top: var(--section-space-lg); /* adjust to match your real navbar height */
+}
 
 
 
 /* ----- Sections ----- */
 /* Space between big sections */
 section + section {
-  margin-block-start: var(--section-space-lg);
+  margin-block-start: var(--section-space-xl);
 }
 
 /* Space between sub-sections */
@@ -60,16 +75,50 @@ section + section {
 }
 
 
-/* ----- Sections ----- */
-/* Space between big sections */
-section + section {
-  margin-block-start: var(--section-space-lg);
+/* Efecto de aparición para secciones 
+.reveal-section {
+    opacity: 0;
+    transform: translateY(20px);  Desplazamiento inicial hacia abajo
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}*/
+
+/*
+.reveal-section.visible {
+    opacity: 1;
+    transform: translateY(0); 
 }
 
-/* Space between sub-sections */
-.subsection + .subsection {
-  margin-block-start: var(--section-space-md);
+/* Delay opcional: se controla por JS 
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+.reveal-delay-5 { transition-delay: 0.5s; } */   
+
+
+
+
+
+/* ============== HOME ============== */
+
+/* space after h2 */
+.section {
+  display: grid;
+  gap: 3rem;
 }
+
+/* Services section layout */
+.services-list {
+  list-style: none;
+  padding: 0;
+
+  display: grid;
+  gap: var(--space-6);
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+}
+
+
+
 
 
 
