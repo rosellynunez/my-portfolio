@@ -57,22 +57,18 @@ body {
 
 .heading {
   font-size: var(--font-size-heading); /* Small section heading */
-  line-height: var(--line-height-tight);
   font-weight: var(--fw-regular);
   letter-spacing: var(--letter-spacing-normal);
 }
 
 .subtitle {
   font-size: var(--font-size-subtitle); /* Section subtitle */
-  line-height: var(--line-height-tight);
   font-weight: var(--fw-regular);
   letter-spacing: var(--letter-spacing-normal);
-  padding-bottom: var(--space-4);
 }
 
 .title {
   font-size: var(--font-size-title); /* Main page title */
-  line-height: var(--line-height-tight);
   letter-spacing: var(--letter-spacing-normal);
 }
 
@@ -92,16 +88,19 @@ body {
   letter-spacing: var(--letter-spacing-normal);
 }
 
+.font-decorative {
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
 
 /* ---------- SPECIAL FOR SOME SEC AND PAGES ---------- */
 /* Nueva: section-label (eyebrow / overline / kicker) */
 .section-label {
-  font-size: var(--font-size-base);         /* 0.875rem = 14px */
-  font-weight: var(--fw-regular);        /* 600 */
-  line-height: var(--line-height-normal);
+  font-size: var(--font-size-caption);         /* 0.875rem = 14px */
+  font-weight: var(--fw-bold);        /* 600 */
   letter-spacing: var(--letter-spacing-wide);
   text-transform: uppercase;
-  line-height: 1.2;
   margin: 0 0 0.5rem 0;                   /* separacion del titulo o texto siguiente */
 }
 
@@ -126,6 +125,11 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
+
+.eyebrow {
+  margin-bottom: 0;
+}
+
 
 /* Imágenes */
 img {
@@ -183,14 +187,6 @@ img {
 
 
 
-
-.text-line--2 {
-  padding-left: var(--space-8);
-}
-
-.text-line--3 {
-  padding-left: var(--space-12);
-}
 
 
 .section-secondary {
@@ -280,15 +276,6 @@ img {
   gap: 10px; /* Añade un espacio de 10 píxeles entre el icono y el texto */
 }
 
-.bi {
-  vertical-align: 0rem;
-}
-  
-.dl-icon-arrow {
-  width: 32px;
-  height: 32px;
-}
-
 .bd-mode-toggle {
   z-index: 1500;
 }
@@ -296,40 +283,6 @@ img {
 .bd-mode-toggle .dropdown-menu .active .bi {
   display: block !important;
 }
-
-
-
-/* HOME - CONTACT ME */
-
-
-.gif-image-wrap {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  border-radius: 1.2rem;
-}
-
-.gif-image-wrap iframe {
-  width: 100%;
-  height: 100%;
-  border-radius: 1.2rem;
-}
-
-.aspect-ratio-16-9 {
-  aspect-ratio: 16 / 9; /* Mantiene proporción 16:9 */
-  border-radius: 1.2rem;
-}
-
-.aspect-ratio-4-3 {
-  aspect-ratio: 4 / 3; /* Mantiene proporción 16:9 */
-  border-radius: 1.2rem;
-}
-
-.row-about {
-  display: flex;
-  flex-wrap: wrap; /* Permitir que los GIFs se ajusten a nuevas filas */
-  justify-content: center;
-}
-
 
 
 
@@ -382,12 +335,6 @@ img {
 /* Si no quieres margen en el último elemento, puedes eliminarlo así: */
 ul li:last-child {
   margin-bottom: 0;
-}
-
-
-
-#page-my-work {
-  margin-top: 10rem;
 }
 
 /* === DESKTOP === */

@@ -30,27 +30,16 @@
 .margin-bottom-lg { margin-bottom: var(--space-9); }
 
 
+.text-line {
+  display: block;
+}
 
-
-.icon-vibe {
-  display: inline-block;
+.text-line--2 {
+  padding-left: var(--space-8);
 }
 
 
 
-
-.btn-vibe:hover .icon-vibe {
-  animation: spin 1s infinite;
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
 
 /* BUTTONS */
 .btn-group {
@@ -135,23 +124,16 @@
 
 
 /* ------- GRADIENT PRIMARY  -------*/
-#typed-output {
-  display: inline-block;
-  min-width: 18ch;
-}
 
-@media (max-width: 992px) {
-  #typed-output {
-    min-width: 14ch;
-  }
+.typed-wrapper {
+  min-height: 8.6rem; /* espacio para 2 líneas del título */
+  max-width: 34rem;
+  display: block;
 }
 
 @media (max-width: 576px) {
-  #typed-output {
-    min-width: 10ch;
+  .typed-wrapper {
+    min-height: 3.6em;
   }
 }
-
-
-
 

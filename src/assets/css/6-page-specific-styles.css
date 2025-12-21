@@ -6,11 +6,6 @@
 
 
 /* INTRO */ 
-#intro title {
-  font-weight: var(--fw-semibold);
-  text-align: left;
-}
-
 @media (min-width: 992px) {
   #intro .intro-content {
     max-width: 76rem;
@@ -22,19 +17,49 @@
   margin-block-start: var(--section-space-sm);
 }
 
+.home .section + .section {
+  margin-block-start: var(--section-space-lg);
+}
 
-/* PROJECTS*/ 
-#projects h2 {
+
+/* ABOUT */ 
+
+#about .text-base {
+  font-weight: var(--fw-bold);
+  line-height: var(--line-height-tight);
+}
+
+#about .title {
+  line-height: var(--line-height-tight);
+}
+
+#about .display-alt {
   font-weight: var(--fw-medium);
+}
+
+/* PROJECTS */ 
+#projects h2 {
+  font-weight: var(--fw-bold);
+  text-align: center;
+}
+
+#projects .eyebrow {
   text-align: center;
 }
 
 
 /* SERVICES */ 
 #services h2 {
+  font-weight: var(--fw-bold);
+  text-align: center;
+}
+
+#services .heading {
   font-weight: var(--fw-medium);
   text-align: center;
 }
+
+
 
 /* CONTACT-ME */ 
 #contact-me h2 {
@@ -53,13 +78,6 @@
 
 
 /* ============ PORTFOLIO PAGE ============*/ 
-
-
-.case-study {
-  padding-top: var(--space-11);
-}
-
-
 .center-image {
   display: flex; 
   justify-content: center; 
@@ -86,10 +104,6 @@
 /* ------------------------------
     CASE STUDY PAGE
 --------------------------------*/
-
-#case-study {
-  padding-top: var(--space-11);
-}
 
 #overview .text-lead {
   font-style: italic;
@@ -118,21 +132,27 @@
     height: auto;
 }
 
+#case-study {
+  margin-bottom: var(--section-space-lg);
+}
+
+#case-study .heading {
+  font-weight: var(--fw-bold);
+  padding-block-end: var(--space-3);
+}
+
 
 /* ----- NEXT PROJECT SECTION ---- */
 
 #next-project {
-  padding: var(--space-2) 0rem;
-}
-
-#next-project h2{
+  align-items: center;
   text-align: center;
-  padding: 0rem 0rem var(--space-7);
 }
 
-article#case-study {
-  margin-bottom: var(--section-space-lg);
+.subtitle {
+  font-weight: var(--fw-bold);
 }
+
 
 
 
@@ -154,11 +174,7 @@ article#case-study {
 --------------------------------*/
 
 #about-me {
-  padding-top: var(--space-11);
-}
-
-#about-me h1 {
-  padding-bottom: var(--space-5);
+  padding-top: var(--space-4);
 }
 
 #about-me h2 {
@@ -170,91 +186,16 @@ article#case-study {
   line-height:  var(--line-height-tight);
 }
 
+#about-me-intro .subtitle {
+  font-weight: var(--fw-medium);
+  line-height:  var(--line-height-tight);
+}
+
 #about-me .text-lead {
   line-height: var(--line-height-normal);
   font-weight: var(--fw-thin);
 }
 
-
-
-
-
-
-
-
-
-/*OUR SERVICES*/
-
-.bd-placeholder-img {
-  font-size: 4em;
-  text-anchor: middle;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
-}
-
-@media (min-width: 768px) {
-  .bd-placeholder-img-lg {
-    font-size: 3.5rem;
-  }
-}
-
-.b-example-divider {
-  width: 100%;
-  height: 3rem;
-  background-color: rgba(0, 0, 0, .1);
-  border: solid rgba(0, 0, 0, .15);
-  border-width: 1px 0;
-  box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-}
-
-.b-example-vr {
-  flex-shrink: 0;
-  width: 1.5rem;
-  height: 100vh;
-}
-
-
-
-
-
-/* === DESKTOP === */
-#title-about {
-  display: flex;
-}
-
-.gif-office-container {
-  position: relative;
-  width: 10rem; /* Ajusta el ancho según necesites */
-  height: 8rem; /* Set a fixed height */
-  overflow: hidden;
-}
-
-.gif-office-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 95%;
-  height: 100%;
-  object-fit: cover; /* Cubre todo el contenedor */
-  border: none;
-}
-
-@media (max-width: 768px) {
-  .gif-office-container {
-    width: 10rem; /* Ajusta el ancho según necesites */
-    height: 8rem; /* Set a fixed height */
-    align-items: center;
-  }
-
-  #title-about {
-    flex-direction: column;
-  }
-
-  .colum-beside {
-    flex-direction: column;
-  }
-} 
 
 
 
@@ -283,10 +224,6 @@ article#case-study {
   justify-content: center;
 }
 
-.title-margin-top {
-  margin-top: 0.4rem;
-  margin-bottom: 0rem;
-}
 
 /* Para desktop: 3 columnas */
 .row-rectangles-v1 {

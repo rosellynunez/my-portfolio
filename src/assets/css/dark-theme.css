@@ -90,26 +90,60 @@ body[data-bs-theme="dark"] {
 
 /* =============== TEXT GRADIENTS =============== */
 
-[data-bs-theme="dark"] .text-gradient-primary {
-  background: linear-gradient(120deg, var(--rose-300), var(--teal-300));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-
+/* animated for the intro */
 [data-bs-theme="dark"] .text-gradient-primary-wrapper {
   background: linear-gradient(
     90deg,
-    var(--rose-300),
     var(--teal-300),
     var(--rose-300)
   );
-  background-size: 300% 100%;
+  background-size: 260% 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: gradientFlow 6s ease-in-out infinite;
 }
 
+[data-bs-theme="dark"] .text-gradient-primary-wrapper--no-animated {
+  background: linear-gradient(
+    90deg,
+    var(--teal-300)0%,
+    var(--rose-300)30%
+  );
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* for other sections - sentences */
+[data-bs-theme="dark"] .text-gradient-primary {
+  background: linear-gradient(
+    120deg,
+    var(--rose-300) 0%,
+    var(--rose-300) 30%,
+    var(--teal-300) 40%,
+    var(--teal-300) 100%
+  );
+  background-size: 200% 200%;
+  background-position: center;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+/* for other sections - short words */
+[data-bs-theme="dark"] .text-gradient-primary--short {
+  background: linear-gradient(
+    120deg,
+    var(--rose-300) 0%,
+    var(--rose-300) 48%,
+    var(--teal-300) 55%,
+    var(--teal-300) 100%
+  );
+  background-size: 200% 200%;
+  background-position: center;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
 
 [data-bs-theme="dark"] .text-gradient-secondary {

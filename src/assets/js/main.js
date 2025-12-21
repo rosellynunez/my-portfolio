@@ -6,9 +6,8 @@
       "Design meant to live beyond the mockup",
       "Design systems that grow with teams",
       "UI crafted with care and code in mind",
-      "Design meant to live beyond the mockup",
       "Design made to be used and maintained",
-      "Interfaces built for real products",
+      "Interfaces built for real products"
     ],
     typeSpeed: 45,
     backSpeed: 30,
@@ -21,6 +20,19 @@
   new Typed("#typed-output", options);
 });
 
+
+// TYPED-OUTPUT-INTRO -> HI
+  document.addEventListener('DOMContentLoaded', function () {
+  var options = {
+    strings: ["H^120e^200l^160l^260o!"],
+    typeSpeed: 100,
+    startDelay: 500,
+    showCursor: false,
+    loop: true
+  };
+
+  new Typed("#typed-output-intro", options);
+});
 
 
 // MENU MOBILE OVERLAY

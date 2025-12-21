@@ -13,7 +13,7 @@
 /* ================== NAV LINK COMPONENT ================== */
 
 .navbar {
-  transition: background-color .3s ease, backdrop-filter .3s ease;
+  transition: background-color .5s ease, backdrop-filter .3s ease;
 }
 
 .container-fluid {
@@ -21,11 +21,12 @@
 }
 
 .nav-link {
-  font-weight: var(--fw-semibold);
+  font-weight: var(--fw-medium);
   text-decoration: none;
   color: var(--nav-link-color);
   padding: var(--space-2) var(--space-3);
   transition: color var(--link-transition);
+  text-transform: uppercase;
 }
 
 .nav-link:hover {
@@ -47,6 +48,105 @@
   background-color: rgba(255,255,255,0.1) !important;
   backdrop-filter: blur(10px);
 }
+
+
+/* ================== DESPLEGABLE ================== */
+/* Reset básico */
+.nav-list {
+  display: flex;
+  gap: var(--space-3);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-dropdown {
+  position: relative;
+}
+
+/* summary */
+.nav-summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  cursor: pointer;
+  white-space: nowrap;
+  color: inherit;
+}
+
+/* quitar marcador nativo */
+.nav-summary::-webkit-details-marker {
+  display: none;
+}
+
+/* flecha */
+.chevron {
+  display: inline-block;
+  font-size: 0.7em;
+  line-height: 1;
+  color: currentColor;
+  transform-origin: center;
+  transition: transform 0.2s ease;
+}
+
+/* estado abierto */
+.nav-dropdown[open] .chevron {
+  transform: rotate(180deg);
+}
+
+/* Flecha hacia arriba cuando está abierto */
+.nav-dropdown[open] .chevron {
+  transform: rotate(180deg);
+}
+
+/* Dropdown cerrado */
+.dropdown-list {
+  display: grid;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-2);
+}
+
+.dropdown-list li {
+  list-style: none;
+}
+
+.dropdown-list a {
+  font-size: var(--font-size-sm);
+  text-decoration: none;
+}
+
+/* Desktop */
+@media (min-width: 992px) {
+  .nav-dropdown {
+    position: relative;
+  }
+
+  .nav-dropdown .dropdown-list {
+    position: absolute;
+    top: calc(100% + 0.5rem); /* baja un poco */
+    left: 50%;
+    transform: translateX(-50%); /* centrado respecto al botón */
+
+    background: var(--surface-card-primary);
+    padding: 1rem;
+    border-radius: var(--radius-md);
+    min-width: 220px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.1);
+  }
+}
+
+/* Mobile */
+@media (max-width: 991px) {
+  .nav-list {
+    flex-direction: column;
+  }
+
+  .dropdown-list {
+    margin-top: 0.5rem;
+    padding-left: 1rem;
+  }
+}
+
 
 
 
@@ -456,35 +556,32 @@
   color: var(--color-text-brand);
 }
 
-.service-card:hover {
-  transform: translateY(-4px);
-}
-
-.service-icon {
-  background: #222634;
-}
-
-
 /* icono del servicio */
-
 .service-icon {
-  width: 64px;
-  height: 64px;
-  border-radius: var(--radius-md);
+  width: 3.6rem;
+  height: 3.6rem;
+  border-radius: var(--radius-full);
 
-  display: flex;
-  align-items: center;
+  display: grid;
+  place-items: center;
   justify-content: center;
 
-  font-size: 2.5rem;
-  margin-bottom: 1.25rem;
+  font-size: 2rem;
+  margin-bottom: var(--space-5);
   transition: transform 0.2s ease;
+  background: rgba(20, 184, 166, 0.15); /* teal soft */
+  color: var(--teal-300);
 }
 
+.service-icon i {
+  display: block;
+  line-height: 2;
+}
+
+/*
 .service-card:hover .service-icon {
   transform: scale(1.08);
-}
-
+}*/
 
 
 
@@ -522,8 +619,6 @@
 
 
 
-/* -------- NEXT PROJECT -------- */
-
 
 
 
@@ -545,13 +640,35 @@ footer p{
   margin-block-end: 0;
 }
 
+
+/* -------- SKILLS TABS -------- */
+
+.skills-tabs ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  padding: 0;
+  margin-block-end: var(--space-4);
+  list-style: none;
+}
+
+.skills-tabs li {
+  padding: var(--space-1) var(--space-4);
+  white-space: nowrap;
+  color: var(--text-muted);
+  background-color: rgb(59, 7, 62);
+}
+
+
+
+
+
+
+
+
 /* -------- BUTTONS para cambiar entre modo claro y oscuro */
 
-.theme-icon-text-container {
-  display: flex;
-  align-items: center; /* Alinea los elementos verticalmente al centro */
-  gap: 10px; /* Añade un espacio de 10 píxeles entre el icono y el texto */
-}
+
 
 .bi {
   vertical-align: 0rem;
@@ -571,27 +688,13 @@ footer p{
 }
 
 /* Personalización del botón navbar-toggler */
-.navbar-toggler {
-  border: 1px solid; /* Quita el borde predeterminado */
-  border-radius: 2rem; /* Ajusta el border-radius */
-  padding: 0.5rem 0.5rem; /* Espaciado interno para centrar el texto */
-  font-weight: bold;
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background 0.3s ease;
-}
+
 
 .navbar-toggler {
   position: relative;
   z-index: 1051; /* Más alto que el overlay */
 }
 
-.navbar-toggler:focus {
-  box-shadow: none;
-}
 
 
 /* Oculta el ícono predeterminado de Bootstrap */
@@ -696,7 +799,7 @@ footer p{
 }
 
 /* Alinear el menú en el centro en desktop */
-@media (min-width: 1024px) {
+@media (min-width: 992px) {
   .desktop-menu {
     flex-grow: 1;
     justify-content: center;
@@ -713,11 +816,11 @@ footer p{
   }
 
   .desktop-menu {
-    order: 2;
+    order: 3;
   }
 
   .btn-vibe {
-    order: 3;
+    order: 2;
   }
 }
 

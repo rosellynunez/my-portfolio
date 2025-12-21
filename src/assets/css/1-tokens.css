@@ -125,17 +125,15 @@
   --space-7: 3rem;      /* 48px Secciones internas, grupos */    
   --space-8: 4rem;      /* 64px */    
   --space-9: 6rem;      /* 96px Secciones principales */   
-  --space-10: 8rem;     /* 128px Separación media */  
   
   /* Espacios grandes - para secciones */
+  --space-10: 8rem;     /* 128px Separación media */  
   --space-11: 10rem;    /* 160px Heroes, espacios dramáticos */
-  --space-12: 12rem;    /* 192px Espaciado máximo */
 
 /* Section spacing */
-  --section-space-xl: var(--space-12); /* hero */
-  --section-space-lg: var(--space-9);  /* grandes */
-  --section-space-md: var(--space-8);  /* secciones normales */
-  --section-space-sm: var(--space-5);  /* subsecciones */
+  --section-space-lg: var(--space-11);  /* grandes 12 rem*/
+  --section-space-md: var(--space-9);  /* secciones normales 6rem*/
+  --section-space-sm: var(--space-7);  /* subsecciones 3rem*/
 
 
 /* =========================================================

@@ -29,17 +29,17 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
         <!-- Google Fonts (usa display=swap para cargar texto antes)-->
-        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Pacifico&display=swap" rel="stylesheet">
 
         <!-- Bootstrap + Bootstrap Icons -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" />
 
-        <!-- Global Styles (tokens, reset, typography, containers) -->
-        <link rel="stylesheet" href="css/global.css">
+        <!-- Global CSS -->
+        <link rel="stylesheet" href="../assets/css/global.css">
 
-        <!-- Components (navbar, buttons, cards, placeholders…) -->
-        <link rel="stylesheet" href="css/components.css">
+        <!-- Page CSS (case-study.css) -->
+        <link rel="stylesheet" href="../assets/css/pages.css">
 
         <!-- 🌗 Carga rápida del tema guardado -->
         <script>
@@ -60,8 +60,9 @@
         <!-- Twemoji-->
         <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous" defer></script>
 
-        <!-- Main Script -->
-        <script src="js.js" defer></script>
+        <!-- Script -->
+        <script src="../assets/js/theme.js"></script>
+        <script src="../assets/js/main.js"></script>
 
         <!-- Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y1KMG7E11J"></script>
@@ -70,7 +71,8 @@
 
     <body>
         <header>
-            <nav class="navbar navbar-expand-lg bg-transparent fixed-top">
+          <div class="container--xl">
+            <nav class="navbar navbar-expand-lg bg-transparent sticky-top">
                 <div class="container-fluid">
             
                 <!-- Logo -->
@@ -83,8 +85,14 @@
                 </a>
 
                 <!-- Botón para cambiar entre modo claro y oscuro -->
-                <button onclick="cambiarTema()" class="btn-vibe order-2 order-sm-1 order-lg-3">
-                    <span class="label">Change the Vibe</span>
+                <button 
+                  data-idle="true"
+                  onclick="cambiarTema()" 
+                  class="btn btn-vibe btn-shine text-micro order-2 order-sm-1 order-lg-3"
+                  aria-label="Switch between light and dark mode">
+
+                    <span>Change the Vibe</span>
+
                     <svg xmlns="http://www.w3.org/2000/svg"
                     width="16" 
                     height="16" 
@@ -109,159 +117,197 @@
                 <div class="collapse navbar-collapse desktop-menu order-lg-2" id="navbarSupportedContent">
 
                     <ul class="navbar-nav text-center mx-auto">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="my-work.html">My Work</a>
+
+                        <li>
+                            <a class="nav-link text-caption" href="#">My Work</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="about.html">About</a>
+
+                        <li>
+                            <a class="nav-link text-caption" href="about.html">About</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="images/cv/CV_Roselly_Nunez_UX_UI_Designer-en.pdf" target="_blank" >Resume<i class="bi bi-box-arrow-up-right ms-2"></i></a>
+
+                        <li>
+                          <a class="nav-link text-caption" href="images/cv/CV_Roselly_Nunez_UX_UI_Designer-en.pdf" target="_blank">
+                            Resume <i class="bi bi-box-arrow-up-right ms-2"></i>
+                          </a>
                         </li>
+
                     </ul>
 
                 </div>
 
                 </div>
             </nav>
+          </div>
         </header>
 
     <main>
         <!-- CASE STUDY -->
-        <article id="negotiation-book" class="case-study container-full">
+        <article id="case-study" class="container-full">
 
             <!-- SECTION 01 -->
-            <section>
-                <div id="title-project" class="subsection container--lg">
-                    <h1 class="col-sm-12 col-lg-8">Festina and Lotus Connected D Landing Pages Design</h1>
-                    <p>.......</p>
-                    <div class="image-placeholder border-radius">
-                        <span class="placeholder-text">Hero Image - Project Overview</span>
+            <section id="overview" class="section">
+                <div class="container--lg">
+                
+                    <!-- Title + subtitle-->
+                    <div class="subsection">
+                        <!-- H1 -->        
+                        <h1 class="title col-sm-12 col-lg-8 mb-4">Festina and Lotus Connected D Landing Pages Design</h1>
+
+                        <!-- Subtitle -->
+                        <p class="text-lead" class="text-lead mb-5">
+                        Website Design & Development for "Introduction to Automated Negotiation"</p>
                     </div>
-                </div>
 
-                <div id="project-overview" class="subsection container--lg">            
-                    <div class="row">
-                        <div class="col-lg-4 col-12">
-                            <h2 class="small-title text-uppercase">Project Overview</h2>
-                        </div>
-
-                        <div class="col-lg-8 col-12">
-                            <p>Festina and Lotus, two distinct brands under the Festina Group, each launched a new Connected Watch Collection:</p>
-                            <ul>
-                                <li><span class="font-weight-bold">Festina Connected D:</span> A classic, elegant smartwatch blending tradition with technology.</li>
-                                <li><span class="font-weight-bold">Lotus Hybrid Connected:</span> A youthful, modern smartwatch designed for an active lifestyle.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="project-goals" class="subsection container--lg">            
-                    <div class="row">
-                        <div class="col-lg-4 col-12">
-                            <h2 class="small-title text-uppercase">the challenge</h2>
-                        </div>
-                        <div class="col-lg-8 col-12">
-                            <p>The challenge was to create two distinct landing pages that captured each brand's unique identity, showcased the watch features, and provided a cohesive user experience. Using a shared page structure was key to managing the tight deadlines and ensuring a consistent look and feel for both projects.</p> 
-                        </div>
-                    </div>
-                </div>
-
-                <div id="my-role" class="subsection container--lg">            
-                    <div class="row">
-                        <div class="col-lg-4 col-12">
-                            <h2 class="small-title text-uppercase">my role</h2>
-                        </div>
-                        <div class="col-lg-8 col-12">
-                            <p>My role focused on designing the UI for both landing pages, creating a consistent visual journey for the user. This involved close collaboration with different teams to bring the projects to life successfully:</p>
-                            <ul>
-                                <li><span class="font-weight-bold">Development Team</span> - To ensure smooth implementation using Strapi and Bootstrap</li>
-                                <li><span class="font-weight-bold">Marketing Team (Spain)</span> - To align design with local branding and promotional campaigns</li>
-                                <li><span class="font-weight-bold">Strategy Team (Sweden)</span> - To define the user journey and messaging.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="subsection container--lg">
-                    <div class="image-placeholder border-radius">
-                        <span class="placeholder-text">Image: </span>
-                    </div>
-                </div>
-            </section>
-
-            <!-- SECTION 02 - UX Approach -->
-            <section id="design-strategy">
-                <div class="subsection container--md">
-                    <h2 class="h2-pag-portfolio">1. Design strategy</h2>
-                    <h3>Concept for Festina Connected D</h3>
-                    <p>The Festina landing page needed to reflect the brand's core values: Quality, Tradition, and Technology. The goal was to create a sophisticated interface that balanced:</p>
-                    <ul class="list">
-                        <li>Smart functionality - Highlighting watch features with a clean and structured layout</li>
-                        <li>Elegance - Using and elegant typography, refined spacing, and a balanced color palette</li>
-                        <li>Consistency - Ensuring that the Lotus Connected D also fit within the same user journey</li>
-                    </ul>
-                </div>
-
-                <div class="subsection container--lg">
-                        
-                        <div class="row ">
-                            <div class="col-md-3 col-sm-12">
-                                <img src="images/connected/quality_540x540.jpg" 
-                                alt="About Image"
-                                class="img-fluid border-radius"
-                                loading="lazy">
-                                <p class="p-note">Quality</p>
-                            </div>
-                            <div class="col-md-3 col-sm-12">
-                                <img src="images/connected/tradition_540x540.jpg" 
-                                alt="About Image"
-                                class="img-fluid border-radius"
-                                loading="lazy">
-                                <p class="p-note">Quality</p>
-                            </div>
-                            <div class="col-md-3 col-sm-12">
-                                <img src="images/connected/tech-innovation_540x540.jpg" 
-                                alt="About Image"
-                                class="img-fluid border-radius"
-                                loading="lazy">
-                                <p class="p-note">Quality</p>
-                            </div>
-                        </div>
-
-                </div>
-
-                <div class="subsection container--md">
-                    <h3>Concept for Lotus Hybrid Connected</h3>
-                    <p>For Lotus, the focus was on versatility and modernity. The design emphasized:</p>
-                    <ul class="list">
-                        <li>Dynamic lifestyle appeal - Showcasing how the watch fits into everyday life</li>
-                        <li>Engaging visuals - Featuring bold, high-contrast images to highlight key features like smart notifications and activity tracking.</li>
-                        <li>Clean and modern UI - Using large, easy-to-read text and elements for smooth navigation</li>
-                    </ul>
-                </div>
-
-                <div class="subsection container--md">
-                    <div class="image-container border-radius">
-                        <img 
-                            src="images/automated-negotiation-book/structure.jpg"
-                            alt="Quality service illustration showing our design principles in action"
-                            class="img-fluid"
-                            loading="lazy"
+                    <!-- Image -->
+                    <div class="subsection">
+                        <img
+                            src="data:image/svg+xml;utf8,
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 800'>
+                                <rect width='100%' height='100%' fill='%23e5e7eb'/>
+                                <text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle'
+                                    font-family='Arial' font-size='64' fill='%239ca3af'>
+                                1600 × 800
+                                </text>
+                            </svg>"
+                            alt="Placeholder 16:10"
                         >
                     </div>
+
+                    <!-- Project Overview -->
+                    <div id="overview" class="subsection">            
+                        <div class="row">
+                            <div class="col-lg-4 col-12 mb-lg-0">
+                                <!-- semantic H2 with visual clases title-lg -->
+                                <h2 class="section-label">Project Overview</h2>
+                            </div>
+                            <div class="col-lg-8 col-12">
+                                <!-- Paragraph with .text (16px) -->
+                                <p class="text-base">Festina and Lotus, two distinct brands under the Festina Group, each launched a new Connected Watch Collection:</p>
+                                <ul>
+                                    <li><span class="font-weight-bold">Festina Connected D:</span> A classic, elegant smartwatch blending tradition with technology.</li>
+                                    <li><span class="font-weight-bold">Lotus Hybrid Connected:</span> A youthful, modern smartwatch designed for an active lifestyle.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Goals -->
+                    <div id="the-challenge" class="subsection">            
+                        <div class="row">
+                            <div class="col-lg-4 col-12">
+                                <!-- H2 semantic H2 with visual clases title-lg -->
+                                <h2 class="section-label">the challenge</h2>
+                            </div>
+                            <div class="col-lg-8 col-12">
+                                <p>The challenge was to create two distinct landing pages that captured each brand's unique identity, showcased the watch features, and provided a cohesive user experience. Using a shared page structure was key to managing the tight deadlines and ensuring a consistent look and feel for both projects.</p> 
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- My role -->
+                    <div id="my-role" class="subsection">            
+                        <div class="row">
+                            <div class="col-lg-4 col-12">
+                                <h2 class="section-label">my role</h2>
+                            </div>
+                            <div class="col-lg-8 col-12">
+                                <p class="text-base">My role focused on designing the UI for both landing pages, creating a consistent visual journey for the user. This involved close collaboration with different teams to bring the projects to life successfully</p>
+                                <ul>
+                                    <li class="text-base">Development Team - To ensure smooth implementation using Strapi and Bootstrap</li>
+                                    <li class="text-base">Marketing Team (Spain)- To align design with local branding and promotional campaigns</li>
+                                    <li class="text-base">Strategy Team (Sweden)- To define the user journey and messaging.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </section>
+
+
+            <!-- SECTION 02 - UX Approach -->
+            <section id="design-strategy" class="section">
+
+                    <div class="text-flow subsection container--md">
+                        <h2 class="subtitle">1. Design strategy</h2>
+                        <div>
+                            <h3 class="heading">Concept for Festina Connected D</h3>
+                            <p>The Festina landing page needed to reflect the brand's core values: Quality, Tradition, and Technology. The goal was to create a sophisticated interface that balanced:</p>
+                            <ul class="list">
+                                <li>Smart functionality - Highlighting watch features with a clean and structured layout</li>
+                                <li>Elegance - Using and elegant typography, refined spacing, and a balanced color palette</li>
+                                <li>Consistency - Ensuring that the Lotus Connected D also fit within the same user journey</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="subsection container--lg">
+                            
+                        <div class="images-row">
+        
+                            <div class="image-item">
+                                <div class="image-wrapper">
+                                    <img
+                                    src="data:image/svg+xml;utf8,
+                                    <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 400'>
+                                        <rect width='100%' height='100%' fill='%23e5e7eb'/>
+                                        <text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle'
+                                        font-family='Arial' font-size='64' fill='%239ca3af'>
+                                        1600 × 800
+                                        </text>
+                                    </svg>"
+                                    alt="Placeholder 16:10"
+                                    loading="lazy"
+                                    >
+                                </div>
+                                <p class="note">Quality</p>
+                            </div>
+
+                            <div class="image-item">
+                            <div class="image-wrapper">
+                                <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 400'><rect width='100%' height='100%' fill='%23e5e7eb'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='64' fill='%239ca3af'>1600 × 800</text></svg>">
+                            </div>
+                            <p class="note">Quality</p>
+                            </div>
+
+                            <div class="image-item">
+                            <div class="image-wrapper">
+                                <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 400'><rect width='100%' height='100%' fill='%23e5e7eb'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='64' fill='%239ca3af'>1600 × 800</text></svg>">
+                            </div>
+                            <p class="note">Quality</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="subsection container--md">
+                        <h3 class="heading">Concept for Lotus Hybrid Connected</h3>
+                        <p>For Lotus, the focus was on versatility and modernity. The design emphasized:</p>
+                        <ul class="list">
+                            <li>Dynamic lifestyle appeal - Showcasing how the watch fits into everyday life</li>
+                            <li>Engaging visuals - Featuring bold, high-contrast images to highlight key features like smart notifications and activity tracking.</li>
+                            <li>Clean and modern UI - Using large, easy-to-read text and elements for smooth navigation</li>
+                        </ul>
+                    </div>
+
+            </section>
+
 
             <!-- SECTION 03 - NAVIGATION STRUCTURE -->
-            <section id="optimizing-images">
-                <div class="subsection container--md">
-                    <h2 class="h2-pag-portfolio">2. Optimizing images</h2>
-                    <p>I received the graphic assets from the design team, and they were, generously sized. Way too big for the web. I adjusted image dimensions to align with the design specifications, preventing unnecessary bandwidth consumption.</p>
-                    <p>Of course, it had to look good everywhere, so I optimized for both desktop and mobile. And to really boost speed, converted everything to WebP.</p>
-                </div>
+            <section id="optimizing-images" class="section">
+                <div class="elements-flow container--md">
 
-                <div class="subsection container--md">
+                    <div class="text-flow">
+                        <h2 class="subtitle">2. Optimizing images</h2>
+                        <div>
+                            <p>I received the graphic assets from the design team, and they were, generously sized. Way too big for the web. I adjusted image dimensions to align with the design specifications, preventing unnecessary bandwidth consumption.</p>
+                            <p>Of course, it had to look good everywhere, so I optimized for both desktop and mobile. And to really boost speed, converted everything to WebP.</p>
+                        </div>
+                    </div>
+
+                    <div class="subsection">
                     <div class="image-container border-radius">
                         <img 
                             src="images/automated-negotiation-book/structure.jpg"
@@ -270,111 +316,188 @@
                             loading="lazy"
                         >
                     </div>
+                    </div>
+
                 </div>
             </section>
 
             <!-- SECTION 02 - UX Approach -->
-            <section id="ux-ui-approach">
-                <div class="subsection container--md">
-                    <h2 class="h2-pag-portfolio">UI/UX Approach</h2>
-                    <p>To ensure an engaging and seamless experience, I focused on visual appeal and functionality, guided by these principles:</p>
-                    <ul class="list">
-                        <li>Navigation & User Flow - Simple and intuitive layout guiding users through product features</li>
-                        <li>Visual Hierarchy - Strong CTAs like "See Collection" to encourage user engagement</li>
-                        <li>White Space & Balance - Creating a clean and distraction-free browsing experience</li>
-                        <li>Component-Based Design - Using our existing components to streamline development</li>
-                    </ul>
-                </div>
+            <section id="ux-ui-approach" class="section">
+                <div class="elements-flow container--md">
 
-                <div class="subsection container--md">
-                    <div class="image-container border-radius">
-                        <img 
-                            src="images/automated-negotiation-book/structure.jpg"
-                            alt="Quality service illustration showing our design principles in action"
-                            class="img-fluid"
-                            loading="lazy"
-                        >
+                    <div class="text-flow">
+                        <h2 class="subtitle">3. UI/UX Approach</h2>
+                        <div>
+                            <p>To ensure an engaging and seamless experience, I focused on visual appeal and functionality, guided by these principles:</p>
+                            <ul class="list">
+                                <li>Navigation & User Flow - Simple and intuitive layout guiding users through product features</li>
+                                <li>Visual Hierarchy - Strong CTAs like "See Collection" to encourage user engagement</li>
+                                <li>White Space & Balance - Creating a clean and distraction-free browsing experience</li>
+                                <li>Component-Based Design - Using our existing components to streamline development</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="subsection container--md">
+                        <div class="image-container border-radius">
+                            <img 
+                                src="images/automated-negotiation-book/structure.jpg"
+                                alt="Quality service illustration showing our design principles in action"
+                                class="img-fluid"
+                                loading="lazy"
+                            >
+                        </div>
                     </div>
                 </div>
             </section>
 
             <!-- SECTION 02 - UX Approach -->
-            <section id="new-component">
-                <div class="subsection container--md">
-                    <h2 class="h2-pag-portfolio">And just one new component</h2>
-                    <p>One addition was a new component designed specifically for, large, eye-catching images to grab attention and highlight key products. Figma plugins and Storybook streamlined the design-to-development process.</p>
-                    <p>New component: fgp-ui-text-on-background</p>
-                    <ul class="list">
-                        <li>Purpose: Text overlay component for impactful hero images and background sections</li>
-                        <li>Application: Used to highlight key features dynamically.</li>
-                        <li>Flexibility: Customizable text position, alignment, and size for a responsive design across devices.</li>
-                    </ul>
-                    <p>You might notice the component names are a bit of a head-scratcher. We're keeping them consistent for now, since everything's interconnected, but a naming overhaul is definitely on our to-do list.</p>
-                </div>
+            <section id="new-component" class="section">
+                <div class="elements-flow container--md">
 
-                <div class="subsection container--md">
-                    <div class="image-container border-radius">
-                        <img 
-                            src="images/automated-negotiation-book/structure.jpg"
-                            alt="Quality service illustration showing our design principles in action"
-                            class="img-fluid"
-                            loading="lazy"
-                        >
+                    <div class="text-flow">
+                        <h2 class="subtitle">4. And just one new component</h2>
+                        <div>
+                            <p>One addition was a new component designed specifically for, large, eye-catching images to grab attention and highlight key products. Figma plugins and Storybook streamlined the design-to-development process.</p>
+                            <p>New component: fgp-ui-text-on-background</p>
+                            <ul class="list">
+                                <li>Purpose: Text overlay component for impactful hero images and background sections</li>
+                                <li>Application: Used to highlight key features dynamically.</li>
+                                <li>Flexibility: Customizable text position, alignment, and size for a responsive design across devices.</li>
+                            </ul>
+                            <p>You might notice the component names are a bit of a head-scratcher. We're keeping them consistent for now, since everything's interconnected, but a naming overhaul is definitely on our to-do list.</p>
+                        </div>
+                    </div>
+
+                    <div class="subsection container--md">
+                        <div class="image-container border-radius">
+                            <img 
+                                src="images/automated-negotiation-book/structure.jpg"
+                                alt="Quality service illustration showing our design principles in action"
+                                class="img-fluid"
+                                loading="lazy"
+                            >
+                        </div>
                     </div>
                 </div>
             </section>
 
             <!-- SECTION 02 - UX Approach -->
-            <section id="ux-ui-approach">
-                <div class="subsection container--md">
-                    <h2 class="h2-pag-portfolio">Post-development QA & refinements</h2>
-                    <p>Following development, my process included comprehensive quality assurance to guarantee that the final product maintained design consistency with the original Figma prototypes, delivered optimized image performance on desktop and mobile, and provided a seamless, interactive user experience on every device.</p>
+            <section id="qa" class="section">
+                <div class="elements-flow container--md">
+
+                    <div class="text-flow">
+                    <h2 class="subtitle">5. Post-development QA & refinements</h2>
+                        <div>
+                            <p>Following development, my process included comprehensive quality assurance to guarantee that the final product maintained design consistency with the original Figma prototypes, delivered optimized image performance on desktop and mobile, and provided a seamless, interactive user experience on every device.</p>
+                        </div>
+                    </div>
+
+                    <div class="subsection container--md">
+                        <div class="image-container border-radius">
+                            <img 
+                                src="images/automated-negotiation-book/structure.jpg"
+                                alt="Quality service illustration showing our design principles in action"
+                                class="img-fluid"
+                                loading="lazy"
+                            >
+                        </div>
+                    </div>
                 </div>
             </section>
 
             <!-- SECTION 02 - UX Approach -->
-            <section id="ux-ui-approach">
-                <div class="subsection container--md">
-                    <h2 class="h2-pag-portfolio">6. Final results</h2>
-                    <p>After development, I conducted thorough QA testing, ensuring:</p>
-                    <ul>
-                        <li>🚀 Successfully launched two visually compelling landing pages.</li>
-                        <li>🎯 Each page captured the essence of its respective brand.</li>
-                        <li>🤝 Collaboration between UI, development, and marketing delivered a seamless user experience.</li>
-                    </ul>
+            <section id="final-result" class="section">
+                <div class="elements-flow container--md">
+
+                    <div class="text-flow">
+                        <h2 class="subtitle">6. Final results</h2>
+                        <div>
+                            <p>After development, I conducted thorough QA testing, ensuring:</p>
+                            <ul>
+                                <li>🚀 Successfully launched two visually compelling landing pages.</li>
+                                <li>🎯 Each page captured the essence of its respective brand.</li>
+                                <li>🤝 Collaboration between UI, development, and marketing delivered a seamless user experience.</li>
+                            </ul>
+                        </div>
+                    </div>
+
                 </div>
             </section>
 
             <!-- SECTION 02 - UX Approach -->
-            <section id="ux-ui-approach">
-                <div class="subsection container--md">
-                    <h2 class="h2-pag-portfolio">7. Key takeaways & learnings</h2>
-                    <p>First and foremost, this project underscored that clear communication is the foundation of effective collaboration. Whether I was talking with developers or stakeholders, explaining the "why" behind a design was just as important as the "what."</p>
-                    <p>Secondly, I got to dive into the classic tug-of-war between SEO and UX. I advocated for a clean, engaging interface, believing that a great user experience is what ultimately keeps people on a site. Though we ended up with more text than I'd initially designed to satisfy SEO requirements, the process taught me how to build a strong, user-focused case and the art of strategic compromise in a cross-functional team.</p>
+            <section id="takeaway" class="section">
+                <div class="text-flow container--md">
+                    <h2 class="subtitle">7. Key takeaways & learnings</h2>
+                    <div>
+                        <p>First and foremost, this project underscored that clear communication is the foundation of effective collaboration. Whether I was talking with developers or stakeholders, explaining the "why" behind a design was just as important as the "what."</p>
+                        <p>Secondly, I got to dive into the classic tug-of-war between SEO and UX. I advocated for a clean, engaging interface, believing that a great user experience is what ultimately keeps people on a site. Though we ended up with more text than I'd initially designed to satisfy SEO requirements, the process taught me how to build a strong, user-focused case and the art of strategic compromise in a cross-functional team.</p>
+                    </div>
                 </div>
             </section>
             
         </article>
 
         <!-- Next Project -->
-        <section id="next-project" class="container-lg">
-            <div>
-                <h2><span class="section-title text-gradient">Next project</span></h2>
-                <a href="kronaby.html" class="btn btn-secondary" role="button">Go to the next project <i id="dl-icon-arrow" class="bi bi-arrow-right-circle-fill"></i>
-                </a>
+        <section id="next-project" class="section">
+            <div class="container--md elements-flow ">
+
+                <h2 class="subtitle">Next project</h2>
+                <!-- Link to next project -->
+                <div>
+                    <a href="kronaby.html" 
+                        class="btn btn-solid btn-primary">
+                        <span class="btn-text">
+                        Read Kronaby case study
+                        </span>
+                    </a>
+                </div>
+
             </div>
         </section>
 
-        <!-- Contact Section -->
-        <section id="contact-me" class="container--full d-flex align-items-center justify-content-left">
-            <div class="row justify-content-center rounded-block container-lg my-5 px-md-5">
-                <div class="text-center py-4 px-md-5">
-                    <h2 class="py-2 border-bottom"><span class="section-title text-gradient">Let's connect!</span></h2>
-                    <p class="subtitle-1 my-4">
-                    Drop it like it's hot and hit me at <span class="colorful-text underlined"><a href="mailto:roselly.nunezg@gmail.com">my email</a></span> or find me on my <span><a class="colorful-text underlined" href="https://www.linkedin.com/in/rosellynunez/" class ="links-external" target="_blank">linkedin</a></span> account.</p>
-                </div>
+        <!-- SECTION 06 - CONTACT SECTION -->
+        <section id="contact-me" class="section contact-section bg-ornament">
+            <div class="container--md">
+        
+                    <!-- Card -->
+                    <div class="contact-card card shadow">
+                        <div class="card-body text-center">
+
+                            <h2 class="subtitle">Let's connect!</h2>
+                            <p class="text-lead">
+                            Drop it like it's hot — pitch me your project, your collab idea, or whatever you're working on. Let's create something great together.
+                            </p>
+                            <div class="group-two-buttons">
+                                <!-- Button 1 -->
+                                <a href="mailto:roselly.nunezg@gmail.com" 
+                                class="btn btn-solid btn-secondary btn-primary-sm btn-icon btn-icon-left">
+                                <span class="btn-icon-element">
+                                    <i class="bi bi-envelope"></i>
+                                </span>
+                                <span class="btn-text">
+                                    Copy mi email
+                                </span>
+                                </a>
+
+                                <!-- Button 2 -->
+                                <a href="mailto:roselly.nunezg@gmail.com" 
+                                class="btn btn-solid btn-secondary btn-primary-sm btn-icon btn-icon-left">
+                                <span class="btn-icon-element">
+                                    <i class="bi bi-envelope"></i>
+                                </span>
+                                <span class="btn-text">
+                                    Go to my Linkedin
+                                </span>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+
             </div>
         </section>
+
     </main>
 
     <!-- Overlay para menú mobile -->
@@ -386,8 +509,8 @@
         </ul>
     </div>
 
-    <footer role="contentinfo" aria-label="Site footer">
-        <p>This site is hand-made by me, Roselly Nuñez. Built with 💖, HTML, CSS, JS and Bootstrap.</p>
+    <footer>
+        <p class="text-caption">This site was made by me, Roselly. Built with 💖, HTML, CSS, Vanilla JS and Bootstrap.</p>
     </footer>
 </body>
 
