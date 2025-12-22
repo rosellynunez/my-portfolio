@@ -257,6 +257,15 @@
   gap: 1rem; /* Espaciado entre las tarjetas */
 }
 
+.rectangle-2 {
+  background-color: rgb(96, 77, 128, 0.2);
+  border-radius: var(--radius-sm);
+  justify-content: space-between; /* Distribute space between content and emoji */
+  padding: var(--space-3) var(--space-3);
+}
+
+
+
 .rectangle {
   background-color: rgb(96, 77, 128, 0.2);
   padding: 2rem;
@@ -265,12 +274,7 @@
   justify-content: space-between; /* Distribute space between content and emoji */
 }
 
-.rectangle-2 {
-  background-color: rgb(96, 77, 128, 0.2);
-  border-radius: 0.8rem;
-  justify-content: space-between; /* Distribute space between content and emoji */
-  padding: 1rem 1.8rem;
-}
+
 
 .responsive-video {
   max-width: 100%;
