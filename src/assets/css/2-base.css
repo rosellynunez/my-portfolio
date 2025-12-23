@@ -264,6 +264,41 @@ img {
 
 
 
+/* Si no quieres margen en el último elemento, puedes eliminarlo así: */
+ul:last-child {
+  margin-bottom: 0;
+}
+
+
+
+
+
+.icon-center {
+  display: flex;
+  justify-content: center;
+}
+
+/* Para desktop: 3 columnas */
+.row-rectangles {
+  display: flex;
+  gap: 1rem; /* Espaciado entre las tarjetas */
+}
+
+.rectangle {
+  background-color: rgb(96, 77, 128, 0.18);
+  border-radius: var(--radius-sm);
+  display: flex; /* Enable Flexbox for the rectangle */
+  justify-content: space-between; /* Distribute space between content and emoji */
+  padding: var(--space-5) var(--space-4);
+}
+
+.rectangle-title {
+  background-color: rgb(96, 77, 128, 0.18);
+  border-radius: var(--radius-sm);
+  justify-content: space-between; /* Distribute space between content and emoji */
+  padding: var(--space-4) var(--space-5);
+  height: 100%;
+}
 
 
 
@@ -337,6 +372,8 @@ ul li:last-child {
   margin-bottom: 0;
 }
 
+
+
 /* === DESKTOP === */
 
 
@@ -377,97 +414,10 @@ ul li:last-child {
   display: flex;
 }
 
-.emoji-end {
-  font-size: 4rem; /* Ajusta el tamaño según necesites */
-  margin-left: 1rem;
-}
 
-.emoji-start {
-  font-size: 4rem; /* Ajusta el tamaño según necesites */
-  margin-right: 2rem;
-}
-
-/* Media query para móviles (ancho máximo de 768px, por ejemplo) */
-@media (max-width: 1024px) {
-  .emoji-start {
-    margin-right: 0; /* Anula el margen en móviles */
-  }
-
-  .emoji-end {
-    margin-right: 0; /* Anula el margen en móviles */
-}
-}
-
-.emoji-container {
-  margin-bottom: 0.5rem;
-}
-
-.icon-center {
-  display: flex;
-  justify-content: center;
-}
-
-
-/* Para desktop: 3 columnas */
-.row-rectangles-v1 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
-  gap: 1rem; /* Espaciado entre las tarjetas */
-}
-
-/* Solo afecta a col-4 dentro de row-rectangles */
-.row-rectangles-v1 .col-4-rectangles {
-  width: 100%; /* Hace que cada col-4 se adapte al grid */
-}
-
-/* Para tablet: 2 columnas */
-@media (max-width: 1024px) {
-  .row-rectangles-v1 {
-    grid-template-columns: repeat(2, 1fr); /* En tablet, 2 columnas */
-  }
-}
-
-/* Para móvil: cada col-4 ocupa el ancho completo */
-@media (max-width: 767px) {
-  .row-rectangles-v1 {
-    grid-template-columns: repeat(1, 1fr); /* Solo una columna en móvil */
-  }
-}
-
-/* Para desktop: 3 columnas */
-.row-rectangles {
-  display: flex;
-  gap: 1rem; /* Espaciado entre las tarjetas */
-}
-
-.rectangle {
-  background-color: rgb(96, 77, 128, 0.2);
-  padding: 2rem;
-  border-radius: 0.8rem;
-  display: flex; /* Enable Flexbox for the rectangle */
-  justify-content: space-between; /* Distribute space between content and emoji */
-}
-
-.rectangle-2 {
-  background-color: rgb(96, 77, 128, 0.2);
-  border-radius: 0.8rem;
-  justify-content: space-between; /* Distribute space between content and emoji */
-  padding: 1rem 1.8rem;
-}
-
-.responsive-video {
-  max-width: 100%;
-  height: auto;
-}
 
 .span-block {
   display: block; /* Convierte el span en bloque */
-}
-
-.emoji-meh-container {
-  display: flex; /* Enable Flexbox for the emoji container */
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
 }
 
 .spotlight {

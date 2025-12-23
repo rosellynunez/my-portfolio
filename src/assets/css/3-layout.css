@@ -100,7 +100,7 @@ main {
 .section-container,
 .elements-flow { /*Esto separa: header body- layout (gap)*/
   display: grid;
-  gap: var(--space-7);
+  gap: var(--space-6);
 }
 
 

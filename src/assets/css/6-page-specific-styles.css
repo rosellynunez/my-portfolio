@@ -12,11 +12,6 @@
   }
 }
 
-/* Home intro is tighter */
-#intro .subsection + .subsection {
-  margin-block-start: var(--section-space-sm);
-}
-
 .home .section + .section {
   margin-block-start: var(--section-space-lg);
 }
@@ -77,7 +72,7 @@
 
 
 
-/* ============ PORTFOLIO PAGE ============*/ 
+/* ============ CASE STUDY PAGE ============*/ 
 .center-image {
   display: flex; 
   justify-content: center; 
@@ -86,24 +81,6 @@
 .text-align {
   text-align: center;
 }
-
-/* Icon arrow alineado */
-.p-note {
-  text-align: center;
-}
-
-.decision-line {
-  border-top: 1px solid #8e8e8e; /* Ajusta el grosor y el color según necesites */
-  padding-top: 1.5rem; /* Opcional: añade espacio encima del borde */
-  margin-top: 1.5rem; /* Opcional: añade espacio entre el borde y el párrafo anterior */
-}
-
-
-
-
-/* ------------------------------
-    CASE STUDY PAGE
---------------------------------*/
 
 #overview .text-lead {
   font-style: italic;
@@ -116,11 +93,6 @@
 }
 
 .text-align {
-  text-align: center;
-}
-
-/* Icon arrow alineado */
-.p-note {
   text-align: center;
 }
 
@@ -137,7 +109,7 @@
 }
 
 #case-study .heading {
-  font-weight: var(--fw-bold);
+  font-weight: var(--fw-medium);
   padding-block-end: var(--space-3);
 }
 
@@ -200,9 +172,10 @@
 
 
 
-.colum-beside {
-  display: flex;
-}
+
+
+
+
 
 .emoji-end {
   font-size: 4rem; /* Ajusta el tamaño según necesites */
@@ -223,71 +196,6 @@
   display: flex;
   justify-content: center;
 }
-
-
-/* Para desktop: 3 columnas */
-.row-rectangles-v1 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
-  gap: 1rem; /* Espaciado entre las tarjetas */
-}
-
-/* Solo afecta a col-4 dentro de row-rectangles */
-.row-rectangles-v1 .col-4-rectangles {
-  width: 100%; /* Hace que cada col-4 se adapte al grid */
-}
-
-/* Para tablet: 2 columnas */
-@media (max-width: 991px) {
-  .row-rectangles-v1 {
-    grid-template-columns: repeat(2, 1fr); /* En tablet, 2 columnas */
-  }
-}
-
-/* Para móvil: cada col-4 ocupa el ancho completo */
-@media (max-width: 768px) {
-  .row-rectangles-v1 {
-    grid-template-columns: repeat(1, 1fr); /* Solo una columna en móvil */
-  }
-}
-
-/* Para desktop: 3 columnas */
-.row-rectangles {
-  display: flex;
-  gap: 1rem; /* Espaciado entre las tarjetas */
-}
-
-.rectangle-2 {
-  background-color: rgb(96, 77, 128, 0.2);
-  border-radius: var(--radius-sm);
-  justify-content: space-between; /* Distribute space between content and emoji */
-  padding: var(--space-3) var(--space-3);
-}
-
-
-
-.rectangle {
-  background-color: rgb(96, 77, 128, 0.2);
-  padding: 2rem;
-  border-radius: 0.8rem;
-  display: flex; /* Enable Flexbox for the rectangle */
-  justify-content: space-between; /* Distribute space between content and emoji */
-}
-
-
-
-.responsive-video {
-  max-width: 100%;
-  height: auto;
-}
-
-.span-block {
-  display: block; /* Convierte el span en bloque */
-}
-
-
-
-
 
 
 

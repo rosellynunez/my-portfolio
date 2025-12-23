@@ -23,8 +23,8 @@
    ========================================================= */
 
   /* Small sizes */
-  --font-size-xs: 0.85rem;      /*— Labels, captions */
-  --font-size-sm: 1rem;      /*— Labels, captions */
+  --font-size-xs: 0.875rem;      /*— Labels, captions */
+  --font-size-sm: 1.05rem;      /*— Labels, captions */
   --font-size-base: 1.25rem;        /* — Body text */
 
   /* Visual scale 1.45x */
