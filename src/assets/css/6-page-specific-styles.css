@@ -96,6 +96,12 @@
   text-align: center;
 }
 
+#overview {
+  display: grid;
+  gap: var(--space-5);
+  padding-inline: var(--space-6);
+}
+
 /* Make sure the image covers the full width */
 .text-image img {
     height: auto;
@@ -110,8 +116,13 @@
 
 #case-study .heading {
   font-weight: var(--fw-medium);
-  padding-block-end: var(--space-3);
 }
+
+#case-study .content-block > .heading {
+  margin-bottom: var(--space-5);
+}
+
+
 
 
 /* ----- NEXT PROJECT SECTION ---- */

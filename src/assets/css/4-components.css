@@ -473,11 +473,141 @@
 }
 
 
-/* -------- CARD PROJECTS -------- */
 
-.section-title {
-  margin-bottom: 2rem;
+
+/* ---------- CARD BASE ---------- */
+.card-base {
+  border-radius: var(--card-radius-sm);
+  background: var(--surface-default);
+  color: var(--color-text-primary);
 }
+
+
+/* ---------- CARD: INSIGHT ---------- */
+
+.card--insight {
+  padding: var(--card-padding-sm);
+}
+
+/* Header (optional) */
+.card--insight .card__header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-3);
+}
+
+.card--insight .card__title {
+  font-weight: var(--fw-regular);
+}
+
+/* Body */
+.card--insight .card__body {
+  display: grid;
+  gap: var(--space-2);
+  text-align: center;
+}
+
+.card__body .text-caption {
+  font-style: italic;
+}
+
+.insight-group {
+  display: grid;
+  gap: var(--space-4);
+}
+
+
+
+
+
+
+
+/* -------- CARD: PROJECT -------- */
+
+.card--project {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  border-radius: var(--card-radius-md);
+  background: var(--surface-card-primary);
+  border: var(--card-border-soft);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card--project:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--card-shadow-hover);
+}
+
+
+/* -------- Media -------- */
+.card--project .card__media {
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+}
+
+.card--project .card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+/* -------- Body / Content -------- */
+.card--project .card__body {
+  padding: var(--card-padding-md);
+  display: grid;
+  gap: var(--space-2);
+}
+
+.card--project .card__title {
+  padding-block-start: var(--space-1);
+}
+
+.card--project .card__description {
+  color: var(--color-text-secondary);
+  margin-block-end: var(--space-1);
+}
+
+
+/* ----- Project meta (skills / tools) ----- */
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.project-tags li {
+  font-size: var(--font-size-micro);
+  color: var(--color-text-secondary);
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-sm);
+  background: rgb(59, 7, 62); 
+}
+
+.project-meta li {
+  background: rgba(255,255,255,0.08);
+}
+
+
+/* -------- Footer -------- */
+.card--project .card__footer {
+  display: flex;
+  gap: var(--space-2);
+  padding-inline: var(--card-padding-md);
+  padding-block-start: var(--space-1);
+  padding-block-end: var(--space-5);
+  border-top: var(--card-border-soft);
+}
+
+/* -------- PROJECTS LAYOUT -------- */
 
 .projects-group {
   display: grid;
@@ -496,108 +626,49 @@
   }
 }
 
-.project-card {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  border: 1px solid rgba(0,0,0,0.1);
-  border-radius: 12px;
-  overflow: hidden;
-  background: var(--surface-card-primary);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
-}
-
-/* media */
-.project-media {
-  aspect-ratio: 16 / 10;
-  overflow: hidden;
-}
-
-.project-media img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-
-/* body */
-.project-body {
-  padding: 1rem;
-  display: grid;
-  gap: 0.5rem;
-}
-
-.project-title {
-  padding-block-start: 0.5rem;
-}
-
-.project-description {
-  color: var(--color-text-secondary);
-  margin-block-end: var(--space-1);
-}
-
-
-/* footer */
-.project-footer {
-  display: flex;
-  gap: 0.75rem;
-  padding-block-start: var(--space-1);
-  padding-block-end: var(--space-5);
-  padding-inline: var(--space-4);
-  border-top: 1px solid rgba(0,0,0,0.06);
-}
-
-
-
 
 /* -------- CARD SERVICES -------- */
 
-.service-card {
-  padding: var(--space-3);
-  border-radius: var(--radius-lg);
-  transition: transform 0.15s ease, box-shadow 0.3s ease;
+.card--service {
+  padding: var(--card-padding-sm);
+  border-radius: var(--card-radius-lg);
   background: var(--surface-card-secondary);
+
+  /* Bootstrap-friendly */
+  --bs-heading-color: var(--color-text-brand);
 }
 
-.service-card p {
+.card--service p {
   color: var(--color-text-secondary);
 }
 
-.service-card h3 {
-  color: var(--color-text-brand);
+
+ /* Media: Icon */
+.card--service .card__media {
+  margin-bottom: var(--space-5);
 }
 
-/* icono del servicio */
-.service-icon {
+.card--service .service-icon {
   width: 3.6rem;
   height: 3.6rem;
-  border-radius: var(--radius-full);
-
+  border-radius: 999px;
   display: grid;
   place-items: center;
-  justify-content: center;
-
   font-size: 2rem;
-  margin-bottom: var(--space-5);
-  transition: transform 0.2s ease;
-  background: rgba(20, 184, 166, 0.15); /* teal soft */
-  color: var(--teal-300);
+  background: color-mix(in srgb, var(--color-accent) 15%, transparent);
+  color: var(--color-accent);
 }
 
-.service-icon i {
-  display: block;
-  line-height: 2;
+ /* Media: Body */
+.card--service .card__body {
+  display: grid;
+  gap: var(--space-2);
 }
 
-/*
-.service-card:hover .service-icon {
-  transform: scale(1.08);
-}*/
+.card--service .card__description {
+  color: var(--color-text-secondary);
+}
+
 
 
 
@@ -634,20 +705,143 @@
 
 
 
+/* -------------- CHANGE MODE BUTTON -------------- */
+
+/* ----- Pattern table (lightweight documentation UI) ----- */
+#tabla-benchmarking {
+  padding: var(--space-3) 0;
+}
+
+.table-pattern {
+  width: 100%;
+  border-collapse: collapse;
+  margin-block: var(--space-6);
+}
+
+.table-pattern th,
+.table-pattern td {
+  padding: var(--space-3);
+  text-align: left;
+  vertical-align: top;
+}
+
+.table-pattern thead th {
+  font-weight: var(--fw-bold);
+  color: var(--color-text-primary);
+  border-bottom: 1px solid rgba(0,0,0,0);
+}
+
+/* Body */
+.table-pattern tbody th,
+.table-pattern tbody td {
+  color: var(--color-text-tertiary);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.table-pattern tbody th:first-child {
+  color: var(--color-text-primary);
+}
+
+/* Typography reset inside cells */
+.table-pattern p {
+  margin: 0;
+}
+
+/* Remove last divider */
+.table-pattern tbody tr:last-child th,
+.table-pattern tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.table-pattern tbody tr:last-child td {
+  border-bottom: none;
+}
+
+[data-theme="dark"] .table-pattern thead th {
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+}
+
+[data-theme="dark"] .table-pattern tbody th,
+[data-theme="dark"] .table-pattern tbody td {
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
 
 
 
+/* -------- IMAGE SLIDER -------- */
+.slider-wrapper {
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius-lg);
+}
+
+/* Slider */
+.slider-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+}
+
+.slider-image  .slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  animation: sliderFade 12s infinite;
+}
+
+.slider-image .slide:nth-child(1) { animation-delay: 0s; }
+.slider-image .slide:nth-child(2) { animation-delay: 4s; }
+.slider-image .slide:nth-child(3) { animation-delay: 8s; }
+
+.slider-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Captions container */
+.slider-captions {
+  position: relative;       /* CLAVE */
+  height: 1.5em;            /* reserva espacio fijo */
+  margin-top: var(--space-3);
+}
+
+/* Captions superpuestos */
+.slide-caption {
+  position: absolute;       /* CLAVE */
+  inset: 0;
+  opacity: 0;
+  animation: captionFade 12s infinite;
+}
+
+.slider-captions .slide-caption:nth-child(1) { animation-delay: 0s; }
+.slider-captions .slide-caption:nth-child(2) { animation-delay: 4s; }
+.slider-captions .slide-caption:nth-child(3) { animation-delay: 8s; }
 
 
+@keyframes sliderFade {
+  0%   { opacity: 0; }
+  8%   { opacity: 1; }
+  33%  { opacity: 1; }
+  41%  { opacity: 0; }
+  100% { opacity: 0; }
+}
 
-
-
+@keyframes captionFade {
+  0%   { opacity: 0; }
+  8%   { opacity: 1; }
+  33%  { opacity: 1; }
+  41%  { opacity: 0; }
+  100% { opacity: 0; }
+}
 
 /* -------- FOOTER -------- */
 
 footer {
   background: var(--color-bg);
-  color: var(--color-text);
+  color: var(--color-text-secondary);
   text-align: center;
   padding-block: var(--space-4);
 }
@@ -676,6 +870,13 @@ footer p{
 }
 
 
+/* -------- VIDEO -------- */
+.responsive-video {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
 
 
 

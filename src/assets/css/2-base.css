@@ -28,7 +28,7 @@ body {
   font-size: var(--font-size-micro);
   /* 15.75px — Small caption, meta information */
   line-height: var(--line-height-normal);
-  letter-spacing: var(--letter-spacing-wide);
+  letter-spacing: var(--letter-spacing-normal);
   font-weight: var(--fw-regular);
 }
 
@@ -36,7 +36,7 @@ body {
   font-size: var(--font-size-caption);
   /* 15.75px — Small caption, meta information */
   line-height: var(--line-height-normal);
-  letter-spacing: var(--letter-spacing-wide);
+  letter-spacing: var(--letter-spacing-normal);
   font-weight: var(--fw-regular);
 }
 
@@ -57,13 +57,11 @@ body {
 
 .heading {
   font-size: var(--font-size-heading); /* Small section heading */
-  font-weight: var(--fw-regular);
   letter-spacing: var(--letter-spacing-normal);
 }
 
 .subtitle {
   font-size: var(--font-size-subtitle); /* Section subtitle */
-  font-weight: var(--fw-regular);
   letter-spacing: var(--letter-spacing-normal);
 }
 
@@ -94,10 +92,13 @@ body {
   font-style: normal;
 }
 
+
+
+
 /* ---------- SPECIAL FOR SOME SEC AND PAGES ---------- */
 /* Nueva: section-label (eyebrow / overline / kicker) */
 .section-label {
-  font-size: var(--font-size-caption);         /* 0.875rem = 14px */
+  font-size: var(--font-size-micro);         /* 0.875rem = 14px */
   font-weight: var(--fw-bold);        /* 600 */
   letter-spacing: var(--letter-spacing-wide);
   text-transform: uppercase;
@@ -128,6 +129,46 @@ body {
 
 .eyebrow {
   margin-bottom: 0;
+}
+
+.text-strong {
+  font-weight: var(--fw-semibold);
+}
+
+.block-meta {
+  font-weight: var(--fw-regular);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-wide);
+  margin: var(--space-3) 0 var(--space-1);
+}
+
+.block-body {
+  margin-bottom: var(--space-5);
+}
+
+.text-insight {
+  font-size: var(--font-size-text);
+  line-height: var(--line-height-normal);
+  letter-spacing: var(--letter-spacing-normal);
+  font-weight: var(--fw-regular);
+  color: var(--color-text-secondary);
+}
+
+.text-annotation
+.annotation {
+  color: var(--color-text-tertiary);
+  padding-top: var(--space-3);
+}
+
+.text-helper {
+  color: var(--color-text-tertiary);
+  font-style: italic;
+}
+
+.text-explainer {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
 }
 
 
@@ -273,16 +314,17 @@ ul:last-child {
 
 
 
-.icon-center {
-  display: flex;
-  justify-content: center;
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-6);
 }
 
-/* Para desktop: 3 columnas */
-.row-rectangles {
-  display: flex;
-  gap: 1rem; /* Espaciado entre las tarjetas */
-}
+
+
+
+
 
 .rectangle {
   background-color: rgb(96, 77, 128, 0.18);

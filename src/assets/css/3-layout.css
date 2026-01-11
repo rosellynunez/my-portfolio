@@ -63,13 +63,10 @@ main {
 
 
 
-
-
-/* ----- Sections ----- */
-
-.section { /*ritmo de página*/
-  padding-block: var(--space-16);
-}
+/* ----- Sections 
+.section { 
+  padding-block: var( --section-space-lg);
+} ----- */
 
 .section + .section {
   margin-block-start: var(--section-space-md);
@@ -77,30 +74,38 @@ main {
 
 
 
-/* ----- Subsections (if any) ----- */
-
+/* ----- Subsections ----- */
 .subsection + .subsection {
   margin-block-start: var(--section-space-sm);
 }
 
 
-/* ----- Section containers ----- */
 
 /* ----- Section header ----- */
 
-.section-header { /*eyebrow + título*/
+/* Spacing between eyebrow and title */
+.section-header { 
   display: grid;
   gap: var(--space-3);
 }
 
-.text-flow > :where(h1, h2, h3, h4) {
-  margin-bottom: var(--space-5);
+
+/* Flow — reading */
+/* Vertical rhythm for text content */
+.flow--reading > :where(.paragraph-space) {
+  margin-block-end: var(--rhythm-reading-text);
 }
 
-.section-container,
-.elements-flow { /*Esto separa: header body- layout (gap)*/
+.flow--reading > :where(h1, h2, h3, h4) {
+  margin-block-end: var(--rhythm-reading-heading);
+}
+
+
+/* Flow — elements */
+/* Spacing between major layout blocks */
+.flow--elements {
   display: grid;
-  gap: var(--space-6);
+  gap: var(--rhythm-elements);
 }
 
 
@@ -159,29 +164,34 @@ main {
   flex: 1 1 100%;
 }
 
-/* Mantener proporción 16:10 */
+/* Image wrapper — keeps native image ratio */
 .image-wrapper {
   width: 100%;
-  aspect-ratio: 16 / 10;
   overflow: hidden;
-  border-radius: var(--radius-sm);
-  background-color: #e5e7eb;
+  border-radius: var(--radius-lg);
+  background-color: #2a523d;
 }
 
 /* Imagen adaptada al contenedor */
 .image-wrapper img {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
   display: block;
 }
 
-/* Texto */
-.note {
-  margin-top: 0.5rem;
-  color: #6b7280;
-  text-align: center;
+.image-wrapper--case {
+  width: 100%;
+  background-color: transparent;
 }
+
+.image-wrapper--case img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius-sm); /* 👈 AQUÍ */
+}
+
 
 /* Tablet */
 @media (min-width: 640px) {
@@ -199,6 +209,86 @@ main {
 
 
 
+.split-layout {
+  display: grid;
+  gap: var(--space-6);
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+  .split-layout {
+    grid-template-columns: 4fr 8fr;
+    align-items: start;
+  }
+
+  .split-layout--half {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .split-layout.is-reversed {
+  direction: rtl;
+  grid-template-columns: 4fr 8fr;
+}
+
+/* reset del contenido interno */
+  .split-layout.is-reversed > * {
+    direction: ltr;
+  }
+}
+
+
+
+.media-block {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.media-split {
+  display: grid;
+  gap: var(--space-3);
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+  .media-split {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.media-grid {
+  display: grid;
+  gap: var(--space-3);
+  align-items: start;
+}
+
+@media (min-width: 768px) {
+  .media-grid--two {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .media-grid--three {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+.final-overview-layout {
+  display: grid;
+  gap: var(--space-4);
+}
+
+@media (min-width: 1024px) {
+  .final-overview-layout {
+    grid-template-columns: 3fr 2fr;
+    align-items: start;
+  }
+
+  .final-side-stack {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+}
 
 
 

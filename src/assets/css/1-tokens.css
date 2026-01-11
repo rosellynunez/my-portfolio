@@ -24,11 +24,11 @@
 
   /* Small sizes */
   --font-size-xs: 0.875rem;      /*— Labels, captions */
-  --font-size-sm: 1.05rem;      /*— Labels, captions */
-  --font-size-base: 1.25rem;        /* — Body text */
+  --font-size-sm: 1rem;      /*— Labels, captions */
+  --font-size-base: 1.225rem;        /* — Body text */
 
   /* Visual scale 1.45x */
-  --font-size-lg: 1.63rem;       /* 26.1px — Lead text, intros */
+  --font-size-lg: 1.55rem;       /* 26.1px — Lead text, intros */
   --font-size-xl: 2.36rem;       /* 37.8px — Strong section subtitles */
   --font-size-2xl: 3.05rem;      /* 54.9px — Page titles / internal displays */
 
@@ -55,7 +55,7 @@
 /* ===== LETTER SPACING ===== */
   --letter-spacing-tight: -0.02em;
   --letter-spacing-normal: 0em;
-  --letter-spacing-wide: 0.02em;
+  --letter-spacing-wide: 0.06em;
 
 
   /* ===== RADII ===== */
@@ -124,16 +124,29 @@
   --space-6: 2rem;      /* 32px Subsecciones */
   --space-7: 3rem;      /* 48px Secciones internas, grupos */    
   --space-8: 4rem;      /* 64px */    
-  --space-9: 6rem;      /* 96px Secciones principales */   
+  --space-9: 5rem;      /* 64px */    
+  --space-10: 6rem;      /* 96px Secciones principales */   
   
   /* Espacios grandes - para secciones */
-  --space-10: 8rem;     /* 128px Separación media */  
-  --space-11: 10rem;    /* 160px Heroes, espacios dramáticos */
+  --space-11: 8rem;     /* 128px Separación media */  
+  --space-12: 10rem;    /* 160px Heroes, espacios dramáticos */
 
-/* Section spacing */
-  --section-space-lg: var(--space-11);  /* grandes 12 rem*/
-  --section-space-md: var(--space-9);  /* secciones normales 6rem*/
-  --section-space-sm: var(--space-7);  /* subsecciones 3rem*/
+
+
+  /* Section rhythm */
+  --section-space-xl: var(--space-12);    /* large section separation */
+  --section-space-lg: var(--space-11);    /* large section separation */
+  --section-space-md: var(--space-9);     /* default section separation */
+  --section-space-sm: var(--space-8);     /* subsection separation */
+
+
+
+   /* Reading rhythm */
+  --rhythm-reading-text: var(--space-5);
+  --rhythm-reading-heading: var(--space-5);
+
+  /* Layout / element flow rhythm */
+  --rhythm-elements: var(--space-6);
 
 
 /* =========================================================
@@ -178,8 +191,9 @@
   --lavender-700: #615092;
   --lavender-600: #8E79C6;
   --lavender-400: #B19CD9;
+  --lavender-300: #bfa5dd;
   --lavender-200: #D8C3F0;
-  --lavender-100: #F4ECFF;
+  --lavender-100: #F4ECFF;  
 
   /* Cyan */
   --cyan-600: #3BAEDC;
@@ -191,10 +205,11 @@
   --gray-900: #0D0D12;
   --gray-700: #1A1A2E;
   --gray-600: #2D2D3A;
-  --gray-500: #6C757D;
-  --gray-300: #ADB5BD;
-  --gray-200: #D6DBDF;
-  --gray-100: #F1F3F5;
+  --gray-500: #6a667e;
+  --gray-400: #a49fab;
+  --gray-300: #d2d2d2;
+  --gray-200: #ede7f3;
+  --gray-100: #ffffff;
 
   --white: #ffffff;
   --cream-100: #F5F4EB;
@@ -238,7 +253,9 @@
     Text
     --------------------------------------------------------- */
   --color-text: var(--gray-100);
-  --color-text-secondary: var(--gray-300);
+  --color-text-secondary: var(--lavender-200); 
+  --color-text-tertiary: var(--gray-400); 
+
   --color-text-brand: var(--purple-300);
 
   --color-border: var(--gray-600);
@@ -273,8 +290,22 @@
 
   --gradient-text-start: var(--purple-700);
   --gradient-text-end: var(--rose-500);
-}
 
 
 
 
+
+
+
+
+/* ---------- Card tokens ---------- */
+  --card-padding-sm: var(--space-3);
+  --card-padding-md: var(--space-5);
+
+  --card-radius-sm: var(--radius-md);
+  --card-radius-lg: var(--radius-lg);
+
+  --card-border-soft: 1px solid rgba(0,0,0,0.08);
+  --card-shadow-hover: 0 10px 30px rgba(0,0,0,0.12);
+
+  }
