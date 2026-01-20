@@ -73,6 +73,19 @@
 
 
 /* ============ CASE STUDY PAGE ============*/ 
+.intro-title {
+  max-width: 66%;
+  margin-bottom: var(--space-4);
+}
+
+.intro-lead {
+  margin-bottom: var(--space-6);
+  font-style: italic;
+  color: var(--color-text-secondary);
+  font-weight: var(--fw-thin);
+  max-width: 66%;
+}
+
 .center-image {
   display: flex; 
   justify-content: center; 

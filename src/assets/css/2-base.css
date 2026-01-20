@@ -24,20 +24,15 @@ body {
 
 /* ---------- 1. BASE TEXTS ---------- */
 
-.text-micro {
-  font-size: var(--font-size-micro);
-  /* 15.75px — Small caption, meta information */
-  line-height: var(--line-height-normal);
-  letter-spacing: var(--letter-spacing-normal);
-  font-weight: var(--fw-regular);
-}
-
 .text-caption {
   font-size: var(--font-size-caption);
-  /* 15.75px — Small caption, meta information */
   line-height: var(--line-height-normal);
-  letter-spacing: var(--letter-spacing-normal);
-  font-weight: var(--fw-regular);
+  color: var(--color-text-tertiary);
+}
+
+.text-small {
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-normal);
 }
 
 .text-base {
@@ -48,8 +43,7 @@ body {
 }
 
 .text-lead {
-  font-size: var(--font-size-lead);
-  /* 26.1px — Lead paragraph, highlighted intro */
+  font-size: var(--font-size-heading);
   letter-spacing: var(--letter-spacing-normal);
 }
 
@@ -97,14 +91,42 @@ body {
 
 /* ---------- SPECIAL FOR SOME SEC AND PAGES ---------- */
 /* Nueva: section-label (eyebrow / overline / kicker) */
-.section-label {
-  font-size: var(--font-size-micro);         /* 0.875rem = 14px */
-  font-weight: var(--fw-bold);        /* 600 */
-  letter-spacing: var(--letter-spacing-wide);
+.label {
+  font-size: var(--font-size-caption);
   text-transform: uppercase;
-  margin: 0 0 0.5rem 0;                   /* separacion del titulo o texto siguiente */
+  letter-spacing: var(--letter-spacing-wide);
+  font-weight: var(--fw-regular);
 }
 
+.text-caption .label {
+  display: inline-block;
+}
+
+.text-caption .label {
+  margin-bottom: var(--space-1);
+}
+
+.text-caption {
+  max-width: 90%;
+  margin-inline: auto;
+  margin-block-start: var(--space-3);
+}
+
+.text-caption p {
+  font-style: italic;
+}
+
+.stack-gap {
+  margin-bottom: var(--space-5);
+}
+
+.text-caption {
+  font-size: var(--font-size-caption);
+  line-height: var(--line-height-normal);
+  letter-spacing: var(--letter-spacing-normal);
+  font-weight: var(--fw-regular);
+  color: var(--color-text-tertiary);
+}
 
 /* ---------- 4. UI (opcional - puedes usar .text) ---------- */
 .ui {
@@ -119,32 +141,12 @@ body {
   font-weight: var(--fw-semibold);
 }
 
-/* Labels usando token específico */
-.label {
-  font-size: var(--font-size-label);
-  font-weight: var(--fw-semibold);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
 .eyebrow {
   margin-bottom: 0;
 }
 
-.text-strong {
-  font-weight: var(--fw-semibold);
-}
 
-.block-meta {
-  font-weight: var(--fw-regular);
-  text-transform: uppercase;
-  letter-spacing: var(--letter-spacing-wide);
-  margin: var(--space-3) 0 var(--space-1);
-}
 
-.block-body {
-  margin-bottom: var(--space-5);
-}
 
 .text-insight {
   font-size: var(--font-size-text);
@@ -154,11 +156,6 @@ body {
   color: var(--color-text-secondary);
 }
 
-.text-annotation
-.annotation {
-  color: var(--color-text-tertiary);
-  padding-top: var(--space-3);
-}
 
 .text-helper {
   color: var(--color-text-tertiary);
@@ -169,6 +166,33 @@ body {
   color: var(--color-text-secondary);
   font-size: var(--font-size-base);
   line-height: var(--line-height-normal);
+}
+
+
+
+.text-strong {
+  font-weight: var(--fw-bold); /*<p class="text-base"> Este texto es normal y <span class="text-strong">este es importante</span>.
+</p>*/
+}
+
+
+
+/* ---------- FONT WEIGHT UTILITIES ---------- */
+
+.fw-thin {
+  font-weight: var(--fw-thin);
+}
+
+.fw-regular {
+  font-weight: var(--fw-regular);
+}
+
+.fw-semibold {
+  font-weight: var(--fw-semibold);
+}
+
+.fw-bold {
+  font-weight: var(--fw-bold);
 }
 
 
@@ -409,10 +433,6 @@ ul:last-child {
   margin-bottom: 0.6rem; /* Ajusta el valor según el espacio que desees */
 }
 
-/* Si no quieres margen en el último elemento, puedes eliminarlo así: */
-ul li:last-child {
-  margin-bottom: 0;
-}
 
 
 

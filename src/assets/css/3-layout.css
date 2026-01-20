@@ -91,15 +91,20 @@ main {
 
 
 /* Flow — reading */
-/* Vertical rhythm for text content */
+/* Paragraph rhythm */
 .flow--reading > :where(.paragraph-space) {
   margin-block-end: var(--rhythm-reading-text);
 }
 
-.flow--reading > :where(h1, h2, h3, h4) {
-  margin-block-end: var(--rhythm-reading-heading);
+/* Headings grandes */
+.flow--reading > :where(h1, h2) {
+  margin-block-end: var(--rhythm-reading-heading-lg);
 }
 
+/* Headings secundarios */
+.flow--reading > :where(h3, h4, h5, h6) {
+  margin-block-end: var(--rhythm-reading-heading-sm);
+}
 
 /* Flow — elements */
 /* Spacing between major layout blocks */
@@ -192,6 +197,11 @@ main {
   border-radius: var(--radius-sm); /* 👈 AQUÍ */
 }
 
+figure {
+  margin: 0;
+}
+
+
 
 /* Tablet */
 @media (min-width: 640px) {
@@ -207,12 +217,23 @@ main {
   }
 }
 
-
+.split-layout {
+  display: grid;
+  gap: var(--space-6);
+}
 
 .split-layout {
   display: grid;
   gap: var(--space-6);
 }
+
+@media (min-width: 768px) {
+  .split-layout {
+    grid-template-columns: 1fr 3fr;
+    align-items: start;
+  }
+}
+
 
 /* Desktop */
 @media (min-width: 768px) {
@@ -240,12 +261,10 @@ main {
 
 .media-block {
   display: grid;
-  gap: var(--space-3);
 }
 
 .media-split {
   display: grid;
-  gap: var(--space-3);
 }
 
 /* Desktop */
@@ -257,7 +276,7 @@ main {
 
 .media-grid {
   display: grid;
-  gap: var(--space-3);
+  gap: var(--space-6);
   align-items: start;
 }
 

@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- SEO -->
+        <meta name="keywords" content="UX design, UI design, web design, portfolio, design system, accessibility">
+        <meta name="description" content="Portfolio of Roselly Nuñez — UX, UI & Web Designer based in Barcelona." />
+        <meta name="author" content="Roselly Nuñez" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://rosellynunez.com/" />
+
+        <!-- Open Graph (social media previews) -->
+        <meta property="og:title" content="Roselly Nuñez - UX, UI & Web Designer" />
+        <meta property="og:description" content="Explore the portfolio of Roselly Nuñez - a Barcelona-based UX, UI & Web Designer who blends creativity and code to build memorable digital experiences." />
+        <meta property="og:image" content="https://rosellynunez.com/images/og-image.jpg" />
+        <meta property="og:url" content="https://rosellynunez.com/" />
+        <meta property="og:type" content="website" />
+
+        <!-- Title -->
+        <title>Roselly Nuñez - UX, UI & Web Designer</title>
+
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" href="images/favicon.png"/>
+
+        <!-- Preconnect for faster Google Fonts loading -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <!-- Google Fonts (usa display=swap para cargar texto antes)-->
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Pacifico&display=swap" rel="stylesheet">
+
+        <!-- Bootstrap + Bootstrap Icons -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" />
+
+        <!-- Global CSS -->
+        <link rel="stylesheet" href="../assets/css/global.css">
+
+        <!-- Page CSS (case-study.css) -->
+        <link rel="stylesheet" href="../assets/css/pages.css">
+
+        <!-- 🌗 Carga rápida del tema guardado -->
+        <script>
+            (function() {
+                const userTheme = localStorage.getItem('theme');
+                if (userTheme) {
+                    document.documentElement.setAttribute('data-bs-theme', userTheme);
+                }
+            })();
+        </script>
+
+        <!-- Typed.js (performance) -->
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+
+        <!-- Twemoji-->
+        <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous" defer></script>
+
+        <!-- Script -->
+        <script src="../assets/js/theme.js"></script>
+        <script src="../assets/js/main.js"></script>
+
+        <!-- Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y1KMG7E11J"></script>
+        <script src="assets/js/tracking.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <div class="container--xl">
+                <nav class="navbar navbar-expand-lg bg-transparent sticky-top">
+                    <div class="container-fluid">
+                
+                    <!-- Logo -->
+                    <a class="navbar-brand" href="index.html">
+                        <svg id="logo" width="150" height="50" viewBox="0 0 39.8 24" xmlns="http://www.w3.org/2000/svg">
+                        <path class="st0" d="M12.5,1v5.2c-3.4,0-6.1,2.7-6.1,6.1v10.9H1.1V1.1h5.2v1.7c1.8-1.1,3.9-1.8,6.1-1.8Z" fill="currentColor"/>
+                        <path class="st0" d="M20.3,23.1v-10.8c0-3.4,2.8-6.1,6.1-6.1h.7c2.4,0,4.4,1.4,5.5,3.3.4.8.6,1.7.7,2.7,0,0,0,0,0,0v5.3c0,0,0,5.5,0,5.5h5.1v-9.5c0-2-.3-3.8-.9-5.4-.2-.5-.4-1-.6-1.4-1-1.9-2.4-3.4-4.2-4.3-1.8-1-3.8-1.5-6-1.5s-3.1.3-4.5.9h0c-.7.3-1.4.6-2,1v-1.7h-5.2v22h5.2Z" 
+                        fill="currentColor"/>
+                        </svg>
+                    </a>
+
+                    <!-- Botón para cambiar entre modo claro y oscuro -->
+                    <button 
+                    data-idle="true"
+                    onclick="cambiarTema()" 
+                    class="btn btn-vibe btn-shine text-micro order-2 order-sm-1 order-lg-3"
+                    aria-label="Switch between light and dark mode">
+
+                        <span>Change the Vibe</span>
+
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                        width="16" 
+                        height="16" 
+                        fill="#fab04e" 
+                        class="icon-vibe" 
+                        viewBox="0 0 16 16">
+                            <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16M2.31 5.243A1 1 0 0 1 3.28 4H6a1 1 0 0 1 1 1v.116A4.2 4.2 0 0 1 8 5c.35 0 .69.04 1 .116V5a1 1 0 0 1 1-1h2.72a1 1 0 0 1 .97 1.243l-.311 1.242A2 2 0 0 1 11.439 8H11a2 2 0 0 1-1.994-1.839A3 3 0 0 0 8 6c-.393 0-.74.064-1.006.161A2 2 0 0 1 5 8h-.438a2 2 0 0 1-1.94-1.515zM4.969 9.75A3.5 3.5 0 0 0 8 11.5a3.5 3.5 0 0 0 3.032-1.75.5.5 0 1 1 .866.5A4.5 4.5 0 0 1 8 12.5a4.5 4.5 0 0 1-3.898-2.25.5.5 0 0 1 .866-.5z"/>
+                        </svg>
+                    </button>  
+                    
+                    <!-- Botón navbar-toggler visible sólo en mobile -->
+                    <button 
+                        id="menu-mobile-color"
+                        class="navbar-toggler order-3" 
+                        aria-controls="navbarSupportedContent" 
+                        aria-expanded="false" 
+                        aria-label="Toggle navigation">
+                        <span id="menu-style">MENU</span>
+                    </button>  
+
+                    <!-- Menú colapsable en pantallas pequeñas, visible en pantallas grandes -->
+                    <div class="collapse navbar-collapse desktop-menu order-lg-2" id="navbarSupportedContent">
+
+                        <ul class="navbar-nav text-center mx-auto">
+
+                            <li>
+                                <details class="nav-dropdown">
+                                <summary class="nav-summary">
+                                    Work
+                                    <span class="chevron" aria-hidden="true">▾</span>
+                                </summary>
+
+                                <ul class="dropdown-list">
+                                    <li><a href="kronaby.html">Kronaby</a></li>
+                                    <li><a href="automated-negotiation.html">Automated Negotiation</a></li>
+                                    <li><a href="another-project.html">Another Project</a></li>
+                                </ul>
+                                </details>
+                            </li>
+
+                            <li>
+                                <a class="nav-link text-small" href="about.html">About</a>
+                            </li>
+
+                            <li>
+                            <a class="nav-link text-small" href="images/cv/CV_Roselly_Nunez_UX_UI_Designer-en.pdf" target="_blank">
+                                Resume <i class="bi bi-box-arrow-up-right ms-2"></i>
+                            </a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+    <main>
+
+        <article id="case-study" class="container-full">
+
+            <!-- SECTION 01 -->
+            <section id="intro-case-study" class="section">
+
+                <div class="container--lg subsection">
+
+                    <!-- Title + subtitle-->
+                    <div>
+
+                        <!-- H1 -->        
+                        <h1 class="title intro-title">Festina and Lotus Connected D Landing Pages Design</h1>
+
+                        <!-- Subtitle -->
+                        <p class="text-lead intro-lead">
+                            Website design and development for two connected watch brands within the same group.
+                        <p>
+                        
+                        <!-- Image -->
+                        <div class="image-wrapper">
+                            <img 
+                            src="../assets/images/connected/hero-image-connected.jpg"
+                            alt="Quality service illustration showing our design principles in action"
+                            loading="lazy"
+                            >
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div id="overview" class="container--lg subsection">
+            
+                    <!-- Project Overview -->
+                    <div class="split-layout paragraph-space">     
+
+                        <div class="content-block">
+                            <h2 class="label">Background</h2>
+                        </div>
+
+                        <div class="content-block">
+                            <p class="text-small">
+                                Festina and Lotus are two brands from the Festina Group. Each brand launched a new Connected Watch collection.
+                            </p>
+
+                            <ul class="list">
+                                <li class="text-small">Festina Connected D focuses on a classic and elegant style, combining tradition and technology.</li>
+                                <li class="text-small">Lotus Hybrid Connected has a modern and youthful design, created for an active lifestyle.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Project Goals -->
+                    <div class="split-layout paragraph-space">            
+                        <div class="content-block">
+                            <h2 class="label">project overview</h2>
+                        </div>
+
+                        <div class="content-block">
+                            <p class="text-small">
+                                The goal of the project was to design two landing pages for different brands within the same group.
+                                The main challenge was to keep a consistent structure while allowing each brand to express its own identity.
+                                Using a shared layout helped speed up the process and meet tight deadlines.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- My role -->
+                    <div class="split-layout paragraph-space">             
+                        <div class="content-block">
+                            <h2 class="label">my role</h2>
+                        </div>
+
+                        <div class="content-block">
+                            <p class="text-small">
+                                I was responsible for the UI design and visual experience of both landing pages.
+                                I worked closely with development and marketing teams in Spain, and with strategy teams in Sweden, to ensure the design was clear, consistent, and easy to build and maintain.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section class="section section--summary">
+                <div class="container--md">
+                    <h3 class="heading text-center">Case study in 1 minute</h3>
+
+                    <ul class="list">
+                    <li>
+                        <strong>Project:</strong> Two landing pages for Festina and Lotus connected watches
+                    </li>
+                    <li>
+                        <strong>Role:</strong> UI Designer, responsible for visual design and component creation
+                    </li>
+                    <li>
+                        <strong>Challenge:</strong> Keep a consistent structure while clearly expressing two different brand identities
+                    </li>
+                    <li>
+                        <strong>Solution:</strong> A shared layout system with brand-specific visual styles and one new reusable component
+                    </li>
+                    <li>
+                        <strong>Result:</strong> Two clear and consistent landing pages, optimized for desktop and mobile
+                    </li>
+                    </ul>
+                </div>
+            </section>
+
+
+
+
+            <!-- SECTION 01 -->
+            <section id="design-strategy" class="section">
+
+                <div class="subsection flow--elements">
+                    
+                    <div class="container--md flow--reading">
+
+                        <h2 class="subtitle text-center">Design strategy</h2>
+
+                        <p class="heading">
+                            Concept for Festina Connected D</p>
+                        <p class="text-base">
+                            <span class="fw-medium">Timeless elegance meets smart technology -</span> 
+                            For Festina, the design needed to feel premium and familiar.
+                            The interface balances tradition and technology, making smart features easy to understand without losing elegance.
+
+                        </p>
+
+                    </div>
+                    
+                    <div class="container--lg">
+
+                        <div class="images-row">
+
+                            <figure class="image-item">
+                                <div class="image-wrapper">
+                                <img
+                                    src="../assets/images/connected/quality_540x540.jpg"
+                                    alt="Festina Connected D - focus on quality and craftsmanship"
+                                    loading="lazy"
+                                >
+                                </div>
+
+                                <figcaption class="text-caption">
+                                    <p class="label">Quality</p>
+                                    <p>
+                                        A refined visual language that highlights craftsmanship, materials, and attention to detail.
+                                    </p>
+                                </figcaption>
+                            </figure>
+
+                            <figure class="image-item">
+                                <div class="image-wrapper">
+                                <img
+                                    src="../assets/images/connected/tradition_540x540.jpg"
+                                    alt="Festina Connected D - tradition and timeless design"
+                                    loading="lazy"
+                                >
+                                </div>
+
+                                <figcaption class="text-caption">
+                                    <p class="label">Tradition</p>
+                                    <p>
+                                        Classic watchmaking codes translated into a modern digital experience.
+                                    </p>
+                                </figcaption>
+                            </figure>
+
+                            <figure class="image-item">
+                                <div class="image-wrapper">
+                                <img
+                                    src="../assets/images/connected/tech-innovation_540x540.jpg"
+                                    alt="Festina Connected D - smart technology and innovation"
+                                    loading="lazy"
+                                >
+                                </div>
+
+                                <figcaption class="text-caption">
+                                    <p class="label">Technology</p>
+                                    <p>
+                                        Smart features presented in a clear and structured way, without losing elegance.
+                                    </p>
+                                </figcaption>
+                            </figure>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="subsection flow--elements">
+
+                    <div class="container--md flow--reading">
+
+                        <p class="heading">Concept for Lotus Hybrid Connected</p>
+
+                        <p class="text-base">
+                            <span class="fw-medium">Modern design for an active lifestyle - </span> 
+                            For Lotus, the focus was on clarity and energy.
+                            The design highlights key features early, helping users quickly understand what the watch can do in everyday situations.
+
+                        </p>
+
+                    </div>
+
+                    <div class="container--lg">
+                        <div class="images-row">
+
+                            <figure class="image-item">
+                                <div class="image-wrapper">
+                                    <img
+                                    src="../assets/images/connected/sophistication_540x540.jpg"
+                                    alt="Lotus Hybrid Connected - modern sophistication"
+                                    loading="lazy"
+                                    >
+                                </div>
+
+                                <figcaption class="text-caption">
+                                    <p class="label">Sophistication</p>
+                                    <p>
+                                        A bold and modern aesthetic designed to feel fresh and contemporary.
+                                    </p>
+                                </figcaption>
+                            </figure>
+
+                            <figure class="image-item">
+                                <div class="image-wrapper">
+                                    <img
+                                    src="../assets/images/connected/versatility_540x540.jpg"
+                                    alt="Lotus Hybrid Connected - versatility for everyday use"
+                                    loading="lazy"
+                                    >
+                                </div>
+
+                                <figcaption class="text-caption">
+                                    <p class="label">Versatility</p>
+                                    <p>
+                                        The watch adapts easily to different moments of the day, from work to active time.
+                                    </p>
+                                </figcaption>
+                            </figure>
+
+                            <figure class="image-item">
+                                <div class="image-wrapper">
+                                    <img
+                                    src="../assets/images/connected/tech-lotus_540x540.jpg"
+                                    alt="Lotus Hybrid Connected – smart features and connectivity"
+                                    loading="lazy"
+                                    >
+                                </div>
+
+                                <figcaption class="text-caption">
+                                    <p class="label">Smart Features</p>
+                                    <p>
+                                        Key functionalities like notifications and activity tracking are easy to discover and use.
+                                    </p>
+                                </figcaption>
+                            
+                            </figure>
+
+                        </div>
+                    </div>
+
+                </div> 
+
+            </section>
+
+
+            <!-- SECTION 02 -->
+            <section id="ux-ui-approach" class="section">
+
+                <div class="container--md">
+
+                    <!-- Principles -->
+                    <div class="subsection flow--elements">
+
+                        <div class="flow--reading">
+                            <h2 class="subtitle text-center">UI/UX Approach</h2>
+
+                            <p class="text-base">
+                                My UI/UX approach focused on creating a clear and easy experience, while keeping a strong visual identity for each brand.
+                                These principles guided the design decisions:
+                            </p>
+
+                            <ul class="list">
+                                <li class="text-base">
+                                    <span class="fw-semibold">Navigation & User Flow:</span>
+                                    Simple layouts that help users understand the product and move forward easily
+                                </li>
+                                <li class="text-base">
+                                    <span class="fw-semibold">Visual Hierarchy:</span>
+                                    Clear CTAs (for example, “See Collection”) that support discovery and guide users to the next step
+                                </li>
+                                <li class="text-base">
+                                    <span class="fw-semibold">White Space & Balance:</span>
+                                    Clean layouts that improve readability and reduce visual noise
+                                </li>
+                                <li class="text-base">
+                                    <span class="fw-semibold">Component-Based Design:</span>
+                                    Reusing existing components and designing one new component to support large images with text, while keeping consistency and making development easier
+                                </li>
+                            </ul>
+                        </div>
+                    
+                        <figure>
+                            <div class="image-wrapper">
+                                <img
+                                src="../assets/images/connected/ux-ui-approach.jpg"
+                                alt="Lotus Hybrid Connected - modern sophistication"
+                                loading="lazy"
+                                >
+                            </div>
+
+                            <figcaption class="text-caption">
+                                <p>
+                                    A simplified Landing page structure overview showing how different sections, content types, and CTAs are combined across the landing pages.
+                                </p>
+                            </figcaption>
+                        </figure>
+
+                    </div>
+
+                    <!-- Applied flow -->
+                    <div class="subsection flow--elements">
+
+                        <div class="flow--reading">
+                            <h3 class="heading">From Discovery to Purchase</h3>
+                            <p class="text-base">
+                                This part of the design focused on guiding users from the first interaction to the product pages in a natural way. Clear CTAs and a consistent layout help users explore the collection and move forward without feeling lost.
+                            </p>
+                        </div>
+
+                        <figure>
+                            <div class="image-wrapper">
+                                <img
+                                src="../assets/images/connected/from-discovery-to-purchase.jpg"
+                                alt="Landing page showing clear CTAs and visual hierarchy"
+                                loading="lazy"
+                                >
+                            </div>
+
+                            <figcaption class="text-caption">
+                                <p>Clear navigation and CTAs help users explore the products and reach the product page.
+                                </p>
+                            </figcaption>
+                        </figure>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- SECTION 03 -->
+            <section id="performance" class="section">
+
+            <!-- Header -->
+            <div class="subsection">
+                <div class="container--md flow--reading">
+                <h2 class="subtitle text-center">Performance & cross-device</h2>
+                <p class="text-base">
+                    The experience was designed to work across desktop and mobile by adapting layouts to different screen sizes.
+                    On smaller screens, text and visual elements were adjusted to improve readability and scanning.
+                </p>
+                </div>
+            </div>
+
+            <!-- Content adaptation -->
+            <div class="subsection flow--elements">
+                
+                <div class="container--md flow--reading">
+                    <h3 class="heading">Content adaptation across devices</h3>
+                    <p class="text-base">
+                        Feature-rich sections were adapted for smaller screens by reducing text size and icon size, while keeping the same structure.
+                        These adjustments made the content easier to scan on mobile devices.
+                    </p>
+                </div>
+
+                <div class="container--lg">
+                    <div class="media-block">
+
+                        <div class="media-grid media-grid--two">
+                            <figure class="image-wrapper">
+                                <img
+                                    src="../assets/images/connected/content-adaptation-festina.jpg"
+                                    alt="Desktop and mobile layout comparison showing adapted content hierarchy for better usability"
+                                    loading="lazy"
+                                >
+                            </figure>
+
+                            <figure class="image-wrapper">
+                                <img
+                                src="../assets/images/connected/content-adaptation-lotus.jpg"
+                                alt="Desktop and mobile layout comparison showing adapted content hierarchy for better usability"
+                                loading="lazy"
+                                >
+                            </figure>
+                        </div>
+
+                        <figcaption class="text-caption">
+                            <p>
+                                These adjustments helped ensure a consistent experience across devices, while improving readability and performance on mobile.
+                            </p>
+                        </figcaption>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Image optimization -->
+            <div class="subsection flow--elements">
+                <div class="container--md flow--reading">
+                    <h3 class="heading">Optimizing Images for Performance</h3>
+                    <p class="text-base">
+                        The original visual assets were large and not optimized for the web.
+                        Image dimensions were adjusted to reduce unnecessary bandwidth usage.
+                    </p>
+                    <p class="text-base">
+                        Images were optimized to keep good visual quality while improving loading speed across devices.
+                    </p>
+                </div>
+
+                <div class="container--lg">
+                    <div class="media-block">
+                        <div class="media-grid media-grid--two">
+
+                            <figure class="image-wrapper">
+                                <img
+                                    src="../assets/images/connected/optimizing-images-festina.jpg"
+                                    alt="Optimized desktop and mobile images showing adjusted image sizes for better web performance"
+                                    loading="lazy"
+                                >
+                            </figure>
+
+                            <figure class="image-wrapper">
+                                <img
+                                src="../assets/images/connected/optimizing-images-lotus.jpg"
+                                alt="Optimized images adapted for desktop and mobile layouts to improve loading speed"
+                                loading="lazy"
+                                >
+                            </figure>
+
+                        </div>
+
+                        <figcaption class="text-caption">
+                            <p>
+                                Images were optimized for the web by adjusting size and layout, improving performance without losing visual quality.
+                            </p>
+                        </figcaption>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Conclusion -->
+            <div class="subsection">
+                <div class="container--md flow--reading">
+                    <p class="text-base">
+                        This approach ensured a consistent and efficient experience across devices, balancing design quality and performance.
+                    </p>
+                </div>
+            </div>
+
+
+            </section>
+
+
+            <!-- SECTION 04 -->
+            <section id="new-component-connected" class="section">
+
+                <div class="subsection flow--elements">    
+                    <div class="container--md  flow--elements">
+                        <div class="flow--reading">
+                            <h2 class="subtitle text-center">One new component</h2>
+                            <p class="text-base">
+                                One new component was created during this project to support large background images with text overlays.
+                                The goal was to present the watches in a more visual and modern way, giving strong focus to the product while keeping the message clear.
+                                This approach is commonly used by contemporary brands to highlight design details and materials.
+                                The component was designed to solve this specific need while being flexible enough to reuse across different websites.
+                            </p>
+                        </div>
+                
+                        <div class="flow--reading">
+                            <p class="label">Purpose</p>
+                            <p class="text-base stack-gap">
+                                Text overlay component used for hero sections and full-width background images.
+                            </p>
+
+                            <p class="label">Application</p>
+                            <p class="text-base stack-gap">
+                                Used to highlight key messages and features without distracting from the product.
+                            </p>
+
+                            <p class="label">Flexibility</p>
+                            <p class="stack-gap">
+                                Text position, alignment, and size can be adjusted to work across desktop and mobile layouts.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="container--lg">
+                        <div class="media-block">
+                            <div class="media-grid media-grid--two">
+
+                                <figure class="image-wrapper">
+                                    <img
+                                        src="../assets/images/connected/componente-festina.jpg"
+                                        alt="Reusable text overlay component applied to large background images on desktop and mobile"
+                                        loading="lazy"
+                                    >
+                                </figure>
+
+                                <figure class="image-wrapper">
+                                    <img
+                                        src="../assets/images/connected/componente-lotus.jpg"
+                                        alt="Reusable text overlay component applied to large background images on desktop and mobile"
+                                        loading="lazy"
+                                    >
+                                </figure>
+
+                            </div>
+
+                            <figcaption class="text-caption">
+                                <p>
+                                    The same text overlay component was reused across both brands, adapting to different visual styles while keeping a consistent structure.
+                                </p>
+                            </figcaption>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <div class="container--md flow--reading">
+                        <p class="text-base">
+                            After implementing this component across both landing pages, the final step was to review the live pages and refine details before launch.
+                        </p>
+                    </div>
+                </div>
+
+            </section>
+
+
+            <!-- SECTION 05 -->
+            <section id="post-qa" class="section">
+
+                <div class="subsection">
+                    <div class="container--md flow--reading">
+                        <h2 class="subtitle text-center">Post-development QA & refinements</h2>
+                        <p class="text-base">
+                            After development, I reviewed the final pages to ensure the new component and all other elements were consistent, easy to use, and performed well across desktop and mobile devices.
+                        </p>
+                    </div>
+                </div>
+
+            </section>
+
+
+            <!-- SECTION 06 -->
+            <section id="results" class="section">
+
+                <!-- FINAL RESULT TEXT --> 
+                <div class="subsection">
+                    <div class="container--md flow--reading">
+                        <h2 class="subtitle text-center">Final Results</h2>
+                        <ul class="list">
+                            <li>Two landing pages were successfully launched for different brands within the same group</li>
+                            <li>Each page clearly reflected its brand identity while sharing a consistent structure</li>
+                            <li>Close collaboration between design, development, and marketing teams helped deliver a smooth and reliable user experience</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- TWO DESKTOP LANDING PAGES -->  
+                <div class="subsection">
+
+                    <div class="container--lg flow--elements">
+                        <h4 class="heading text-center">
+                            Final outcome — One structure, two brand expressions
+                        </h4>
+
+                        <div class="media-grid media-grid--two">
+
+                            <!-- LANDING 1: FESTINA -->
+                            <figure class="image-wrapper--case">
+                                <img
+                                    src="../assets/images/connected/Festina-landing_desktop.jpg"
+                                    alt="What is a hybrid watch storytelling page"
+                                    loading="lazy"
+                                >
+
+                                <figcaption class="text-caption">
+                                    <p class="label">Festina Connected D</p>
+                                    <p>
+                                        Timeless · Elegant · Refined
+                                    </p>
+                                </figcaption>
+                            </figure>
+
+                            <!-- LANDING 2: LOTUS -->
+                            <figure class="image-wrapper--case">
+                                <img
+                                    src="../assets/images/connected/Lotus-landing_desktop.jpg"
+                                    alt="Why choose Kronaby brand storytelling page"
+                                    loading="lazy"
+                                >
+                                <figcaption class="text-caption">
+                                    <p class="label">Lotus Hybrid Connected</p>
+                                    <p>
+                                        Modern · Dynamic · Feature-driven
+                                    </p>
+                                </figcaption>
+                            </figure>
+
+                        </div>  
+                    </div>
+                    
+                    <div class="container--md">
+                        <figcaption class="text-caption">
+                            <p>This side-by-side comparison highlights how a single design system can support different brand personalities without compromising usability or clarity.</p>
+                            <p>
+                                Mobile adaptations and content prioritization were addressed earlier in the case study.
+                            </p>
+                        </figcaption>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- SECTION 07 -->
+            <section class="section">   
+
+                <div class="container--md flow--reading">
+                    <h2 class="subtitle text-center">Key takeaways & learnings</h2>
+
+                    <p class="text-base">
+                    This project showed how important clear communication is.
+                    Sharing design decisions early helped keep all teams aligned.
+                    </p>
+
+                    <p class="text-base">
+                    It also showed the need to balance UX and SEO.
+                    In this case, SEO needs required more content, even when a simpler design was preferred.
+                    </p>
+                </div>
+                
+            </section>
+
+        </article>
+
+        <!-- NEXT PROJECT -->
+        <section id="next-project" class="section">
+            <div class="container--md flow--elements ">
+
+                <h2 class="subtitle">Next project</h2>
+                <!-- Link to next project -->
+                <div>
+                    <a href="kronaby.html" 
+                        class="btn btn-solid btn-primary">
+                        <span class="btn-text">
+                        Read Kronaby case study
+                        </span>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact-me" class="section contact-section bg-ornament">
+            <div class="container--md">
+        
+                <!-- Card -->
+                <div class="contact-card card shadow">
+                    <div class="card-body text-center">
+
+                        <h2 class="subtitle">Let's connect!</h2>
+                        <p class="text-lead">
+                        Drop it like it's hot — pitch me your project, your collab idea, or whatever you're working on. Let's create something great together.
+                        </p>
+                        <div class="group-two-buttons">
+                            <!-- Button 1 -->
+                            <a href="mailto:roselly.nunezg@gmail.com" 
+                            class="btn btn-solid btn-secondary btn-primary-sm btn-icon btn-icon-left">
+                            <span class="btn-icon-element">
+                                <i class="bi bi-envelope"></i>
+                            </span>
+                            <span class="btn-text">
+                                Copy mi email
+                            </span>
+                            </a>
+
+                            <!-- Button 2 -->
+                            <a href="mailto:roselly.nunezg@gmail.com" 
+                            class="btn btn-solid btn-secondary btn-primary-sm btn-icon btn-icon-left">
+                            <span class="btn-icon-element">
+                                <i class="bi bi-envelope"></i>
+                            </span>
+                            <span class="btn-text">
+                                Go to my Linkedin
+                            </span>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Overlay para menú mobile -->
+    <div id="menu-overlay">
+        <ul class="overlay-menu">
+            <li><a href="my-work.html">My Work</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a class="nav-link active" href="images/cv/CV_Roselly_Nunez_UX_UI_Designer-en.pdf" target="_blank" >Resume<i class="bi bi-box-arrow-up-right ms-2"></i></a></li>
+        </ul>
+    </div>
+
+    <footer>
+        <p>This site is hand-made by me, Roselly Nuñez. Built with 💖, HTML, CSS, JS and Bootstrap.</p>
+    </footer>
+
+    </body>
+
+</html>

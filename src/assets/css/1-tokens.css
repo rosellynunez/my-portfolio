@@ -14,8 +14,8 @@
    ========================================================= */
 
   /* ===== FONT TOKENS ===== */
-  --font-family-base: "Inter Display", sans-serif;
-  --font-family-heading: "Inter Display", sans-serif;
+  --font-family-base: "Inter", system-ui, -apple-system, sans-serif;
+  --font-family-heading: "Inter", system-ui, -apple-system, sans-serif;
 
 
 /* =========================================================
@@ -77,10 +77,11 @@
    ========================================================= */
   
 /* --- BASE TEXT --- */
-  --font-size-micro: var(--font-size-xs);
+  --font-size-caption: var(--font-size-xs);
+  /* 12–13px — Image captions, notes */
 
-  --font-size-caption: var(--font-size-sm);
-  /* 15.75px — Image captions, notes, metadata */
+  --font-size-small: var(--font-size-sm);
+  /* 15–16px — Metadata, labels, small UI text */
 
   --font-size-text: var(--font-size-base);
   /* 18px — Standard body copy */
@@ -140,10 +141,11 @@
   --section-space-sm: var(--space-8);     /* subsection separation */
 
 
-
-   /* Reading rhythm */
+  /* Reading rhythm */
   --rhythm-reading-text: var(--space-5);
-  --rhythm-reading-heading: var(--space-5);
+  --rhythm-reading-heading-lg: var(--space-6); /* h1, h2 */
+  --rhythm-reading-heading-sm: var(--space-5); /* h3, h4 */
+
 
   /* Layout / element flow rhythm */
   --rhythm-elements: var(--space-6);
@@ -253,7 +255,7 @@
     Text
     --------------------------------------------------------- */
   --color-text: var(--gray-100);
-  --color-text-secondary: var(--lavender-200); 
+  --color-text-secondary: var(--gray-300); 
   --color-text-tertiary: var(--gray-400); 
 
   --color-text-brand: var(--purple-300);
