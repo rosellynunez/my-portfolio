@@ -25,7 +25,7 @@
   /* Small sizes */
   --font-size-xs: 0.875rem;      /*— Labels, captions */
   --font-size-sm: 1rem;      /*— Labels, captions */
-  --font-size-base: 1.225rem;        /* — Body text */
+  --font-size-base: 1.125rem;        /* — Body text */
 
   /* Visual scale 1.45x */
   --font-size-lg: 1.55rem;       /* 26.1px — Lead text, intros */
@@ -254,7 +254,7 @@
 /*  ---------------------------------------------------------
     Text
     --------------------------------------------------------- */
-  --color-text: var(--gray-100);
+  --color-text-primary: var(--gray-100);
   --color-text-secondary: var(--gray-300); 
   --color-text-tertiary: var(--gray-400); 
 

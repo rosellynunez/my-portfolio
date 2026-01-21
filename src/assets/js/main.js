@@ -40,6 +40,7 @@ const toggleButton = document.querySelector('.navbar-toggler');
 const toggleText = document.querySelector('#menu-style');
 const overlay = document.getElementById('menu-overlay');
 
+
 // Muestra/oculta el overlay y cambia el texto del botón
 toggleButton.addEventListener('click', function(event) {
   event.preventDefault();
@@ -179,5 +180,21 @@ function loadClarityWithConsent() {
 
 
 
+// 1 MINUTE CASE STUDY - STEPS ANIMATION
+  //const steps = document.querySelectorAll(".flow-step");
 
+  //console.log("Steps found:", steps.length);
 
+  //const observer = new IntersectionObserver(
+  //  (entries, observer) => {
+  //    entries.forEach(entry => {
+   //     if (entry.isIntersecting) {
+   //       entry.target.classList.add("is-visible");
+    //      observer.unobserve(entry.target);
+    //    }
+    //  });
+  //  },
+   // { threshold: 0.2 }
+//  );
+
+//  steps.forEach(step => observer.observe(step));

@@ -36,10 +36,9 @@ body {
 }
 
 .text-base {
-  font-size: var(--font-size-text);
-  line-height: var(--line-height-loose);
-  letter-spacing: var(--letter-spacing-normal);
-  font-weight: var(--fw-regular);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
+  color: var(--text-color, var(--color-text-secondary));
 }
 
 .text-lead {
@@ -128,6 +127,14 @@ body {
   color: var(--color-text-tertiary);
 }
 
+.text--primary {
+  --text-color: var(--color-text-primary);
+}
+
+.text--secondary {
+  --text-color: var(--color-text-secondary);
+}
+
 /* ---------- 4. UI (opcional - puedes usar .text) ---------- */
 .ui {
   font-size: var(--font-size-ui);            /* Ahora SÍ existe */
@@ -167,8 +174,6 @@ body {
   font-size: var(--font-size-base);
   line-height: var(--line-height-normal);
 }
-
-
 
 .text-strong {
   font-weight: var(--fw-bold); /*<p class="text-base"> Este texto es normal y <span class="text-strong">este es importante</span>.
@@ -243,6 +248,57 @@ img {
 
 
 
+@media (max-width: 1024px) {
+  .display {
+    font-size: calc(var(--font-size-display-lg) * 0.9);
+  }
+
+  .display-alt {
+    font-size: calc(var(--font-size-display-md) * 0.95);
+  }
+}
+
+@media (max-width: 768px) {
+  .display {
+    font-size: clamp(2.2rem, 7vw, 3rem);
+    line-height: 1.15;
+  }
+
+  .display-alt {
+    font-size: clamp(1.8rem, 6vw, 2.4rem);
+  }
+
+  .title {
+    font-size: clamp(1.9rem, 6vw, 2.4rem);
+    line-height: 1.2;
+  }
+
+  .subtitle {
+    font-size: clamp(1.4rem, 4.5vw, 1.7rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .display,
+  .title {
+    line-height: 1.15;
+  }
+
+  .text-base {
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 768px) {
+  .flow--reading {
+    max-width: 100%;
+  }
+
+  p,
+  .text-base {
+    max-width: 60ch;
+  }
+}
 
 
 
@@ -299,17 +355,6 @@ img {
 
 
 
-.alert-info {
-  border: 1px solid #4dd0e1; /* Un borde azul más oscuro */
-  padding: 1rem;
-  border-radius: 0.25rem;
-}
-
-.callout-info-raya {
-  border-left: 4px solid #4dd0e1; /* Ajusta el grosor y el color según tus preferencias */
-  padding-left: 1rem; /* Agrega un poco de espacio entre la raya y el texto */
-  /* ... otros estilos del callout ... */
-}
 
 
 

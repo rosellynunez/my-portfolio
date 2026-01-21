@@ -21,7 +21,7 @@
 }
 
 .nav-link {
-  font-size: var(--font-size-base);
+  font-size: var(--font-size-small);
   font-weight: var(--fw-medium);
   text-decoration: none;
   color: var(--nav-link-color);
@@ -144,6 +144,14 @@
   .dropdown-list {
     margin-top: 0.5rem;
     padding-left: 1rem;
+  }
+
+  .navbar {
+    padding-top: var(--space-3);
+  }
+
+  .navbar-brand svg {
+    width: 32px;
   }
 }
 
@@ -402,6 +410,7 @@
   position: relative;
   padding: var(--space-1) var(--space-3);
   cursor: pointer;
+  font-size: 0.75rem;
 
   background-color: var(--btn-vibe-bg);
   border-radius: var(--radius-lg);
@@ -470,6 +479,79 @@
 
 .btn-link:hover {
   opacity: 0.7;
+}
+
+
+
+/* =========================================================
+   OVERVIEW NOTE COMPONENT
+   Purpose:
+   - Visual support card for context sections (Background, Project, Role)
+   - Clear separation from main narrative flow
+   - Editorial / portfolio style
+   ========================================================= */
+
+.overview-note {
+  --overview-font-size: 0.88rem; /* entre sm y base */
+}
+
+/* Base component */
+.overview-note {
+  font-size: var(--overview-font-size);
+  color: var(--color-text-secondary);
+
+  background: rgba(255, 255, 255, 0.04);   /* Neutral base */
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-sm);
+
+  padding: 1.4rem 1.8rem 1.1rem;              /* Internal spacing */
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+
+/* ---------------------------------------------------------
+   Title (label)
+   - Icon is decorative only
+   - Does NOT affect text alignment
+   - Text starts at the same left edge as content
+   --------------------------------------------------------- */
+
+.overview-note .label {
+  position: relative;
+  color: var(--color-text-primary);
+}
+
+/* Decorative icon */
+.overview-note .label::before {
+  content: "✦ ";
+  opacity: 0.6;
+}
+
+
+/* ---------------------------------------------------------
+   Content
+   - Aligned with title text
+   - No left padding
+   --------------------------------------------------------- */
+
+.overview-note__content {
+  padding-left: 0;
+}
+
+
+/* ---------------------------------------------------------
+   Typography adjustments (scoped to this component only)
+   --------------------------------------------------------- */
+
+/* Remove bottom margin ONLY from last paragraph */
+.overview-note__content p:last-of-type {
+  margin-bottom: 0;
+}
+
+/* Controlled spacing between paragraph and list */
+.overview-note__content p + ul {
+  margin-top: 0.75rem;
 }
 
 
