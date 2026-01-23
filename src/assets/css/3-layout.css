@@ -96,7 +96,17 @@ main {
 }
 
 
-/* Flow — reading */
+/* =========================
+   Flow — reading (base)
+   ========================= */
+/*
+.flow--reading {
+  max-width: var(--reading-width);
+  margin-inline: auto;
+  text-wrap: pretty;
+  hanging-punctuation: first last;
+}*/
+
 /* Paragraph rhythm */
 .flow--reading > :where(.paragraph-space) {
   margin-block-end: var(--rhythm-reading-text);
@@ -111,6 +121,8 @@ main {
 .flow--reading > :where(h3, h4, h5, h6) {
   margin-block-end: var(--rhythm-reading-heading-sm);
 }
+
+
 
 /* Flow — elements */
 /* Spacing between major layout blocks */
@@ -307,6 +319,13 @@ figure {
   }
 }
 
+.annotation-before-after {
+  padding-top: var(--space-3)!important;
+}
+
+.annotation-before-after .text-small{
+  color: var(--color-text-secondary);
+}
 
 .media-block {
   display: grid;
@@ -314,6 +333,7 @@ figure {
 
 .media-split {
   display: grid;
+  gap: var(--space-6);
 }
 
 /* Desktop */

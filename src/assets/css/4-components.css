@@ -519,7 +519,6 @@
 
 .overview-note .label {
   position: relative;
-  color: var(--color-text-primary);
 }
 
 /* Decorative icon */
@@ -527,7 +526,6 @@
   content: "✦ ";
   opacity: 0.6;
 }
-
 
 /* ---------------------------------------------------------
    Content
@@ -787,7 +785,7 @@
 
 
 
-/* -------------- CHANGE MODE BUTTON -------------- */
+/* -------------- TABLE -------------- */
 
 /* ----- Pattern table (lightweight documentation UI) ----- */
 #tabla-benchmarking {
@@ -797,28 +795,32 @@
 .table-pattern {
   width: 100%;
   border-collapse: collapse;
-  margin-block: var(--space-6);
+  font-size: var(--font-size-caption);
 }
 
 .table-pattern th,
 .table-pattern td {
   padding: var(--space-3);
   text-align: left;
-  vertical-align: top;
+  vertical-align: top;      
 }
 
+/* Header */
 .table-pattern thead th {
-  font-weight: var(--fw-bold);
-  color: var(--color-text-primary);
+  font-weight: var(--fw-semibold);
+  color: var(--color-text-primary); 
   border-bottom: 1px solid rgba(0,0,0,0);
 }
 
 /* Body */
-.table-pattern tbody th,
-.table-pattern tbody td {
-  color: var(--color-text-tertiary);
-  border-bottom: 1px solid rgba(0,0,0,0.05);
+/* Body */
+.table-pattern tbody th {
+  color: var(--color-text-primary);
 }
+
+.table-pattern tbody td {
+  color: var(--color-text-secondary);
+} 
 
 .table-pattern tbody th:first-child {
   color: var(--color-text-primary);
@@ -846,6 +848,13 @@
 [data-theme="dark"] .table-pattern tbody th,
 [data-theme="dark"] .table-pattern tbody td {
   border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.table-caption {
+  max-width: 90%;
+  margin-inline: auto; /* lo centra respecto al contenedor */
+  margin-top: var(--space-4);
+  text-align: justify;
 }
 
 
@@ -887,7 +896,6 @@
 .slider-captions {
   position: relative;       /* CLAVE */
   height: 1.5em;            /* reserva espacio fijo */
-  margin-top: var(--space-3);
 }
 
 /* Captions superpuestos */

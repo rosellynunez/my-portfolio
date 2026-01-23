@@ -142,14 +142,15 @@
 
 
   /* Reading rhythm */
-  --rhythm-reading-text: var(--space-5);
-  --rhythm-reading-heading-lg: var(--space-6); /* h1, h2 */
-  --rhythm-reading-heading-sm: var(--space-5); /* h3, h4 */
+  --rhythm-reading-text: var(--space-2);
+  --rhythm-reading-heading-lg: var(--space-4); /* h1, h2 */
+  --rhythm-reading-heading-sm: var(--space-3); /* h3, h4 */
 
 
   /* Layout / element flow rhythm */
   --rhythm-elements: var(--space-6);
 
+  --reading-width: 46rem;
 
 /* =========================================================
     COLORS

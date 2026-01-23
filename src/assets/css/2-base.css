@@ -91,18 +91,17 @@ body {
 /* ---------- SPECIAL FOR SOME SEC AND PAGES ---------- */
 /* Nueva: section-label (eyebrow / overline / kicker) */
 .label {
-  font-size: var(--font-size-caption);
-  text-transform: uppercase;
+  color: var(--color-text-primary);
+  font-weight: var(--fw-medium);
   letter-spacing: var(--letter-spacing-wide);
-  font-weight: var(--fw-regular);
+  text-transform: uppercase;
+  font-size: var(--font-size-caption);
 }
 
 .text-caption .label {
-  display: inline-block;
-}
-
-.text-caption .label {
+  color: var(--color-text-tertiary);
   margin-bottom: var(--space-1);
+  display: inline-block;
 }
 
 .text-caption {
@@ -179,6 +178,21 @@ body {
   font-weight: var(--fw-bold); /*<p class="text-base"> Este texto es normal y <span class="text-strong">este es importante</span>.
 </p>*/
 }
+
+
+
+.content-block {
+  --label-color: var(--color-text-primary);
+}
+
+.text-caption {
+  --label-color: var(--color-text-secondary);
+}
+
+.overview-section {
+  --label-color: var(--color-text-primary);
+}
+
 
 
 
@@ -475,7 +489,11 @@ ul:last-child {
 } 
 
 .list li {
-  margin-bottom: 0.6rem; /* Ajusta el valor según el espacio que desees */
+  margin-bottom: var(--space-1);
+}
+
+.list--wide li {
+  margin-bottom: var(--space-4);
 }
 
 
