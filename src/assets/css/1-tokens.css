@@ -18,23 +18,30 @@
   --font-family-heading: "Inter", system-ui, -apple-system, sans-serif;
 
 
-/* =========================================================
-    FONT SIZE SCALE (base 18px = 1rem)
+  /* =========================================================
+    FONT SIZE FOUNDATIONS
+    Pure scale tokens — no semantic meaning
    ========================================================= */
 
-  /* Small sizes */
-  --font-size-xs: 0.875rem;      /*— Labels, captions */
-  --font-size-sm: 1rem;      /*— Labels, captions */
-  --font-size-base: 1.125rem;        /* — Body text */
+  /* --- MICRO & EXTRA SMALL --- */
+  --font-size-2xs: 0.75rem;        /* 12px — Legal text, micro labels, subtle UI hints */
+  --font-size-xs: 0.875rem;       /* 14px — Captions, footnotes, secondary labels */
 
-  /* Visual scale 1.45x */
-  --font-size-lg: 1.55rem;       /* 26.1px — Lead text, intros */
-  --font-size-xl: 2.36rem;       /* 37.8px — Strong section subtitles */
-  --font-size-2xl: 3.05rem;      /* 54.9px — Page titles / internal displays */
+  /* --- SMALL & BASE TEXT --- */
+  --font-size-sm: 1rem;            /* 16px — UI labels, metadata, small text */
+  --font-size-base: 1.125rem;      /* 18px — Standard body text */
 
-  /* Adjusted as requested */
-  --font-size-3xl: 3.55rem;      /* 64px — Main title for secondary pages (About, Contact, Case Studies, etc.) */
-  --font-size-4xl: 4.5rem;       /* 81px — High-impact section display */
+  /* --- EMPHASIZED BODY TEXT --- */
+  --font-size-lg: 1.55rem;         /* 24.8px — Lead text, intro paragraphs */
+
+  /* --- HEADINGS --- */
+  --font-size-xl: 2.36rem;         /* 37.8px — Section subtitles */
+  --font-size-2xl: 3.05rem;        /* 48.8px — Page titles */
+
+  /* --- DISPLAY SIZES --- */
+  --font-size-3xl: 3.55rem;        /* 56.8px — Large internal page titles */
+  --font-size-4xl: 4.5rem;         /* 72px — High-impact hero / display text */
+
 
 
   /* ===== FONT WEIGHT ===== */
@@ -77,17 +84,24 @@
    ========================================================= */
   
 /* --- BASE TEXT --- */
+
+  /* --- MICRO & SMALL TEXT --- */
+  --font-size-micro: var(--font-size-2xs);
+  /* 10–11px — Legal text, micro labels, UI hints */
+
   --font-size-caption: var(--font-size-xs);
-  /* 12–13px — Image captions, notes */
+  /* 12–13px — Image captions, footnotes, secondary notes */
 
   --font-size-small: var(--font-size-sm);
   /* 15–16px — Metadata, labels, small UI text */
 
-  --font-size-text: var(--font-size-base);
-  /* 18px — Standard body copy */
+  
+  /* --- BODY TEXT --- */
+--font-size-text: var(--font-size-base);
+/* 18px — Standard body copy */
 
-  --font-size-lead: var(--font-size-lg);
-  /* 26.1px — Intro paragraphs, strong opening text */
+--font-size-lead: var(--font-size-lg);
+/* 26.1px — Intro paragraphs, strong opening text */
 
 
   /* --- HEADINGS (3-level system) --- */
@@ -103,10 +117,10 @@
 
   /* --- SPECIAL DISPLAYS --- */
   --font-size-display-md: var(--font-size-3xl);
-  /* 81px — Largest title for internal pages */
+/* 64px — Large display titles */
 
-  --font-size-display-lg: var(--font-size-4xl);
-  /* 104.4px — Giant homepage hero */
+--font-size-display-lg: var(--font-size-4xl);
+/* 81px — Hero / high-impact display */
 
 
 /* =========================================================
@@ -218,6 +232,21 @@
   --cream-100: #F5F4EB;
 
 
+  /* ===== ICON TOKENS ===== */
+
+/* Icon sizes (frame lógico) */
+  --icon-size-xs: 0.8rem; /* 12px */
+  --icon-size-sm: 1rem;     /* 16px */
+  --icon-size-md: 1.25rem; /* 20px */
+  --icon-size-lg: 1.5rem;  /* 24px */
+
+  /* Icon-only buttons (touch area) */
+  --icon-btn-sm: 2rem;    /* 32px */
+  --icon-btn-md: 2.5rem; /* 40px */
+  --icon-btn-lg: 3rem;   /* 48px */
+
+
+
 
 /* =========================================================
     BREAKPOINTS
@@ -239,6 +268,12 @@
     --------------------------------------------------------- */
   --bg-primary: var(--purple-950);
   --bg-secondary: var(--purple-900);
+
+
+  --surface-bg: #ffffff;
+
+  --surface-overlay: rgba(15, 15, 16, 0.7);
+
 
 /*  ---------------------------------------------------------
     UI components
@@ -298,6 +333,10 @@
 
 
 
+/* ---------- Media / Image tokens ---------- */
+--media-radius-sm: var(--radius-sm);
+--media-radius-md: var(--radius-md);
+--media-radius-lg: var(--radius-lg);
 
 
 

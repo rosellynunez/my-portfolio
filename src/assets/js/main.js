@@ -1,3 +1,56 @@
+// MOBILE MENU (SIN BOOTSTRAP)
+
+document.addEventListener('DOMContentLoaded', () => {
+
+  const toggle = document.querySelector('.menu-toggle');
+  const mobileNav = document.getElementById('mobile-nav');
+
+  if (!toggle || !mobileNav) return;
+
+  function openMenu() {
+    mobileNav.hidden = false;
+    toggle.setAttribute('aria-expanded', 'true');
+    toggle.textContent = 'CLOSE';
+    document.body.classList.add('no-scroll');
+  }
+
+  function closeMenu() {
+    mobileNav.hidden = true;
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.textContent = 'MENU';
+    document.body.classList.remove('no-scroll');
+  }
+
+  // Toggle MENU / CLOSE
+  toggle.addEventListener('click', () => {
+    const isOpen = toggle.getAttribute('aria-expanded') === 'true';
+    isOpen ? closeMenu() : openMenu();
+  });
+
+  // Cerrar al hacer click en un link
+  mobileNav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', closeMenu);
+  });
+
+  // Cerrar con ESC
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') {
+      closeMenu();
+    }
+  });
+  
+  mobileNav.addEventListener('click', (e) => {
+    if (e.target === mobileNav) {
+      closeMenu();
+    }
+  });
+
+});
+
+
+
+
+
 
 // TYPED-OUTPUT
   document.addEventListener('DOMContentLoaded', function () {
@@ -35,44 +88,6 @@
 });
 
 
-// MENU MOBILE OVERLAY
-const toggleButton = document.querySelector('.navbar-toggler');
-const toggleText = document.querySelector('#menu-style');
-const overlay = document.getElementById('menu-overlay');
-
-
-// Muestra/oculta el overlay y cambia el texto del botón
-toggleButton.addEventListener('click', function(event) {
-  event.preventDefault();
-  
-  // Verifica si el overlay está activo
-  const isOverlayActive = overlay.classList.contains('active');
-  
-  // Muestra/oculta el overlay y cambia el texto del botón
-  if (isOverlayActive) {
-    overlay.classList.remove('active');
-    toggleText.textContent = 'MENU';
-  } else {
-    overlay.classList.add('active');
-    toggleText.textContent = 'CLOSE';
-  }
-});
-
-// Cierra el overlay al hacer clic en un enlace
-document.querySelectorAll('.overlay-menu a').forEach(link => {
-  link.addEventListener('click', function() {
-    overlay.classList.remove('active');
-    toggleText.textContent = 'MENU';
-  });
-});
-
-// Cierra el menú cuando se cambia a modo escritorio
-window.addEventListener('resize', function() {
-  if (window.innerWidth >= 992) {
-    overlay.classList.remove('active');
-    toggleText.textContent = 'MENU';
-  }
-});
 
 // NAVBAR SCROLL
 document.addEventListener('DOMContentLoaded', function() {
@@ -126,7 +141,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-// CONFIGURACIÓN - REEMPLAZA ESTO CON TU ID REAL
+// CONFIGURACIÓN - ID
 const CLARITY_PROJECT_ID = 'rc9pe4uosu';
 
 // 1. Configurar Google Consent Mode por defecto (sin consentimiento)
@@ -180,21 +195,33 @@ function loadClarityWithConsent() {
 
 
 
-// 1 MINUTE CASE STUDY - STEPS ANIMATION
-  //const steps = document.querySelectorAll(".flow-step");
+// 1 MINUTE CASE STUDY - SUMMARY TOGGLE
+document.addEventListener('DOMContentLoaded', () => {
+  const toggle = document.querySelector('.js-summary-toggle');
+  const content = document.querySelector('.summary__content');
 
-  //console.log("Steps found:", steps.length);
+  if (!toggle || !content) return;
 
-  //const observer = new IntersectionObserver(
-  //  (entries, observer) => {
-  //    entries.forEach(entry => {
-   //     if (entry.isIntersecting) {
-   //       entry.target.classList.add("is-visible");
-    //      observer.unobserve(entry.target);
-    //    }
-    //  });
-  //  },
-   // { threshold: 0.2 }
-//  );
+  function toggleSummary() {
+    const expanded = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', !expanded);
+    content.hidden = expanded;
+  }
 
-//  steps.forEach(step => observer.observe(step));
+  toggle.addEventListener('click', toggleSummary);
+
+  toggle.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      toggleSummary();
+    }
+  });
+});
+
+
+
+
+
+
+
+

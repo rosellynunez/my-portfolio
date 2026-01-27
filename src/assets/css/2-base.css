@@ -26,7 +26,7 @@ body {
 
 .text-caption {
   font-size: var(--font-size-caption);
-  line-height: var(--line-height-normal);
+  line-height: var(--line-height-tight); 
   color: var(--color-text-tertiary);
 }
 

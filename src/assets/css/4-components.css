@@ -11,6 +11,186 @@
 
 
 /* ================== NAV LINK COMPONENT ================== */
+/* ========== HEADER LAYOUT ========== */
+
+.site-header {
+  position: sticky;
+  top: var(--space-5);
+}
+
+.header-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+
+  display: grid;
+  grid-template-columns: auto 1fr auto auto;
+  align-items: center;
+}
+
+/* Logo */
+.brand {
+  display: inline-flex;
+  align-items: center;
+  z-index: 400;
+  color: var(--white);
+}
+
+/* ========== NAV DESKTOP ========== */
+
+.main-nav--desktop {
+  justify-self: center;
+}
+
+.nav-list {
+  display: flex;
+  gap: var(--space-6);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--nav-link-color);
+  font-weight: var(--fw-medium);
+}
+
+/* Dropdown */
+.nav-dropdown {
+  position: relative;
+}
+
+.nav-summary {
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
+}
+
+.dropdown-list {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--gray-200);
+  padding: var(--space-5);
+  border-radius: var(--radius-md);
+  list-style: none;
+  min-width: 280px;
+}
+
+.nav-dropdown:hover .dropdown-list,
+.nav-dropdown:focus-within .dropdown-list {
+  display: block;
+}
+
+
+/* ========== MOBILE ========== */
+.btn-vibe {
+  margin-left: var(--space-4);
+}
+
+/* Menu button */
+.menu-toggle {
+  display: none;
+  border: 1px solid; /* Quita el borde predeterminado */
+  border-radius: 2rem; /* Ajusta el border-radius */
+  padding: var(--space-2) var(--space-3); /* Espaciado interno para centrar el texto */
+  font-weight: var(--fw-medium);
+  font-size: var(--font-size-xs);
+  text-transform: uppercase;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+  position: relative;
+  z-index: 300;
+  background-color: transparent;
+}
+
+@media (max-width: 991px) {
+
+  .main-nav--desktop {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: inline-flex;
+  }
+
+  #mobile-nav {
+    position: fixed;
+    inset: 0;
+    background: var(--surface-overlay);
+    backdrop-filter: blur(10px);
+    z-index: 200;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .main-nav--mobile {
+    padding: var(--space-6);
+    align-items: center;
+  }
+
+  .nav-list--mobile a {
+    font-size: 2.6rem;
+    text-decoration: none;
+    color: var(--nav-link-color);
+    font-weight: var(--fw-thin);
+  }
+
+  .no-scroll {
+  overflow: hidden;
+  }
+  
+  .nav-list--mobile > li > a,
+  .nav-section__title {
+    font-size: 2.6rem;
+    font-weight: var(--fw-thin);
+    color: var(--nav-link-color);
+    text-decoration: none;
+  }
+
+  /* Submenu */
+  .nav-submenu {
+    list-style: none;
+    padding-left: var(--space-4);
+  }
+
+  .nav-submenu .submenu {
+    font-size: 1.4rem;
+    font-weight: var(--fw-regular);
+    opacity: 0.8;
+  }
+
+  .nav-list--mobile,
+  .nav-submenu {
+    list-style: none;
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .nav-list--mobile {
+    display: grid;
+    gap: var(--space-6);
+  }
+}
+
+/* DESKTOP: el menú mobile NO debe existir */
+@media (min-width: 992px) {
+  #mobile-nav {
+    display: none !important;
+  }
+}
 
 .navbar {
   transition: background-color .5s ease, backdrop-filter .3s ease;
@@ -50,6 +230,7 @@
 }
 
 
+
 /* ================== DESPLEGABLE ================== */
 /* Reset básico */
 .nav-list {
@@ -68,7 +249,7 @@
 .nav-summary {
   display: inline-flex;
   align-items: center;
-  gap: 0.35rem;
+  gap: 0.5rem;
   cursor: pointer;
   white-space: nowrap;
   color: inherit;
@@ -101,9 +282,7 @@
 
 /* Dropdown cerrado */
 .dropdown-list {
-  display: grid;
-  gap: var(--space-2);
-  padding: var(--space-3) var(--space-2);
+  gap: var(--space-4);
 }
 
 .dropdown-list li {
@@ -111,9 +290,14 @@
 }
 
 .dropdown-list a {
-  font-size: var(--font-size-sm);
+  color: var(--gray-600);
+  font-size: var(--font-size-caption);
+  line-height: var(--line-height-tight);
   text-decoration: none;
+  display: block;
+  font-weight: var(--fw-medium);
 }
+
 
 /* Desktop */
 @media (min-width: 992px) {
@@ -121,17 +305,36 @@
     position: relative;
   }
 
+  .nav-dropdown::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    height: 0.5rem;
+    width: 100%;
+  }
+
   .nav-dropdown .dropdown-list {
     position: absolute;
-    top: calc(100% + 0.5rem); /* baja un poco */
+    top: 100%;
     left: 50%;
     transform: translateX(-50%); /* centrado respecto al botón */
 
-    background: var(--surface-card-primary);
-    padding: 1rem;
+    background: var(--gray-200);
+    padding: var(--space-5);
     border-radius: var(--radius-md);
-    min-width: 220px;
+    min-width: 320px;
     box-shadow: 0 10px 30px rgba(0,0,0,.1);
+    gap: var(--space-4);
+  }
+
+  .dropdown-list a {
+    color: var(--gray-700);
+    font-size: var(--font-size-caption);
+    line-height: var(--line-height-tight);
+    text-decoration: none;
+    display: block;
+    font-weight: var(--fw-medium);
   }
 }
 
@@ -155,6 +358,48 @@
   }
 }
 
+
+/* ================== ICONS ================== */
+
+/* Base icon */
+.icon {
+  display: inline-block;
+}
+
+.icon path {
+  fill: currentColor;
+}
+
+
+/* Contexto (botón, card, etc.) Button context */
+.btn .icon {
+  width: var(--icon-size-sm);
+  height: var(--icon-size-sm);
+}
+
+.nav-chevron {
+  width: var(--icon-size-xs);
+  height: var(--icon-size-xs);
+}
+
+.card .icon {
+  width: var(--icon-size-sm);
+  height: var(--icon-size-sm);
+}
+
+/* Icon-only button  */
+.btn-icon-only {
+  width: var(--icon-btn-md);
+  height: var(--icon-btn-md);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-icon-only .icon {
+  width: var(--icon-size-md);
+  height: var(--icon-size-md);
+}
 
 
 
@@ -267,6 +512,12 @@
   gap: 0.5rem;
 }
 
+.btn-icon-element {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 
 /* Left Icon button */
 .btn-icon-left .btn-icon-element {
@@ -341,9 +592,9 @@
 }
 
 /* -------------- SMALL BUTTON WITH ICON -------------- */
-.btn-primary-sm .btn-icon-element {
+/* .btn-primary-sm .btn-icon-element {
   font-size: 0.9rem;
-}
+}*/
 
 /* Icono a la izquierda */
 .btn-icon-left .btn-icon-element {
@@ -370,6 +621,9 @@
   animation: none !important;
   opacity: 0 !important;
 }
+
+
+
 
 
 /* -------------- SHINE EFFECT (GENERIC) -------------- */
@@ -415,6 +669,9 @@
   background-color: var(--btn-vibe-bg);
   border-radius: var(--radius-lg);
   overflow: hidden;
+
+  width: fit-content;
+  justify-self: center;
 
   display: flex;
   align-items: center;
@@ -555,6 +812,8 @@
 
 
 
+
+
 /* ---------- CARD BASE ---------- */
 .card-base {
   border-radius: var(--card-radius-sm);
@@ -582,6 +841,10 @@
   font-weight: var(--fw-regular);
 }
 
+.card__body .card__title {
+  margin-bottom: 0;
+}
+
 /* Body */
 .card--insight .card__body {
   display: grid;
@@ -607,9 +870,10 @@
 /* -------- CARD: PROJECT -------- */
 
 .card--project {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  border-radius: var(--card-radius-md);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-radius: var(--card-radius-lg);
   background: var(--surface-card-primary);
   border: var(--card-border-soft);
   overflow: hidden;
@@ -626,6 +890,8 @@
 .card--project .card__media {
   aspect-ratio: 16 / 10;
   overflow: hidden;
+  border-top-left-radius: var(--card-radius-lg);
+  border-top-right-radius: var(--card-radius-lg);
 }
 
 .card--project .card__media img {
@@ -638,9 +904,11 @@
 
 /* -------- Body / Content -------- */
 .card--project .card__body {
-  padding: var(--card-padding-md);
-  display: grid;
+    padding: var(--card-padding-md);
+  display: flex;
+  flex-direction: column;
   gap: var(--space-2);
+  flex-grow: 1; /* 👈 clave */
 }
 
 .card--project .card__title {
@@ -651,6 +919,14 @@
   color: var(--color-text-secondary);
   margin-block-end: var(--space-1);
 }
+
+.card__description {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
 
 
 /* ----- Project meta (skills / tools) ----- */
@@ -665,7 +941,7 @@
 }
 
 .project-tags li {
-  font-size: var(--font-size-micro);
+  font-size:  var(--font-size-micro);
   color: var(--color-text-secondary);
   padding: var(--space-1) var(--space-2);
   border-radius: var(--radius-sm);
@@ -685,6 +961,8 @@
   padding-block-start: var(--space-1);
   padding-block-end: var(--space-5);
   border-top: var(--card-border-soft);
+    margin-top: auto; /* 👈 empuja el footer al fondo */
+
 }
 
 /* -------- PROJECTS LAYOUT -------- */
@@ -967,169 +1245,6 @@ footer p{
   max-width: 100%;
   height: auto;
   display: block;
-}
-
-
-
-
-
-
-/* -------- BUTTONS para cambiar entre modo claro y oscuro */
-
-
-
-.bi {
-  vertical-align: 0rem;
-}
-  
-.dl-icon-arrow {
-  width: 32px;
-  height: 32px;
-}
-
-.bd-mode-toggle {
-  z-index: 1500;
-}
-
-.bd-mode-toggle .dropdown-menu .active .bi {
-  display: block !important;
-}
-
-/* Personalización del botón navbar-toggler */
-
-
-.navbar-toggler {
-  position: relative;
-  z-index: 1051; /* Más alto que el overlay */
-}
-
-
-
-/* Oculta el ícono predeterminado de Bootstrap */
-.navbar-toggler-icon {
-  display: none;
-}
-
-/* Ajustes cuando el menú está abierto */
-.navbar-toggler[aria-expanded="true"] #menu-style {
-  content: "CLOSE"; /* Puedes cambiarlo a "CERRAR" si prefieres en español */
-}
-
-
-
-.underlined {
-    text-decoration: underline !important;
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: 0.5px #5800E5; /* For WebKit browsers (Chrome, Safari) */
-    background-image: linear-gradient(130deg, rgb(241, 58, 238) -9.41449%, rgb(44, 90, 255) 110.686%, rgb(100, 246, 255) 175.912%);    
-} 
-
-
-
-
-
-
-
-/* Alineación de logo a la izquierda y menú a la derecha */
-.navbar .container-fluid {
-  display: flex;
-  justify-content: space-between;
-}
-
-@media (max-width: 992px) {
-/* Alinear el menú mobile al centro cuando esté desplegado */
-  .desktop-menu .navbar-nav {
-    flex-direction: column;
-    align-items: center;
-    margin-left: inherit !important;
-    text-decoration: none !important;
-  }
-}
-
-.navbar-expand-lg {
-  padding-top: var(--space-5);
-}
-
-.navbar {
-  transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
-}
-
-/* Versión escritorio sigue con el menú al centro*/
-@media (min-width: 1024px) {
-  .navbar-nav {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    text-decoration: none !important;
-  }
-}
-
-
-
-/* Personalización del botón navbar-toggler */
-.navbar-toggler {
-  border: 1px solid; /* Quita el borde predeterminado */
-  border-radius: 2rem; /* Ajusta el border-radius */
-  padding: 0.5rem 0.5rem; /* Espaciado interno para centrar el texto */
-  font-weight: bold;
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background 0.3s ease;
-}
-
-.navbar-toggler {
-  position: relative;
-  z-index: 1051; /* Más alto que el overlay */
-}
-
-.navbar-toggler:focus {
-  box-shadow: none;
-}
-
-.navbar {
-  --bs-navbar-color: none;
-}
-
-/* Oculta el ícono predeterminado de Bootstrap */
-.navbar-toggler-icon {
-  display: none;
-}
-
-/* Ajustes cuando el menú está abierto */
-.navbar-toggler[aria-expanded="true"] #menu-style {
-  content: "CLOSE"; /* Puedes cambiarlo a "CERRAR" si prefieres en español */
-}
-
-/* Alinear el menú en el centro en desktop */
-@media (min-width: 992px) {
-  .desktop-menu {
-    flex-grow: 1;
-    justify-content: center;
-  }
-  
-  .navbar .container-fluid {
-    display: flex;
-    align-items: center;
-  }
-
-  /* Logo a la izquierda, menú al centro, botón a la derecha */
-  .navbar-brand {
-    order: 1;
-  }
-
-  .desktop-menu {
-    order: 3;
-  }
-
-  .btn-vibe {
-    order: 2;
-  }
 }
 
 

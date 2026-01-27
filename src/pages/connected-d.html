@@ -62,7 +62,6 @@
 
         <!-- Script -->
         <script src="../assets/js/theme.js"></script>
-        <script src="../assets/js/main.js"></script>
 
         <!-- Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y1KMG7E11J"></script>
@@ -70,86 +69,92 @@
     </head>
 
     <body>
-        <header>
-            <div class="container--xl">
-                <nav class="navbar navbar-expand-lg bg-transparent sticky-top">
-                    <div class="container-fluid">
-                
-                    <!-- Logo -->
-                    <a class="navbar-brand" href="index.html">
-                        <svg id="logo" width="150" height="50" viewBox="0 0 39.8 24" xmlns="http://www.w3.org/2000/svg">
+        <header class="site-header">
+            <div class="header-container">
+
+                <!-- Logo -->
+                <a class="brand" href="index.html" aria-label="Home">
+                    <svg id="logo" width="150" height="50" viewBox="0 0 39.8 24" xmlns="http://www.w3.org/2000/svg">
                         <path class="st0" d="M12.5,1v5.2c-3.4,0-6.1,2.7-6.1,6.1v10.9H1.1V1.1h5.2v1.7c1.8-1.1,3.9-1.8,6.1-1.8Z" fill="currentColor"/>
                         <path class="st0" d="M20.3,23.1v-10.8c0-3.4,2.8-6.1,6.1-6.1h.7c2.4,0,4.4,1.4,5.5,3.3.4.8.6,1.7.7,2.7,0,0,0,0,0,0v5.3c0,0,0,5.5,0,5.5h5.1v-9.5c0-2-.3-3.8-.9-5.4-.2-.5-.4-1-.6-1.4-1-1.9-2.4-3.4-4.2-4.3-1.8-1-3.8-1.5-6-1.5s-3.1.3-4.5.9h0c-.7.3-1.4.6-2,1v-1.7h-5.2v22h5.2Z" 
                         fill="currentColor"/>
-                        </svg>
+                    </svg>
+                </a>
+
+                <!-- Nav desktop -->
+                <nav class="main-nav main-nav--desktop" aria-label="Primary navigation">
+                <ul class="nav-list">
+
+                    <li class="nav-dropdown">
+                        <button class="nav-summary" aria-haspopup="true">
+                            <span class="nav-link">Work
+                                <svg class="nav-chevron" viewBox="0 0 16 16" aria-hidden="true">
+                                <path d="M2 5l6 6 6-6" fill="none" stroke="currentColor" />
+                                </svg>
+                            </span>
+                        </button>
+
+                        <ul class="dropdown-list">
+                            <li><a href="kronaby.html">Academic Book Platform</a></li>
+                            <li><a href="automated-negotiation.html">E-commerce Redesign</a></li>
+                            <li><a href="automated-negotiation-book.html">Landing Pages</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a class="nav-link" href="about.html">About</a></li>
+                    <li>
+                    <a class="nav-link" href="images/cv/CV_Roselly_Nunez_UX_UI_Designer-en.pdf" target="_blank">
+                        Resume
                     </a>
+                    </li>
 
-                    <!-- Botón para cambiar entre modo claro y oscuro -->
-                    <button 
+                </ul>
+                </nav>
+
+                <!-- Theme button -->
+                <button 
                     data-idle="true"
-                    onclick="cambiarTema()" 
-                    class="btn btn-vibe btn-shine order-2 order-sm-1 order-lg-3"
+                    class="btn btn-vibe btn-shine" 
+                    onclick="cambiarTema()"
                     aria-label="Switch between light and dark mode">
+                    Change the Vibe 😎
+                </button>
 
-                        <span>Change the Vibe</span>
+                <!-- Mobile menu button -->
+                <button 
+                    class="menu-toggle" 
+                    aria-expanded="false" aria-controls="mobile-nav">
+                    MENU
+                </button>
 
-                        <svg xmlns="http://www.w3.org/2000/svg"
-                        width="16" 
-                        height="16" 
-                        fill="#fab04e" 
-                        class="icon-vibe" 
-                        viewBox="0 0 16 16">
-                            <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16M2.31 5.243A1 1 0 0 1 3.28 4H6a1 1 0 0 1 1 1v.116A4.2 4.2 0 0 1 8 5c.35 0 .69.04 1 .116V5a1 1 0 0 1 1-1h2.72a1 1 0 0 1 .97 1.243l-.311 1.242A2 2 0 0 1 11.439 8H11a2 2 0 0 1-1.994-1.839A3 3 0 0 0 8 6c-.393 0-.74.064-1.006.161A2 2 0 0 1 5 8h-.438a2 2 0 0 1-1.94-1.515zM4.969 9.75A3.5 3.5 0 0 0 8 11.5a3.5 3.5 0 0 0 3.032-1.75.5.5 0 1 1 .866.5A4.5 4.5 0 0 1 8 12.5a4.5 4.5 0 0 1-3.898-2.25.5.5 0 0 1 .866-.5z"/>
-                        </svg>
-                    </button>  
-                    
-                    <!-- Botón navbar-toggler visible sólo en mobile -->
-                    <button 
-                        id="menu-mobile-color"
-                        class="navbar-toggler order-3" 
-                        aria-controls="navbarSupportedContent" 
-                        aria-expanded="false" 
-                        aria-label="Toggle navigation">
-                        <span id="menu-style">MENU</span>
-                    </button>  
+            </div>
 
-                    <!-- Menú colapsable en pantallas pequeñas, visible en pantallas grandes -->
-                    <div class="collapse navbar-collapse desktop-menu order-lg-2" id="navbarSupportedContent">
+            <!-- Nav mobile -->
+            <nav id="mobile-nav" class="main-nav main-nav--mobile" hidden>
+                <ul class="nav-list--mobile">
 
-                        <ul class="navbar-nav text-center mx-auto">
-
+                    <li class="nav-section">
+                        <span class="nav-section__title">Work</span>
+                        
+                        <ul class="nav-submenu">
                             <li>
-                                <details class="nav-dropdown">
-                                <summary class="nav-summary">
-                                    Work
-                                    <span class="chevron" aria-hidden="true">▾</span>
-                                </summary>
-
-                                <ul class="dropdown-list">
-                                    <li><a href="kronaby.html">Kronaby</a></li>
-                                    <li><a href="automated-negotiation.html">Automated Negotiation</a></li>
-                                    <li><a href="another-project.html">Another Project</a></li>
-                                </ul>
-                                </details>
+                                <a href="kronaby.html" class="submenu">Academic Book Platform</a>
                             </li>
-
                             <li>
-                                <a class="nav-link text-small" href="about.html">About</a>
+                                <a href="automated-negotiation.html" class="submenu">E-commerce Redesign</a>
                             </li>
-
                             <li>
-                            <a class="nav-link text-small" href="images/cv/CV_Roselly_Nunez_UX_UI_Designer-en.pdf" target="_blank">
-                                Resume <i class="bi bi-box-arrow-up-right ms-2"></i>
-                            </a>
+                                <a href="automated-negotiation-book.html" class="submenu">Landing Pages</a>
                             </li>
-
                         </ul>
 
-                    </div>
+                    </li>
+                    
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="images/cv/CV_Roselly_Nunez_UX_UI_Designer-en.pdf">Resume</a></li>
+                </ul>
+            </nav>
 
-                    </div>
-                </nav>
-            </div>
         </header>
 
     <main>
@@ -160,6 +165,7 @@
             <section id="intro-case-study" class="section">
 
                 <div class="container--lg subsection">
+
                     <!-- Title + subtitle-->
                     <div>
 
@@ -181,12 +187,96 @@
                         </div>
 
                     </div>
+
                 </div>
 
-                <!-- OVERVIEW CARD -->
-                <div id="overview" class="container--lg subsection overview-section">
+            </section>
+
+
+            <!-- SECTION 02 -->
+            <section class="section section--summary">
+                <div class="container container--md">
+
+                    <div class="eyebrow-summary">                        
+                        <p>Short on time?</p>
+                        <p>A quick snapshot of the project — read the one-minute summary or scroll for the full case study.</p>
+                    </div>
+
+                    <div class="subsection">
+
+                        <!-- AREA CLICABLE -->
+                        <button
+                            class="summary__header js-summary-toggle"
+                            aria-expanded="false"
+                            type="button"
+                        >
+                            <div class="summary__titles">
+                                <h2 class="summary__title">Case study in one minute</h2>
+                                <h2 class="summary__title--2">Project summary</h2>
+                            </div>
+
+                            <span class="summary__icon-wrap" aria-hidden="true">
+                                <svg
+                                    class="icon summary__icon"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                >
+                                    <path d="M9.56696 5.81077C9.83629 5.59106 10.2338 5.60702 10.4848 5.85809L17.7992 13.1724C18.0669 13.4402 18.0669 13.8743 17.7992 14.1421C17.5314 14.4099 17.0973 14.4099 16.8295 14.1421L10 7.31256L3.17049 14.1421C2.9027 14.4099 2.46863 14.4099 2.20084 14.1421C1.93305 13.8743 1.93305 13.4402 2.20084 13.1724L9.51518 5.85809L9.56696 5.81077Z"/>
+                                </svg>
+                            </span>
+                        </button>
+
+
+                        <!-- SUMMARY COLAPSABLE -->
+                        <div class="summary__content" hidden>
+                            <ul class="summary__list list--wide">
+                            <li>
+                                <span class="fw-medium">Context:</span>
+                                <span class="text-base">
+                                    Two landing pages designed for Festina and Lotus, two brands from the same watch group. Each page presents a new connected watch collection, using the same structure but with a different visual style
+                                </span>
+                            </li>
+                            <li>
+                                <span class="fw-medium">Challenge:</span>
+                                <span class="text-base">
+                                    The main challenge was to keep a consistent layout while clearly showing the unique personality of each brand. The pages also needed to work well on both desktop and mobile
+                                </span>
+                            </li>
+                            <li>
+                                <span class="fw-medium">Solution:</span>
+                                <span class="text-base">
+                                    I designed a flexible landing page system with reusable components and a clear structure. Each brand used the same UX base, but with its own visual identity, colors, and tone
+                                </span>
+                            </li>
+                            <li>
+                                <span class="fw-medium">Outcome:</span>
+                                <span class="text-base">
+                                    Two clear and well-structured landing pages that reflect each brand's identity, are easy to navigate, and offer a consistent experience across devices
+                                </span>
+                            </li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- DIVIDER -->
+            <div class="container--md">
+                <div class="separator separator--gradient-dots" aria-hidden="true">
+                </div>
+            </div>
+
+
+            <!-- SECTION 03 -->
+            <section id="overview" class="section">
+
+                <div class="container--lg subsection overview-section">
 
                     <div class="overview-grid">
+
                         <!-- Background -->
                         <div class="paragraph-space overview-note">
                             <div class="content-block">
@@ -227,6 +317,7 @@
                                 </p>
                             </div>
                         </div>
+                        
                     </div>
 
                 </div>
@@ -234,60 +325,7 @@
             </section>
 
 
-            <!-- SECTION 02 -->
-            <section class="section section--summary">
-                <div class="container--md">
-                    <h3 class="heading text-center fw-bold">Case study in 1 minute</h3>
-
-                    <div class="summary-flow">
-
-                        <div class="flow-step">
-                            <span class="flow-dot"></span>
-                            <div>
-                            <h4 class="text-base text--primary fw-medium">Project</h4>
-                            <p class="text-base">
-                                Two landing pages for Festina Connected D and Lotus Hybrid Connected,
-                                two connected watch brands from the same group.
-                            </p>
-                            </div>
-                        </div>
-
-                        <div class="flow-step">
-                            <span class="flow-dot"></span>
-                            <div>
-                                <h4 class="text-base text--primary fw-medium">Challenge</h4>
-                                <p class="text-base">
-                                    Use one shared structure while showing two very different brand personalities.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="flow-step">
-                            <span class="flow-dot"></span>
-                            <div>
-                                <h4 class="text-base text--primary fw-medium">My role</h4>
-                                <p class="text-base">
-                                    UI Designer in charge of visual design, component creation, and collaboration with development and marketing teams.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="flow-step">
-                            <span class="flow-dot"></span>
-                            <div>
-                                <h4 class="text-base text--primary fw-medium">Solution & result</h4>
-                                <p class="text-base">
-                                    A shared layout system with brand-specific styles and one reusable component, resulting in two responsive and consistent landing pages.
-                                </p>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-
-
-            <!-- SECTION 03 -->
+            <!-- SECTION 04 -->
             <section id="design-strategy" class="section">
 
                 <div class="subsection flow--elements">
@@ -903,6 +941,8 @@
     <footer>
         <p>This site is hand-made by me, Roselly Nuñez. Built with 💖, HTML, CSS, JS and Bootstrap.</p>
     </footer>
+
+    <script src="../assets/js/main.js"></script>
 
     </body>
 

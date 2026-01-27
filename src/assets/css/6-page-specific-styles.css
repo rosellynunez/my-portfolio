@@ -164,13 +164,52 @@
   margin-block-start: var(--section-space-md);
 }
 
+
+
 /* ----- 1 MINUTE CASE ---- */
-.section--summary {
-  margin-block: var(--section-space-sm);
+/* EYEBROW (si lo usas arriba) */
+.eyebrow-summary {
+  font-size: var(--font-size-small);
+  font-style: italic;
+  color: var(--color-text-secondary);
+  margin-block-end: var(--space-7);
+  text-align: center;
 }
 
+.eyebrow-summary p:first-child {
+  font-weight: var(--fw-bold);
+  margin-block-end: 0.1rem;
+}
+
+.section--summary {
+  margin-block: var(--space-6);
+}
+
+/* HEADER CLICABLE */
 .summary__header {
-  margin-block-end: var(--space-6);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+
+  background: none;
+  border: 0;
+  padding: 0;
+
+
+  cursor: pointer;
+}
+
+.summary__icon {
+  transition: transform 0.25s ease;
+  flex-shrink: 0;
+}
+
+
+/* TÍTULOS */
+.summary__titles {
+  display: flex;
+  flex-direction: column;
 }
 
 .summary__title {
@@ -182,18 +221,43 @@
 .summary__title--2 {
   font-size: var(--font-size-lead);
   color: var(--color-text-tertiary);
+  text-align: left;
 }
 
-.eyebrow-summary {
-  font-size: var(--font-size-small);
-  font-style: italic;
-  color: var(--color-text-secondary);
+/* ICONO FLECHA */
+
+/* círculo visual */ 
+.summary__icon-wrap {
+  width: var(--icon-btn-sm);   /* 32px */
+  height: var(--icon-btn-sm);
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(145, 145, 145, 0.333);
+  flex-shrink: 0;
 }
 
+/* TODO: refine icon alignment if needed */
+.summary__icon {
+  width: var(--icon-size-sm);  /* 16px */
+  height: var(--icon-size-sm);
+  transform-origin: center;
+  transition: transform 0.25s ease;
+  transform: translateX(1.5px);
+}
 
+/* ROTACIÓN CUANDO ESTÁ ABIERTO */
+.summary__header[aria-expanded="true"] .summary__icon {
+  transform: rotate(180deg);
+}
 
-
-
+/* CONTENIDO DESPLEGABLE */
+.summary__content {
+  margin-top: 1.5rem;
+}
 
 
 
