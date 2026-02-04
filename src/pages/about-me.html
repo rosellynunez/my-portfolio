@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="dark">
+
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -22,7 +23,7 @@
         <title>Roselly Nuñez - UX, UI & Web Designer</title>
 
         <!-- Favicon -->
-        <link rel="icon" type="image/png" href="images/favicon.png"/>
+        <link rel="icon" type="image/png" href="../assets/images/favicon.png"/>
 
         <!-- Preconnect for faster Google Fonts loading -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,15 +32,11 @@
         <!-- Google Fonts (usa display=swap para cargar texto antes)-->
         <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Pacifico&display=swap" rel="stylesheet">
 
-        <!-- Bootstrap + Bootstrap Icons -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" />
-
         <!-- Global CSS -->
-        <link rel="stylesheet" href="../assets/css/global.css">
+        <link rel="stylesheet" href="../assets/css/global.css"> 
 
-        <!-- Page CSS (case-study.css) -->
-        <link rel="stylesheet" href="../assets/css/pages.css">
+        <!-- Page CSS (case-study.css) 
+        <link rel="stylesheet" href="../assets/css/pages.css"> -->
 
         <!-- 🌗 Carga rápida del tema guardado -->
         <script>
@@ -54,9 +51,6 @@
         <!-- Typed.js (performance) -->
         <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
-        <!-- Bootstrap JS -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
-
         <!-- Twemoji-->
         <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous" defer></script>
 
@@ -65,108 +59,116 @@
 
         <!-- Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y1KMG7E11J"></script>
-        <script src="assets/js/tracking.js"></script>
+        <script src="../assets/js/tracking.js"></script>
     </head>
 
     <body>
+
         <header class="site-header">
-            <div class="header-container">
+                <div class="container container--xl header-container">
 
-                <!-- Logo -->
-                <a class="brand" href="index.html" aria-label="Home">
-                    <svg id="logo" width="150" height="50" viewBox="0 0 39.8 24" xmlns="http://www.w3.org/2000/svg">
-                        <path class="st0" d="M12.5,1v5.2c-3.4,0-6.1,2.7-6.1,6.1v10.9H1.1V1.1h5.2v1.7c1.8-1.1,3.9-1.8,6.1-1.8Z" fill="currentColor"/>
-                        <path class="st0" d="M20.3,23.1v-10.8c0-3.4,2.8-6.1,6.1-6.1h.7c2.4,0,4.4,1.4,5.5,3.3.4.8.6,1.7.7,2.7,0,0,0,0,0,0v5.3c0,0,0,5.5,0,5.5h5.1v-9.5c0-2-.3-3.8-.9-5.4-.2-.5-.4-1-.6-1.4-1-1.9-2.4-3.4-4.2-4.3-1.8-1-3.8-1.5-6-1.5s-3.1.3-4.5.9h0c-.7.3-1.4.6-2,1v-1.7h-5.2v22h5.2Z" 
-                        fill="currentColor"/>
-                    </svg>
-                </a>
-
-                <!-- Nav desktop -->
-                <nav class="main-nav main-nav--desktop" aria-label="Primary navigation">
-                <ul class="nav-list">
-
-                    <li class="nav-dropdown">
-                        <button class="nav-summary" aria-haspopup="true">
-                            <span class="nav-link">Work
-                                <svg class="nav-chevron" viewBox="0 0 16 16" aria-hidden="true">
-                                <path d="M2 5l6 6 6-6" fill="none" stroke="currentColor" />
-                                </svg>
-                            </span>
-                        </button>
-
-                        <ul class="dropdown-list">
-                            <li><a href="kronaby.html">Academic Book Platform</a></li>
-                            <li><a href="automated-negotiation.html">E-commerce Redesign</a></li>
-                            <li><a href="automated-negotiation-book.html">Landing Pages</a></li>
-                        </ul>
-                    </li>
-
-                    <li><a class="nav-link" href="about.html">About</a></li>
-                    <li>
-                    <a class="nav-link" href="images/cv/CV_Roselly_Nunez_UX_UI_Designer-en.pdf" target="_blank">
-                        Resume
+                    <!-- Logo -->
+                    <a class="brand" href="index.html" aria-label="Home">
+                        <svg id="logo" width="150" height="50" viewBox="0 0 39.8 24" xmlns="http://www.w3.org/2000/svg">
+                            <path class="st0" d="M12.5,1v5.2c-3.4,0-6.1,2.7-6.1,6.1v10.9H1.1V1.1h5.2v1.7c1.8-1.1,3.9-1.8,6.1-1.8Z" fill="currentColor"/>
+                            <path class="st0" d="M20.3,23.1v-10.8c0-3.4,2.8-6.1,6.1-6.1h.7c2.4,0,4.4,1.4,5.5,3.3.4.8.6,1.7.7,2.7,0,0,0,0,0,0v5.3c0,0,0,5.5,0,5.5h5.1v-9.5c0-2-.3-3.8-.9-5.4-.2-.5-.4-1-.6-1.4-1-1.9-2.4-3.4-4.2-4.3-1.8-1-3.8-1.5-6-1.5s-3.1.3-4.5.9h0c-.7.3-1.4.6-2,1v-1.7h-5.2v22h5.2Z" 
+                            fill="currentColor"/>
+                        </svg>
                     </a>
-                    </li>
 
-                </ul>
-                </nav>
+                    <!-- Nav desktop -->
+                    <nav class="main-nav main-nav--desktop" aria-label="Primary navigation">
+                    <ul class="nav-list">
 
-                <!-- Theme button -->
-                <button 
-                    data-idle="true"
-                    class="btn btn-vibe btn-shine" 
-                    onclick="cambiarTema()"
-                    aria-label="Switch between light and dark mode">
-                    Change the Vibe 😎
-                </button>
+                        <li class="nav-dropdown">
+                            <button class="nav-summary" aria-haspopup="true">
+                                <span class="nav-link">Work
+                                    <svg class="nav-chevron" viewBox="0 0 16 16" aria-hidden="true">
+                                    <path d="M2 5l6 6 6-6" fill="none" stroke="currentColor" />
+                                    </svg>
+                                </span>
+                            </button>
 
-                <!-- Mobile menu button -->
-                <button 
-                    class="menu-toggle" 
-                    aria-expanded="false" aria-controls="mobile-nav">
-                    MENU
-                </button>
+                            <ul class="dropdown-list">
+                                <li><a href="kronaby.html">Academic Book Platform (Design System)</a></li>
+                                <li><a href="automated-negotiation.html">E-commerce Redesign Webpage</a></li>
+                                <li><a href="automated-negotiation-book.html">Connected Watches Landing Pages</a></li>
+                            </ul>
+                        </li>
 
-            </div>
+                        <li><a class="nav-link" href="about.html">About</a></li>
+                        <li>
+                        <a class="nav-link" href="images/cv/CV_Roselly_Nunez_UX_UI_Designer-en.pdf" target="_blank">
+                            Resume
+                        </a>
+                        </li>
 
-            <!-- Nav mobile -->
-            <nav id="mobile-nav" class="main-nav main-nav--mobile" hidden>
-                <ul class="nav-list--mobile">
+                    </ul>
+                    </nav>
 
-                    <li class="nav-section">
-                        <span class="nav-section__title">Work</span>
-                        
-                        <ul class="nav-submenu">
-                            <li>
-                                <a href="kronaby.html" class="submenu">Academic Book Platform</a>
-                            </li>
-                            <li>
-                                <a href="automated-negotiation.html" class="submenu">E-commerce Redesign</a>
-                            </li>
-                            <li>
-                                <a href="automated-negotiation-book.html" class="submenu">Landing Pages</a>
-                            </li>
-                        </ul>
+                    <!-- Theme button -->
+                    <button 
+                        data-idle="true"
+                        class="btn btn-vibe btn-shine" 
+                        onclick="cambiarTema()"
+                        aria-label="Switch between light and dark mode">
+                        Change the Vibe 😎
+                    </button>
 
-                    </li>
-                    
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="images/cv/CV_Roselly_Nunez_UX_UI_Designer-en.pdf">Resume</a></li>
-                </ul>
-            </nav>
+                    <!-- Mobile menu button -->
+                    <button 
+                        class="menu-toggle" 
+                        aria-expanded="false" aria-controls="mobile-nav">
+                        MENU
+                    </button>
+
+                </div>
 
         </header>
 
+        <!-- Nav mobile -->
+        <nav id="mobile-nav" class="main-nav main-nav--mobile">
+
+            <div class="mobile-nav__content">
+
+            <ul class="nav-list--mobile">
+
+                <li class="nav-section">
+                    <span class="nav-section__title">Work</span>
+                    
+                    <ul class="nav-submenu">
+                        <li>
+                            <a href="kronaby.html" class="submenu">Academic Book Platform (Design System)</a>
+                        </li>
+                        <li>
+                            <a href="automated-negotiation.html" class="submenu">E-commerce Redesign Webpage</a>
+                        </li>
+                        <li>
+                            <a href="automated-negotiation-book.html" class="submenu">Connected Watches Landing Pages</a>
+                        </li>
+                    </ul>
+
+                </li>
+                
+                <li><a href="about.html">About</a></li>
+                <li><a href="images/cv/CV_Roselly_Nunez_UX_UI_Designer-en.pdf">Resume</a></li>
+            </ul>
+            
+            </div>
+
+        </nav>
+
     <main>
+
         <!-- ABOUT ME -->
         <article id="about-me">
-            
+
             <section id="about-me-intro" class="section reveal-section">
-                <div class="section-container container--lg">
+                <div class="container container--lg flow--reading">
 
                     <h1 class="display-alt text-gradient-primary">About me</h1>
 
-                    <div>
+                    <div class="flow--reading">
                         <p>
                             <span class="subtitle text-gradient-primary-wrapper--no-animated">
                             As a UX/UI and Design Systems Designer, I focus on bringing structure to complexity and turning ideas into clear, usable experiences.
@@ -189,36 +191,32 @@
                 </div>
             </section>
 
+
             <section id="skills-tools" class="section reveal-section">
-                <div class="section-container container--lg">
-                    
+
+                <div class="container container--lg flow--reading">
                     <h2 class="title">
                         <span class="text-line">Skills & tools</span>
                         <span class="text-line text-line--2">that shape my work</span>
-                    </h2>
-                
-                    <div class="section-container container--md-right">
+                    </h2>                
 
-                        <div>
-                            <p class="text-base">My main skills are empathy, enthusiasm, and adaptability and I like bringing them to every project. My life is guided by freedom, perseverance, and the joy of growth.</p>
-                            <p class="text-base">The tools and technologies I use to bring your products to life:</p>
-                        </div>
+                    <div class="container container--md container--right flow--reading">
 
-                        <div class="skills-tabs" aria-label="Skill categories">
-                            <ul>
-                                <li class="text-caption">Figma</li>
-                                <li class="text-caption">Adobe Creative Cloud</li>
-                                <li class="text-caption">CSS3</li>
-                                <li class="text-caption">Javascript</li>
-                                <li class="text-caption">Github</li>
-                                <li class="text-caption">VS Code</li>
-                                <li class="text-caption">Bootstrap</li>
-                                <li class="text-caption">Vue</li>
+                        <p>My main skills are empathy, enthusiasm, and adaptability and I like bringing them to every project. My life is guided by freedom, perseverance, and the joy of growth.</p>
+                        <p>The tools and technologies I use to bring your products to life:</p>
+
+                            <ul class="tags tags--md">
+                                <li>Figma</li>
+                                <li>Adobe Creative Cloud</li>
+                                <li>CSS3</li>
+                                <li>Javascript</li>
+                                <li>Github</li>
+                                <li>VS Code</li>
+                                <li>Bootstrap</li>
+                                <li>Vue</li>
                             </ul>
-                        </div>
 
-                        <div>
-                            <p class="text-base">I'm currently leveling up my development skills — and yes, this website is one of my training quests 👩🏻‍💻⚔️.  
+                            <p>I'm currently leveling up my development skills — and yes, this website is one of my training quests 👩🏻‍💻⚔️.  
                             Crafted with Design System magic and semantic HTML sorcery, it's designed to grow without falling apart.  
                             If you're curious, my Portfolio GitHub has the full spellbook: the HTML, CSS, JavaScript, and the Design System behind this portfolio.  
                             You can explore it here:
@@ -231,56 +229,62 @@
                                     github.com/rosellynunez/my-portfolio
                                 </a>
                             </span>
-                        </div>
 
                     </div>
+                </div>
 
             </section>
 
-            <section class="section reveal-section">
-                <div class="section-container container--lg">
 
+            <section class="section reveal-section">
+
+                <div class="container container--lg flow--reading">
                     <h2 class="title">
                         <span class="text-line">From sketchbook</span>
                         <span class="text-line text-line--2">to digital world</span>
                     </h2>
 
-                <div class="container--md-right">
-                    <p class="text-base">
-                        Born and raised in Peru 🇵🇪, where my love for drawing as a kid naturally led me to graphic design. After working for years as a graphic designer, I packed my bags and headed to Barcelona for a Master's in UX/UI Design at 
+                    <div class="container container--md container--right flow--reading">
+                        <p>
+                            Born and raised in Peru 🇵🇪, where my love for drawing as a kid naturally led me to graphic design. After working for years as a graphic designer, I packed my bags and headed to Barcelona for a Master's in UX/UI Design at 
+                            
                             <a class="link-underline link-underline--text" href="https://www.elisava.net/en/" target="_blank">Elisava School</a>.</p>
-                    <p class="text-base">
-                        Now, let's just say I'm pretty happy to call Barcelona my home 🏡.</p>
+                        <p>
+                            Now, let's just say I'm pretty happy to call Barcelona my home 🏡.</p>
+                    </div>
                 </div>
 
             </section>
 
-            <section class="section reveal-section">
-                <div class="section-container container--lg">
 
+            <section class="section reveal-section">
+
+                <div class="container container--lg flow--reading">
                     <h2 class="title">
                         <span class="text-line">When I am not in</span>
                         <span class="text-line text-line--2">front of my screen...</span>
                     </h2>
 
-                    <div class="container--md-right">
-                        <p class="text-base">
+                    <div class="container container--md container--right flow--reading">
+                        <p>
                             One of my favorite activities is co-hosting an 
                                 <a class="link-underline link-underline--text" 
                                 href="https://www.meetup.com/es-ES/theater-games-in-the-park/events/303712539/?eventorigin=group_upcoming_events" 
                                 target="_blank">improvisation meetup</a>. 
                             It's a great way to connect with others and laugh a lot! So, if you are in Barcelona, you're welcome to come.
                         </p>
-                        <p class="text-base">
+                        <p>
                             Beside that, I'm a big fan of exploring the world. Trying new foods, experiencing different cultures, and seeing amazing scenery inspires me and gives me fresh perspectives.
                         </p>
-                        <p class="text-base">
+                        <p>
                             Recently, I've been fascinated by Japan's mixture of tradition and technology, and the spiritual life in India. Also, I've picked up drawing again. 
                         </p>
                     </div>
                 </div>
+
             </section>
             
+
             <!-- SECTION 06 - CONTACT SECTION -->
             <section id="contact-me" class="section contact-section bg-ornament">
                 <div class="container--md">
@@ -325,9 +329,33 @@
 
     </main>
 
-    <footer>
-        <p class="text-caption">This site was made by me, Roselly. Built with 💖, HTML, CSS, JS and Bootstrap.</p>
-    </footer>
+    <footer class="site-footer">
+            <p class="footer__copyright">
+            © 2026 Roselly Nuñez.
+            </p>
+
+            <p class="footer__role">
+            UX/UI & Design Systems Designer.
+            </p>
+
+            <p class="footer__statement">
+            Built with semantic HTML, CSS, and a scalable design system — driven by curiosity and a genuine care for well-crafted experiences.
+            </p>
+
+            <nav class="footer__links" aria-label="Footer links">
+            <a href="https://www.linkedin.com/in/rosellynunez"
+                target="_blank"
+                rel="noopener noreferrer">LinkedIn</a>
+            <span aria-hidden="true">·</span>
+            <a href="https://github.com/rosellynunez"
+                target="_blank"
+                rel="noopener noreferrer">GitHub</a>
+            <span aria-hidden="true">·</span>
+            <a href="/assets/docs/cv/current.pdf"
+                target="_blank"
+                rel="noopener noreferrer">Resume</a>
+            </nav>
+        </footer>
 
     <script src="../assets/js/main.js"></script>
 

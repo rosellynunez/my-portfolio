@@ -1,38 +1,75 @@
-/* =========================================================
-    THEME: DARK (DEFAULT)
-   ========================================================= */
+/* ========== ORNAMENTS ========== */
 
-:root,
-[data-bs-theme="dark"] 
+/* ORNAMENT SECTION */
+.section.bg-ornament {
+  position: relative;
+  isolation: isolate;
+  overflow-x: hidden; /* ✅ solo corta horizontal */
+  overflow-y: visible; /* ✅ permite scroll vertical */
+
+  background: var(--purple-950); /* 👈 ESTE es el plano real */
+}
+
+/* afecta a todos los hijos directos de contact-section, no nietos “Todo lo que haya dentro de la sección
+debe estar por encima del fondo decorativo” */
+.section.bg-ornament > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Background ornament */
+[data-bs-theme="dark"] .contact-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle at 70% 25%,
+      rgba(218,110,220,0.14),
+      transparent 55%
+    ),
+    radial-gradient(
+      circle at 30% 80%,
+      rgba(20,184,196,0.18),
+      transparent 60%
+    ),
+    linear-gradient(
+      to bottom,
+      transparent 0%,
+      transparent 25%,
+      var(--purple-900) 60%,
+      var(--purple-850) 100%
+    );
+
+  z-index: 0;
+  pointer-events: none;
+}
+
+.contact-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+
+
+
+[data-bs-theme="light"] .bg-ornament::before {
+  display: none;
+}
+
 
 /* =========================================================
     DARK THEME SPECIFIC STYLES
    ========================================================= */
 
-/* ================== BUTTONS ================== */
-
-/* -------------- PRIMARY BUTTONS -------------- */
-
-[data-bs-theme="dark"] .btn-primary:hover,
-[data-bs-theme="dark"] .btn-primary-icon:hover {
-  background: var(--btn-primary-bg-hover)!important;
+   /* Dark theme override */
+[data-bs-theme="dark"] {
+  --gradient-text-start: var(--rose-300);
+  --gradient-text-end: var(--teal-300);
 }
 
-[data-bs-theme="dark"] .btn-primary:active,
-[data-bs-theme="dark"] .btn-primary-icon:active,
-[data-bs-theme="dark"] .btn-primary-sm:active {
-  background: var(--btn-primary-bg-active);
-}
 
-/* -------------- SECONDARY BUTTON -------------- */
-
-[data-bs-theme="dark"] .btn-secondary:hover {
-  background: var(--btn-secondary-hover-bg);
-}
-
-[data-bs-theme="dark"] .btn-secondary:active {
-  background: var(--btn-secondary-active-bg);
-}
 
 /* ---------- CHANGE MODE GRADIENT ---------- */
 body[data-bs-theme="dark"] {
@@ -68,7 +105,6 @@ body[data-bs-theme="dark"] {
   background: var(--purple-950);
   backdrop-filter: blur(16px) saturate(140%);
   -webkit-backdrop-filter: blur(96px) saturate(140%);
-  color: var(--text-primary);
   position: relative;
   overflow: hidden;
 }
@@ -114,36 +150,26 @@ body[data-bs-theme="dark"] {
   -webkit-text-fill-color: transparent;
 }
 
-/* for other sections - sentences */
-[data-bs-theme="dark"] .text-gradient-primary {
+
+[data-bs-theme="dark"] .eyebrow-gradient {
+  display: inline-block;
+
   background: linear-gradient(
-    120deg,
+    95deg,
     var(--rose-300) 0%,
-    var(--rose-300) 30%,
-    var(--teal-300) 40%,
+    color-mix(in srgb, var(--rose-300) 80%, var(--teal-300)) 50%,
     var(--teal-300) 100%
   );
-  background-size: 200% 200%;
+
+  background-size: 100% 100%;
   background-position: center;
+
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 
-/* for other sections - short words */
-[data-bs-theme="dark"] .text-gradient-primary--short {
-  background: linear-gradient(
-    120deg,
-    var(--rose-300) 0%,
-    var(--rose-300) 48%,
-    var(--teal-300) 55%,
-    var(--teal-300) 100%
-  );
-  background-size: 200% 200%;
-  background-position: center;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
 
 
 [data-bs-theme="dark"] .text-gradient-secondary {
@@ -154,68 +180,9 @@ body[data-bs-theme="dark"] {
 
 
 
-
-
-
-
-/* =============== LOGO =============== */
-
-#logo { fill: var(----white); }
-
-
-
 /* =============== GLOBAL BACKGROUND =============== */
 
 [data-bs-theme="dark"] body {
-  background: var(--bg-primary);
-  color: var(--text-primary);
-}
-
-
-
-
-/* =============== ORNAMENT BACKGROUND =============== */
-
-/* Dark theme override */
-[data-bs-theme="dark"] {
-  --gradient-text-start: var(--rose-300);
-  --gradient-text-end: var(--teal-300);
-}
-
-[data-bs-theme="dark"] .bg-ornament::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-
-  background:
-    /* Glow rosado-violeta */
-    radial-gradient(
-      circle at 70% 20%,
-      rgba(218, 110, 220, 0.12),
-      transparent 55%
-    ),
-    /* Glow turquesa */
-    radial-gradient(
-      circle at 30% 80%,
-      rgba(20, 184, 196, 0.18),
-      transparent 60%
-    ),
-    /* Base gradient */
-    linear-gradient(
-      var(--purple-900) 100%
-    );
-
-  opacity: 0.55;
-  z-index: -1;
-  pointer-events: none;
-
-
-
-
-/* dark-theme.css */
-
-
-
 
 
  /* -------- RAW GRADIENTS -------- */

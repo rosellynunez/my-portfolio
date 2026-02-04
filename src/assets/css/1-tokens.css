@@ -14,8 +14,19 @@
    ========================================================= */
 
   /* ===== FONT TOKENS ===== */
-  --font-family-base: "Inter", system-ui, -apple-system, sans-serif;
-  --font-family-heading: "Inter", system-ui, -apple-system, sans-serif;
+
+  /* ===== FONT TOKENS ===== */
+
+  /* Base / body */
+  --font-family-base: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Headings */
+  --font-family-heading: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Mono / UI details */
+  --font-family-mono: "Sometype Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+
 
 
   /* =========================================================
@@ -97,10 +108,10 @@
 
   
   /* --- BODY TEXT --- */
---font-size-text: var(--font-size-base);
-/* 18px — Standard body copy */
+  --font-size-text: var(--font-size-base);
+  /* 18px — Standard body copy */
 
---font-size-lead: var(--font-size-lg);
+  --font-size-lead: var(--font-size-lg);
 /* 26.1px — Intro paragraphs, strong opening text */
 
 
@@ -156,10 +167,12 @@
 
 
   /* Reading rhythm */
-  --rhythm-reading-text: var(--space-2);
-  --rhythm-reading-heading-lg: var(--space-4); /* h1, h2 */
-  --rhythm-reading-heading-sm: var(--space-3); /* h3, h4 */
+  --rhythm-reading-text: var(--space-3);
+  --rhythm-reading-heading-primary: var(--space-4); /* h1, h2 */
+  --rhythm-reading-heading-secondary: var(--space-3); /* h3, h4, h5, h6 */
 
+  
+  
 
   /* Layout / element flow rhythm */
   --rhythm-elements: var(--space-6);
@@ -253,6 +266,7 @@
     ======================================================== */
   --breakpoint-mobile: 768px;
   --breakpoint-tablet: 991px;
+  --breakpoint-laptop: 1200px;
   --breakpoint-desktop: 1400px;
 }
 
@@ -267,10 +281,12 @@
     Surfaces
     --------------------------------------------------------- */
   --bg-primary: var(--purple-950);
+
   --bg-secondary: var(--purple-900);
 
 
-  --surface-bg: #ffffff;
+  --surface-bg: var(--purple-950);
+
 
   --surface-overlay: rgba(15, 15, 16, 0.7);
 
@@ -278,7 +294,9 @@
 /*  ---------------------------------------------------------
     UI components
     --------------------------------------------------------- */
-  --surface-card-primary: var(--purple-850);
+  --surface-card-primary: hsl(255 18% 12%);
+
+
   --surface-card-secondary: var(--purple-950);
 
 /*  ---------------------------------------------------------
@@ -290,9 +308,9 @@
 /*  ---------------------------------------------------------
     Text
     --------------------------------------------------------- */
-  --color-text-primary: var(--gray-100);
-  --color-text-secondary: var(--gray-300); 
-  --color-text-tertiary: var(--gray-400); 
+    --color-text-primary: var(--gray-100);
+    --color-text-secondary: var(--gray-300); 
+    --color-text-tertiary: var(--gray-400); 
 
   --color-text-brand: var(--purple-300);
 
@@ -334,9 +352,9 @@
 
 
 /* ---------- Media / Image tokens ---------- */
---media-radius-sm: var(--radius-sm);
---media-radius-md: var(--radius-md);
---media-radius-lg: var(--radius-lg);
+  --media-radius-sm: var(--radius-sm);
+  --media-radius-md: var(--radius-md);
+  --media-radius-lg: var(--radius-lg);
 
 
 
@@ -350,4 +368,31 @@
   --card-border-soft: 1px solid rgba(0,0,0,0.08);
   --card-shadow-hover: 0 10px 30px rgba(0,0,0,0.12);
 
+
+
+/* ---------- Cotainers ---------- */
+
+  /* Container max-widths */
+  --container-xs: 32rem;   /* 512px  */
+  --container-sm: 40rem;   /* 640px  */
+  --container-md: 56rem;   /* 832px  */
+  --container-lg: 74rem;   /* 1024px */
+  --container-xl: 82rem;   /* 1280px */
+  --container-2xl: 90rem;  /* 1440px */
+
+  /* Container paddings */
+  /* ---------- Container ---------- */
+  --container-padding: clamp(var(--space-3), 4vw, var(--space-6));
+}
+
+@media (max-width: 576px) {
+  :root {
+    --container-padding: var(--space-2);
   }
+}
+
+@media (min-width: 1440px) {
+  :root {
+    --container-padding: var(--space-3);
+  }
+}

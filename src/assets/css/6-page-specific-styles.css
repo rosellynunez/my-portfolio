@@ -6,25 +6,147 @@
 
 
 /* INTRO */ 
-@media (min-width: 992px) {
-  #intro .intro-content {
-    max-width: 76rem;
+
+.intro-hero-content {
+  max-width: 76rem;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3); /* ajusta el espacio */
+}
+
+#intro .container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6); /* ajusta el espacio */
+}
+
+.hero-photo-inline {
+  display: inline-block;
+  max-width: none;
+}
+
+/* BUTTONS */
+.intro-hero-actions {
+  display: flex;
+  gap: var(--space-5);
+  flex-wrap: wrap;
+}
+
+.intro-hero-actions .btn {
+  margin: 0;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+
+@media (max-width: 1200px) {
+
+  #intro .intro-hero-content {
+    max-width: 60rem;
+  }
+
+  .display-alt {
+    font-size: clamp(2.5rem, 4vw, 3.2rem);
+  }
+
+  .text-lead {
+    font-size: 1.125rem; /* 18px */
+    line-height: 1.6;
+    max-width: 46rem;
+  }
+
+  .intro-hero-content {
+    gap: var(--space-4);
+  }
+
+  .hero-photo-inline {
+    width: 3.2rem;
+    height: auto;
+    vertical-align: middle;
+  }
+
+  .intro-hero-actions {
+    gap: var(--space-4);
   }
 }
+
+
+@media (max-width: 768px) {
+
+  #intro .container {
+    gap: var(--space-6);
+  }
+
+  #intro .intro-hero-content {
+    max-width: 100%;
+  }
+
+  .display-alt {
+    font-size: clamp(1.9rem, 6vw, 2.3rem);
+    line-height: 1.25;
+  }
+
+  .display-alt br {
+    display: none;
+  }
+
+  .hero-photo-inline {
+    width: 2.6rem;
+    margin-left: 0.25rem;
+    vertical-align: middle;
+  }
+
+  .text-lead {
+    font-size: 1rem; /* 16px */
+    line-height: 1.6;
+    max-width: 100%;
+  }
+
+  .intro-hero-content {
+    gap: var(--space-4);
+  }
+
+  .intro-hero-actions {
+    flex-direction: column
+  }
+}
+
+@media (max-width: 576px) {
+
+  .display-alt {
+    font-size: 1.75rem; /* ~28px */
+    line-height: 1.3;
+    letter-spacing: -0.005em;
+  }
+
+  .hero-photo-inline {
+    width: 2.2rem;
+    margin-left: 0.2rem;
+  }
+
+  .text-lead {
+    font-size: 0.95rem; /* ~15px */
+    line-height: 1.65;
+  }
+
+  .intro-hero-content {
+    gap: var(--space-3);
+  }
+
+  #intro .container {
+    gap: var(--space-5);
+  }
+
+  .intro-hero-actions {
+    gap: var(--space-2);
+  }
+}
+
+
 
 .home .section + .section {
   margin-block-start: var(--section-space-lg);
-}
-
-@media (max-width: 991px) {
-  .intro-title {
-    font-size: clamp(2rem, 6vw, 2.6rem);
-    line-height: 1.2;
-  }
-
-  .intro-lead {
-    font-size: var(--font-size-text);
-  }
 }
 
 
@@ -64,22 +186,6 @@
   font-weight: var(--fw-medium);
   text-align: center;
 }
-
-
-
-/* CONTACT-ME */ 
-#contact-me h2 {
-  font-weight: var(--fw-bold);
-  text-align: center;
-}
-
-
-
-
-
-
-
-
 
 
 
@@ -358,12 +464,9 @@
 /* ----- CONTACT CARD SECTION ---- */
 
 #contact-me h2 {
-  padding: 0rem 0rem var(--space-5);
+  font-weight: var(--fw-bold);
 }
 
-#contact-me .text-lead {
-  padding: 0rem 0rem var(--space-5);
-}
 
 
 

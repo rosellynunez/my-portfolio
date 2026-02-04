@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="dark">
+
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -22,24 +23,20 @@
         <title>Roselly Nuñez - UX, UI & Web Designer</title>
 
         <!-- Favicon -->
-        <link rel="icon" type="image/png" href="images/favicon.png"/>
+        <link rel="icon" type="image/png" href="../assets/images/favicon.png"/>
 
         <!-- Preconnect for faster Google Fonts loading -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
         <!-- Google Fonts (usa display=swap para cargar texto antes)-->
-        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Pacifico&display=swap" rel="stylesheet">
-
-        <!-- Bootstrap + Bootstrap Icons -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Pacifico&family=Sometype+Mono:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 
         <!-- Global CSS -->
-        <link rel="stylesheet" href="../assets/css/global.css">
+        <link rel="stylesheet" href="../assets/css/global.css"> 
 
-        <!-- Page CSS (case-study.css) -->
-        <link rel="stylesheet" href="../assets/css/pages.css">
+        <!-- Page CSS (case-study.css) 
+        <link rel="stylesheet" href="../assets/css/pages.css"> -->
 
         <!-- 🌗 Carga rápida del tema guardado -->
         <script>
@@ -54,9 +51,6 @@
         <!-- Typed.js (performance) -->
         <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
-        <!-- Bootstrap JS -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
-
         <!-- Twemoji-->
         <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous" defer></script>
 
@@ -65,12 +59,13 @@
 
         <!-- Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y1KMG7E11J"></script>
-        <script src="assets/js/tracking.js"></script>
+        <script src="../assets/js/tracking.js"></script>
     </head>
 
     <body>
-        <header class="site-header">
-            <div class="header-container">
+
+      <header class="site-header">
+            <div class="container container--2xl header-container">
 
                 <!-- Logo -->
                 <a class="brand" href="index.html" aria-label="Home">
@@ -83,32 +78,36 @@
 
                 <!-- Nav desktop -->
                 <nav class="main-nav main-nav--desktop" aria-label="Primary navigation">
-                <ul class="nav-list">
+                  <ul class="nav-list">
 
-                    <li class="nav-dropdown">
-                        <button class="nav-summary" aria-haspopup="true">
-                            <span class="nav-link">Work
-                                <svg class="nav-chevron" viewBox="0 0 16 16" aria-hidden="true">
-                                <path d="M2 5l6 6 6-6" fill="none" stroke="currentColor" />
-                                </svg>
-                            </span>
-                        </button>
+                      <li class="nav-dropdown">
+                          <button class="nav-summary" aria-haspopup="true">
+                              <span class="nav-link">Work
+                                  <svg class="nav-chevron" viewBox="0 0 16 16" aria-hidden="true">
+                                  <path d="M2 5l6 6 6-6" fill="none" stroke="currentColor" />
+                                  </svg>
+                              </span>
+                          </button>
 
-                        <ul class="dropdown-list">
-                            <li><a href="kronaby.html">Academic Book Platform</a></li>
-                            <li><a href="automated-negotiation.html">E-commerce Redesign</a></li>
-                            <li><a href="automated-negotiation-book.html">Landing Pages</a></li>
-                        </ul>
-                    </li>
+                          <ul class="dropdown-list">
+                              <li><a href="academic-book.html">Academic Book Platform (Design System)</a></li>
+                              <li><a href="kronaby.html">E-commerce Redesign Webpage</a></li>
+                              <li><a href="connected-d.html">Connected Watches Landing Pages</a></li>
+                          </ul>
+                      </li>
 
-                    <li><a class="nav-link" href="about.html">About</a></li>
-                    <li>
-                    <a class="nav-link" href="images/cv/CV_Roselly_Nunez_UX_UI_Designer-en.pdf" target="_blank">
-                        Resume
-                    </a>
-                    </li>
+                      <li>
+                        <a class="nav-link" href="about-me.html">About</a></li>
+                      <li>
+                        <a class="nav-link"
+                          href="/assets/docs/cv/current.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer">
+                          Resume
+                        </a>
+                      </li>
 
-                </ul>
+                  </ul>
                 </nav>
 
                 <!-- Theme button -->
@@ -129,549 +128,595 @@
 
             </div>
 
-            <!-- Nav mobile -->
-            <nav id="mobile-nav" class="main-nav main-nav--mobile" hidden>
-                <ul class="nav-list--mobile">
+      </header>
 
-                    <li class="nav-section">
-                        <span class="nav-section__title">Work</span>
-                        
-                        <ul class="nav-submenu">
-                            <li>
-                                <a href="kronaby.html" class="submenu">Academic Book Platform</a>
-                            </li>
-                            <li>
-                                <a href="automated-negotiation.html" class="submenu">E-commerce Redesign</a>
-                            </li>
-                            <li>
-                                <a href="automated-negotiation-book.html" class="submenu">Landing Pages</a>
-                            </li>
-                        </ul>
+      <!-- Nav mobile -->
+      <nav id="mobile-nav" class="main-nav main-nav--mobile">
 
-                    </li>
-                    
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="images/cv/CV_Roselly_Nunez_UX_UI_Designer-en.pdf">Resume</a></li>
-                </ul>
-            </nav>
+        <div class="mobile-nav__content">
 
-        </header>
+          <ul class="nav-list--mobile">
 
-    <main class="home">
+              <li class="nav-section">
+                  <span class="nav-section__title">Work</span>
+                  
+                  <ul class="nav-submenu">
+                      <li>
+                          <a href="kronaby.html" class="submenu">Academic Book Platform (Design System)</a>
+                      </li>
+                      <li>
+                          <a href="automated-negotiation.html" class="submenu">E-commerce Redesign Webpage</a>
+                      </li>
+                      <li>
+                          <a href="automated-negotiation-book.html" class="submenu">Connected Watches Landing Pages</a>
+                      </li>
+                  </ul>
 
-      <!-- SECTION 01 - INTRO -->
-      <section id="intro" class="section">
-        <div class="container--xl">         
-
-          <div class="subsection intro-content">
-
-            <h1 class="display-alt">
-
+              </li>
               
-              <span class="font-decorative text-gradient-primary-wrapper heading">Hello!</span>
-              <span class="wave subtitle">👋🏼</span>
-
-              <span class="text-gradient-primary-wrapper">
-                <br>
-                I'm Roselly Nuñez,
-              </span>
-
-              <img class="hero-photo-inline"
-                  src="../assets/images/Roselly_Nunez.jpg"
-                  alt="Hey! That's me!"
-                  loading="lazy">
-
-              <span class="text-gradient-primary-wrapper text-gradient-follow">
-                <br>
-                I design thoughtful interfaces and scalable UI for digital products.
-              </span>
-
-            </h1>
-          
-          </div>
-
-          <div class="subsection intro-content">
-            <p class="text-lead">Based in Barcelona, I work at the intersection of UX, visual design, engineering, and design systems, creating products that feel good to use and make sense to build.</p>
-          </div>
-
-          <div class="subsection">
-            <div class="btn-group">
-
-              <!-- button 1 -->
-              <div>
-                <a href="about-me.html" class="btn btn-solid btn-primary">
-                  View my work
-                </a>
-              </div>
-
-              <!-- button 2 -->
-              <div>
-                <a href="about-me.html" class="btn btn-solid btn-secondary">
-                  Contact me
-                </a>
-              </div>
-
-            </div>
-          </div>
-
+              <li><a href="about.html">About</a></li>
+              <li><a href="images/cv/CV_Roselly_Nunez_UX_UI_Designer-en.pdf">Resume</a></li>
+          </ul>
+        
         </div>
-      </section> 
+
+      </nav>
+
+      <main class="home">
+
+        <!-- SECTION 01 - INTRO -->
+        <section id="intro" class="section">
+          <div class="container container--xl">         
+
+              <div class="intro-hero-content">
+
+                <h1 class="display-alt">
+
+                  
+                  <span class="font-decorative text-gradient-primary-wrapper text-base">Hello!</span>
+                  <span class="wave subtitle">👋🏼</span>
+
+                  <span class="text-gradient-primary-wrapper">
+                    <br>
+                    I'm Roselly Nuñez,
+                  </span>
+
+                  <img class="hero-photo-inline"
+                    src="../assets/images/home/my-picture.jpg"
+                    alt="Hey! That's me!"
+                    loading="lazy"
+                  >
+
+                  <span class="text-gradient-primary-wrapper text-gradient-follow">
+                    <br>
+                    I design thoughtful interfaces and scalable UI for digital products.
+                  </span>
+
+                </h1>
+              
+                <p class="text-lead">
+                  Based in Barcelona, I work at the intersection of UX, visual design, engineering, and design systems, creating products that feel good to use and make sense to build.
+                </p>
+
+              </div>
+
+              <div class="intro-hero-actions">
+
+                  <!-- button 1 -->
+                  <div>
+                    <a href="#projects" class="btn btn-solid btn-primary">
+                      <span class="btn-inner">View my work</span>
+                    </a>
+                  </div>
+
+                  <!-- button 2 -->
+                  <div>
+                    <a href="about-me.html" class="btn btn-solid btn-secondary">
+                      Contact me
+                    </a>
+                  </div>
+
+              </div>
+
+          </div>
+        </section> 
 
 
-      <!-- SECTION 02 - BRIEF ABOUT ME SECTION -->
-      <section id="about" class="section">
-        
-        <div class="elements-flow container--lg">
+        <!-- SECTION 02 - BRIEF ABOUT ME SECTION -->
+        <section id="about" class="section">
+          
+          <div class="container container--lg">
 
-          <!-- Header de sección -->
-          <header class="section-header">
-            <p class="text-lead text-gradient-primary font-decorative eyebrow">
-              How I think about design
-            </p>
+            <div class="flow--elements">
 
-            <div class="typed-wrapper">
-              <span id="typed-output" class="display-alt">
-              </span>
-            </div>
-          </header>
-        
-          <!-- Contenido de sección -->
-          <div class="container--md-right">
+              <!-- Header de sección -->
+              <header class="section-header">
+                <p class="font-decorative eyebrow eyebrow-gradient">
+                  How I think about design
+                </p>
 
-            <div class="section-container">
-              <!-- paragraph-->
-              <div>
-                <p class="heading"> 
-                With 5+ years of experience designing digital products, I've worked closely with product and engineering teams to turn ideas into real, usable interfaces.</p>
-                <p class="heading"> 
-                My background in UI and UX naturally leads me toward design systems—thinking in components, patterns, and solutions that scale over time.</p>
+                <div class="typed-wrapper">
+                  <span id="typed-output" class="display-alt">
+                  </span>
+                </div>
+              </header>
+
+              <!-- Contenido de sección -->
+              <div class="container container--md container--right">
+
+                <div class="section-container">
+
+                  <!-- paragraph-->
+                  <div class="flow--reading">
+                    <p class="text-lead">
+                    With 5+ years of experience designing digital products, I've worked closely with product and engineering teams to turn ideas into real, usable interfaces.</p>
+                    <p class="text-lead">
+                    My background in UI and UX naturally leads me toward design systems—thinking in components, patterns, and solutions that scale over time.</p>
+                  </div>
+
+                </div>
+
               </div>
 
               <!-- link -->
-              <div>
+              <div class="container container--md container--right">
                   <a href="about-me.html"
                     class="btn btn-solid btn-primary">Get to know me better
                   </a>
               </div>
+
             </div>
 
           </div>
 
-        </div>
-
-      </section>
+        </section>
 
 
-      <!-- SECTION 03 - MY WORK SECTION -->
-      <section id="projects" class="section" aria-labelledby="projects-title">
-        <div class="elements-flow container--lg">
+        <!-- SECTION 03 - MY WORK SECTION -->
+        <section id="projects" class="section" aria-labelledby="projects-title">
 
-          <!-- Header de sección -->
-          <div class="section-header">
-            <p class="text-lead text-gradient-primary--short font-decorative eyebrow">Take a look at</p>
-            <h2 class="title">Some of my recent work</h2>
-          </div>
+          <div class="container container--xl">
+            
+            <div class="flow--elements">
 
-          <!-- Contenido de sección -->
-          <div class="projects-group">
-
-            <!-- Project line 1 -->
-            <div class="projects-grid">
-
-              <!-- Project 1 -->
-              <article class="card--project">
-  
-                <div class="card__media">
-                  <a href="#" class="project-image">
-                  <img
-                    src="data:image/svg+xml;utf8,
-                      <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 1000'>
-                        <rect width='100%' height='100%' fill='%23e5e7eb'/>
-                        <text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle'
-                              font-family='Arial' font-size='64' fill='%239ca3af'>
-                          1600 × 1000
-                        </text>
-                      </svg>"
-                    alt="Placeholder 16:10"
-                  >
-                </a>
-                </div>
-
-                <div class="card__body">
-                  <h3 class="card__title">Academic Book Website & Design System</h3>
-                  <p class="card__description text-small">
-                    A website built to support complex academic content and future growth.
-                  </p>
-                  <!-- Project meta (skills / tools) -->
-                  <ul class="project-tags">
-                    <li>Information Architecture</li>
-                    <li>Design System</li>
-                    <li>Accessibility</li>
-                    <li>Deveploment</li>
-                  </ul>
-                </div>
-
-                <footer class="card__footer">
-
-                  <!-- Button 1 -->
-                  <a href="mailto:roselly.nunezg@gmail.com" 
-                    class="btn btn-solid btn-primary btn-primary-sm">
-                    <span class="btn-text">
-                      Read the case study
-                    </span>
-                  </a>
-
-                  <!-- Button 2 -->
-                  <a href="https://www.behance.net/tuusuario"
-                    class="btn btn-solid btn-primary btn-primary-sm btn-icon btn-icon-right">
-
-                    <span class="btn-icon-element">
-                      <svg
-                        class="icon"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 16 16"
-                        fill="none"
-                        aria-hidden="true"
-                      >
-                        <path d="M2.17007 13.8299C1.94331 13.6032 1.94331 13.2356 2.17007 13.0089L12.0176 3.16129L4.55163 3.16129C4.23095 3.16129 3.97098 2.90133 3.97098 2.58065C3.97098 2.25996 4.23095 2 4.55163 2L13.4194 2C13.74 2 14 2.25996 14 2.58065L14 11.4484C14 11.7691 13.74 12.029 13.4194 12.029C13.0987 12.029 12.8387 11.7691 12.8387 11.4484L12.8387 3.98237L2.99114 13.8299C2.76438 14.0567 2.39682 14.0567 2.17007 13.8299Z"/>
-                      </svg>
-                    </span>
-
-                    <span class="btn-text">
-                      View on GitHub
-                    </span>
-                  </a>
-
-                </footer>
-
-              </article>
-
-              <!-- Project 2 -->
-              <article class="card--project">
-  
-                <div class="card__media">
-                  <a href="#" class="project-image">
-                  <img
-                    src="data:image/svg+xml;utf8,
-                      <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 1000'>
-                        <rect width='100%' height='100%' fill='%23e5e7eb'/>
-                        <text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle'
-                              font-family='Arial' font-size='64' fill='%239ca3af'>
-                          1600 × 1000
-                        </text>
-                      </svg>"
-                    alt="Placeholder 16:10"
-                  >
-                </a>
-                </div>
-
-                <div class="card__body">
-                  <h3 class="card__title">Kronaby Website Redesign</h3>
-                  <p class="card__description text-small">
-                    A redesign to align the brand with a shared digital ecosystem.
-                  </p>
-                  <!-- Project meta (skills / tools) -->
-                  <ul class="project-tags">
-                    <li>UX/UI Design</li>
-                    <li>User Research</li>
-                    <li>Prototyping</li>
-                    <li>Cross-team Collaboration</li>
-                  </ul>
-                </div>
-
-                <footer class="card__footer">
-                  <!-- Button 1 -->
-                  <a href="mailto:roselly.nunezg@gmail.com" 
-                    class="btn btn-solid btn-primary btn-primary-sm">
-                    <span class="btn-text">
-                      Read the case study
-                    </span>
-                  </a>
-
-                  <!-- Button 2
-                  <a href="mailto:roselly.nunezg@gmail.com" 
-                    class="btn btn-solid btn-primary btn-primary-sm btn-icon btn-icon-left">
-                    <span class="btn-icon-element">
-                      <i class="bi bi-envelope"></i>
-                    </span>
-                    <span class="btn-text">
-                      Source
-                    </span>
-                  </a> -->
-                </footer>
-
-              </article>
-
-
-            </div>
-
-            <!-- Project line 2 -->
-            <div class="projects-grid">
-
-              <!-- Project 3 -->
-              <article class="card--project">
-  
-                <div class="card__media">
-                  <a href="#" class="project-image">
-                  <img
-                    src="data:image/svg+xml;utf8,
-                      <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 1000'>
-                        <rect width='100%' height='100%' fill='%23e5e7eb'/>
-                        <text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle'
-                              font-family='Arial' font-size='64' fill='%239ca3af'>
-                          1600 × 1000
-                        </text>
-                      </svg>"
-                    alt="Placeholder 16:10"
-                  >
-                </a>
-                </div>
-
-                <div class="card__body">
-                  <h3 class="card__title">Festina & Lotus Connected Watch Landing Pages</h3>
-                  <p class="card__description text-small">
-                    Two brand identities, one shared structure.
-                  </p>
-                  <!-- Project meta (skills / tools) -->
-                  <ul class="project-tags">
-                    <li>UI Design</li>
-                    <li>Visual Design</li>
-                    <li>Brand Identity</li>
-                    <li>Landing Page Design</li>
-                  </ul>
-                </div>
-
-                <footer class="card__footer">
-                  <!-- Button 1 -->
-                  <a href="mailto:roselly.nunezg@gmail.com" 
-                    class="btn btn-solid btn-primary btn-primary-sm">
-                    <span class="btn-text">
-                      Read the case study
-                    </span>
-                  </a>
-
-                  <!-- Button 2 
-                  <a href="mailto:roselly.nunezg@gmail.com" 
-                    class="btn btn-solid btn-primary btn-primary-sm btn-icon btn-icon-left">
-                    <span class="btn-icon-element">
-                      <i class="bi bi-envelope"></i>
-                    </span>
-                    <span class="btn-text">
-                      Source
-                    </span>
-                  </a> -->
-                </footer>
-
-              </article>
-
-              <!-- Project 4 -->
-              <article class="card--project">
-  
-                <div class="card__media">
-                  <a href="#" class="project-image">
-                  <img
-                    src="data:image/svg+xml;utf8,
-                      <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 1000'>
-                        <rect width='100%' height='100%' fill='%23e5e7eb'/>
-                        <text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle'
-                              font-family='Arial' font-size='64' fill='%239ca3af'>
-                          1600 × 1000
-                        </text>
-                      </svg>"
-                    alt="Placeholder 16:10"
-                  >
-                </a>
-                </div>
-
-                <div class="card__body">
-                  <h3 class="card__title">Selected Design Works (Behance)</h3>
-                  <p class="card__description text-small">
-                    A collection of earlier UI, web, and graphic design projects.
-                  </p>
-                  <!-- Project meta (skills / tools) -->
-                  <ul class="project-tags">
-                    <li>UI Design</li>
-                    <li>Web Design</li>
-                    <li>Graphic Design</li>
-                    <li>Visual Exploration</li>
-                  </ul>
-                </div>
-
-                <footer class="card__footer">
-
-                  <!-- Button 1 -->
-                  <a href="https://www.behance.net/tuusuario"
-                    class="btn btn-solid btn-primary btn-primary-sm btn-icon btn-icon-right">
-
-                    <span class="btn-icon-element">
-                      <svg
-                        class="icon"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 16 16"
-                        fill="none"
-                        aria-hidden="true"
-                      >
-                        <path d="M2.17007 13.8299C1.94331 13.6032 1.94331 13.2356 2.17007 13.0089L12.0176 3.16129L4.55163 3.16129C4.23095 3.16129 3.97098 2.90133 3.97098 2.58065C3.97098 2.25996 4.23095 2 4.55163 2L13.4194 2C13.74 2 14 2.25996 14 2.58065L14 11.4484C14 11.7691 13.74 12.029 13.4194 12.029C13.0987 12.029 12.8387 11.7691 12.8387 11.4484L12.8387 3.98237L2.99114 13.8299C2.76438 14.0567 2.39682 14.0567 2.17007 13.8299Z"/>
-                      </svg>
-                    </span>
-
-                    <span class="btn-text">
-                      View on Behance
-                    </span>
-                  </a>
-
-                </footer>
-
-              </article>
-
-            </div>
-
-        </div>
-      </section>
-
-    
-      <!-- SECTION 04 - SERVICES SECTION -->
-      <section id="services" class="section" aria-labelledby="services-title">
-
-        <div class="elements-flow container--lg">
-        
-          <!-- Header de sección -->
-          <div class="section-header">
-            <p class="heading text-gradient-primary--short font-decorative eyebrow">Skills</p>
-            <h2 class="title">Things I can help you with</h2>
-          </div>
-
-          <!-- Contenido de sección -->
-          <ul class="services-list">
-
-            <li class="card--service">
-              <div class="service-icon">
-                <i class="bi bi-check-lg" aria-hidden="true"></i>
+              <!-- Header de sección -->
+              <div class="section-header section-header--centered">
+                <p class="font-decorative eyebrow eyebrow-gradient">Take a look at</p>
+                <h2 class="title">Some of my recent work</h2>
               </div>
-              <h3 class="text-lead">UX Design</h3>
-              <p class="text-base">Crafting intuitive user journeys through research, wireframing and UX strategy.</p>
-            </li>
 
-            <li class="card--service">
-              <div class="service-icon">
-                <i class="bi bi-check-lg" aria-hidden="true"></i>
-              </div>
-              <h3 class="text-lead">UI Design</h3>
-              <p class="text-base">Elegant and functional interfaces with modern aesthetics and responsive behavior.</p>
-            </li>
+              <!-- Contenido de sección -->
+              <div class="projects-group">
 
-            <li class="card--service">
-              <div class="service-icon">
-                <i class="bi bi-check-lg" aria-hidden="true"></i>
-              </div>
-              <h3 class="text-lead">Design Systems</h3>
-              <p class="text-base">Scalable and consistent systems that improve product quality and team efficiency.</p>
-            </li>
+                <!-- Project line 1 -->
+                <div class="projects-grid">
 
-            <li class="card--service">
-              <div class="service-icon">
-                <i class="bi bi-check-lg" aria-hidden="true"></i>
-              </div>
-              <h3 class="text-lead">HTML & CSS</h3>
-              <p class="text-base">Front-end implementation, now expanding JavaScript expertise.</p>
-            </li>
-
-            <li class="card--service">
-              <div class="service-icon">
-                <i class="bi bi-check-lg" aria-hidden="true"></i>
-              </div>
-              <h3 class="text-lead">Web Accessibility</h3>
-              <p class="text-base">Designing for everyone by applying WCAG standards and inclusive UX principles.</p>
-            </li>
-
-            <li class="card--service">
-              <div class="service-icon">
-                <i class="bi bi-check-lg" aria-hidden="true"></i>
-              </div>
-              <h3 class="text-lead">Interface Redesign</h3>
-              <p class="text-base">
-                Refreshing outdated interfaces to enhance usability, clarity and visual identity.
-              </p>
-            </li>
-
-          </ul>
-
-        </div>
-      </section>
-
-    
-      <!-- SECTION 06 - CONTACT SECTION -->
-      <section id="contact-me" class="section contact-section bg-ornament">
-          <div class="container--md">
+                  <!-- Project 1 -->
+                  <article class="card--project">
       
-                  <!-- Card -->
-                  <div class="contact-card card shadow">
-                      <div class="card-body text-center">
+                    <div class="card__media">
+                      <a href="academic-book.html" 
+                        class="project-image">
+                          <img 
+                          src="../assets/images/home/card-project-connected.jpg"
+                          alt="Quality service illustration showing our design principles in action"
+                          loading="lazy"
+                          >
+                      </a>
+                    </div>
 
-                          <h2 class="subtitle">Let's connect!</h2>
-                          <p class="text-lead">
-                          Drop it like it's hot — pitch me your project, your collab idea, or whatever you're working on. Let's create something great together.
-                          </p>
-                          <div class="group-two-buttons">
-                            <!-- Button 1 -->
-                            <a href="mailto:roselly.nunezg@gmail.com" 
-                              class="btn btn-solid btn-primary btn-primary-sm btn-icon btn-icon-left">
-                              <span class="btn-icon-element">
-                                <i class="bi bi-envelope"></i>
-                              </span>
-                              <span class="btn-text">
-                                Copy mi email
-                              </span>
-                            </a>
+                    <div class="card__body">
+                      <h3 class="card__title">Academic Book Website & Design System</h3>
+                      <p class="card__description">
+                        A website built to support complex academic content and future growth.
+                      </p>
+                      <!-- Project meta (skills / tools) -->
+                      <ul class="tags">
+                        <li>Information Architecture</li>
+                        <li>Design System</li>
+                        <li>Accessibility</li>
+                        <li>Deveploment</li>
+                      </ul>
+                    </div>
 
-                            <!-- Button 2 -->
-                            <a href="mailto:roselly.nunezg@gmail.com" 
-                              class="btn btn-solid btn-primary btn-primary-sm btn-icon btn-icon-left">
-                              <span class="btn-icon-element">
-                                <i class="bi bi-envelope"></i>
-                              </span>
-                              <span class="btn-text">
-                                Go to my Linkedin
-                              </span>
-                            </a>
-                          </div>
+                    <footer class="card__footer">
 
-                      </div>
+                      <!-- Button 1 -->
+                      <a href="academic-book.html" 
+                          class="btn btn-solid btn-primary btn-primary-sm">
+                        <span class="btn-text">
+                          Read the case study
+                        </span>
+                      </a>
+
+                      <!-- Button 2 -->
+                      <a href="https://www.behance.net/tuusuario"
+                        class="btn btn-solid btn-primary btn-primary-sm btn-icon btn-icon-right">
+
+                        <span class="btn-icon-element">
+                          <svg
+                            class="icon"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 16 16"
+                            fill="none"
+                            aria-hidden="true"
+                          >
+                            <path d="M3.14172 12.8583C2.95276 12.6693 2.95276 12.363 3.14172 12.1741L11.348 3.96774L5.12636 3.96775C4.85912 3.96775 4.64248 3.75111 4.64248 3.48387C4.64248 3.21664 4.85912 3 5.12636 3L12.5161 3C12.7834 3 13 3.21664 13 3.48387L13 10.8736C13 11.1409 12.7834 11.3575 12.5161 11.3575C12.2489 11.3575 12.0323 11.1409 12.0323 10.8736L12.0323 4.65197L3.82595 12.8583C3.63699 13.0472 3.33069 13.0472 3.14172 12.8583Z"/>
+                          </svg>
+                        </span>
+
+                        <span class="btn-text">
+                          View on GitHub
+                        </span>
+                      </a>
+
+                    </footer>
+
+                  </article>
+
+                  <!-- Project 2 -->
+                  <article class="card--project">
+      
+                    <div class="card__media">
+                      <a href="kronaby.html" 
+                        class="project-image">
+                          <img 
+                          src="../assets/images/home/card-project-kronaby.jpg"
+                          alt="Quality service illustration showing our design principles in action"
+                          loading="lazy"
+                          >
+                      </a>
+                    </div>
+
+                    <div class="card__body">
+                      <h3 class="card__title">Kronaby Website Redesign</h3>
+                      <p class="card__description">
+                        A redesign to align the brand with a shared digital ecosystem.
+                      </p>
+                      <!-- Project meta (skills / tools) -->
+                      <ul class="tags">
+                        <li>UX/UI Design</li>
+                        <li>User Research</li>
+                        <li>Prototyping</li>
+                        <li>Cross-team Collaboration</li>
+                      </ul>
+                    </div>
+
+                    <footer class="card__footer">
+                      <!-- Button 1 -->
+                      <a href="kronaby.html" 
+                        class="btn btn-solid btn-primary btn-primary-sm">
+                        <span class="btn-text">
+                          Read the case study
+                        </span>
+                      </a>
+
+                      <!-- Button 2
+                      <a href="mailto:roselly.nunezg@gmail.com" 
+                        class="btn btn-solid btn-primary btn-primary-sm btn-icon btn-icon-left">
+                        <span class="btn-icon-element">
+                          <i class="bi bi-envelope"></i>
+                        </span>
+                        <span class="btn-text">
+                          Source
+                        </span>
+                      </a> -->
+                    </footer>
+
+                  </article>
+
+
+                </div>
+
+                <!-- Project line 2 -->
+                <div class="projects-grid">
+
+                  <!-- Project 3 -->
+                  <article class="card--project">
+      
+                    <div class="card__media">
+                      <a href="festina-lotus.html" 
+                        class="project-image">
+                          <img 
+                          src="../assets/images/home/card-project-connected.jpg"
+                          alt="Festina & Lotus connected watch landing page designs"
+                          loading="lazy"
+                          >
+                      </a>
+                    </div>
+
+                    <div class="card__body">
+                      <h3 class="card__title">Festina & Lotus Connected Watch Landing Pages</h3>
+                      <p class="card__description">
+                        Two brand identities, one shared structure.
+                      </p>
+                      <!-- Project meta (skills / tools) -->
+                      <ul class="tags">
+                        <li>UI Design</li>
+                        <li>Visual Design</li>
+                        <li>Brand Identity</li>
+                        <li>Landing Page Design</li>
+                      </ul>
+                    </div>
+
+                    <footer class="card__footer">
+                      <!-- Button 1 -->
+                      <a href="festina-lotus.html" 
+                        class="btn btn-solid btn-primary btn-primary-sm">
+                        <span class="btn-text">
+                          Read the case study
+                        </span>
+                      </a>
+
+                      <!-- Button 2 
+                      <a href="mailto:roselly.nunezg@gmail.com" 
+                        class="btn btn-solid btn-primary btn-primary-sm btn-icon btn-icon-left">
+                        <span class="btn-icon-element">
+                          <i class="bi bi-envelope"></i>
+                        </span>
+                        <span class="btn-text">
+                          Source
+                        </span>
+                      </a> -->
+                    </footer>
+
+                  </article>
+
+                  <!-- Project 4 -->
+                  <article class="card--project">
+      
+                    <div class="card__media">
+                      <a href="https://www.behance.net/rosellynunez" 
+                        class="project-image"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                          <img 
+                          src="../assets/images/home/card-project-behance.jpg"
+                          alt="Quality service illustration showing our design principles in action"
+                          loading="lazy"
+                          >
+                      </a>
+                    </div>
+
+                    <div class="card__body">
+                      <h3 class="card__title">Selected Design Works (Behance)</h3>
+                      <p class="card__description">
+                        A collection of earlier UI, web, and graphic design projects.
+                      </p>
+                      <!-- Project meta (skills / tools) -->
+                      <ul class="tags">
+                        <li>UI Design</li>
+                        <li>Web Design</li>
+                        <li>Graphic Design</li>
+                        <li>Visual Exploration</li>
+                      </ul>
+                    </div>
+
+                    <footer class="card__footer">
+
+                      <!-- Button 1 -->
+                      <a href="https://www.behance.net/rosellynunez"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="btn btn-solid btn-primary btn-primary-sm btn-icon btn-icon-right">
+
+                        <span class="btn-icon-element">
+                          <svg
+                            class="icon"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 16 16"
+                            fill="none"
+                            aria-hidden="true"
+                          >
+                            <path d="M3.14172 12.8583C2.95276 12.6693 2.95276 12.363 3.14172 12.1741L11.348 3.96774L5.12636 3.96775C4.85912 3.96775 4.64248 3.75111 4.64248 3.48387C4.64248 3.21664 4.85912 3 5.12636 3L12.5161 3C12.7834 3 13 3.21664 13 3.48387L13 10.8736C13 11.1409 12.7834 11.3575 12.5161 11.3575C12.2489 11.3575 12.0323 11.1409 12.0323 10.8736L12.0323 4.65197L3.82595 12.8583C3.63699 13.0472 3.33069 13.0472 3.14172 12.8583Z"/>
+                          </svg>
+                        </span>
+
+                        <span class="btn-text">
+                          View on Behance
+                        </span>
+                      </a>
+
+                    </footer>
+
+                  </article>
+
+                </div>
+
+            
+              </div>
+
+            </div>
+
+          </div>
+
+        </section>
+
+      
+        <!-- SECTION 04 - SERVICES SECTION -->
+        <section id="services" class="section" aria-labelledby="services-title">
+
+          <div class="container container--lg">
+            <div class="elements-flow">
+
+              <!-- Header de sección -->
+              <header class="section-header section-header--centered">
+                <p class="font-decorative eyebrow eyebrow-gradient">Skills</p>
+                <h2 class="title">Things I can help you with</h2>
+              </header>
+
+              <!-- Contenido de sección -->
+              <ul class="services-list">
+
+                <li class="card--service">
+                  <div class="service-icon">
+                    <i class="bi bi-check-lg" aria-hidden="true"></i>
                   </div>
+                  <h3 class="text-lead">UX Design</h3>
+                  <p class="text-base">Crafting intuitive user journeys through research, wireframing and UX strategy</p>
+                </li>
 
+                <li class="card--service">
+                  <div class="service-icon">
+                    <i class="bi bi-check-lg" aria-hidden="true"></i>
+                  </div>
+                  <h3 class="text-lead">UI Design</h3>
+                  <p class="text-base">Elegant and functional interfaces with modern aesthetics and responsive behavior.</p>
+                </li>
+
+                <li class="card--service">
+                  <div class="service-icon">
+                    <i class="bi bi-check-lg" aria-hidden="true"></i>
+                  </div>
+                  <h3 class="text-lead">Design Systems</h3>
+                  <p class="text-base">Scalable and consistent systems that improve product quality and team efficiency.</p>
+                </li>
+
+                <li class="card--service">
+                  <div class="service-icon">
+                    <i class="bi bi-check-lg" aria-hidden="true"></i>
+                  </div>
+                  <h3 class="text-lead">HTML & CSS</h3>
+                  <p class="text-base">Front-end implementation, now expanding JavaScript expertise.</p>
+                </li>
+
+                <li class="card--service">
+                  <div class="service-icon">
+                    <i class="bi bi-check-lg" aria-hidden="true"></i>
+                  </div>
+                  <h3 class="text-lead">Web Accessibility</h3>
+                  <p class="text-base">Designing for everyone by applying WCAG standards and inclusive UX principles.</p>
+                </li>
+
+                <li class="card--service">
+                  <div class="service-icon">
+                    <i class="bi bi-check-lg" aria-hidden="true"></i>
+                  </div>
+                  <h3 class="text-lead">Interface Redesign</h3>
+                  <p class="text-base">
+                    Refreshing outdated interfaces to enhance usability, clarity and visual identity.
+                  </p>
+                </li>
+
+              </ul>
+
+            </div>
           </div>
-      </section>
 
-    </main>
+        </section>
 
-    <!-- Overlay para menú mobile -->
-    <div id="menu-overlay">
-      <ul class="overlay-menu">
-        <li><a href="my-work.html">My Work</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a class="nav-link active" href="images/cv/CV_Roselly_Nunez_UX_UI_Designer-en.pdf" target="_blank" >Resume<i class="bi bi-box-arrow-up-right ms-2"></i></a></li>
-      </ul>
-    </div>
+      
+        <!-- SECTION 05 - CONTACT SECTION -->
+        <section id="contact-me" class="section contact-section bg-ornament">
+            <div class="container container--lg">
 
+              <div class="contact-card">
 
-    <footer>
-      <p class="text-caption">This site was made by me, Roselly. Built with 💖, HTML, CSS, Vanilla JS and Bootstrap.</p>
-    </footer>
+                  <div class="text-center">
+                      <h2 class="subtitle">
+                        Let's connect!
+                      </h2>
+                      <p>
+                        Drop it like it's hot — pitch me your project, your collab idea, or whatever you're working on. Let's create something great together.
+                      </p>
+                      <div class="group-two-buttons">
+                        <!-- Button 1 -->
+                        <a href="https://www.behance.net/tuusuario"
+                          class="btn btn-solid btn-primary btn-primary-sm btn-icon btn-icon-right">
 
-    <!-- Banner de Cookies -->
-    <div id="cookieBanner" class="cookie-banner" style="display: none;">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-md-8">
-            <p class="mb-0">I use cookies to analyze how you interact with the site and improve your experience. Do you accept the use of cookies? Thanks!</p>
-          </div>
-          <div class="col-md-4 text-end">
-            <button class="btn btn-outline-secondary btn-sm me-2" onclick="declineCookies()">Decline</button>
-            <button class="btn btn-primary btn-sm" onclick="acceptCookies()">Accept</button>
+                          <span class="btn-icon-element">
+                            <svg
+                              class="icon"
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 16 16"
+                              fill="none"
+                              aria-hidden="true"
+                            >
+                              <path d="M13.1335 6.33461L9.77731 8.5728C9.24999 8.9238 8.89782 9.16668 8.50486 9.26117H8.5043C8.17295 9.34056 7.82735 9.34048 7.4957 9.26117H7.49514C7.10215 9.1667 6.75005 8.92382 6.22269 8.5728H6.22213L2.86596 6.33461V9.55885C2.86596 10.0509 2.86613 10.394 2.88795 10.661C2.90935 10.9229 2.94937 11.0735 3.00747 11.1876C3.132 11.432 3.33079 11.6308 3.57519 11.7553C3.68931 11.8134 3.83989 11.8534 4.10176 11.8748C4.36882 11.8967 4.71192 11.8968 5.20395 11.8968H10.7961C11.288 11.8968 11.6312 11.8967 11.8982 11.8748C12.1601 11.8534 12.3107 11.8134 12.4248 11.7553L12.5139 11.7051C12.7172 11.5803 12.8831 11.4014 12.992 11.1876V11.187C13.0502 11.0731 13.09 10.9227 13.1115 10.661C13.1334 10.394 13.134 10.0509 13.134 9.55885V6.44116C13.134 6.40484 13.1335 6.36933 13.1335 6.33461ZM5.20395 4.10318C4.71193 4.10318 4.36882 4.10334 4.10176 4.12516C3.90533 4.14122 3.77155 4.16791 3.66878 4.20466L3.57519 4.24468C3.33103 4.36929 3.13243 4.56813 3.00803 4.81241V4.81297C2.95198 4.92271 2.91276 5.06613 2.89077 5.31022L6.70303 7.85229H6.70247C7.28681 8.24125 7.49018 8.36902 7.69753 8.41889H7.69697C7.89637 8.46657 8.10392 8.46645 8.30247 8.41889L8.38083 8.39634C8.56657 8.3331 8.78597 8.19243 9.29697 7.85229L13.1087 5.31022C13.0867 5.06603 13.0485 4.92226 12.9925 4.81241C12.868 4.56801 12.6692 4.36922 12.4248 4.24468C12.3107 4.18657 12.1601 4.14657 11.8982 4.12516C11.6312 4.10334 11.288 4.10318 10.7961 4.10318H5.20395ZM14 9.55885C14 10.0366 14.0001 10.4209 13.9746 10.7315C13.9488 11.0472 13.8943 11.3245 13.7632 11.5811L13.7627 11.5806C13.5553 11.9876 13.2252 12.3189 12.8183 12.5266H12.8178C12.5613 12.6572 12.2842 12.7122 11.9687 12.738C11.6582 12.7634 11.2738 12.7628 10.7961 12.7628H5.20395C4.72621 12.7628 4.34179 12.7634 4.03129 12.738C3.71572 12.7122 3.43872 12.6572 3.18224 12.5266C2.77491 12.319 2.44378 11.9879 2.23622 11.5806C2.10559 11.3241 2.0506 11.0471 2.02481 10.7315C1.99944 10.421 2 10.0366 2 9.55885V6.44116C2 6.12372 2.00109 5.84752 2.00846 5.60677C1.99622 5.54275 1.99937 5.47659 2.01691 5.41227C2.01965 5.36269 2.02158 5.31474 2.02537 5.2685C2.05123 4.95301 2.10586 4.67593 2.23679 4.41945H2.23622C2.44356 4.01229 2.7747 3.68112 3.18168 3.47344H3.18224C3.43872 3.3428 3.71572 3.28781 4.03129 3.26202C4.34179 3.23665 4.72621 3.23721 5.20395 3.23721H10.7961C11.2738 3.23721 11.6582 3.23665 11.9687 3.26202C12.2842 3.28781 12.5613 3.34281 12.8178 3.47344C13.2251 3.68099 13.5562 4.01212 13.7638 4.41945C13.8944 4.67591 13.9488 4.95297 13.9746 5.2685C13.9784 5.31524 13.9803 5.36381 13.9831 5.41396C14.0002 5.47778 14.0037 5.54328 13.9915 5.60677C13.9989 5.84749 14 6.12369 14 6.44116V9.55885Z"/>
+                            </svg>
+                          </span>
+
+                          <span class="btn-text">
+                            Get in touch
+                          </span>
+                        </a>
+
+                        <!-- Button 2 -->
+                        <a href="https://www.behance.net/tuusuario"
+                          class="btn btn-solid btn-primary btn-primary-sm btn-icon btn-icon-right">
+
+                          <span class="btn-icon-element">
+                            <svg
+                              class="icon"
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 16 16"
+                              fill="none"
+                              aria-hidden="true"
+                            >
+                              <path d="M3.14172 12.8583C2.95276 12.6693 2.95276 12.363 3.14172 12.1741L11.348 3.96774L5.12636 3.96775C4.85912 3.96775 4.64248 3.75111 4.64248 3.48387C4.64248 3.21664 4.85912 3 5.12636 3L12.5161 3C12.7834 3 13 3.21664 13 3.48387L13 10.8736C13 11.1409 12.7834 11.3575 12.5161 11.3575C12.2489 11.3575 12.0323 11.1409 12.0323 10.8736L12.0323 4.65197L3.82595 12.8583C3.63699 13.0472 3.33069 13.0472 3.14172 12.8583Z"/>
+                            </svg>
+                          </span>
+
+                          <span class="btn-text">
+                            Let's connect on LinkedIn
+                          </span>
+                        </a>
+                      </div>
+
+                  </div>
+              </div>
+
+            </div>
+        </section>
+
+      </main>
+
+      <footer class="site-footer">
+        <div>
+          <p class="footer__copyright">
+            © 2026 Roselly Nuñez.
+          </p>
+
+          <p class="footer__role">
+            UX/UI & Design Systems Designer.
+          </p>
+        </div>
+
+        <p class="footer__statement">
+          Built with semantic HTML, CSS, and a scalable design system — driven by curiosity and a genuine care for well-crafted experiences.
+        </p>
+
+        <nav class="footer__links" aria-label="Footer links">
+          <a href="https://www.linkedin.com/in/rosellynunez"
+            target="_blank"
+            rel="noopener noreferrer">LinkedIn</a>
+          <span aria-hidden="true">·</span>
+          <a href="https://github.com/rosellynunez"
+            target="_blank"
+            rel="noopener noreferrer">GitHub</a>
+          <span aria-hidden="true">·</span>
+          <a href="/assets/docs/cv/current.pdf"
+            target="_blank"
+            rel="noopener noreferrer">Resume</a>
+        </nav>
+      </footer>
+
+      <!-- Banner de Cookies -->
+      <div id="cookieBanner" class="cookie-banner" style="display: none;">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-md-8">
+              <p class="mb-0">I use cookies to analyze how you interact with the site and improve your experience. Do you accept the use of cookies? Thanks!</p>
+            </div>
+            <div class="col-md-4 text-end">
+              <button class="btn btn-outline-secondary btn-sm me-2" onclick="declineCookies()">Decline</button>
+              <button class="btn btn-primary btn-sm" onclick="acceptCookies()">Accept</button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+
+      <script src="../assets/js/main.js"></script>
 
     </body>
 </html>

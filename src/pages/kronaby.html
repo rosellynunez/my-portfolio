@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="dark">
+
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -22,7 +23,7 @@
         <title>Roselly Nuñez - UX, UI & Web Designer</title>
 
         <!-- Favicon -->
-        <link rel="icon" type="image/png" href="images/favicon.png"/>
+        <link rel="icon" type="image/png" href="../assets/images/favicon.png"/>
 
         <!-- Preconnect for faster Google Fonts loading -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,15 +32,11 @@
         <!-- Google Fonts (usa display=swap para cargar texto antes)-->
         <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Pacifico&display=swap" rel="stylesheet">
 
-        <!-- Bootstrap + Bootstrap Icons -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" />
-
         <!-- Global CSS -->
-        <link rel="stylesheet" href="../assets/css/global.css">
+        <link rel="stylesheet" href="../assets/css/global.css"> 
 
-        <!-- Page CSS (case-study.css) -->
-        <link rel="stylesheet" href="../assets/css/pages.css">
+        <!-- Page CSS (case-study.css) 
+        <link rel="stylesheet" href="../assets/css/pages.css"> -->
 
         <!-- 🌗 Carga rápida del tema guardado -->
         <script>
@@ -54,9 +51,6 @@
         <!-- Typed.js (performance) -->
         <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
-        <!-- Bootstrap JS -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
-
         <!-- Twemoji-->
         <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous" defer></script>
 
@@ -65,12 +59,13 @@
 
         <!-- Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y1KMG7E11J"></script>
-        <script src="assets/js/tracking.js"></script>
+        <script src="../assets/js/tracking.js"></script>
     </head>
 
     <body>
+
         <header class="site-header">
-            <div class="header-container">
+            <div class="container container--xl header-container">
 
                 <!-- Logo -->
                 <a class="brand" href="index.html" aria-label="Home">
@@ -95,17 +90,21 @@
                         </button>
 
                         <ul class="dropdown-list">
-                            <li><a href="kronaby.html">Academic Book Platform</a></li>
-                            <li><a href="automated-negotiation.html">E-commerce Redesign</a></li>
-                            <li><a href="automated-negotiation-book.html">Landing Pages</a></li>
+                            <li><a href="automated-negotiation-book.html">Academic Book Platform (Design System)</a></li>
+                            <li><a href="kronaby.html">E-commerce Redesign Webpage</a></li>
+                            <li><a href="connected-d.html">Connected Watches Landing Pages</a></li>
                         </ul>
                     </li>
 
-                    <li><a class="nav-link" href="about.html">About</a></li>
                     <li>
-                    <a class="nav-link" href="images/cv/CV_Roselly_Nunez_UX_UI_Designer-en.pdf" target="_blank">
+                        <a class="nav-link" href="about-me.html">About</a></li>
+                    <li>
+                        <a class="nav-link"
+                        href="/assets/docs/cv/current.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer">
                         Resume
-                    </a>
+                        </a>
                     </li>
 
                 </ul>
@@ -128,1049 +127,1098 @@
                 </button>
 
             </div>
-
-            <!-- Nav mobile -->
-            <nav id="mobile-nav" class="main-nav main-nav--mobile" hidden>
-                <ul class="nav-list--mobile">
-
-                    <li class="nav-section">
-                        <span class="nav-section__title">Work</span>
-                        
-                        <ul class="nav-submenu">
-                            <li>
-                                <a href="kronaby.html" class="submenu">Academic Book Platform</a>
-                            </li>
-                            <li>
-                                <a href="automated-negotiation.html" class="submenu">E-commerce Redesign</a>
-                            </li>
-                            <li>
-                                <a href="automated-negotiation-book.html" class="submenu">Landing Pages</a>
-                            </li>
-                        </ul>
-
-                    </li>
-                    
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="images/cv/CV_Roselly_Nunez_UX_UI_Designer-en.pdf">Resume</a></li>
-                </ul>
-            </nav>
-
         </header>
 
-    <main>
+        <!-- Nav mobile -->
+        <nav id="mobile-nav" class="main-nav main-nav--mobile">
 
-        <article id="case-study" class="container-full">
+            <div class="mobile-nav__content">
 
-            <!-- SECTION 01 -->
-            <section id="intro-case-study" class="section">
+            <ul class="nav-list--mobile">
 
-                <div class="container--lg subsection">
+                <li class="nav-section">
+                    <span class="nav-section__title">Work</span>
+                    
+                    <ul class="nav-submenu">
+                        <li>
+                            <a href="kronaby.html" class="submenu">Academic Book Platform (Design System)</a>
+                        </li>
+                        <li>
+                            <a href="automated-negotiation.html" class="submenu">E-commerce Redesign Webpage</a>
+                        </li>
+                        <li>
+                            <a href="automated-negotiation-book.html" class="submenu">Connected Watches Landing Pages</a>
+                        </li>
+                    </ul>
 
-                    <!-- Title + subtitle-->
-                    <div>
-
-                        <!-- H1 -->        
-                        <h1 class="title col-sm-12 col-lg-8 mb-4">Kronaby Website Redesign</h1>
-
-                        <!-- Subtitle -->
-                        <p class="text-lead intro-lead">
-                            Website design and development for two connected watch brands within the same group.
-                        <p>
-                        
-                        <!-- Image -->
-                        <div class="image-wrapper">
-                            <img 
-                            src="../assets/images/kronaby/hero-image-kronaby.jpg"
-                            alt="Quality service illustration showing our design principles in action"
-                            loading="lazy"
-                            >
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </section>
-
-
-
-            <!-- SECTION 02 -->
-            <section class="section section--summary">
-                <div class="container container--md">
-
-                    <div class="eyebrow-summary">                        
-                        <p>Short on time?</p>
-                        <p>A quick snapshot of the project — read the one-minute summary or scroll for the full case study.</p>
-                    </div>
-
-                    <div class="subsection">
-
-                        <!-- AREA CLICABLE -->
-                        <button
-                            class="summary__header js-summary-toggle"
-                            aria-expanded="false"
-                            type="button"
-                        >
-                            <div class="summary__titles">
-                                <h2 class="summary__title">Case study in one minute</h2>
-                                <h2 class="summary__title--2">Project summary</h2>
-                            </div>
-
-                            <span class="summary__icon-wrap" aria-hidden="true">
-                                <svg
-                                    class="icon summary__icon"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                >
-                                    <path d="M9.56696 5.81077C9.83629 5.59106 10.2338 5.60702 10.4848 5.85809L17.7992 13.1724C18.0669 13.4402 18.0669 13.8743 17.7992 14.1421C17.5314 14.4099 17.0973 14.4099 16.8295 14.1421L10 7.31256L3.17049 14.1421C2.9027 14.4099 2.46863 14.4099 2.20084 14.1421C1.93305 13.8743 1.93305 13.4402 2.20084 13.1724L9.51518 5.85809L9.56696 5.81077Z"/>
-                                </svg>
-                            </span>
-                        </button>
-
-
-                        <!-- SUMMARY COLAPSABLE -->
-                        <div class="summary__content" hidden>
-                            <ul class="summary__list list--wide">
-                            <li>
-                                <span class="fw-medium">Context:</span>
-                                <span class="text-base">
-                                An academic book website designed to present complex research content and downloadable materials in a clear, structured way
-                                </span>
-                            </li>
-                            <li>
-                                <span class="fw-medium">Challenge:</span>
-                                <span class="text-base">
-                                    Users found the website hard to navigate and difficult to understand. The hybrid watch concept was not clear, the navigation was confusing, and the site had low visibility for new users
-                                </span>
-                            </li>
-                            <li>
-                                <span class="fw-medium">Solution:</span>
-                                <span class="text-base">
-                                    I redesigned key pages using a clearer navigation structure, stronger visual hierarchy, and simple storytelling. Educational content and visual components were added to explain the hybrid watch concept in an easy and scannable way
-                                </span>
-                            </li>
-                            <li>
-                                <span class="fw-medium">Outcome:</span>
-                                <span class="text-base">
-                                    A clearer and more confident website experience that helps users understand the product faster, navigate more easily, and connect better with the brand across the site
-                                </span>
-                            </li>
-                            </ul>
-                        </div>
-
-                    </div>
-
-                </div>
-            </section>
-
-            <!-- DIVIDER -->
-            <div class="container--md">
-                <div class="separator separator--gradient-dots" aria-hidden="true">
-                </div>
+                </li>
+                
+                <li><a href="about.html">About</a></li>
+                <li><a href="images/cv/CV_Roselly_Nunez_UX_UI_Designer-en.pdf">Resume</a></li>
+            </ul>
+            
             </div>
 
+        </nav>
 
+        <main>
 
-            <!-- SECTION 03: OVERVIEW CARDS -->
-            <section id="overview" class="section">
-                <div class="container--lg overview-section">
+            <article id="case-study" class="container-full">
 
-                    <div class="overview-grid">
-                        
-                        <!-- Background -->
-                        <div class="paragraph-space overview-note">
-                            <div class="content-block">
-                                <h2 class="label">Background</h2>
+                <!-- SECTION 01 -->
+                <section id="intro-case-study" class="section">
+
+                    <div class="container container--xl subsection">
+
+                        <!-- Title + subtitle-->
+                        <div>
+
+                            <!-- H1 -->        
+                            <h1 class="title col-sm-12 col-lg-8 mb-4">Kronaby Website Redesign</h1>
+
+                            <!-- Subtitle -->
+                            <p class="text-lead intro-lead">
+                                Website design and development for two connected watch brands within the same group.
+                            <p>
+                            
+                            <!-- Image -->
+                            <div class="image-wrapper">
+                                <img 
+                                src="../assets/images/kronaby/hero-image-kronaby.jpg"
+                                alt="Quality service illustration showing our design principles in action"
+                                loading="lazy"
+                                >
                             </div>
 
-                            <div class="content-block">
-                                <p>Kronaby is a Swedish hybrid watch brand that combines minimalist design with smart technology. As part of the Festina Group, the brand operates within a multi-brand environment with shared digital platforms and teams.</p>
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- SECTION 02 -->
+                <section class="section section--summary">
+                    <div class="container container--md">
+
+                        <div class="eyebrow-summary">                        
+                            <p>Short on time?</p>
+                            <p>A quick snapshot of the project — read the one-minute summary or scroll for the full case study.</p>
+                        </div>
+
+                        <div class="subsection">
+
+                            <!-- AREA CLICABLE -->
+                            <button
+                                class="summary__header js-summary-toggle"
+                                aria-expanded="false"
+                                type="button"
+                            >
+                                <div class="summary__titles">
+                                    <h2 class="summary__title">Case study in one minute</h2>
+                                    <h2 class="summary__title--2">Project summary</h2>
+                                </div>
+
+                                <span class="summary__icon-wrap" aria-hidden="true">
+                                    <svg
+                                        class="icon summary__icon"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                    >
+                                        <path d="M9.56696 5.81077C9.83629 5.59106 10.2338 5.60702 10.4848 5.85809L17.7992 13.1724C18.0669 13.4402 18.0669 13.8743 17.7992 14.1421C17.5314 14.4099 17.0973 14.4099 16.8295 14.1421L10 7.31256L3.17049 14.1421C2.9027 14.4099 2.46863 14.4099 2.20084 14.1421C1.93305 13.8743 1.93305 13.4402 2.20084 13.1724L9.51518 5.85809L9.56696 5.81077Z"/>
+                                    </svg>
+                                </span>
+                            </button>
+
+
+                            <!-- SUMMARY COLAPSABLE -->
+                            <div class="summary__content" hidden>
+                                <ul class="summary__list list--wide">
+                                <li>
+                                    <span class="fw-medium">Context:</span>
+                                    <span class="text-base">
+                                    An academic book website designed to present complex research content and downloadable materials in a clear, structured way
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="fw-medium">Challenge:</span>
+                                    <span class="text-base">
+                                        Users found the website hard to navigate and difficult to understand. The hybrid watch concept was not clear, the navigation was confusing, and the site had low visibility for new users
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="fw-medium">Solution:</span>
+                                    <span class="text-base">
+                                        I redesigned key pages using a clearer navigation structure, stronger visual hierarchy, and simple storytelling. Educational content and visual components were added to explain the hybrid watch concept in an easy and scannable way
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="fw-medium">Outcome:</span>
+                                    <span class="text-base">
+                                        A clearer and more confident website experience that helps users understand the product faster, navigate more easily, and connect better with the brand across the site
+                                    </span>
+                                </li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </section>
+
+
+                <!-- DIVIDER -->
+                <div class="container container--md">
+                    <div class="separator separator--gradient-dots" aria-hidden="true">
+                    </div>
+                </div>
+
+
+                <!-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -->
+
+
+                <!-- SECTION 03: OVERVIEW CARDS -->
+                <section id="overview" class="section">
+                    <div class="container container--xl overview-section">
+
+                        <div class="overview-grid">
+                            
+                            <!-- Background -->
+                            <div class="overview-note">
+                                <div class="content-block">
+                                    <h2 class="label">Background</h2>
+                                </div>
+
+                                <div class="content-block flow--reading flow--reading--compact">
+                                    <p>Kronaby is a Swedish hybrid watch brand that combines minimalist design with smart technology. As part of the Festina Group, the brand operates within a multi-brand environment with shared digital platforms and teams.</p>
+                                </div>
+                            </div>
+
+                            <!-- Project overview -->
+                            <div class="overview-note">
+                                <div class="content-block">
+                                    <h2 class="label">Project overview</h2>
+                                </div>
+
+                                <div class="content-block flow--reading flow--reading--compact">
+                                    <p>The Kronaby website was built on PrestaShop and did not align with Festina's digital ecosystem, creating design and development inefficiencies.</p>
+                                    <p>The goal of the project was to align Kronaby's digital experience with Festina's ecosystem while improving consistency and scalability.</p>                               
+                                </div>
+                            </div>
+
+                            <!-- My role -->
+                            <div class="overview-note">
+                                <div class="content-block">
+                                <h2 class="label">My role</h2>
+                                </div>
+
+                                <div class="content-block flow--reading flow--reading--compact">
+                                    <p>As the UX/UI designer, I led the website redesign, from research and wireframing to prototyping in Figma. I collaborated closely with strategy, marketing, and development teams to bring the designs to life.</p>
+                                </div>
                             </div>
                         </div>
 
-                        <!-- Project overview -->
-                        <div class="paragraph-space overview-note overview-note">
-                            <div class="content-block">
-                                <h2 class="label">Project overview</h2>
+                    </div>  
+                </section>
+
+
+                <!-- SECTION 01 -->
+                <section id="project-scope" class="section">
+
+                    <div class="subsection container container--md flow--reading">
+                        <h2 class="subtitle">1. Scope & constraints</h2>
+                        <p>To work within Festina's existing platform, we took a phased approach based on what could realistically be changed. Some areas could be updated independently, while others were deeply tied to core systems.</p>
+                        <ul class="list">
+                            <li class="text-base">Phase 1 focused on elements that could be updated independently, such as the homepage, landing pages, and other key user-facing sections</li>
+                            <li class="text-base">Phase 2 covered more complex areas, like product pages and checkout, planned for a later stage</li>
+                        </ul>
+                    </div>    
+
+                    <div class="subsection container container--xl">
+
+                        <div class="slider-wrapper">
+
+                            <!-- slider -->
+                            <div class="slider-image">
+                                <div class="slide">
+                                    <img
+                                    src="../assets/images/kronaby/home-old-website.jpg"
+                                    alt="Old homepage showing complex navigation"
+                                    loading="lazy"
+                                    >
+                                </div>
+
+                                <div class="slide">
+                                    <img
+                                    src="../assets/images/kronaby/product-page-old-website.jpg"
+                                    alt="Old homepage with mixed content sections"
+                                    loading="lazy"
+                                    >
+                                </div>
+
+                                <div class="slide">
+                                    <img
+                                    src="../assets/images/kronaby/landing-pages-old-website.jpg"
+                                    alt="Old homepage highlighting information overload"
+                                    loading="lazy"
+                                    >
+                                </div>
                             </div>
 
-                            <div class="content-block">
-                                <p>The Kronaby website was built on PrestaShop and did not align with Festina's digital ecosystem, creating design and development inefficiencies.</p>
-                                <p>The goal of the project was to align Kronaby's digital experience with Festina's ecosystem while improving consistency and scalability.</p>                               
-                            </div>
-                        </div>
-
-                        <!-- My role -->
-                        <div class="paragraph-space overview-note overview-note">
-                            <div class="content-block">
-                            <h2 class="label">My role</h2>
-                            </div>
-
-                            <div class="content-block">
-                                <p>As the UX/UI designer, I led the website redesign, from research and wireframing to prototyping in Figma. I collaborated closely with strategy, marketing, and development teams to bring the designs to life.</p>
+                            <!-- captions FUERA del slider -->
+                            <div class="slider-captions">
+                                <p class="slide-caption text-caption text-helper">Homepage across desktop and mobile</p>
+                                <p class="slide-caption text-caption text-helper">Product grid across desktop and mobile</p>
+                                <p class="slide-caption text-caption text-helper">Landing pages: unclear features & benefits</p>
                             </div>
                         </div>
                     </div>
+                </section>
 
-                </div>  
-            </section>
+                <!-- SECTION 04 -->
+                <section id="research" class="section">
 
-
-            <!-- SECTION 03 -->
-            <section id="project-scope" class="section">
-
-                <div class="subsection container--md flow--reading">
-                    <h2 class="subtitle">1. Scope & constraints</h2>
-                    <p>To work within Festina's existing platform, we took a phased approach based on what could realistically be changed. Some areas could be updated independently, while others were deeply tied to core systems.</p>
-                    <ul class="list">
-                        <li class="text-base">Phase 1 focused on elements that could be updated independently, such as the homepage, landing pages, and other key user-facing sections</li>
-                        <li class="text-base">Phase 2 covered more complex areas, like product pages and checkout, planned for a later stage</li>
-                    </ul>
-                </div>    
-
-                <div class="subsection container--lg">
-
-                    <div class="slider-wrapper">
-
-                        <!-- slider -->
-                        <div class="slider-image">
-                            <div class="slide">
-                                <img
-                                src="../assets/images/kronaby/home-old-website.jpg"
-                                alt="Old homepage showing complex navigation"
-                                loading="lazy"
-                                >
-                            </div>
-
-                            <div class="slide">
-                                <img
-                                src="../assets/images/kronaby/product-page-old-website.jpg"
-                                alt="Old homepage with mixed content sections"
-                                loading="lazy"
-                                >
-                            </div>
-
-                            <div class="slide">
-                                <img
-                                src="../assets/images/kronaby/landing-pages-old-website.jpg"
-                                alt="Old homepage highlighting information overload"
-                                loading="lazy"
-                                >
-                            </div>
-                        </div>
-
-                        <!-- captions FUERA del slider -->
-                        <div class="slider-captions">
-                            <p class="slide-caption text-caption text-helper">Homepage across desktop and mobile</p>
-                            <p class="slide-caption text-caption text-helper">Product grid across desktop and mobile</p>
-                            <p class="slide-caption text-caption text-helper">Landing pages: unclear features & benefits</p>
-                        </div>
+                    <div class="container container--md subsection flow--reading">
+                        <h2 class="subtitle">2. UX Research</h2>
+                        <p>
+                            This project had been on hold due to other priorities. When the development team had a short window to implement design updates, we needed to move quickly.
+                        </p>
+                        <p>
+                            Ideally, I would have run a deeper research sprint, but with limited time, and no analytics available, I relied on fast, qualitative research to identify the most critical issues.
+                        </p>
                     </div>
-                </div>
-            </section>
 
-            <!-- SECTION 04 -->
-            <section id="research" class="section">
 
-                <div class="container--md subsection flow--reading">
-                    <h2 class="subtitle">2. UX Research</h2>
-                    <p class="text-base">
-                        This project had been on hold due to other priorities. When the development team had a short window to implement design updates, we needed to move quickly.
-                    </p>
-                    <p class="text-base">
-                        Ideally, I would have run a deeper research sprint, but with limited time, and no analytics available, I relied on fast, qualitative research to identify the most critical issues.
-                    </p>
-                </div>
+                    <div class="container container--md subsection flow--reading">
+                        <h3 class="heading">Early assumptions</h3>
+                        <p class="text-base">Based on early observations and an initial review of the site, I identified a few assumptions (not conclusions) about where users might struggle. For example, the navigation felt confusing, the product concept was not clearly explained, between others.</p>
+                    </div>
 
-                <div class="container--md subsection flow--reading">
-                    <h3 class="heading">Early assumptions</p>
-                    <p class="text-base">Based on early observations and an initial review of the site, I identified a few assumptions (not conclusions) about where users might struggle. For example, the navigation felt confusing, the product concept was not clearly explained, between others.</p>
-                </div>
-
-                <div class="container--md subsection flow--reading">
-                    <h3 class="heading">Research goals</p>
-                    <p class="text-base">These assumptions helped define the research focus. The goal was to validate whether these issues were real and understand them better:</p>
-                    <ul class="list">
-                        <li class="text-base">Navigation & usability: Understand how users move through the site and where friction appears</li>
-                        <li class="text-base">Product understanding: Learn how users perceive hybrid watches and where confusion arises</li> 
-                    </ul>
-                </div>
-
-                <div class="container--md subsection flow--reading">
-                    <h3 class="heading">Methods Used</p>
-                    <p class="text-base">To validate these assumptions, I used a mix of qualitative methods:</p>
-
-                    <div class="list">
-                        <ul>
-                            <li class="text-base">User and stakeholder interviews</li>
-                            <li class="text-base">Usability review of the existing website</li>
-                            <li class="text-base">Competitive benchmarking</li>
+                    <div class="container container--md subsection flow--reading">
+                        <h3 class="heading">Research goals</h3>
+                        <p class="text-base">These assumptions helped define the research focus. The goal was to validate whether these issues were real and understand them better:</p>
+                        <ul class="list">
+                            <li class="text-base">Navigation & usability: Understand how users move through the site and where friction appears</li>
+                            <li class="text-base">Product understanding: Learn how users perceive hybrid watches and where confusion arises</li> 
                         </ul>
                     </div>
-                </div>
 
-                <div id="interviews" class="container--md subsection flow--elements">
-                    <div class="flow--reading">
-                        <h3 class="text-lead">User interviews & stakeholder discussions</h3>
-                        <p class="text-base">After speaking with users and stakeholders, a few recurring themes emerged.
-                        s revealed gaps in usability and product communication, and also surfaced an additional issue: limited website visibility.</p>
-                        <p class="text-insight">Users struggled to quickly understand the product and its key benefits, and felt overwhelmed by the amount of information.</p>
-                        <p class="text-insight">Stakeholders felt the website wasn't communicating the brand's value and supporting business goals.</p>
+                    <div class="container container--md subsection flow--reading">
+                        <h3 class="heading">Methods Used</h3>
+                        <p class="text-base">To validate these assumptions, I used a mix of qualitative methods:</p>
+
+                        <div class="list">
+                            <ul>
+                                <li class="text-base">User and stakeholder interviews</li>
+                                <li class="text-base">Usability review of the existing website</li>
+                                <li class="text-base">Competitive benchmarking</li>
+                            </ul>
+                        </div>
                     </div>
 
-                    <figure>
-                        <div class="image-wrapper">
-                            <!-- Image -->
-                            <img 
-                            src="../assets/images/kronaby/diagram.jpg"
-                            alt="Quality service illustration showing our design principles in action"
-                            loading="lazy"
-                            >
-                        </div>
-                        <figcaption class="text-caption">
-                            <p>Clear navigation and CTAs help users explore the products and reach the product page.</p>
-                        </figcaption>
-                    </figure>
-                </div>
-
-                <div id="inconsistencies" class="subsection">
-                    <div class="flow--elements">
-
-                        <div class="container--md flow--reading">
-                            <h3 class="text-lead">Usability review of the existing website</h3>
-                            <p class="text-base">Based on interviews and a usability review of the existing website, several issues were identified.</p>
-                            <p class="text-base">The examples below highlight the most relevant usability issues.</p>
+                    <div id="interviews" class="container container--md subsection flow--elements">
+                        <div class="flow--reading">
+                            <h3 class="text-lead">User interviews & stakeholder discussions</h3>
+                            <p class="text-base">After speaking with users and stakeholders, a few recurring themes emerged.
+                            s revealed gaps in usability and product communication, and also surfaced an additional issue: limited website visibility.</p>
+                            <p class="text-insight">Users struggled to quickly understand the product and its key benefits, and felt overwhelmed by the amount of information.</p>
+                            <p class="text-insight">Stakeholders felt the website wasn't communicating the brand's value and supporting business goals.</p>
                         </div>
 
-                        <div class="container--lg flow--elements">
+                        <figure>
+                            <div class="image-wrapper">
+                                <!-- Image -->
+                                <img 
+                                src="../assets/images/kronaby/diagram.jpg"
+                                alt="Quality service illustration showing our design principles in action"
+                                loading="lazy"
+                                >
+                            </div>
+                            <figcaption class="text-caption">
+                                <p>Clear navigation and CTAs help users explore the products and reach the product page.</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+
+                    <div id="inconsistencies" class="subsection">
+                        <div class="flow--elements">
+
+                            <div class="container container--md flow--reading">
+                                <h3 class="text-lead">Usability review of the existing website</h3>
+                                <p class="text-base">Based on interviews and a usability review of the existing website, several issues were identified.</p>
+                                <p class="text-base">The examples below highlight the most relevant usability issues.</p>
+                            </div>
+
+                            <div class="container container--xl flow--elements">
+                                <div class="media-split">
+                                    <!-- BEFORE -->
+                                    <figure class="example">
+                                        <video
+                                                class="responsive-video"
+                                                autoplay
+                                                muted
+                                                loop
+                                                playsinline
+                                                preload="metadata"
+                                            >
+                                            <source src="../assets/video/home-page-desktop.mp4" type="video/mp4">
+                                            Your browser does not support the video tag.
+                                        </video>
+
+                                        <figcaption class="annotation-before-after"> 
+                                            <p class="label">Before</p>
+                                            <p class="text-small">
+                                            The homepage used a two-level navigation that mixed watch collections with secondary content. This made navigation harder to understand and partially covered the main visuals.
+                                            </p>
+                                        </figcaption>
+                                    </figure>
+
+                                    <!-- AFTER -->
+                                    <figure class="example">
+                                        <img src="https://placehold.co/640x457" alt="Redesigned homepage with simplified">
+
+                                        <figcaption class="annotation-before-after">
+                                            <p class="label">After</p>
+                                            <p class="text-small">
+                                            Navigation was simplified to focus on watch collections first. Supporting content was grouped more clearly, improving clarity and keeping the main visuals fully visible.
+                                            </p>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+
+                                <div class="media-split">
+                                    <!-- BEFORE -->
+                                    <figure class="example">
+                                        <video
+                                                class="responsive-video"
+                                                autoplay
+                                                muted
+                                                loop
+                                                playsinline
+                                                preload="metadata"
+                                            >
+                                            <source src="../assets/video/product-page-desktop.mp4" type="video/mp4">
+                                            Your browser does not support the video tag.
+                                        </video>
+
+                                        <figcaption class="annotation-before-after">
+                                            <p class="label">Before</p>
+                                            <p class="text-small">
+                                            The homepage used a two-level navigation that mixed watch collections with secondary content. This made navigation harder to understand and partially covered the main visuals.
+                                            </p>
+                                        </figcaption>
+                                    </figure>
+
+                                    <!-- AFTER -->
+                                    <figure class="example">
+                                        <img src="https://placehold.co/640x457" alt="Redesigned homepage with simplified">
+
+                                        <figcaption class="annotation-before-after">
+                                            <p class="label">After</p>
+                                            <p class="text-small">The redesigned homepage uses a more neutral color paletteand places greater emphasis on lifestyle imagery. Product features are presented more clearly, allowing the watch and its benefits to stand out.</p>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div id="benchmarking" class="subsection flow--elements">
+
+                        <div class="container container--md flow--reading">
+                            <h3 class="heading">Competitive benchmarking</h3>
+                            <p class="text-base">To better understand best practices, I analyzed websites from direct and indirect competitors, as well as e-commerce brands outside the watch category. This helped compare Kronaby's UX against luxury, mid-range, and conversion-driven experiences.</p> 
+                            <p class="text-base">The table below summarizes key UX patterns across different brands.</p>
+                        </div>
+
+                        <div class="container container--xl">
+                            <div id="tabla-benchmarking">
+                                <table class="table-pattern">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col"><p>Feature/Platform</p></th>
+                                            <th scope="col"><p>Kronaby Goal</p></th>
+                                            <th scope="col"><p>Tag Heuer</p></th>
+                                            <th scope="col"><p>Daniel Wellington</p></th>
+                                            <th scope="col"><p>ASOS</p></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                            <tr>
+                                                <th scope="row"><p>Information Architecture</p></th>
+                                                <td><p>Simple and clear value proposition.</p></td>
+                                                <td><p>Clear and detailed product organization.</p></td>
+                                                <td><p>Minimal structure focused on style and easy shopping.</p></td>
+                                                <td><p>Designed to sell fast advanced search and filters.</p></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row"><p>Homepage Storytelling</p></th>
+                                                <td><p>Subtle storytelling around smart features and Scandinavian design.</p></td>
+                                                <td><p>Bold and energetic brand storytelling.</p></td>
+                                                <td><p>Clean and modern look that fits everyday life.</p></td>
+                                                <td><p>Trend-driven content and limited-time collections.</p></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row"><p>Landing Page Experience</p></th>
+                                                <td><p>Focused on the “connected, not distracted” philosophy.</p></td>
+                                                <td><p>Highly visual pages designed for conversion.</p></td>
+                                                <td><p>Focused on the product without distractions.</p></td>
+                                                <td><p>Urgency-based UI optimized for sales.</p></td>
+                                            </tr>
+                                            
+                                            <tr>
+                                                <th scope="row"><p>Product Page UX</p></th>
+                                                <td><p>Lifestyle imagery, feature clarity, and clear CTAs.</p></td>
+                                                <td><p>Interactive visuals, 360° views, and detailed specs.</p></td>
+                                                <td><p>Minimal, fashion-led product presentation.</p></td>
+                                                <td><p>Scannable content with reviews and user images.</p></td>
+                                            </tr>
+
+                                            <tr>
+                                                <th scope="row"><p>Navigation & Menu</p></th>
+                                                <td><p>Simple navigation with fast access to key sections.</p></td>
+                                                <td><p>Clear filters and detailed product options.</p></td>
+                                                <td><p>Fast and frictionless navigation.</p></td>
+                                                <td><p>Quick-access menus to help users find what they need.</p></td>
+                                            </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="table-caption">
+                                <p class="text-caption text-helper">These patterns later informed navigation structure, content hierarchy, and visual emphasis decisions.</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- SECTION 05 -->
+                <section id="insights-decisions" class="section">
+
+                    <div class="subsection">
+                        <div class="container container--md flow--reading">
+                            <h2 class="subtitle">4. Insights and UX Decisions</h2>
+                            <p class="text-base">Based on research findings and usability observations, I grouped the main issues into clear insights and translated them into practical UX decisions.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- SUBSECTION - INSIGHT-->
+                    <div class="subsection">
+                        <div class="container container--xl">
+                            <div class="split-layout">
+                                <div class="content-block flow--reading flow--reading--spacious">
+                                    <h4 class="heading">Insight 3 — Low website visibility limited brand awareness</h4>
+                                    <p class="label">Finding</p>
+                                    <p>The website had low organic visibility and lacked content designed for first-time discovery.Benchmarking showed that SEO-friendly content and clear storytelling help users discover and understand the brand.</p>
+                                    <p class="label">Impact</p>
+                                    <p>Low awareness resulted in fewer direct visits.</p>
+                                    <p class="label">Decision</p>
+                                    <p class="text-insight">I collaborated with an SEO expert to restructure content around user intent, improving information hierarchy, headings, and introducing educational guides that support both discovery and early brand understanding.</p>
+                                </div>
+
+                                <div class="media-block">
+                                    <figure class="image-wrapper">
+                                        <img
+                                            src="../assets/images/kronaby/insight-3.jpg"
+                                            alt="Inconsistent typography on the original website"
+                                            loading="lazy"
+                                        >
+                                    </figure>
+
+                                    <figcaption class="text-caption">
+                                        <p class="label">Evidence from benchmarking</p>
+                                        <p>Some educational content existed, but explanations were long, unstructured, and placed deep within the page, making the hybrid watch concept hard to grasp quickly.
+                                        </p>
+                                    </figcaption>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SUBSECTION - INSIGHT -->
+                    <div class="subsection">
+                        <div class="container container--xl">
+                            <div class="split-layout">
+                                <div class="content-block flow--reading flow--reading--spacious">
+                                    <h4 class="heading">Insight 2 — Users didn't understand what a hybrid watch is</h4>
+                                    <p class="label">Finding</p>
+                                    <p class="text-base ">Users struggled to understand what a hybrid watch is and how it fits into their daily life. Although the previous website included explanatory content, it required effort to find and digest, making the product concept easy to miss.</p>
+                                    <p class="label">Impact</p>
+                                    <p class="text-base ">An unclear value proposition reduced engagement and confidence in the product.</p>
+                                    <p class="label">Decision</p>
+                                    <p class="text-insight ">I introduced a storytelling-based approach through dedicated educational touchpoints, using concise text and visuals to explain the concept before presenting detailed features.</p>
+                                </div>
+
+                                <div class="media-block">
+                                    <figure class="image-wrapper">
+                                        <img
+                                            src="../assets/images/kronaby/insights-2.jpg"
+                                            alt="Inconsistent typography on the original website"
+                                            loading="lazy"
+                                        >
+                                    </figure>
+
+                                    <figcaption class="text-caption">
+                                        <p class="label">Evidence from previous website</p>
+                                        <p>Educational content existed, but explanations were long, unstructured, and placed deep within the page, making the hybrid watch concept hard to grasp quickly.
+                                        </p>
+                                    </figcaption>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SUBSECTION - INSIGHT -->
+                    <div class="subsection">
+                        <div class="container container--xl">
+                            <div class="split-layout">
+                                <div class="content-block flow--reading flow--reading--spacious">
+                                    <h4 class="heading">Insight 1 — Navigation confusion led to early drop-off</h4>
+                                    <p class="label">Finding</p>
+                                    <p class="text-base ">Users were exposed to multiple navigation entry points at the same time, with different labels leading to the same destination. Navigation visibility and hierarchy changed depending on background imagery and menu state, making key options hard to scan and creating false choices. As a result, it was often unclear where to start.</p>
+
+                                    <p class="label">Impact</p>
+                                    <p class="text-base ">Navigation created hesitation instead of guidance, causing users to lose context and leave before exploring products.</p>
+
+                                    <p class="label">Decision</p>
+                                    <p class="text-insight ">I simplified the navigation to create one clear main path. Product collections were placed first, while secondary and educational content was moved out of the main flow to help users find products faster and explore more easily.</p>
+                                </div>
+
+                                <div class="media-block">
+                                    <figure class="image-wrapper">
+                                        <img
+                                            src="../assets/images/kronaby/insight-1.jpg"
+                                            alt="Kronaby navigation showing multiple entry points and low contrast over background imagery"
+                                            loading="lazy"
+                                        >
+                                    </figure>
+
+                                    <figcaption class="text-caption">
+                                        <p class="label">Evidence from usability review</p>
+                                        <p>Navigation relied on multiple entry points, changing hierarchy and visibility depending on background and menu state, which made orientation and decision-making harder for users.
+                                        </p>
+                                    </figcaption>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SUBSECTION -->
+                    <div class="subsection">
+                        <div class="subsection container container--md">
+                            <p class="text-base">Together, these insights showed that users struggled to discover the brand, understand the product, and navigate the site. Solving these issues helped create a clearer, more confident user journey.</p>
+                        </div>
+                    </div>
+
+                </section>
+
+
+                <!-- SECTION 06 -->
+                <section id="insights-decisions" class="section">
+
+                    <div class="subsection">
+                        <div class="container container--md flow--reading">
+                            <h2 class="subtitle">5. Visual design</h2>
+                            <p>The visual design focused on clarity, consistency, and usability. Typography and color were used to improve scanning, and better reflect the brand.</p>
+                        </div>
+                    </div>
+
+
+                    <!-- SUBSECTION TYPOGRAPHY -->
+                    <div class="subsection flow--elements">
+
+                        <div class="container container--md flow--reading flow--reading--spacious">
+                            <h3 class="heading">Typography</h3>
+
+                            <p class="label">Insight addressed</p>
+                            <p>Users found it hard to scan the content and quickly understand what was important. The website used several different fonts, which created visual noise and reduced readability.</p>
+
+                            <p class="label">Decision</p>
+                            <p class="text-insight">I chose a single typeface for the website to improve clarity and consistency. This made the content easier to read, more cohesive, and faster to load.</p>
+                        </div>
+
+                        <div class="container container--xl">
+                            <div class="media-block">
+                                <div class="media-grid media-grid--two">
+
+                                    <figure class="image-wrapper">
+                                        <img
+                                            src="../assets/images/kronaby/use-of-multiple-fonts.jpg"
+                                            alt="Inconsistent typography on the original website"
+                                            loading="lazy"
+                                        >
+                                    </figure>
+
+                                    <figure class="image-wrapper">
+                                        <img
+                                        src="../assets/images/kronaby/use-of-dmsans.jpg"
+                                        alt="Refined typography direction improving readability"
+                                        loading="lazy"
+                                        >
+                                    </figure>
+
+                                </div>
+
+                                <figcaption class="text-caption">
+                                    <p>
+                                        Comparison between the original website (left), which used multiple fonts (Avenir Next, Lucida Grande, Iconochive, and Roboto), and the refined direction (right), which uses a single typeface (DM Sans), showing clearer hierarchy and better readability.
+                                    </p>
+                                </figcaption>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SUBSECTION COLOR PALETTE -->
+                    <div class="subsection">
+                        <div class="container container--xl">
+                            <div class="split-layout">
+                                <div class="content-block flow--reading flow--reading--spacious">
+                                    <h4 class="heading">Color palette</h4>
+                                    <p class="label">Insight addressed</p>
+                                    <p class="text-base ">Users had trouble understanding visual hierarchy and knowing where to focus.</p>
+
+                                    <p class="label">Decision</p>
+                                    <p class="text-base ">The color system is based on purpose, not decoration: Cool mint tones create structure and clarity, warm brown tones highlight important actions, and vivid colors are reserved exclusively for moments that require emphasis.</p>
+
+                                    <ul class="list">
+                                        <li class="text-insight">Mint Cool: layout, text, icons, and UI elements
+                                        <li class="text-insight">Brown: main actions and purchase moments.</li>
+                                        <li class="text-insight">Vivid accents: feedback and emotional states</li>
+                                        <li class="text-insight">Vivid accents: main background</li>
+                                    </ul>
+
+                                    <p class="text-base">Variations in lightness and saturation to create depth and guide the eye.</p>
+                                </div>
+
+                                <figure>
+                                    <div class="image-wrapper">
+                                        <img
+                                            src="../assets/images/kronaby/Core-Color-System.jpg"
+                                            alt="Inconsistent typography on the original website"
+                                            loading="lazy"
+                                        >
+                                    </div>
+                                    <figcaption class="text-caption">
+                                        <p>Clear navigation and CTAs help users explore the products and reach the product page.</p>
+                                    </figcaption>
+                                </figure>
+                            </div>  
+                        </div>
+                    </div>
+
+                    <!-- SUBSECTION USE OF COLOR -->
+                    <div class="subsection">
+                        <div class="container container--xl">
+                            <div class="split-layout">
+                                <div class="content-block flow--reading flow--reading--spacious">
+                                    <h4 class="heading">Application of color</h4>
+                                    <p class="label">Insight addressed</p>
+                                    <p class="text-base ">Users had trouble understanding visual hierarchy and knowing where to focus.</p>
+
+                                    <p class="label">Decision</p>
+                                    <p class="text-insight ">Color is used to reinforce hierarchy and interaction, not to compete with content..</p>
+
+                                    <p class="text-insight ">In practice:</p>
+                                    <ul class="pb-3 list">
+                                        <li class="text-insight">Product grids remain neutral, allowing imagery to lead.</li>
+                                        <li class="text-insight">Calls to action are immediately recognizable through warm contrast.</li>
+                                        <li class="text-insight">Micro-interactions (likes, filters, states) rely on restrained vivid accents to provide clear feedback.</li>
+                                    </ul>
+                                </div>
+
+                                <figure>
+                                    <div class="image-wrapper">
+                                        <img
+                                            src="../assets/images/kronaby/use-colors.jpg"
+                                            alt="Inconsistent typography on the original website"
+                                            loading="lazy"
+                                        >
+                                    </div>
+                                    <figcaption class="text-caption">
+                                        <p>Clear navigation and CTAs help users explore the products and reach the product page.</p>
+                                    </figcaption>
+                                </figure>
+                            </div>  
+                        </div>
+                    </div>
+
+                </section>
+
+
+                <!-- SECTION 07 -->
+                <section id="new-component" class="section">
+
+                    <div class="subsection">
+                        <div class="container container--md flow--reading">
+                            <h2 class="subtitle">6. The features: Explaining the product through design</h2>
+                            <p class="text-base">To make hybrid watch features easier to understand, I designed a dedicated Icon Card component. It turns complex information into clear, visual explanations that support the overall storytelling of the site.</p>
+
+                            <p class="label">Insight addressed</p>
+                            <p class="text-base ">Users didn't clearly understand what a hybrid watch is or how it fits into their daily life. Previous feature explanations were long, text-heavy, and not designed for quick reading or learning.</p>
+                        </div>
+                    </div>
+
+
+                    <!-- COMPONENT INSIGHT -->
+                    <div class="subsection">
+                        <div class="container container--xl">
+                            <div class="split-layout">
+
+                                <div class="content-block flow--reading flow--reading--spacious">
+
+                                    <p class="label">Design decision</p>
+                                    <p class="text-base">I created a simple, visual Icon Card to explain features in a clear and scannable way.</p>
+
+                                    <p class="text-base">The component:</p>
+                                    <ul>
+                                        <li class="text-base">Highlights only the most important information</li>
+                                        <li class="text-base">Uses clear, user-friendly language</li>
+                                        <li class="text-base">Replaces long text with visual cues</li>
+                                        <li class="text-base">Can be reused across Kronaby and other Festina brands</li>
+                                    </ul>
+
+                                    <p class="label">Outcome</p>
+                                    <p class="text-base">The Icon Card helps users understand features faster and see how a hybrid watch fits naturally into everyday life.</p>
+                                </div>
+
+                                <figure>
+                                    <div class="image-wrapper">
+                                        <img
+                                            src="../assets/images/kronaby/anatomy-component.jpg"
+                                            alt="Inconsistent typography on the original website"
+                                            loading="lazy"
+                                        >
+                                    </div>
+                                    <figcaption class="text-caption">
+                                        <p>Clear navigation and CTAs help users explore the products and reach the product page.</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </div>  
+                    </div>
+
+                    <!-- VIDEOS -->
+                    <div class="subsection">
+                        <div class="container container--xl">
                             <div class="media-split">
+
                                 <!-- BEFORE -->
                                 <figure class="example">
                                     <video
-                                            class="responsive-video"
-                                            autoplay
-                                            muted
-                                            loop
-                                            playsinline
-                                            preload="metadata"
-                                        >
-                                        <source src="../assets/video/home-page-desktop.mp4" type="video/mp4">
+                                        class="responsive-video"
+                                        autoplay
+                                        muted
+                                        loop
+                                        playsinline
+                                        preload="metadata"
+                                    >
+                                        <source src="../assets/video/features-of-product-page.mp4" type="video/mp4">
                                         Your browser does not support the video tag.
                                     </video>
 
                                     <figcaption class="annotation-before-after"> 
                                         <p class="label">Before</p>
                                         <p class="text-small">
-                                        The homepage used a two-level navigation that mixed watch collections with secondary content. This made navigation harder to understand and partially covered the main visuals.
+                                        Text-heavy feature presentation on the product page
                                         </p>
                                     </figcaption>
                                 </figure>
 
                                 <!-- AFTER -->
                                 <figure class="example">
-                                    <img src="https://placehold.co/640x457" alt="Redesigned homepage with simplified">
-
-                                    <figcaption class="annotation-before-after">
-                                        <p class="label">After</p>
-                                        <p class="text-small">
-                                        Navigation was simplified to focus on watch collections first. Supporting content was grouped more clearly, improving clarity and keeping the main visuals fully visible.
-                                        </p>
-                                    </figcaption>
-                                </figure>
-                            </div>
-
-                            <div class="media-split">
-                                <!-- BEFORE -->
-                                <figure class="example">
                                     <video
-                                            class="responsive-video"
-                                            autoplay
-                                            muted
-                                            loop
-                                            playsinline
-                                            preload="metadata"
-                                        >
-                                        <source src="../assets/video/product-page-desktop.mp4" type="video/mp4">
+                                        class="responsive-video"
+                                        autoplay
+                                        muted
+                                        loop
+                                        playsinline
+                                        preload="metadata"
+                                    >
+                                        <source src="../assets/video/features-of-product-page.mp4" type="video/mp4">
                                         Your browser does not support the video tag.
                                     </video>
 
-                                    <figcaption class="annotation-before-after">
+                                    <figcaption class="annotation-before-after"> 
                                         <p class="label">Before</p>
                                         <p class="text-small">
-                                        The homepage used a two-level navigation that mixed watch collections with secondary content. This made navigation harder to understand and partially covered the main visuals.
+                                        Visual Icon Cards make feature information easier to read and scan.
                                         </p>
                                     </figcaption>
                                 </figure>
 
-                                <!-- AFTER -->
-                                <figure class="example">
-                                    <img src="https://placehold.co/640x457" alt="Redesigned homepage with simplified">
+                            </div>
+                        </div>
+                    </div> 
 
-                                    <figcaption class="annotation-before-after">
-                                        <p class="label">After</p>
-                                        <p class="text-small">The redesigned homepage uses a more neutral color paletteand places greater emphasis on lifestyle imagery. Product features are presented more clearly, allowing the watch and its benefits to stand out.</p>
-                                    </figcaption>
-                                </figure>
+                </section>
+
+
+                <!-- SECTION 08 -->
+                <section id="results" class="section">
+                    <div class="flow--elements">
+
+                        <div class="container container--md flow--reading">
+                            <h2 class="subtitle">8. Final Results 🫶</h2>
+                            <p class="text-base">The final design brings together clarity, progressive storytelling, and a simplified navigation system, creating a calmer and more confident experience across the site.</p>
+                        </div>
+
+
+                        <!-- HOME + PRODUCT GRID + PRODUCT PAGE -->
+                        <div class="subsection">
+                            <div class="flow--elements">
+                                <div class="container container--md flow--elements">
+                                    <h4 class="text-base">
+                                        These screens show how the core shopping experience was redesigned to feel clearer and more confident. From the homepage to the product page, the layout guides users step by step, helping them understand the brand, browse collections easily, and focus on what matters when choosing a watch.
+                                    </h4>
+                                </div>
+
+                                <div class="container container--xl">
+                                    <div class="final-overview-layout">
+
+                                        <!-- LEFT: HOME -->
+                                        <figure class="image-wrapper--caxse final-home">
+                                            <img
+                                                src="../assets/images/kronaby/home-desktop.jpg"
+                                                alt="Kronaby homepage full view"
+                                                loading="lazy"
+                                                >
+                                            <figcaption class="text-caption">
+                                                <p class="label">Homepage</label>
+                                                <p>Clear brand positioning and first-touch orientation through a calm, focused hero.</p>
+                                            </figcaption>
+                                        </figure>
+
+                                        <!-- RIGHT: GRID + PRODUCT PAGE -->
+                                        <div class="final-side-stack">
+
+                                            <figure class="image-wrapper--case">
+                                                <img
+                                                    src="../assets/images/kronaby/grid-desktop.jpg"
+                                                    alt="Kronaby product grid overview"
+                                                    loading="lazy"
+                                                >
+                                                <figcaption class="text-caption">
+                                                    <p class="label">Homepage</label>
+                                                    <p>Clear brand positioning and first-touch orientation through a calm, focused hero.</p>
+                                                </figcaption>
+                                            </figure>
+
+                                            <figure class="image-wrapper--case">
+                                                <img
+                                                    src="../assets/images/kronaby/product-page-desktop.jpg"
+                                                    alt="Kronaby product page full view"
+                                                    loading="lazy"
+                                                >
+                                                <figcaption class="text-caption">
+                                                    <p class="label">Homepage</label>
+                                                    <p>Clear brand positioning and first-touch orientation through a calm, focused hero.</p>
+                                                </figcaption>
+                                            </figure>
+
+                                        </div>
+
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
-                    </div>
-                </div>
+                        <!-- EDUCATIONAL CONTENT -->
+                        <div class="subsection">
+                            <div class="flow--elements">
+                                <div class="container container--md">
+                                    <h4 class="text-base">
+                                        These landing pages support early understanding by explaining the hybrid watch concept in a simple and visual way. The content is structured to answer key questions, build trust, and prepare users before they explore products in detail.
+                                    </h4>
+                                </div>
 
-                <div id="benchmarking" class="subsection flow--elements">
+                                <div class="container container--xl">
+                                    <div class="media-grid media-grid--three">
 
-                    <div class="container--md flow--reading">
-                        <h3 class="heading">Competitive benchmarking</h3>
-                        <p class="text-base">To better understand best practices, I analyzed websites from direct and indirect competitors, as well as e-commerce brands outside the watch category. This helped compare Kronaby's UX against luxury, mid-range, and conversion-driven experiences.</p> 
-                        <p class="text-base">The table below summarizes key UX patterns across different brands.</p>
-                    </div>
+                                        <!-- STEP 1 -->
+                                        <figure class="image-wrapper--case">
+                                            <img
+                                                src="../assets/images/kronaby/storytelling-what-is-hybrid.jpg"
+                                                alt="What is a hybrid watch storytelling page"
+                                                loading="lazy"
+                                            >
+                                            <figcaption class="text-caption">
+                                                <p>What is a Hybrid Watch? — Introducing the concept</p>
+                                            </figcaption>
+                                        </figure>
 
-                    <div class="container--lg">
-                        <div id="tabla-benchmarking">
-                            <table class="table-pattern">
-                                <thead>
-                                    <tr>
-                                        <th scope="col"><p>Feature/Platform</p></th>
-                                        <th scope="col"><p>Kronaby Goal</p></th>
-                                        <th scope="col"><p>Tag Heuer</p></th>
-                                        <th scope="col"><p>Daniel Wellington</p></th>
-                                        <th scope="col"><p>ASOS</p></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                        <tr>
-                                            <th scope="row"><p>Information Architecture</p></th>
-                                            <td><p>Simple and clear value proposition.</p></td>
-                                            <td><p>Clear and detailed product organization.</p></td>
-                                            <td><p>Minimal structure focused on style and easy shopping.</p></td>
-                                            <td><p>Designed to sell fast advanced search and filters.</p></td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row"><p>Homepage Storytelling</p></th>
-                                            <td><p>Subtle storytelling around smart features and Scandinavian design.</p></td>
-                                            <td><p>Bold and energetic brand storytelling.</p></td>
-                                            <td><p>Clean and modern look that fits everyday life.</p></td>
-                                            <td><p>Trend-driven content and limited-time collections.</p></td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row"><p>Landing Page Experience</p></th>
-                                            <td><p>Focused on the “connected, not distracted” philosophy.</p></td>
-                                            <td><p>Highly visual pages designed for conversion.</p></td>
-                                            <td><p>Focused on the product without distractions.</p></td>
-                                            <td><p>Urgency-based UI optimized for sales.</p></td>
-                                        </tr>
-                                        
-                                        <tr>
-                                            <th scope="row"><p>Product Page UX</p></th>
-                                            <td><p>Lifestyle imagery, feature clarity, and clear CTAs.</p></td>
-                                            <td><p>Interactive visuals, 360° views, and detailed specs.</p></td>
-                                            <td><p>Minimal, fashion-led product presentation.</p></td>
-                                            <td><p>Scannable content with reviews and user images.</p></td>
-                                        </tr>
+                                        <!-- STEP 2 -->
+                                        <figure class="image-wrapper--case">
+                                            <img
+                                                src="../assets/images/kronaby/storytelling-why-kronaby.jpg"
+                                                alt="Why choose Kronaby brand storytelling page"
+                                                loading="lazy"
+                                            >
+                                            <figcaption class="text-caption">
+                                                <p>Why choose Kronaby? — Brand values and differentiation</p>
+                                            </figcaption>
+                                        </figure>
 
-                                        <tr>
-                                            <th scope="row"><p>Navigation & Menu</p></th>
-                                            <td><p>Simple navigation with fast access to key sections.</p></td>
-                                            <td><p>Clear filters and detailed product options.</p></td>
-                                            <td><p>Fast and frictionless navigation.</p></td>
-                                            <td><p>Quick-access menus to help users find what they need.</p></td>
-                                        </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="table-caption">
-                            <p class="text-caption text-helper">These patterns later informed navigation structure, content hierarchy, and visual emphasis decisions.</p>
-                        </div>
-                    </div>
+                                        <!-- STEP 3 -->
+                                        <figure class="image-wrapper--case">
+                                            <img
+                                                src="../assets/images/kronaby/storytelling-how-it-works.jpg"
+                                                alt="How Kronaby works and feature explanation page"
+                                                loading="lazy"
+                                            >
+                                            <figcaption class="text-caption">
+                                                <p>How Kronaby works — From concept to features</p>
+                                            </figcaption>
+                                        </figure>
 
-                </div>
+                                    </div>
 
-            </section>
-
-
-            <!-- SECTION 05 -->
-            <section id="insights-decisions" class="section">
-
-                <div class="container--md subsection">
-                    <h2 class="subtitle">4. Insights and UX Decisions</h2>
-                    <p class="text-base">Based on research findings and usability observations, I grouped the main issues into clear insights and translated them into practical UX decisions.</p>
-                </div>
-                
-                <!-- SUBSECTION - INSIGHT-->
-                <div class="subsection container--lg">
-                    <div class="split-layout">
-                        <div class="content-block">
-                            <h4 class="heading">Insight 3 — Low website visibility limited brand awareness</h4>
-                            <p class="label">Finding</p>
-                            <p class="text-base stack-gap">The website had low organic visibility and lacked content designed for first-time discovery.Benchmarking showed that SEO-friendly content and clear storytelling help users discover and understand the brand.</p>
-                            <p class="label">Impact</p>
-                            <p class="text-base stack-gap">Low awareness resulted in fewer direct visits.</p>
-                            <p class="label">Decision</p>
-                            <p class="text-insight stack-gap">I collaborated with an SEO expert to restructure content around user intent, improving information hierarchy, headings, and introducing educational guides that support both discovery and early brand understanding.</p>
-                        </div>
-
-                        <div class="media-block">
-                            <figure class="image-wrapper">
-                                <img
-                                    src="../assets/images/kronaby/insight-3.jpg"
-                                    alt="Inconsistent typography on the original website"
-                                    loading="lazy"
-                                >
-                            </figure>
-
-                            <figcaption class="text-caption">
-                                <p class="label">Evidence from benchmarking</p>
-                                <p>Some educational content existed, but explanations were long, unstructured, and placed deep within the page, making the hybrid watch concept hard to grasp quickly.
-                                </p>
-                            </figcaption>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- SUBSECTION - INSIGHT -->
-                <div class="subsection container--lg">
-                    <div class="split-layout">
-                        <div class="content-block">
-                            <h4 class="heading">Insight 2 — Users didn't understand what a hybrid watch is</h4>
-                            <p class="label">Finding</p>
-                            <p class="text-base stack-gap">Users struggled to understand what a hybrid watch is and how it fits into their daily life. Although the previous website included explanatory content, it required effort to find and digest, making the product concept easy to miss.</p>
-                            <p class="label">Impact</p>
-                            <p class="text-base stack-gap">An unclear value proposition reduced engagement and confidence in the product.</p>
-                            <p class="label">Decision</p>
-                            <p class="text-insight stack-gap">I introduced a storytelling-based approach through dedicated educational touchpoints, using concise text and visuals to explain the concept before presenting detailed features.</p>
-                        </div>
-
-                        <div class="media-block">
-                            <figure class="image-wrapper">
-                                <img
-                                    src="../assets/images/kronaby/insights-2.jpg"
-                                    alt="Inconsistent typography on the original website"
-                                    loading="lazy"
-                                >
-                            </figure>
-
-                            <figcaption class="text-caption">
-                                <p class="label">Evidence from previous website</p>
-                                <p>Educational content existed, but explanations were long, unstructured, and placed deep within the page, making the hybrid watch concept hard to grasp quickly.
-                                </p>
-                            </figcaption>
+                                    <p class="text-caption text-center">
+                                        The storytelling pages were designed as a progressive journey, guiding users from understanding the concept to exploring concrete product features.
+                                    </p>
+                                </div>
                         </div>
 
                     </div>
-                </div>
+                </section>
 
-                <!-- SUBSECTION - INSIGHT -->
-                <div class="subsection container--lg">
-                    <div class="split-layout">
-                        <div class="content-block">
-                            <h4 class="heading">Insight 1 — Navigation confusion led to early drop-off</h4>
-                            <p class="label">Finding</p>
-                            <p class="text-base stack-gap">Users were exposed to multiple navigation entry points at the same time, with different labels leading to the same destination. Navigation visibility and hierarchy changed depending on background imagery and menu state, making key options hard to scan and creating false choices. As a result, it was often unclear where to start.</p>
 
-                            <p class="label">Impact</p>
-                            <p class="text-base stack-gap">Navigation created hesitation instead of guidance, causing users to lose context and leave before exploring products.</p>
+                <!-- SECTION 09 -->
+                <section class="section">
 
-                            <p class="label">Decision</p>
-                            <p class="text-insight stack-gap">I simplified the navigation to create one clear main path. Product collections were placed first, while secondary and educational content was moved out of the main flow to help users find products faster and explore more easily.</p>
-                        </div>
-
-                        <div class="media-block">
-                            <figure class="image-wrapper">
-                                <img
-                                    src="../assets/images/kronaby/insight-1.jpg"
-                                    alt="Kronaby navigation showing multiple entry points and low contrast over background imagery"
-                                    loading="lazy"
-                                >
-                            </figure>
-
-                            <figcaption class="text-caption">
-                                <p class="label">Evidence from usability review</p>
-                                <p>Navigation relied on multiple entry points, changing hierarchy and visibility depending on background and menu state, which made orientation and decision-making harder for users.
-                                </p>
-                            </figcaption>
-                        </div>
+                    <div class="container container--md flow--reading">
+                        <h2 class="subtitle">9. What about metrics?</h2>
+                        <p class="text-base">I wrapped up this project in my last week at Festina Group, so I didn't get the chance to track final results. If I had stayed longer, I would have focused on metrics like time on site, bounce rate, direct traffic, and checkout starts. Even without final data, these metrics helped guide my design decisions.</p>
                     </div>
-                </div>
-
-                <!-- SUBSECTION -->
-                <div class="subsection container--md">
-                <p class="text-base">Together, these insights showed that users struggled to discover the brand, understand the product, and navigate the site. Solving these issues helped create a clearer, more confident user journey.</p>
-                </div>
-
-            </section>
+                    
+                </section>
 
 
-            <!-- SECTION 06 -->
-            <section id="insights-decisions" class="section">
+                <!-- SECTION 10 -->
+                <section class="section">
 
-                <div class="subsection">
-                    <div class="container--md">
-                        <h2 class="subtitle">5. Visual design</h2>
-                        <p class="text-base">The visual design focused on clarity, consistency, and usability. Typography and color were used to improve scanning, and better reflect the brand.</p>
+                    <div class="container container--md flow--reading">
+                        <h2 class="subtitle">10. Next steps for Kronaby</h2>
+                        <p class="text-base">Honestly, the big thing would be tracking user behavior and refine the site. More engaging content would boost SEO and explain the product. Building a community with reviews and forums would be great. And of course, tying it all in better with the rest of Festina's world, especially that checkout redesign, would make the whole experience smoother.</p>
                     </div>
-                </div>
+                    
+                </section>
 
 
-                <!-- SUBSECTION TYPOGRAPHY -->
-                <div class="subsection flow--elements">
+                <!-- SECTION 11 -->
+                <section class="section">
 
-                    <div class="container--md flow--reading">
-                        <h4 class="heading">Typography</h4>
-
-                        <p class="label">Insight addressed</p>
-                        <p class="text-base">Users found it hard to scan content and quickly understand what was important.</p>
-
-                        <p class="text-base">The style guide defined Avenir Next and Minion, but the website used many different fonts, including Avenir Next, Lucida Grande, Iconochive, and sometimes Roboto. This lack of consistency created visual noise.</p>
-
-                        <p class="label">Decision</p>
-                        <p class="text-insight">I selected DM Sans as the main typeface. It has a clean, modern look and is optimized for digital use. Using a single font improved readability, consistency, and loading speed.</p>
-                    </div>
-
-                    <div class="container--lg">
-                        <div class="media-block">
-                            <div class="media-grid media-grid--two">
-
-                                <figure class="image-wrapper">
-                                    <img
-                                        src="../assets/images/kronaby/use-of-multiple-fonts.jpg"
-                                        alt="Inconsistent typography on the original website"
-                                        loading="lazy"
-                                    >
-                                </figure>
-
-                                <figure class="image-wrapper">
-                                    <img
-                                    src="../assets/images/kronaby/use-of-dmsans.jpg"
-                                    alt="Refined typography direction improving readability"
-                                    loading="lazy"
-                                    >
-                                </figure>
-
-                            </div>
-
-                            <figcaption class="text-caption">
-                                <p>
-                                    Comparison between the original website's inconsistent typography (left) and the refined direction using DM Sans (right), showing improved hierarchy and readability.
-                                </p>
-                            </figcaption>
-
-                        </div>
-                    </div>
-                </div>
-
-                <!-- SUBSECTION COLOR PALETTE -->
-                <div class="subsection container--lg">
-                    <div class="split-layout">
-                        <div class="content-block">
-                            <h4 class="heading">Color palette</h4>
-                            <p class="label">Insight addressed</p>
-                            <p class="text-base stack-gap">Users had trouble understanding visual hierarchy and knowing where to focus.</p>
-
-                            <p class="label">Decision</p>
-                            <p class="text-base stack-gap">The color system is based on purpose, not decoration: Cool mint tones create structure and clarity, warm brown tones highlight important actions, and vivid colors are reserved exclusively for moments that require emphasis.</p>
-
+                    <div class="container container--md flow--reading">
+                        <h2 class="subtitle">11. Key takeaways & learnings</h2>
+                        <div>
                             <ul class="list">
-                                <li class="text-insight">Mint Cool: layout, text, icons, and UI elements
-                                <li class="text-insight">Brown: main actions and purchase moments.</li>
-                                <li class="text-insight">Vivid accents: feedback and emotional states</li>
-                                <li class="text-insight">Vivid accents: main background</li>
-                            </ul>
-
-                            <p class="text-base">Variations in lightness and saturation to create depth and guide the eye.</p>
-                        </div>
-
-                        <figure>
-                            <div class="image-wrapper">
-                                <img
-                                    src="../assets/images/kronaby/Core-Color-System.jpg"
-                                    alt="Inconsistent typography on the original website"
-                                    loading="lazy"
-                                >
-                            </div>
-                            <figcaption class="text-caption">
-                                <p>Clear navigation and CTAs help users explore the products and reach the product page.</p>
-                            </figcaption>
-                        </figure>
-                    </div>  
-                </div>
-
-                <!-- SUBSECTION USE OF COLOR -->
-                <div class="subsection container--lg">
-                    <div class="split-layout">
-                        <div class="content-block">
-                            <h4 class="heading">Application of color</h4>
-                            <p class="label">Insight addressed</p>
-                            <p class="text-base stack-gap">Users had trouble understanding visual hierarchy and knowing where to focus.</p>
-
-                            <p class="label">Decision</p>
-                            <p class="text-insight stack-gap">Color is used to reinforce hierarchy and interaction, not to compete with content..</p>
-
-                            <p class="text-insight stack-gap">In practice:</p>
-                            <ul class="pb-3 list">
-                                <li class="text-insight">Product grids remain neutral, allowing imagery to lead.</li>
-                                <li class="text-insight">Calls to action are immediately recognizable through warm contrast.</li>
-                                <li class="text-insight">Micro-interactions (likes, filters, states) rely on restrained vivid accents to provide clear feedback.</li>
+                                <li class="text-base">Qualitative research can provide strong insights, even without analytics</li>
+                                <li class="text-base">Tight timelines require flexibility and smart prioritization</li>
+                                <li class="text-base">Focusing on high-impact changes is more effective than fixing everything</li>
                             </ul>
                         </div>
-
-                        <figure>
-                            <div class="image-wrapper">
-                                <img
-                                    src="../assets/images/kronaby/use-colors.jpg"
-                                    alt="Inconsistent typography on the original website"
-                                    loading="lazy"
-                                >
-                            </div>
-                            <figcaption class="text-caption">
-                                <p>Clear navigation and CTAs help users explore the products and reach the product page.</p>
-                            </figcaption>
-                        </figure>
-                    </div>  
-                </div>
-
-            </section>
-
-
-            <!-- SECTION 07 -->
-            <section id="new-component" class="section">
-
-                <div class="subsection">
-                    <div class="container--md">
-                        <h2 class="subtitle">6. The features: Explaining the product through design</h2>
-                        <p class="text-base">To make hybrid watch features easier to understand, I designed a dedicated Icon Card component. It turns complex information into clear, visual explanations that support the overall storytelling of the site.</p>
-
-                        <p class="label">Insight addressed</p>
-                        <p class="text-base stack-gap">Users didn't clearly understand what a hybrid watch is or how it fits into their daily life. Previous feature explanations were long, text-heavy, and not designed for quick reading or learning.</p>
-                    </div>
-                </div>
-
-
-                <!-- COMPONENT INSIGHT -->
-                <div class="subsection container--lg">
-                    <div class="split-layout">
-
-                        <div class="content-block">
-
-                            <p class="label">Design decision</p>
-                            <p class="text-base">I created a simple, visual Icon Card to explain features in a clear and scannable way.</p>
-
-                            <p class="text-base">The component:</p>
-                            <ul>
-                                <li class="text-base">Highlights only the most important information</li>
-                                <li class="text-base">Uses clear, user-friendly language</li>
-                                <li class="text-base">Replaces long text with visual cues</li>
-                                <li class="text-base">Can be reused across Kronaby and other Festina brands</li>
-                            </ul>
-
-                            <p class="label">Outcome</p>
-                            <p class="text-base">The Icon Card helps users understand features faster and see how a hybrid watch fits naturally into everyday life.</p>
-                        </div>
-
-                        <figure>
-                            <div class="image-wrapper">
-                                <img
-                                    src="../assets/images/kronaby/anatomy-component.jpg"
-                                    alt="Inconsistent typography on the original website"
-                                    loading="lazy"
-                                >
-                            </div>
-                            <figcaption class="text-caption">
-                                <p>Clear navigation and CTAs help users explore the products and reach the product page.</p>
-                            </figcaption>
-                        </figure>
-                    </div>  
-                </div>
-
-                <!-- VIDEOS -->
-                <div class="subsection container--lg">
-                    <div class="media-split">
-
-                        <!-- BEFORE -->
-                        <figure class="example">
-                            <video
-                                class="responsive-video"
-                                autoplay
-                                muted
-                                loop
-                                playsinline
-                                preload="metadata"
-                            >
-                                <source src="../assets/video/features-of-product-page.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-
-                            <figcaption class="annotation-before-after"> 
-                                <p class="label">Before</p>
-                                <p class="text-small">
-                                Text-heavy feature presentation on the product page
-                                </p>
-                            </figcaption>
-                        </figure>
-
-                        <!-- AFTER -->
-                        <figure class="example">
-                            <video
-                                class="responsive-video"
-                                autoplay
-                                muted
-                                loop
-                                playsinline
-                                preload="metadata"
-                            >
-                                <source src="../assets/video/features-of-product-page.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-
-                            <figcaption class="annotation-before-after"> 
-                                <p class="label">Before</p>
-                                <p class="text-small">
-                                Visual Icon Cards make feature information easier to read and scan.
-                                </p>
-                            </figcaption>
-                        </figure>
-
-                    </div>
-                </div>
-
-            </section>
-
-
-            <!-- SECTION 08 -->
-            <section id="results" class="section flow--elements">
-
-                <div class="container--md flow--reading">
-                    <h2 class="subtitle">8. Final Results 🫶</h2>
-                    <p class="text-base">The final design brings together clarity, progressive storytelling, and a simplified navigation system, creating a calmer and more confident experience across the site.</p>
-                </div>
-
-                <!-- HOME + PRODUCT PAGE -->
-                <div class="subsection container--xl">
-
-                    <div class="final-overview-layout">
-
-                        <!-- LEFT: HOME -->
-                        <figure class="image-wrapper--case final-home">
-                            <img
-                                src="../assets/images/kronaby/home-desktop.jpg"
-                                alt="Kronaby homepage full view"
-                                loading="lazy"
-                                >
-                            <figcaption class="text-caption">
-                                <p class="label">Homepage</label>
-                                <p>Clear brand positioning and first-touch orientation through a calm, focused hero.</p>
-                            </figcaption>
-                        </figure>
-
-                        <!-- RIGHT: GRID + PRODUCT PAGE -->
-                        <div class="final-side-stack">
-
-                            <figure class="image-wrapper--case">
-                                <img
-                                    src="../assets/images/kronaby/grid-desktop.jpg"
-                                    alt="Kronaby product grid overview"
-                                    loading="lazy"
-                                >
-                                <figcaption class="text-caption">
-                                    <p class="label">Homepage</label>
-                                    <p>Clear brand positioning and first-touch orientation through a calm, focused hero.</p>
-                                </figcaption>
-                            </figure>
-
-                            <figure class="image-wrapper--case">
-                                <img
-                                    src="../assets/images/kronaby/product-page-desktop.jpg"
-                                    alt="Kronaby product page full view"
-                                    loading="lazy"
-                                >
-                                <figcaption class="text-caption">
-                                    <p class="label">Homepage</label>
-                                    <p>Clear brand positioning and first-touch orientation through a calm, focused hero.</p>
-                                </figcaption>
-                            </figure>
-
-                        </div>
-
                     </div>
 
-                </div>
+                </section>
 
+            </article>
 
+            <!-- NEXT PROJECT -->
+            <section id="next-project" class="section">
+                <div class="container container--md flow--elements ">
 
-                <!-- EDUCATIONAL CONTENT -->
-                <div class="subsection container--xl">
-
-                    <h4 class="heading text-center">
-                        Progressive storytelling to explain the hybrid watch concept
-                    </h4>
-
-                    <div class="media-grid media-grid--three">
-
-                        <!-- STEP 1 -->
-                        <figure class="image-wrapper--case">
-                            <img
-                                src="../assets/images/kronaby/storytelling-what-is-hybrid.jpg"
-                                alt="What is a hybrid watch storytelling page"
-                                loading="lazy"
-                            >
-                            <figcaption class="text-caption">
-                                <p>What is a Hybrid Watch? — Introducing the concept</p>
-                            </figcaption>
-                        </figure>
-
-                        <!-- STEP 2 -->
-                        <figure class="image-wrapper--case">
-                            <img
-                                src="../assets/images/kronaby/storytelling-why-kronaby.jpg"
-                                alt="Why choose Kronaby brand storytelling page"
-                                loading="lazy"
-                            >
-                            <figcaption class="text-caption">
-                                <p>Why choose Kronaby? — Brand values and differentiation</p>
-                            </figcaption>
-                        </figure>
-
-                        <!-- STEP 3 -->
-                        <figure class="image-wrapper--case">
-                            <img
-                                src="../assets/images/kronaby/storytelling-how-it-works.jpg"
-                                alt="How Kronaby works and feature explanation page"
-                                loading="lazy"
-                            >
-                            <figcaption class="text-caption">
-                                <p>How Kronaby works — From concept to features</p>
-                            </figcaption>
-                        </figure>
-
-                    </div>
-
-                    <p class="text-caption text-center">
-                        The storytelling pages were designed as a progressive journey, guiding users from understanding the concept to exploring concrete product features.
-                    </p>
-
-                </div>
-
-
-                </div>
-            </section>
-
-
-            <!-- SECTION 09 -->
-            <section class="section">
-
-                <div class="container--md flow--reading">
-                    <h2 class="subtitle">9. What about metrics?</h2>
-                    <p class="text-base">I wrapped up this project in my last week at Festina Group, so I didn't get the chance to track final results. If I had stayed longer, I would have focused on metrics like time on site, bounce rate, direct traffic, and checkout starts. Even without final data, these metrics helped guide my design decisions.</p>
-                </div>
-                
-            </section>
-
-
-            <!-- SECTION 10 -->
-            <section class="section">
-
-                <div class="container--md flow--reading">
-                    <h2 class="subtitle">10. Next steps for Kronaby</h2>
-                    <p class="text-base">Honestly, the big thing would be tracking user behavior and refine the site. More engaging content would boost SEO and explain the product. Building a community with reviews and forums would be great. And of course, tying it all in better with the rest of Festina's world, especially that checkout redesign, would make the whole experience smoother.</p>
-                </div>
-                
-            </section>
-
-
-            <!-- SECTION 11 -->
-            <section class="section">
-
-                <div class="container--md flow--reading">
-                    <h2 class="subtitle">11. Key takeaways & learnings</h2>
+                    <h2 class="subtitle">Next project</h2>
+                    <!-- Link to next project -->
                     <div>
-                        <ul class="list">
-                            <li class="text-base">Qualitative research can provide strong insights, even without analytics</li>
-                            <li class="text-base">Tight timelines require flexibility and smart prioritization</li>
-                            <li class="text-base">Focusing on high-impact changes is more effective than fixing everything</li>
-                        </ul>
+                        <a href="kronaby.html" 
+                            class="btn btn-solid btn-primary">
+                            <span class="btn-text">
+                            Read Kronaby case study
+                            </span>
+                        </a>
                     </div>
-                </div>
 
+                </div>
             </section>
 
-        </article>
+            <!-- CONTACT SECTION -->
+            <section id="contact-me" class="section contact-section bg-ornament">
+                <div class="container container--md">
+            
+                    <!-- Card -->
+                    <div class="contact-card card shadow">
+                        <div class="card-body text-center">
 
-        <!-- NEXT PROJECT -->
-        <section id="next-project" class="section">
-            <div class="container--md flow--elements ">
+                            <h2 class="subtitle">Let's connect!</h2>
+                            <p class="text-lead">
+                            Drop it like it's hot — pitch me your project, your collab idea, or whatever you're working on. Let's create something great together.
+                            </p>
+                            <div class="group-two-buttons">
+                                <!-- Button 1 -->
+                                <a href="mailto:roselly.nunezg@gmail.com" 
+                                class="btn btn-solid btn-secondary btn-primary-sm btn-icon btn-icon-left">
+                                <span class="btn-icon-element">
+                                    <i class="bi bi-envelope"></i>
+                                </span>
+                                <span class="btn-text">
+                                    Copy mi email
+                                </span>
+                                </a>
 
-                <h2 class="subtitle">Next project</h2>
-                <!-- Link to next project -->
-                <div>
-                    <a href="kronaby.html" 
-                        class="btn btn-solid btn-primary">
-                        <span class="btn-text">
-                        Read Kronaby case study
-                        </span>
-                    </a>
-                </div>
+                                <!-- Button 2 -->
+                                <a href="mailto:roselly.nunezg@gmail.com" 
+                                class="btn btn-solid btn-secondary btn-primary-sm btn-icon btn-icon-left">
+                                <span class="btn-icon-element">
+                                    <i class="bi bi-envelope"></i>
+                                </span>
+                                <span class="btn-text">
+                                    Go to my Linkedin
+                                </span>
+                                </a>
+                            </div>
 
-            </div>
-        </section>
-
-        <!-- CONTACT SECTION -->
-        <section id="contact-me" class="section contact-section bg-ornament">
-            <div class="container--md">
-        
-                <!-- Card -->
-                <div class="contact-card card shadow">
-                    <div class="card-body text-center">
-
-                        <h2 class="subtitle">Let's connect!</h2>
-                        <p class="text-lead">
-                        Drop it like it's hot — pitch me your project, your collab idea, or whatever you're working on. Let's create something great together.
-                        </p>
-                        <div class="group-two-buttons">
-                            <!-- Button 1 -->
-                            <a href="mailto:roselly.nunezg@gmail.com" 
-                            class="btn btn-solid btn-secondary btn-primary-sm btn-icon btn-icon-left">
-                            <span class="btn-icon-element">
-                                <i class="bi bi-envelope"></i>
-                            </span>
-                            <span class="btn-text">
-                                Copy mi email
-                            </span>
-                            </a>
-
-                            <!-- Button 2 -->
-                            <a href="mailto:roselly.nunezg@gmail.com" 
-                            class="btn btn-solid btn-secondary btn-primary-sm btn-icon btn-icon-left">
-                            <span class="btn-icon-element">
-                                <i class="bi bi-envelope"></i>
-                            </span>
-                            <span class="btn-text">
-                                Go to my Linkedin
-                            </span>
-                            </a>
                         </div>
-
                     </div>
+
                 </div>
+            </section>
 
-            </div>
-        </section>
+        </main>
 
-    </main>
+        <footer class="site-footer">
+            <p class="footer__copyright">
+            © 2026 Roselly Nuñez.
+            </p>
 
-    <!-- Overlay para menú mobile -->
-    <div id="menu-overlay">
-        <ul class="overlay-menu">
-            <li><a href="my-work.html">My Work</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a class="nav-link active" href="images/cv/CV_Roselly_Nunez_UX_UI_Designer-en.pdf" target="_blank" >Resume<i class="bi bi-box-arrow-up-right ms-2"></i></a></li>
-        </ul>
-    </div>
+            <p class="footer__role">
+            UX/UI & Design Systems Designer.
+            </p>
 
-    <footer>
-        <p>This site is hand-made by me, Roselly Nuñez. Built with 💖, HTML, CSS, JS and Bootstrap.</p>
-    </footer>
+            <p class="footer__statement">
+            Built with semantic HTML, CSS, and a scalable design system — driven by curiosity and a genuine care for well-crafted experiences.
+            </p>
 
-    <script src="../assets/js/main.js"></script>
+            <nav class="footer__links" aria-label="Footer links">
+            <a href="https://www.linkedin.com/in/rosellynunez"
+                target="_blank"
+                rel="noopener noreferrer">LinkedIn</a>
+            <span aria-hidden="true">·</span>
+            <a href="https://github.com/rosellynunez"
+                target="_blank"
+                rel="noopener noreferrer">GitHub</a>
+            <span aria-hidden="true">·</span>
+            <a href="/assets/docs/cv/current.pdf"
+                target="_blank"
+                rel="noopener noreferrer">Resume</a>
+            </nav>
+        </footer>
+
+        <script src="../assets/js/main.js"></script>
 
     </body>
 

@@ -8,18 +8,18 @@ document.addEventListener('DOMContentLoaded', () => {
   if (!toggle || !mobileNav) return;
 
   function openMenu() {
-    mobileNav.hidden = false;
-    toggle.setAttribute('aria-expanded', 'true');
-    toggle.textContent = 'CLOSE';
-    document.body.classList.add('no-scroll');
-  }
+  mobileNav.classList.add('is-open');
+  toggle.setAttribute('aria-expanded', 'true');
+  toggle.textContent = 'CLOSE';
+  document.documentElement.classList.add('no-scroll');
+}
 
-  function closeMenu() {
-    mobileNav.hidden = true;
-    toggle.setAttribute('aria-expanded', 'false');
-    toggle.textContent = 'MENU';
-    document.body.classList.remove('no-scroll');
-  }
+function closeMenu() {
+  mobileNav.classList.remove('is-open');
+  toggle.setAttribute('aria-expanded', 'false');
+  toggle.textContent = 'MENU';
+  document.documentElement.classList.remove('no-scroll');
+}
 
   // Toggle MENU / CLOSE
   toggle.addEventListener('click', () => {
@@ -38,7 +38,8 @@ document.addEventListener('DOMContentLoaded', () => {
       closeMenu();
     }
   });
-  
+
+  // Cerrar al hacer click en el overlay
   mobileNav.addEventListener('click', (e) => {
     if (e.target === mobileNav) {
       closeMenu();
@@ -52,9 +53,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+
+
+
 // TYPED-OUTPUT
-  document.addEventListener('DOMContentLoaded', function () {
-  var options = {
+document.addEventListener('DOMContentLoaded', function () {
+  const target = document.querySelector("#typed-output");
+
+  if (!target) return;
+
+  new Typed(target, {
     strings: [
       "Design meant to live beyond the mockup",
       "Design systems that grow with teams",
@@ -68,23 +76,25 @@ document.addEventListener('DOMContentLoaded', () => {
     startDelay: 300,
     loop: true,
     showCursor: false
-  };
-
-  new Typed("#typed-output", options);
+  });
 });
 
 
+
+
 // TYPED-OUTPUT-INTRO -> HI
-  document.addEventListener('DOMContentLoaded', function () {
-  var options = {
+document.addEventListener('DOMContentLoaded', function () {
+  const introTarget = document.querySelector("#typed-output-intro");
+
+  if (!introTarget) return;
+
+  new Typed(introTarget, {
     strings: ["H^120e^200l^160l^260o!"],
     typeSpeed: 100,
     startDelay: 500,
     showCursor: false,
     loop: true
-  };
-
-  new Typed("#typed-output-intro", options);
+  });
 });
 
 
@@ -218,6 +228,10 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+
+// Nunca permitir scroll bloqueado en <html>
+document.documentElement.style.overflow = '';
+document.documentElement.classList.remove('no-scroll');
 
 
 

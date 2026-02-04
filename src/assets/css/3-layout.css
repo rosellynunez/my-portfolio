@@ -3,63 +3,163 @@
    ========================================  */
 /* Containers, grid system, section, header, hero, footer, sections */
 
+
+/* ==================================================
+   Z-INDEX SCALE
+   1    → main content
+   900  → overlays (mobile nav, modals)
+   1000 → header (logo, toggle)
+================================================== */
+
+/* ===============================
+   HEADER
+================================ */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: var(--space-3) 0 var(--space-3); 
+  backdrop-filter: blur(10px);
+  background: rgba(15, 0, 34, 0.4);
+}
+
+/* ===============================
+   MOBILE NAV OVERLAY
+================================ */
+
+#mobile-nav {
+  position: fixed;
+  inset: 0;
+  z-index: 900;
+
+  backdrop-filter: blur(10px);
+  background: var(--surface-overlay);
+
+  display: flex;
+  flex-direction: column; /* 👈 importante */
+
+  opacity: 0;
+  transform: translateY(8px);
+  visibility: hidden;
+  pointer-events: none;
+
+  transition:
+    opacity 0.3s ease,
+    transform 0.35s ease,
+    visibility 0s linear 0.35s; /* espera a que termine */
+}
+
+#mobile-nav.is-open {
+  opacity: 1;
+  transform: translateY(0);
+
+  visibility: visible;
+  pointer-events: auto;
+
+  transition:
+    opacity 0.3s ease,
+    transform 0.35s ease;
+}
+
+
+.mobile-nav__content {
+  flex: 1; /* 🔥 ocupa todo el espacio libre */
+  display: flex;
+
+  align-items: center;     /* centro vertical */
+  justify-content: center; /* centro horizontal */
+
+  opacity: 0;
+  transform: translateY(16px);
+
+  transition:
+    opacity 0.35s ease,
+    transform 0.4s ease;
+}
+
+#mobile-nav.is-open .mobile-nav__content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#mobile-nav.is-open .mobile-nav__content {
+  transition-delay: 0.08s;
+}
+
+
+/* Safety: desktop */
+@media (min-width: 992px) {
+  #mobile-nav {
+    display: none !important;
+  }
+}
+
+.mobile-nav__content {
+  flex: 1; /* ocupa todo el espacio disponible */
+  display: flex;
+  align-items: center;     /* centro vertical */
+  justify-content: center; /* centro horizontal */
+}
+
+
 main {
   padding-top: var(--section-space-md); /* adjust to match your real navbar height */
 }
 
 /* ----- Containers ----- */
+
+/* Base container - layout primitive */
+.container {
+  width: 100%;
+  max-width: var(--container-max, var(--container-md));
+  margin-inline: auto;
+  padding-inline: var(--container-padding);
+}
+
+
+
+/* Width tokens */
+.container--xs  { --container-max: var(--container-xs); }
+.container--sm  { --container-max: var(--container-sm); }
+.container--md  { --container-max: var(--container-md); }
+.container--lg  { --container-max: var(--container-lg); }
+.container--xl  { --container-max: var(--container-xl); }
+.container--2xl { --container-max: var(--container-2xl); }
+
+
+
+/* Full bleed */
 .container-full {
   width: 100%;
+  max-width: none;
   margin-inline: auto;
+  padding-inline: 0;
 }
 
-/* Variants (percent + max-width) */
-.container--sm { width: 48%; max-width: 40rem; margin-inline: auto;}
-.container--md { width: 54%; max-width: 52rem; margin-inline: auto;}
-.container--lg { width: 80%; max-width: 80rem; margin-inline: auto;}
-.container--xl { width: 92%;   max-width: 90rem; margin-inline: auto;}
-
-.container--md-right {
-  width: 54%;
-  max-width: 52rem;
+/* Modifiers */
+.container--right {
   margin-left: auto;
-  margin-right: 12%;
+  margin-right: 0;
 }
 
-/* Responsive override */
-/* ----- Between 992px and 1200px → all containers = 80% ----- */
-@media (min-width: 992px) and (max-width: 1200px){
-  .container--sm,
-  .container--md,
-  .container--lg,
-  .container--xl {
-    width: 76%;
-    max-width: unset; /* ← opcional pero recomendado */
-  }
-}
-
-/* ----- Below 992px → all containers = 90% ----- */
+/* Mobile */
 @media (max-width: 991px) {
-  .container--sm,
-  .container--md,
-  .container--lg,
-  .container--xl {
-    width: 86%;
-    max-width: unset; /* ← opcional pero recomendado */
+  .container {
+    max-width: 96%;
   }
 
-  .container--lg-left {
-    width: 100%;
+  .container--right {
     margin-inline: auto;
   }
 }
 
-.container img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
 
+
+.container img:not(.hero-photo-inline) {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
 
 
 
@@ -89,47 +189,83 @@ main {
 
 /* ----- Section header ----- */
 
-/* Spacing between eyebrow and title */
-.section-header { 
-  display: grid;
+/* Estado base: Alineado a la izquierda */
+.section-header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  text-align: left; 
+  align-items: flex-start; /* Asegura que los hijos no se estiren y se queden a la izquierda */
+}
+
+/* Modificador: Alineado al centro */
+.section-header--centered {
+  text-align: center;
+  align-items: center; /* Centra los hijos (divs, spans, botones) horizontalmente */
+}
+
+/* Para que los botones se vean bien en fila */
+.intro-hero-actions {
+  display: flex;
   gap: var(--space-3);
+  flex-wrap: wrap; /* Por si en móvil no caben */
 }
 
 
-/* =========================
-   Flow — reading (base)
-   ========================= */
-/*
+
+
+/* ===============================
+   FLOW — READING (EDITORIAL)
+   =============================== */
+
 .flow--reading {
-  max-width: var(--reading-width);
-  margin-inline: auto;
-  text-wrap: pretty;
-  hanging-punctuation: first last;
-}*/
-
-/* Paragraph rhythm */
-.flow--reading > :where(.paragraph-space) {
-  margin-block-end: var(--rhythm-reading-text);
+  --reading-text-space: var(--rhythm-reading-text);
 }
 
-/* Headings grandes */
+/* Paragraphs & lead text */
+.flow--reading > :where(p, .text-lead, .text-base, .text-insight) {
+  margin-block-end: var(--reading-text-space);
+}
+
+/* Large headings */
 .flow--reading > :where(h1, h2) {
-  margin-block-end: var(--rhythm-reading-heading-lg);
+  margin-block-end: var(--rhythm-reading-heading-primary);
 }
 
-/* Headings secundarios */
+/* Secondary headings */
 .flow--reading > :where(h3, h4, h5, h6) {
-  margin-block-end: var(--rhythm-reading-heading-sm);
+  margin-block-end: var(--rhythm-reading-heading-secondary);
+}
+
+/* Label sticks to the content below */
+.flow--reading > :where(.label) {
+  margin-block-end: calc(var(--rhythm-reading-text) * 0.5);
+}
+
+/* Reading density variants */
+.flow--reading--compact {
+  --reading-text-space: calc(var(--rhythm-reading-text) * 0.5);
+}
+
+.flow--reading--relaxed {
+  --reading-text-space: calc(var(--rhythm-reading-text) * 1.25);
+}
+
+.flow--reading--spacious {
+  --reading-text-space: calc(var(--rhythm-reading-text) * 2);
 }
 
 
 
-/* Flow — elements */
-/* Spacing between major layout blocks */
+/* ===============================
+   FLOW — ELEMENTS (LAYOUT)
+   =============================== */
+
 .flow--elements {
   display: grid;
   gap: var(--rhythm-elements);
 }
+
 
 @media (max-width: 768px) {
   .flow--elements {
@@ -173,6 +309,7 @@ main {
   display: grid;
   gap: var(--space-6);
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  align-items: start;
 }
 
 
@@ -238,6 +375,11 @@ figure {
   margin: 0;
 }
 
+.final-overview-layout {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
 
 
 .overview-grid {
@@ -361,47 +503,6 @@ figure {
 .media-split {
   display: grid;
   gap: var(--space-6);
-}
-
-/* Desktop */
-.nav-dropdown {
-  position: relative;
-}
-
-.dropdown-list {
-  display: none;
-  top: 100%;
-  left: 0;
-  z-index: 1000;
-}
-
-.nav-dropdown:hover > .dropdown-list,
-.nav-dropdown:focus-within > .dropdown-list {
-  display: grid;
-}
-
-.nav-dropdown:hover .nav-chevron {
-  transform: rotate(180deg);
-}
-
-.nav-external-icon {
-  margin-left: 0.4rem;
-  transform: translateY(1px);
-}
-
-.nav-summary {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-  cursor: pointer;
-}
-
-.nav-chevron {
-  width: var(--icon-size-xs);   /* 12px */
-  height: var(--icon-size-xs);
-  transform-origin: center;
-  transform: none;
-  transition: transform 0.2s ease;
 }
 
 
