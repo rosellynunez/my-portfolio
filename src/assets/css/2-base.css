@@ -27,10 +27,15 @@ html.no-scroll {
 }
 
 
-p, h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
-  font-weight: inherit;
+  font-family: var(--font-family-heading);
+}
+
+p {
+  margin: 0;
+  padding: 0;
 }
 
 
@@ -40,10 +45,16 @@ body {
   font-size: var(--font-size-base);
   line-height: var(--line-height-normal);
   color: var(--color-text-secondary);
-  background: var(--surface-bg);
+  background: var(--bg-primary);
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
+   /* Neutraliza Bootstrap */
+  --bs-body-bg: var(--bg-primary);
+  --bs-body-color: var(--color-text-primary);
+
+  position: relative;
 }
 
 
@@ -73,7 +84,7 @@ body {
 .text-lead {
   font-size: var(--font-size-heading);
   letter-spacing: var(--letter-spacing-normal);
-  color: var(--text-color, var(--color-text-primary));
+  color: var(--color-text-secondary, var(--color-text-primary));
 }
 
 /* ---------- 2. HEADINGS ---------- */
@@ -104,7 +115,7 @@ body {
 .display-alt {
   font-size: var(--font-size-display-md); /*  Main title for secondary pages (About, Contact, Work, etc.) */
   line-height: var(--line-height-tight);
-  font-weight: var(--fw-bold);
+  font-weight: var(--fw-black);
   letter-spacing: var(--letter-spacing-normal);
 }
 
@@ -116,7 +127,7 @@ body {
 
 .font-decorative {
   font-family: var(--font-family-mono);
-  font-weight: 500; /* mejor para mono */
+  font-weight: 700; 
   font-style: normal;
   font-optical-sizing: auto;
   letter-spacing: 0.04rem;
@@ -126,6 +137,7 @@ body {
   line-height: 1.2;
   text-transform: uppercase;
   margin-bottom: 0;
+  font-size: var(--font-size-eyebrow);
 
   /* mejora legibilidad con gradiente */
   -webkit-font-smoothing: antialiased;

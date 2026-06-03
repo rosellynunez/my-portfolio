@@ -160,202 +160,316 @@
 
     <main>
 
-        <!-- ABOUT ME -->
-        <article id="about-me">
+        <article id="about-me" class="about-page page-article">
 
-            <section id="about-me-intro" class="section reveal-section">
-                <div class="container container--lg flow--reading">
+            <!-- ABOUT INTRO -->
+            <section id="about-me-intro" class="section about-hero reveal-section">
 
-                    <h1 class="display-alt text-gradient-primary">About me</h1>
+                <div class="container container--lg">
 
-                    <div class="flow--reading">
-                        <p>
-                            <span class="subtitle text-gradient-primary-wrapper--no-animated">
-                            As a UX/UI and Design Systems Designer, I focus on bringing structure to complexity and turning ideas into clear, usable experiences.
-                            </span>
-                        </p>
+                    <div class="about-intro-grid"> 
+                        
+                        <!-- LEFT: TEXT --> 
+                        <div class="about-intro flow--reading"> 
+                            <p class="font-decorative eyebrow eyebrow-gradient">A little about me</p>
+                            <h1 class="display-alt text-gradient-primary"> The human behind the pixels </h1> 
+                            <p class="subtitle text-gradient-primary-wrapper--no-animated"> I design systems that make complexity feel simple. </p> 
 
-                        <p>
-                            <span class="subtitle text-gradient-primary-wrapper--no-animated">
-                            I love collaborating with cross-functional teams—co-creation is truly my jam 😋—and I'm always chasing new perspectives that challenge me to grow as a designer and as a human.
-                            </span>
-                        </p>
+                            <p class="text-lead"> As a UX/UI and Design Systems Designer, I focus on bringing structure to complexity and turning ideas into clear, usable experiences. </p> 
+                            <p class="text-base"> I love collaborating with cross-functional teams — co-creation is truly my jam 😋 — and I'm always chasing new perspectives that challenge me to grow as a designer and as a human. </p> 
 
-                        <p>
-                            <span class="subtitle text-gradient-primary-wrapper--no-animated">
-                            Scroll down to learn more about my background and how I can contribute to your goals.
-                            </span>
-                        </p>
-                    </div>
+                            <!-- PREVIOUSLY BLOCK -->
+                            <div class="about-previously">
+                                <p class="text-small ">
+                                    Previously, I worked for 5+ years in graphic design before transitioning into UX/UI and Design Systems.
+                                    Different titles, same thing: making things clearer, better, and more human.
+                                </p>
+                            </div>
+                        </div>
+                            
+                        <!-- RIGHT: PROFILE PHOTO --> 
+                        <figure class="about-profile"> 
+                            <div class="image-wrapper image-placeholder">
+
+                                <!-- Placeholder temporal -->
+                                <img src="../assets/images/about-me/roselly-profile.jpg" alt="Portrait of Roselly Nuñez" loading="lazy"> 
+                            </div> 
+
+                            <figcaption class="text-caption"><p>That's me! Designer, systems thinker, and forever curious human ♡</p></figcaption> 
+                        </figure> 
+                    </div> <!-- cierre de about-intro-grid -->
+
+                    <!-- QUOTE BLOCK --> 
+                    <blockquote class="about-quote"> <p> Good design is not decoration. It is clarity, structure, and intention. </p> </blockquote>
 
                 </div>
+
             </section>
 
 
-            <section id="skills-tools" class="section reveal-section">
+            <!-- SKILLS & TOOLS -->
+            <section id="skills-tools" class="section">
 
-                <div class="container container--lg flow--reading">
-                    <h2 class="title">
-                        <span class="text-line">Skills & tools</span>
-                        <span class="text-line text-line--2">that shape my work</span>
-                    </h2>                
+                <div class="container container--lg">
 
-                    <div class="container container--md container--right flow--reading">
+                    <div class="section-layout">
 
-                        <p>My main skills are empathy, enthusiasm, and adaptability and I like bringing them to every project. My life is guided by freedom, perseverance, and the joy of growth.</p>
-                        <p>The tools and technologies I use to bring your products to life:</p>
+                        <!-- LEFT -->
+                        <div class="section-heading">
+                            <h2 class="title">
+                                <span class="text-line">Skills & tools</span>
+                                <span class="text-line text-line--2">that shape my work</span>
+                            </h2>
+                        </div>
+
+                        <!-- RIGHT -->
+                        <div class="section-content flow--reading">
+
+                            <p>
+                                My main skills are empathy, enthusiasm, and adaptability,
+                                and I like bringing them to every project.
+                                My life is guided by freedom, perseverance,
+                                and the joy of growth.
+                            </p>
+
+                            <p>
+                                The tools and technologies I use to bring your products to life:
+                            </p>
 
                             <ul class="tags tags--md">
                                 <li>Figma</li>
                                 <li>Adobe Creative Cloud</li>
                                 <li>CSS3</li>
-                                <li>Javascript</li>
-                                <li>Github</li>
+                                <li>JavaScript</li>
+                                <li>GitHub</li>
                                 <li>VS Code</li>
                                 <li>Bootstrap</li>
                                 <li>Vue</li>
                             </ul>
 
-                            <p>I'm currently leveling up my development skills — and yes, this website is one of my training quests 👩🏻‍💻⚔️.  
-                            Crafted with Design System magic and semantic HTML sorcery, it's designed to grow without falling apart.  
-                            If you're curious, my Portfolio GitHub has the full spellbook: the HTML, CSS, JavaScript, and the Design System behind this portfolio.  
-                            You can explore it here:
-                            <span>
-                                <a  class="link-underline link-underline--text" 
-                                    href="https://github.com/rosellynunez/my-portfolio" 
-                                    target="_blank" 
+                            <p>
+                                I'm currently leveling up my development skills —
+                                and yes, this website is one of my training quests 👩🏻‍💻⚔️
+                            </p>
+
+                            <p>
+                                Crafted with Design System magic and semantic HTML sorcery,
+                                it's designed to grow without falling apart.
+                                If you're curious, my Portfolio GitHub has the full spellbook:
+                            </p>
+
+                            <p>
+                                <a
+                                    class="link-underline link-underline--text"
+                                    href="https://github.com/rosellynunez/my-portfolio"
+                                    target="_blank"
                                     rel="noopener noreferrer"
-                                    >
+                                >
                                     github.com/rosellynunez/my-portfolio
                                 </a>
-                            </span>
+                            </p>
 
-                    </div>
-                </div>
-
-            </section>
-
-
-            <section class="section reveal-section">
-
-                <div class="container container--lg flow--reading">
-                    <h2 class="title">
-                        <span class="text-line">From sketchbook</span>
-                        <span class="text-line text-line--2">to digital world</span>
-                    </h2>
-
-                    <div class="container container--md container--right flow--reading">
-                        <p>
-                            Born and raised in Peru 🇵🇪, where my love for drawing as a kid naturally led me to graphic design. After working for years as a graphic designer, I packed my bags and headed to Barcelona for a Master's in UX/UI Design at 
-                            
-                            <a class="link-underline link-underline--text" href="https://www.elisava.net/en/" target="_blank">Elisava School</a>.</p>
-                        <p>
-                            Now, let's just say I'm pretty happy to call Barcelona my home 🏡.</p>
-                    </div>
-                </div>
-
-            </section>
-
-
-            <section class="section reveal-section">
-
-                <div class="container container--lg flow--reading">
-                    <h2 class="title">
-                        <span class="text-line">When I am not in</span>
-                        <span class="text-line text-line--2">front of my screen...</span>
-                    </h2>
-
-                    <div class="container container--md container--right flow--reading">
-                        <p>
-                            One of my favorite activities is co-hosting an 
-                                <a class="link-underline link-underline--text" 
-                                href="https://www.meetup.com/es-ES/theater-games-in-the-park/events/303712539/?eventorigin=group_upcoming_events" 
-                                target="_blank">improvisation meetup</a>. 
-                            It's a great way to connect with others and laugh a lot! So, if you are in Barcelona, you're welcome to come.
-                        </p>
-                        <p>
-                            Beside that, I'm a big fan of exploring the world. Trying new foods, experiencing different cultures, and seeing amazing scenery inspires me and gives me fresh perspectives.
-                        </p>
-                        <p>
-                            Recently, I've been fascinated by Japan's mixture of tradition and technology, and the spiritual life in India. Also, I've picked up drawing again. 
-                        </p>
-                    </div>
-                </div>
-
-            </section>
-            
-
-            <!-- SECTION 06 - CONTACT SECTION -->
-            <section id="contact-me" class="section contact-section bg-ornament">
-                <div class="container--md">
-            
-                        <!-- Card -->
-                        <div class="contact-card card shadow">
-                            <div class="card-body text-center">
-
-                                <h2 class="subtitle">Let's connect!</h2>
-                                <p class="text-lead">
-                                Drop it like it's hot — pitch me your project, your collab idea, or whatever you're working on. Let's create something great together.
-                                </p>
-                                <div class="group-two-buttons">
-                                <!-- Button 1 -->
-                                <a href="mailto:roselly.nunezg@gmail.com" 
-                                    class="btn btn-solid btn-primary btn-primary-sm btn-icon btn-icon-left">
-                                    <span class="btn-icon-element">
-                                    <i class="bi bi-envelope"></i>
-                                    </span>
-                                    <span class="btn-text">
-                                    Copy mi email
-                                    </span>
-                                </a>
-
-                                <!-- Button 2 -->
-                                <a href="mailto:roselly.nunezg@gmail.com" 
-                                    class="btn btn-solid btn-primary btn-primary-sm btn-icon btn-icon-left">
-                                    <span class="btn-icon-element">
-                                    <i class="bi bi-envelope"></i>
-                                    </span>
-                                    <span class="btn-text">
-                                    Go to my Linkedin
-                                    </span>
-                                </a>
-                                </div>
-
-                            </div>
                         </div>
 
+                    </div>
+
                 </div>
+
             </section>
+
+
+            <!-- FROM SKETCHBOOK -->
+            <section class="section">
+
+                <div class="container container--lg">
+
+                    <div class="section-layout">
+
+                        <div class="section-heading">
+                            <h2 class="title">
+                                <span class="text-line">From sketchbook</span>
+                                <span class="text-line text-line--2">to digital world</span>
+                            </h2>
+                        </div>
+
+                        <div class="section-content flow--reading">
+
+                            <p>
+                                Born and raised in Peru 🇵🇪, where my love for drawing
+                                naturally led me to graphic design.
+                            </p>
+
+                            <p>
+                                After working for some years as a graphic designer,
+                                I moved to Barcelona for a Master's in UX/UI Design at
+                                <a
+                                    class="link-underline link-underline--text"
+                                    href="https://www.elisava.net/en/"
+                                    target="_blank"
+                                >
+                                    Elisava School
+                                </a>.
+                            </p>
+
+                            <p>
+                                Now, let's just say I'm pretty happy
+                                to call Barcelona my home 🏡
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- WHEN I AM NOT -->
+            <section class="section">
+
+                <div class="container container--lg">
+
+                    <div class="section-layout">
+
+                        <div class="section-heading">
+                            <h2 class="title">
+                                <span class="text-line">When I am not in</span>
+                                <span class="text-line text-line--2">front of my screen...</span>
+                            </h2>
+                        </div>
+
+                        <div class="section-content flow--reading">
+
+                            <p>
+                                One of my favorite activities is co-hosting an
+                                <a
+                                    class="link-underline link-underline--text"
+                                    href="https://www.meetup.com/"
+                                    target="_blank"
+                                >
+                                    improvisation meetup
+                                </a>.
+                            </p>
+
+                            <p>
+                                It’s a great way to connect with others and laugh a lot.
+                                So if you're in Barcelona, you're very welcome to come.
+                            </p>
+
+                            <p>
+                                Besides that, I love exploring the world —
+                                trying new foods, discovering different cultures,
+                                and collecting fresh perspectives.
+                            </p>
+
+                            <p>
+                                Recently, I’ve been fascinated by Japan’s balance
+                                between tradition and technology,
+                                and by the spiritual life in India.
+                                I’ve also picked up drawing again.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </article>
+
+        <!-- CONTACT CTA -->
+        <section id="contact-me" class="section contact-section bg-ornament">
+            <div class="container container--lg">
+
+              <div class="contact-card">
+
+                  <div class="text-center">
+                      <h2 class="subtitle">
+                        Let's connect!
+                      </h2>
+                      <p>
+                        Drop it like it's hot — pitch me your project, your collab idea, or whatever you're working on. Let's create something great together.
+                      </p>
+                      <div class="group-two-buttons">
+                        <!-- Button 1 -->
+                        <a href="https://www.behance.net/tuusuario"
+                          class="btn btn-solid btn-primary btn-sm btn-icon btn-icon-right">
+
+                          <span class="btn-icon-element">
+                            <svg
+                              class="icon"
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 16 16"
+                              fill="none"
+                              aria-hidden="true"
+                            >
+                              <path d="M13.1335 6.33461L9.77731 8.5728C9.24999 8.9238 8.89782 9.16668 8.50486 9.26117H8.5043C8.17295 9.34056 7.82735 9.34048 7.4957 9.26117H7.49514C7.10215 9.1667 6.75005 8.92382 6.22269 8.5728H6.22213L2.86596 6.33461V9.55885C2.86596 10.0509 2.86613 10.394 2.88795 10.661C2.90935 10.9229 2.94937 11.0735 3.00747 11.1876C3.132 11.432 3.33079 11.6308 3.57519 11.7553C3.68931 11.8134 3.83989 11.8534 4.10176 11.8748C4.36882 11.8967 4.71192 11.8968 5.20395 11.8968H10.7961C11.288 11.8968 11.6312 11.8967 11.8982 11.8748C12.1601 11.8534 12.3107 11.8134 12.4248 11.7553L12.5139 11.7051C12.7172 11.5803 12.8831 11.4014 12.992 11.1876V11.187C13.0502 11.0731 13.09 10.9227 13.1115 10.661C13.1334 10.394 13.134 10.0509 13.134 9.55885V6.44116C13.134 6.40484 13.1335 6.36933 13.1335 6.33461ZM5.20395 4.10318C4.71193 4.10318 4.36882 4.10334 4.10176 4.12516C3.90533 4.14122 3.77155 4.16791 3.66878 4.20466L3.57519 4.24468C3.33103 4.36929 3.13243 4.56813 3.00803 4.81241V4.81297C2.95198 4.92271 2.91276 5.06613 2.89077 5.31022L6.70303 7.85229H6.70247C7.28681 8.24125 7.49018 8.36902 7.69753 8.41889H7.69697C7.89637 8.46657 8.10392 8.46645 8.30247 8.41889L8.38083 8.39634C8.56657 8.3331 8.78597 8.19243 9.29697 7.85229L13.1087 5.31022C13.0867 5.06603 13.0485 4.92226 12.9925 4.81241C12.868 4.56801 12.6692 4.36922 12.4248 4.24468C12.3107 4.18657 12.1601 4.14657 11.8982 4.12516C11.6312 4.10334 11.288 4.10318 10.7961 4.10318H5.20395ZM14 9.55885C14 10.0366 14.0001 10.4209 13.9746 10.7315C13.9488 11.0472 13.8943 11.3245 13.7632 11.5811L13.7627 11.5806C13.5553 11.9876 13.2252 12.3189 12.8183 12.5266H12.8178C12.5613 12.6572 12.2842 12.7122 11.9687 12.738C11.6582 12.7634 11.2738 12.7628 10.7961 12.7628H5.20395C4.72621 12.7628 4.34179 12.7634 4.03129 12.738C3.71572 12.7122 3.43872 12.6572 3.18224 12.5266C2.77491 12.319 2.44378 11.9879 2.23622 11.5806C2.10559 11.3241 2.0506 11.0471 2.02481 10.7315C1.99944 10.421 2 10.0366 2 9.55885V6.44116C2 6.12372 2.00109 5.84752 2.00846 5.60677C1.99622 5.54275 1.99937 5.47659 2.01691 5.41227C2.01965 5.36269 2.02158 5.31474 2.02537 5.2685C2.05123 4.95301 2.10586 4.67593 2.23679 4.41945H2.23622C2.44356 4.01229 2.7747 3.68112 3.18168 3.47344H3.18224C3.43872 3.3428 3.71572 3.28781 4.03129 3.26202C4.34179 3.23665 4.72621 3.23721 5.20395 3.23721H10.7961C11.2738 3.23721 11.6582 3.23665 11.9687 3.26202C12.2842 3.28781 12.5613 3.34281 12.8178 3.47344C13.2251 3.68099 13.5562 4.01212 13.7638 4.41945C13.8944 4.67591 13.9488 4.95297 13.9746 5.2685C13.9784 5.31524 13.9803 5.36381 13.9831 5.41396C14.0002 5.47778 14.0037 5.54328 13.9915 5.60677C13.9989 5.84749 14 6.12369 14 6.44116V9.55885Z"/>
+                            </svg>
+                          </span>
+
+                          <span class="btn-text">
+                            Get in touch
+                          </span>
+                        </a>
+
+                        <!-- Button 2 -->
+                        <a href="https://www.behance.net/tuusuario"
+                          class="btn btn-solid btn-secondary btn-sm btn-icon btn-icon-right">
+
+                          <span class="btn-icon-element">
+                            <svg
+                              class="icon"
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 16 16"
+                              fill="none"
+                              aria-hidden="true"
+                            >
+                              <path d="M3.14172 12.8583C2.95276 12.6693 2.95276 12.363 3.14172 12.1741L11.348 3.96774L5.12636 3.96775C4.85912 3.96775 4.64248 3.75111 4.64248 3.48387C4.64248 3.21664 4.85912 3 5.12636 3L12.5161 3C12.7834 3 13 3.21664 13 3.48387L13 10.8736C13 11.1409 12.7834 11.3575 12.5161 11.3575C12.2489 11.3575 12.0323 11.1409 12.0323 10.8736L12.0323 4.65197L3.82595 12.8583C3.63699 13.0472 3.33069 13.0472 3.14172 12.8583Z"/>
+                            </svg>
+                          </span>
+
+                          <span class="btn-text">
+                            Let's connect on LinkedIn
+                          </span>
+                        </a>
+                      </div>
+
+                  </div>
+              </div>
+
+            </div>
+        </section>
 
     </main>
 
     <footer class="site-footer">
-            <p class="footer__copyright">
-            © 2026 Roselly Nuñez.
-            </p>
+        <div>
+          <p class="footer__data">
+            © 2026 Roselly Nuñez. - UX/UI & Design Systems Designer.
+          </p>
+        </div>
 
-            <p class="footer__role">
-            UX/UI & Design Systems Designer.
-            </p>
+        <p class="footer__statement">
+          Built with semantic HTML, CSS, and a scalable design system — driven by curiosity and a genuine care for well-crafted experiences.
+        </p>
 
-            <p class="footer__statement">
-            Built with semantic HTML, CSS, and a scalable design system — driven by curiosity and a genuine care for well-crafted experiences.
-            </p>
-
-            <nav class="footer__links" aria-label="Footer links">
-            <a href="https://www.linkedin.com/in/rosellynunez"
-                target="_blank"
-                rel="noopener noreferrer">LinkedIn</a>
-            <span aria-hidden="true">·</span>
-            <a href="https://github.com/rosellynunez"
-                target="_blank"
-                rel="noopener noreferrer">GitHub</a>
-            <span aria-hidden="true">·</span>
-            <a href="/assets/docs/cv/current.pdf"
-                target="_blank"
-                rel="noopener noreferrer">Resume</a>
-            </nav>
-        </footer>
+        <nav class="footer__links" aria-label="Footer links">
+          <a href="https://www.linkedin.com/in/rosellynunez"
+            target="_blank"
+            rel="noopener noreferrer">LinkedIn</a>
+          <span aria-hidden="true">·</span>
+          <a href="https://github.com/rosellynunez"
+            target="_blank"
+            rel="noopener noreferrer">GitHub</a>
+          <span aria-hidden="true">·</span>
+          <a href="/assets/docs/cv/current.pdf"
+            target="_blank"
+            rel="noopener noreferrer">Resume</a>
+        </nav>
+    </footer>
 
     <script src="../assets/js/main.js"></script>
 

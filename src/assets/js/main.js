@@ -51,51 +51,45 @@ function closeMenu() {
 
 
 
-
-
-
-
-
-// TYPED-OUTPUT
 document.addEventListener('DOMContentLoaded', function () {
-  const target = document.querySelector("#typed-output");
+  const phraseA = document.querySelector(".phrase-a");
+  const phraseB = document.querySelector(".phrase-b");
 
-  if (!target) return;
+  if (!phraseA || !phraseB) return;
 
-  new Typed(target, {
-    strings: [
-      "Design meant to live beyond the mockup",
-      "Design systems that grow with teams",
-      "UI crafted with care and code in mind",
-      "Design made to be used and maintained",
-      "Interfaces built for real products"
-    ],
-    typeSpeed: 45,
-    backSpeed: 30,
-    backDelay: 1400,
-    startDelay: 300,
-    loop: true,
-    showCursor: false
-  });
+  const phrases = [
+    "Design meant to live beyond the mockup",
+    "Design systems that grow with teams",
+    "UI crafted with care and code in mind",
+    "Design made to be used and maintained",
+    "Interfaces built for real products"
+  ];
+
+  let index = 0;
+  let showingA = true;
+
+  phraseA.textContent = phrases[index];
+  phraseA.classList.add("visible");
+  index++;
+
+  setInterval(() => {
+    const nextPhrase = phrases[index];
+    const visibleEl = showingA ? phraseA : phraseB;
+    const hiddenEl = showingA ? phraseB : phraseA;
+
+    hiddenEl.textContent = nextPhrase;
+    hiddenEl.classList.add("visible");
+    visibleEl.classList.remove("visible");
+
+    showingA = !showingA;
+    index = (index + 1) % phrases.length;
+
+  }, 5000);
 });
 
 
 
 
-// TYPED-OUTPUT-INTRO -> HI
-document.addEventListener('DOMContentLoaded', function () {
-  const introTarget = document.querySelector("#typed-output-intro");
-
-  if (!introTarget) return;
-
-  new Typed(introTarget, {
-    strings: ["H^120e^200l^160l^260o!"],
-    typeSpeed: 100,
-    startDelay: 500,
-    showCursor: false,
-    loop: true
-  });
-});
 
 
 

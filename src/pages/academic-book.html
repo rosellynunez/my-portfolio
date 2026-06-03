@@ -164,10 +164,10 @@
 
         <main>
 
-            <article id="case-study" class="container-full">
+            <article id="case-study" class="container-full page-article">
 
                 <!-- SECTION INTRO CASE -->
-                <section id="intro-case-study" class="section">
+                <section id="intro-case-study" class="section case-study-hero">
 
                     <div class="container container--xl subsection">
                         <!-- Title + subtitle-->
@@ -235,31 +235,31 @@
 
                             <!-- SUMMARY COLAPSABLE -->
                             <div class="summary__content" hidden>
-                                <ul class="summary__list list--wide">
-                                <li>
-                                    <span class="fw-medium">Context:</span>
-                                    <span class="text-base">
-                                    An academic book website designed to present complex research content and downloadable materials in a clear, structured way
-                                    </span>
-                                </li>
-                                <li>
-                                    <span class="fw-medium">Challenge:</span>
-                                    <span class="text-base">
-                                    Academic content was dense and text-heavy, making it hard to quickly scan, understand, and navigate at a glance
-                                    </span>
-                                </li>
-                                <li>
-                                    <span class="fw-medium">Solution:</span>
-                                    <span class="text-base">
-                                    I designed a lightweight design system and a responsive one-page layout focused on clarity, accessibility, and future scalability
-                                    </span>
-                                </li>
-                                <li>
-                                    <span class="fw-medium">Outcome:</span>
-                                    <span class="text-base">
-                                    A clear and professional website that makes complex academic content easier to understand and ready to scale over time
-                                    </span>
-                                </li>
+                                <ul class="summary__list list--wide text-base">
+                                    <li>
+                                        <span class="fw-bold">Context:</span>
+                                        <span>
+                                        An academic book website designed to present complex research content and downloadable materials in a clear, structured way
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="fw-bold">Challenge:</span>
+                                        <span>
+                                        Academic content was dense and text-heavy, making it hard to quickly scan, understand, and navigate at a glance
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="fw-bold">Solution:</span>
+                                        <span>
+                                        I designed a lightweight design system and a responsive one-page layout focused on clarity, accessibility, and future scalability
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="fw-bold">Outcome:</span>
+                                        <span>
+                                        A clear and professional website that makes complex academic content easier to understand and ready to scale over time
+                                        </span>
+                                    </li>
                                 </ul>
                             </div>
 
@@ -639,7 +639,7 @@
 
 
                     <!-- SUBSECTION - 4.3 Semantic Tokens -->
-                    <div class="subsection">
+                    <div class="subsection flow--elements">
                         <div class="container container--md flow--reading">
                             <h3 class="heading">4.3 Components</h3>
                             <p class="text-base">
@@ -711,70 +711,106 @@
                 </section>
 
 
-                <!-- SECTION 05 -->
+                <!-- SECTION 05 - Accessibility -->
                 <section id="accessibility" class="section">
 
-                    <div class="subsection">
-                        <div class="container container--md flow--reading">
+                    <div class="container container--md">
+
+                        <div class="subsection flow--reading">
                             <h2 class="subtitle">5. Accessibility</h2>
-                            <p class="text-base">
-                                I followed a set of practical guidelines to make sure everyone can use the website comfortably.
-                            </p>
+                            <p class="text-base">I followed a set of practical guidelines to make sure everyone can use the website comfortably.</p>
+                        </div>
 
-                            <p class="heading">Colour contrast</p>
-                            <p class="text-base">
-                                All colours follow WCAG AA contrast standards. Using tokens for text, surfaces, and interactive elements helps maintain consistent, accessible contrast across light and dark backgrounds.
-                            </p>
+                        <!-- 5.1 Colour Contrast -->
+                        <div class="subsection flow--elements">
 
-                            <p class="heading">Semantic HTML Structure</p>
-                            <p class="text-base">
-                                The page is built using meaningful HTML elements such as
-                                <code>&lt;nav&gt;</code>, <code>&lt;header&gt;</code>,
-                                <code>&lt;section&gt;</code>, <code>&lt;table&gt;</code>, and
-                                <code>&lt;footer&gt;</code>.
-                            </p>
-                            <p class="text-base">
-                                Clear headings and a consistent hierarchy make the content easier to understand for both users and assistive technologies.
-                            </p>
+                            <div class="flow--reading">
+                                <h3 class="heading">5.1 Colour Contrast</h3>
+                                <p class="text-base">
+                                    All colours follow WCAG AA contrast standards. Using tokens for text, surfaces, and interactive elements helps maintain consistent, accessible contrast across light and dark backgrounds.
+                                </p>
+                            </div>
+
+                            <!-- Full image block -->
                             <figure>
-                                    <div class="image-wrapper">
-                                        <img 
-                                            src="../assets/images/automated-negotiation-book/semantic-structure.jpg"
-                                            alt="Semantic HTML structure highlighting header, navigation, main content, and section elements"
-                                            class="img-fluid"
-                                            loading="lazy"
-                                        >
-                                    </div>
-
-                                    <figcaption class="text-caption">
-                                        <p>Semantic HTML elements and a clear heading hierarchy define the documentstructure, improving navigation for screen readers and other assistive technologies.                   </p>
-                                    </figcaption>
+                                <div class="image-wrapper">
+                                    <img
+                                        src="../assets/images/automated-negotiation-book/semantic-structure.jpg"
+                                        alt="Colour contrast validation showing accessible text and interface combinations"
+                                        class="img-fluid"
+                                        loading="lazy"
+                                    >
+                                </div>
+                                <figcaption>
+                                ...
+                                </figcaption>
                             </figure>
 
-                            <p class="heading">Keyboard Navigation & Focus States</p>
-                            <p class="text-base">
-                                All interactive elements—buttons, links, the mobile menu, and the copy-to-clipboard action—are fully usable with a keyboard.</p>
-                            <p class="text-base">
-                                Visible focus states are defined using design tokens, so users always know where they are when navigating the page.
-                            </p>
+                        </div>
 
-                            <p class="heading">Screen Reader Labels & ARIA</p>
-                            <p class="text-base">
-                                Descriptive ARIA labels are used for key actions such as “Open menu”, “Close menu”, and “Copy BibTeX entry”.
-                            </p>
-                            <p class="text-base">
-                                On mobile, where the version table becomes cards, additional labels ensure that screen readers still communicate the same information clearly.
-                            </p>
+                        <!-- 5.2 Semantic HTML Structure -->
+                        <div class="subsection flow--elements">
 
-                            <figure class="image-wrapper">
-                                <img 
-                                    src="../assets/images/automated-negotiation-book/7-1-color-palette.jpg"
-                                    alt="Raw color palette showing primary, secondary, and neutral scales"
-                                    class="img-fluid"
-                                    loading="lazy"
-                                >
+                            <div class="flow--reading">
+                                <h3 class="heading">5.2 Semantic HTML Structure</h3>
+
+                                <p class="text-base">
+                                    The page is built using meaningful HTML elements such as
+                                    <code>&lt;nav&gt;</code>,
+                                    <code>&lt;header&gt;</code>,
+                                    <code>&lt;section&gt;</code>,
+                                    <code>&lt;table&gt;</code>,
+                                    and
+                                    <code>&lt;footer&gt;</code>.
+                                </p>
+
+                                <p class="text-base">
+                                    Clear headings and a consistent hierarchy make the content easier to understand for both users and assistive technologies.
+                                </p>
+                            </div>
+
+                            <!-- Full image block -->
+                            <figure>
+                                <div class="image-wrapper">
+                                    <img
+                                        src="../assets/images/automated-negotiation-book/semantic-structure.jpg"
+                                        alt="Colour contrast validation showing accessible text and interface combinations"
+                                        class="img-fluid"
+                                        loading="lazy"
+                                    >
+                                </div>
+                                <figcaption>
+                                ...
+                                </figcaption>
                             </figure>
                         </div>
+
+                        <!-- 5.3 Keyboard Navigation -->
+                        <div class="subsection flow--reading">
+                                <h3 class="heading">5.3 Keyboard Navigation & Focus States</h3>
+
+                                <p class="text-base">
+                                    All interactive elements—buttons, links, the mobile menu, and the copy-to-clipboard action—are fully usable with a keyboard.
+                                </p>
+
+                                <p class="text-base">
+                                    Visible focus states are defined using design tokens, so users always know where they are when navigating the page.
+                                </p>
+                        </div>
+
+                        <!-- 5.4 Screen Reader Labels -->
+                        <div class="subsection flow--reading">
+                                <h3 class="heading">5.4 Screen Reader Labels & ARIA</h3>
+
+                                <p class="text-base">
+                                Descriptive ARIA labels are used for key actions such as “Open menu”, “Close menu”, and “Copy BibTeX entry”.
+                                </p>
+
+                                <p class="text-base">
+                                On mobile, where the version table becomes cards, additional labels ensure that screen readers still communicate the same information clearly.
+                                </p>
+                        </div>
+
                     </div>
 
                 </section>
@@ -875,62 +911,131 @@
             </article>
 
 
-            <!-- NEXT PROJECT -->
-            <section id="next-project" class="section">
-                <div class="container container--md flow--elements ">
+            <!-- NEXT / PREVIOUS PROJECT -->
+            <!-- NEXT / PREVIOUS PROJECT -->
+<section id="contact-me" class="section nav-section">
 
-                    <h2 class="subtitle">Next project</h2>
-                    <!-- Link to next project -->
-                    <div>
-                        <a href="kronaby.html" 
-                            class="btn btn-solid btn-primary">
-                            <span class="btn-text">
-                            Read Kronaby case study
-                            </span>
-                        </a>
-                    </div>
+    <div class="container container--lg">
+
+        <!-- PREVIOUS -->
+
+        <a href="volvo.html"
+           class="nav-link nav-link--prev">
+
+            <div class="nav-link__meta container container--md">
+
+                <div class="nav-link__content">
+
+                    <span class="nav-link__label">
+                        Previous project
+                    </span>
+
+                    <h3 class="nav-link__title">
+                        Volvo Cars
+                    </h3>
 
                 </div>
-            </section>
 
-            <!-- CONTACT SECTION -->
+                <img
+                    src="images/volvo-thumb.webp"
+                    alt="Volvo Cars"
+                    class="nav-link__thumb">
+
+            </div>
+
+        </a>
+
+        <!-- NEXT -->
+
+        <a href="kronaby.html"
+           class="nav-link nav-link--next">
+
+            <div class="nav-link__meta container container--md">
+
+                <img
+                    src="images/kronaby-thumb.webp"
+                    alt="Kronaby"
+                    class="nav-link__thumb">
+
+                <div class="nav-link__content">
+
+                    <span class="nav-link__label">
+                        Next project
+                    </span>
+
+                    <h3 class="nav-link__title">
+                        Kronaby
+                    </h3>
+
+                </div>
+
+            </div>
+
+        </a>
+
+    </div>
+
+</section>
+
+            <!-- CONTACT CTA -->
             <section id="contact-me" class="section contact-section bg-ornament">
-                <div class="container container--md">
-            
-                    <!-- Card -->
-                    <div class="contact-card card shadow">
-                        <div class="card-body text-center">
+                <div class="container container--lg">
 
-                            <h2 class="subtitle">Let's connect!</h2>
-                            <p class="text-lead">
+                <div class="contact-card">
+
+                    <div class="text-center">
+                        <h2 class="subtitle">
+                            Let's connect!
+                        </h2>
+                        <p>
                             Drop it like it's hot — pitch me your project, your collab idea, or whatever you're working on. Let's create something great together.
-                            </p>
-                            <div class="group-two-buttons">
-                                <!-- Button 1 -->
-                                <a href="mailto:roselly.nunezg@gmail.com" 
-                                class="btn btn-solid btn-secondary btn-primary-sm btn-icon btn-icon-left">
-                                <span class="btn-icon-element">
-                                    <i class="bi bi-envelope"></i>
-                                </span>
-                                <span class="btn-text">
-                                    Copy mi email
-                                </span>
-                                </a>
+                        </p>
+                        <div class="group-two-buttons">
+                            <!-- Button 1 -->
+                            <a href="https://www.behance.net/tuusuario"
+                            class="btn btn-solid btn-primary btn-sm btn-icon btn-icon-right">
 
-                                <!-- Button 2 -->
-                                <a href="mailto:roselly.nunezg@gmail.com" 
-                                class="btn btn-solid btn-secondary btn-primary-sm btn-icon btn-icon-left">
-                                <span class="btn-icon-element">
-                                    <i class="bi bi-envelope"></i>
-                                </span>
-                                <span class="btn-text">
-                                    Go to my Linkedin
-                                </span>
-                                </a>
-                            </div>
+                            <span class="btn-icon-element">
+                                <svg
+                                class="icon"
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 16 16"
+                                fill="none"
+                                aria-hidden="true"
+                                >
+                                <path d="M13.1335 6.33461L9.77731 8.5728C9.24999 8.9238 8.89782 9.16668 8.50486 9.26117H8.5043C8.17295 9.34056 7.82735 9.34048 7.4957 9.26117H7.49514C7.10215 9.1667 6.75005 8.92382 6.22269 8.5728H6.22213L2.86596 6.33461V9.55885C2.86596 10.0509 2.86613 10.394 2.88795 10.661C2.90935 10.9229 2.94937 11.0735 3.00747 11.1876C3.132 11.432 3.33079 11.6308 3.57519 11.7553C3.68931 11.8134 3.83989 11.8534 4.10176 11.8748C4.36882 11.8967 4.71192 11.8968 5.20395 11.8968H10.7961C11.288 11.8968 11.6312 11.8967 11.8982 11.8748C12.1601 11.8534 12.3107 11.8134 12.4248 11.7553L12.5139 11.7051C12.7172 11.5803 12.8831 11.4014 12.992 11.1876V11.187C13.0502 11.0731 13.09 10.9227 13.1115 10.661C13.1334 10.394 13.134 10.0509 13.134 9.55885V6.44116C13.134 6.40484 13.1335 6.36933 13.1335 6.33461ZM5.20395 4.10318C4.71193 4.10318 4.36882 4.10334 4.10176 4.12516C3.90533 4.14122 3.77155 4.16791 3.66878 4.20466L3.57519 4.24468C3.33103 4.36929 3.13243 4.56813 3.00803 4.81241V4.81297C2.95198 4.92271 2.91276 5.06613 2.89077 5.31022L6.70303 7.85229H6.70247C7.28681 8.24125 7.49018 8.36902 7.69753 8.41889H7.69697C7.89637 8.46657 8.10392 8.46645 8.30247 8.41889L8.38083 8.39634C8.56657 8.3331 8.78597 8.19243 9.29697 7.85229L13.1087 5.31022C13.0867 5.06603 13.0485 4.92226 12.9925 4.81241C12.868 4.56801 12.6692 4.36922 12.4248 4.24468C12.3107 4.18657 12.1601 4.14657 11.8982 4.12516C11.6312 4.10334 11.288 4.10318 10.7961 4.10318H5.20395ZM14 9.55885C14 10.0366 14.0001 10.4209 13.9746 10.7315C13.9488 11.0472 13.8943 11.3245 13.7632 11.5811L13.7627 11.5806C13.5553 11.9876 13.2252 12.3189 12.8183 12.5266H12.8178C12.5613 12.6572 12.2842 12.7122 11.9687 12.738C11.6582 12.7634 11.2738 12.7628 10.7961 12.7628H5.20395C4.72621 12.7628 4.34179 12.7634 4.03129 12.738C3.71572 12.7122 3.43872 12.6572 3.18224 12.5266C2.77491 12.319 2.44378 11.9879 2.23622 11.5806C2.10559 11.3241 2.0506 11.0471 2.02481 10.7315C1.99944 10.421 2 10.0366 2 9.55885V6.44116C2 6.12372 2.00109 5.84752 2.00846 5.60677C1.99622 5.54275 1.99937 5.47659 2.01691 5.41227C2.01965 5.36269 2.02158 5.31474 2.02537 5.2685C2.05123 4.95301 2.10586 4.67593 2.23679 4.41945H2.23622C2.44356 4.01229 2.7747 3.68112 3.18168 3.47344H3.18224C3.43872 3.3428 3.71572 3.28781 4.03129 3.26202C4.34179 3.23665 4.72621 3.23721 5.20395 3.23721H10.7961C11.2738 3.23721 11.6582 3.23665 11.9687 3.26202C12.2842 3.28781 12.5613 3.34281 12.8178 3.47344C13.2251 3.68099 13.5562 4.01212 13.7638 4.41945C13.8944 4.67591 13.9488 4.95297 13.9746 5.2685C13.9784 5.31524 13.9803 5.36381 13.9831 5.41396C14.0002 5.47778 14.0037 5.54328 13.9915 5.60677C13.9989 5.84749 14 6.12369 14 6.44116V9.55885Z"/>
+                                </svg>
+                            </span>
 
+                            <span class="btn-text">
+                                Get in touch
+                            </span>
+                            </a>
+
+                            <!-- Button 2 -->
+                            <a href="https://www.behance.net/tuusuario"
+                            class="btn btn-solid btn-secondary btn-sm btn-icon btn-icon-right">
+
+                            <span class="btn-icon-element">
+                                <svg
+                                class="icon"
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 16 16"
+                                fill="none"
+                                aria-hidden="true"
+                                >
+                                <path d="M3.14172 12.8583C2.95276 12.6693 2.95276 12.363 3.14172 12.1741L11.348 3.96774L5.12636 3.96775C4.85912 3.96775 4.64248 3.75111 4.64248 3.48387C4.64248 3.21664 4.85912 3 5.12636 3L12.5161 3C12.7834 3 13 3.21664 13 3.48387L13 10.8736C13 11.1409 12.7834 11.3575 12.5161 11.3575C12.2489 11.3575 12.0323 11.1409 12.0323 10.8736L12.0323 4.65197L3.82595 12.8583C3.63699 13.0472 3.33069 13.0472 3.14172 12.8583Z"/>
+                                </svg>
+                            </span>
+
+                            <span class="btn-text">
+                                Let's connect on LinkedIn
+                            </span>
+                            </a>
                         </div>
+
                     </div>
+                </div>
 
                 </div>
             </section>

@@ -4,11 +4,16 @@
 
 /* ============ HOME ============*/ 
 
+.case-study-hero, 
+.about-hero {
+  padding-top: var(--header-offset);
+}
+
 
 /* INTRO */ 
 
 .intro-hero-content {
-  max-width: 76rem;
+  max-width: 60rem;
   z-index: 1;
   display: flex;
   flex-direction: column;
@@ -19,11 +24,17 @@
   display: flex;
   flex-direction: column;
   gap: var(--space-6); /* ajusta el espacio */
+  padding-block: var(--section-space-sm);
 }
 
+/* -------- MY PICTURE -------- */
 .hero-photo-inline {
   display: inline-block;
-  max-width: none;
+  vertical-align: middle;
+  width: 90px;
+  height: 60px;
+  border-radius: var(--radius-full);
+  object-fit: cover;
 }
 
 /* BUTTONS */
@@ -43,7 +54,7 @@
 @media (max-width: 1200px) {
 
   #intro .intro-hero-content {
-    max-width: 60rem;
+    max-width: 50rem;
   }
 
   .display-alt {
@@ -60,15 +71,15 @@
     gap: var(--space-4);
   }
 
-  .hero-photo-inline {
-    width: 3.2rem;
-    height: auto;
-    vertical-align: middle;
-  }
-
   .intro-hero-actions {
     gap: var(--space-4);
   }
+
+  .hero-photo-inline {
+  vertical-align: middle;
+  width: 80px;
+  height: 50px;
+}
 }
 
 
@@ -79,7 +90,7 @@
   }
 
   #intro .intro-hero-content {
-    max-width: 100%;
+    max-width: 90%;
   }
 
   .display-alt {
@@ -87,14 +98,9 @@
     line-height: 1.25;
   }
 
-  .display-alt br {
-    display: none;
-  }
-
   .hero-photo-inline {
-    width: 2.6rem;
-    margin-left: 0.25rem;
-    vertical-align: middle;
+    width: 70px;
+    height: 40px;
   }
 
   .text-lead {
@@ -121,7 +127,8 @@
   }
 
   .hero-photo-inline {
-    width: 2.2rem;
+    width: 52px;
+    height: 38px;
     margin-left: 0.2rem;
   }
 
@@ -144,26 +151,176 @@
 }
 
 
-
-.home .section + .section {
-  margin-block-start: var(--section-space-lg);
-}
-
-
 /* ABOUT */ 
 
-#about .text-base {
-  font-weight: var(--fw-bold);
-  line-height: var(--line-height-tight);
+#about-me .display-alt {
+  font-weight: var(--fw-medium);
+  color: var(--color-text-primary);
 }
 
-#about .title {
-  line-height: var(--line-height-tight);
+#about-me .title {
+  font-weight: var(--fw-medium);
+  color: var(--color-text-primary);
 }
 
-#about .display-alt {
+.about-editorial__image img {
+  width: 100%;
+  max-width: 420px;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+}
+
+.about-intro .text-lead {
+  color: var(--color-text-primary);
+}
+
+.about-intro .text-base {
+  color: var(--color-text-primary);
+}
+
+.about-previously {
+    max-width: 42rem;
+    margin-top: var(--space-7);
+    margin-bottom: var(--space-6);
+    margin-left: var(--space-6);
+}
+
+.about-previously p {
+    font-size: var(--font-size-small);
+    line-height: var(--line-height-normal);
+    color: var(--color-text-secondary);
+}
+
+.typed-wrapper {
+  position: relative;
+  display: block;
+  width: 100%; 
+}
+
+.phrase {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+  width: 100%;
+}
+
+.phrase.visible {
+  opacity: 1;
+}
+
+
+/* =========================================================
+   ABOUT HERO
+========================================================= */
+
+.about-hero {
+  padding-top: var(--header-offset);
+}
+
+
+/* ---------------------------------------------------------
+   Intro layout (text + photo)
+--------------------------------------------------------- */
+
+.about-intro-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: var(--space-8);
+  align-items: center;
+}
+
+.about-intro {
+  max-width: 52rem;
+}
+
+
+/* ---------------------------------------------------------
+   Profile image
+--------------------------------------------------------- */
+
+.about-profile {
+  margin: 0;
+}
+
+.about-profile .image-wrapper {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.about-profile img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+
+/* ---------------------------------------------------------
+   Quote block
+--------------------------------------------------------- */
+
+.about-quote {
+  margin-top: var(--space-9);
+  max-width: 52rem;
+  padding-left: var(--space-5);
+
+  border-left: 2px solid var(--border-subtle);
+}
+
+.about-quote p {
+  margin: 0;
+  font-size: var(--font-size-lead);
+  line-height: var(--line-height-normal);
   font-weight: var(--fw-medium);
 }
+
+
+/* ---------------------------------------------------------
+   Editorial layout (title left / content right)
+--------------------------------------------------------- */
+
+.section-layout {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: var(--space-8);
+  align-items: start;
+}
+
+
+
+.section-content {
+  max-width: 46rem;
+}
+
+
+/* ---------------------------------------------------------
+   Mobile
+--------------------------------------------------------- */
+
+@media (max-width: 991px) {
+  .about-intro-grid,
+  .section-layout {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+
+  .section-heading {
+    position: static;
+  }
+
+  .about-profile {
+    max-width: 28rem;
+  }
+
+  .about-quote {
+    margin-top: var(--space-7);
+  }
+}
+
+
 
 /* PROJECTS */ 
 #projects h2 {
@@ -184,12 +341,12 @@
 
 #services .heading {
   font-weight: var(--fw-medium);
-  text-align: center;
 }
 
 
 
 /* ============ CASE STUDY PAGE ============*/ 
+
 .intro-title {
   max-width: 66%;
   margin-bottom: var(--space-4);
@@ -346,10 +503,36 @@
   flex-shrink: 0;
 }
 
-/* TODO: refine icon alignment if needed */
+/* icono */
+
+/* círculo visual solo con borde */
+.summary__icon-wrap {
+  width: var(--icon-btn-sm);   /* 32px */
+  height: var(--icon-btn-sm);
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* quitamos el fondo */
+  background: transparent;
+
+  /* borde circular */
+  border: 1px solid var(--border-subtle);
+
+  flex-shrink: 0;
+}
+
 .summary__icon {
   width: var(--icon-size-sm);  /* 16px */
   height: var(--icon-size-sm);
+
+  display: block;
+
+  color: var(--icon-color-primary);
+  fill: currentColor;
+
   transform-origin: center;
   transition: transform 0.25s ease;
   transform: translateX(1.5px);
@@ -357,7 +540,7 @@
 
 /* ROTACIÓN CUANDO ESTÁ ABIERTO */
 .summary__header[aria-expanded="true"] .summary__icon {
-  transform: rotate(180deg);
+    transform: translateX(-1px) rotate(180deg);
 }
 
 /* CONTENIDO DESPLEGABLE */

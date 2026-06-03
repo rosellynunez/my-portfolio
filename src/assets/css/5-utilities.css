@@ -40,7 +40,6 @@
 
 
 
-
 /* MANO */
 .wave {
   display: inline-block;
@@ -62,60 +61,13 @@
   100% { transform: rotate(0deg); }
 }
 
-
-/* -------- MY PICTURE -------- */
-
-
-.hero-photo-inline {
-  display: inline-block;
-  vertical-align: middle;
-  width: 130px;
-  height: 65px;
-  border-radius: var(--radius-full);
-  object-fit: cover;
-}
-
-
-/* ------- GRADIENT PRIMARY  -------*/
-
-/* SIMPLE */
-.text-gradient {
-  background: linear-gradient(
-    135deg,
-    var(--gradient-text-start),
-    var(--gradient-text-end)
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-/* GRADIENT WRAPPER*/
-.text-gradient-primary-wrapper {
-  background-size: 300% 100%;
-  animation: gradientFlow 6s ease infinite;
-  transition: animation-duration 0.3s ease;
-}
-
-.text-gradient-primary-wrapper:hover {
-  animation-duration: 2s;
-  filter: brightness(1.1); /* un poquito más de luz */
-}
-
-/* ANIMACIÓN DEL GRADIENTE */
-@keyframes gradientFlow {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-
 /* ------- GRADIENT PRIMARY  -------*/
 
 .typed-wrapper {
   min-height: 8.6rem; /* espacio para 2 líneas del título */
   max-width: 34rem;
   display: block;
+  color: var(--color-text-primary);
 }
 
 @media (max-width: 576px) {

@@ -1,0 +1,233 @@
+/* =========================================================
+   SEMANTIC TOKENS — LIGHT THEME
+   ========================================================= */
+
+[data-theme="light"] { 
+
+/* ---------------------------------------------------------
+   Surfaces
+   --------------------------------------------------------- */
+   --bg-primary: #e6e9ef;
+   --bg-secondary: #F0EDF5; /* neutral lilac-gray */
+
+   --surface-overlay: rgba(246, 246, 234, 0.9);
+
+
+   --bg-page-solid: #e6e9ef;
+
+
+   --hero-glow-top: color-mix(in srgb, var(--grey-100) 100%, white);
+   --hero-glow-side: color-mix(in srgb, var(--violet-blue-400) 30%, white);
+
+
+
+/* ---------------------------------------------------------
+   Text
+   --------------------------------------------------------- */
+   --color-text-primary: var(--violet-blue-800);   
+   --color-text-secondary: var(--gray-700); 
+   --color-text-tertiary: var(--gray-500);
+
+   --color-text-brand: var(--violet-blue-600);     
+
+
+
+
+  /* Cards */
+   --surface-card-primary: #FFFFFF;
+   --surface-card-secondary: hsl(60, 40%, 94%,0);
+
+/* ---------------------------------------------------------
+   Borders
+   --------------------------------------------------------- */
+   --border-color-card: #E3DEE9;
+   --color-border: #DAD4E2;
+
+
+
+  /* ---------------------------------------------------------
+     NAV
+     --------------------------------------------------------- */
+  --nav-link-color: var(--color-text-primary);
+  --nav-link-hover-color: #5E4B72;
+  --nav-link-active-color: #4A3A5E;
+
+
+
+/* ---------------------------------------------------------
+   Buttons
+   --------------------------------------------------------- */
+
+   --btn-primary-bg: linear-gradient(
+      135deg,
+      var(--violet-blue-600) 0%,
+      var(--violet-blue-400) 65%,
+      var(--vermillion-400) 100%
+   );
+
+   --btn-primary-bg-hover: linear-gradient(
+      135deg,
+      var(--violet-blue-600) 50%,
+      var(--violet-blue-400) 95%,
+      var(--vermillion-400) 100%
+   );
+
+   --btn-primary-text: var(--gray-100);
+
+  /* Secondary → neutral lilac surface */
+   --btn-secondary-bg: transparent;
+   --border-color-action: #3A3F7D;
+   --btn-secondary-text: #3A3F7D;
+   --btn-secondary-bg-hover: #DDD6EA;
+
+  /* Vibe / tertiary → paper neutral */
+   --btn-vibe-bg: var(--vermillion-100);
+
+   --btn-vibe-bg-hover: rgba(255,255,255,.1);
+   --btn-vibe-text: var(--gray-700);
+   
+   --btn-toggle-text: var(--violet-blue-800);
+
+
+/* ---------------------------------------------------------
+   Links & accents
+   --------------------------------------------------------- */
+   --link-color: #5E4B72;        /* plum, not rose */
+   --link-hover-color: #3F314F;
+
+
+/*  ---------------------------------------------------------
+      Text gradients
+    --------------------------------------------------------- */
+
+  /* ---------- Text ornament ---------- */
+   --text-gradient-start: var(--violet-blue-800);
+   --text-gradient-mid:   var(--violet-blue-800);
+   --text-gradient-end:   var(--violet-blue-800);
+
+  /* ---------- Eyebrow ---------- */
+   --eyebrow-gradient-start: var(--vermillion-400);
+   --eyebrow-gradient-mid: var(--magenta-400);
+   --eyebrow-gradient-end: var(--violet-blue-400);
+
+
+
+  /* ---------------------------------------------------------
+     Shadows (editorial, not soft-glow)
+     --------------------------------------------------------- */
+    --shadow-sm: 0 1px 2px rgba(24, 21, 50, 0.05);
+    --shadow-md: 0 8px 16px rgba(24, 21, 50, 0.08);
+    --shadow-lg: 0 18px 36px rgba(24, 21, 50, 0.12);
+
+
+  /* ---------------------------------------------------------
+     Project card shadow — atmospheric
+     --------------------------------------------------------- */
+  --shadow-card-project:
+  0px 40px 20px rgba(53, 23, 68, 0.02),
+  0px 24px 18px rgba(53, 23, 68, 0.05),
+  0px 10px 12px rgba(53, 23, 68, 0.08),
+  0px 4px 6px rgba(53, 23, 68, 0.10);
+
+--shadow-card-project-hover:
+  0px 60px 30px rgba(53, 23, 68, 0.03),
+  0px 36px 22px rgba(53, 23, 68, 0.07),
+  0px 16px 16px rgba(53, 23, 68, 0.10),
+  0px 6px 10px rgba(53, 23, 68, 0.14);
+
+
+
+  --card-accent-opacity: 0;
+
+  --logo-color: #3A3F7D;
+
+
+--contact-border-color:
+  color-mix(in srgb, var(--violet-blue-400) 20%, transparent);
+
+
+--bg-page-solid: #e6e9ef; /* gris muy claro, frío, editorial */
+
+
+
+--accent-violet-strong: #5B3FD6;
+--accent-violet-soft: #7C72FF;
+
+--accent-coral-strong: #F46A54;
+--accent-coral-soft: #FF8A76;
+
+--accent-magenta-bridge: #D96FD8;
+--accent-magenta-soft: #E8A4E6;
+
+
+
+--bg-tint-violet: rgba(108, 99, 255, 0.06);
+--bg-tint-coral: rgba(244, 106, 84, 0.05);
+--bg-tint-magenta: rgba(217, 111, 216, 0.05);
+
+--link-color: #5B3FD6;
+--link-hover-color: #F46A54;
+
+--color-border-strong: rgba(91, 63, 214, 0.25); 
+--color-border-soft: rgba(108, 99, 255, 0.12);
+
+
+
+
+
+  /* Base del texto */
+  --btn-vibe-text-base: var(--violet-blue-500);
+
+  /* Cool gradient axis */
+  --btn-vibe-shine-1: var(--vermillion-400);
+  --btn-vibe-shine-2: var(--magenta-400);
+  --btn-vibe-shine-3: var(--violet-blue-300);
+
+
+
+/* LIGHT */
+
+--contact-ornament-glow-center:
+  color-mix(in srgb, white 55%, transparent);
+
+--contact-ornament-glow-left:
+  color-mix(in srgb, var(--vermillion-400) 16%, transparent);
+
+--contact-ornament-glow-right:
+  color-mix(in srgb, var(--magenta-400) 14%, transparent);
+
+--contact-ornament-base:
+  color-mix(in srgb, var(--violet-blue-100) 75%, white);
+
+--contact-ornament-shadow:
+  color-mix(in srgb, var(--violet-blue-400) 15%, transparent);
+
+--contact-border-color:
+  color-mix(in srgb, var(--violet-blue-400) 20%, transparent);
+
+/* ---------- Tags ---------- */
+   --color-borde-tag: var(--gray-500);
+   --bg-tag: transparent;
+
+
+
+   /* Interior del badge */
+  --badge-bg-from: #e6e9ef;
+  --badge-bg-to: #e6e9ef;
+
+  /* Borde del badge */
+  --badge-border-from: var(--vermillion-300);
+  --badge-border-to: var(--vermillion-500);
+
+  /* Glow */
+  --badge-glow: none;
+
+  /* Icono */
+  --badge-icon-color: var(--violet-blue-700);
+
+}
+
+[data-theme="light"] .site-header::before {
+    background: rgba(246, 246, 234, 0.15); /* light */
+}
+

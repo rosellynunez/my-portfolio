@@ -6,8 +6,6 @@
   isolation: isolate;
   overflow-x: hidden; /* ✅ solo corta horizontal */
   overflow-y: visible; /* ✅ permite scroll vertical */
-
-  background: var(--purple-950); /* 👈 ESTE es el plano real */
 }
 
 /* afecta a todos los hijos directos de contact-section, no nietos “Todo lo que haya dentro de la sección
@@ -17,47 +15,33 @@ debe estar por encima del fondo decorativo” */
   z-index: 1;
 }
 
-/* Background ornament */
-[data-bs-theme="dark"] .contact-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-
-  background:
-    radial-gradient(
-      circle at 70% 25%,
-      rgba(218,110,220,0.14),
-      transparent 55%
-    ),
-    radial-gradient(
-      circle at 30% 80%,
-      rgba(20,184,196,0.18),
-      transparent 60%
-    ),
-    linear-gradient(
-      to bottom,
-      transparent 0%,
-      transparent 25%,
-      var(--purple-900) 60%,
-      var(--purple-850) 100%
-    );
-
-  z-index: 0;
-  pointer-events: none;
-}
-
 .contact-card > * {
   position: relative;
   z-index: 1;
 }
 
+.section--fade-from-hero {
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(243, 244, 246, 0.85) 35%,
+    var(--bg-page-solid) 100%
+  );
 
-
-
-[data-bs-theme="light"] .bg-ornament::before {
-  display: none;
+  padding-block-start: var(--section-space-md);
+  margin-block-start: calc(var(--section-space-md) * -1);
 }
 
+.section--solid-bg {
+  background-color: var(--bg-page-solid);
+}
+
+
+.subsection--solid {
+  background-color: var(--bg-page-solid);
+  padding-block-start: var(--section-space-sm);
+  margin-block-start: calc(var(--section-space-sm) * -1);
+}
 
 /* =========================================================
     DARK THEME SPECIFIC STYLES
@@ -67,14 +51,6 @@ debe estar por encima del fondo decorativo” */
 [data-bs-theme="dark"] {
   --gradient-text-start: var(--rose-300);
   --gradient-text-end: var(--teal-300);
-}
-
-
-
-/* ---------- CHANGE MODE GRADIENT ---------- */
-body[data-bs-theme="dark"] {
-  --btn-vibe-bg: var(--purple-300);
-  --btn-vibe-bg-hover: rgba(255, 255, 255, 0.1);
 }
 
 /* ---------- LINK BUTTON GRADIENT ---------- */
@@ -97,28 +73,6 @@ body[data-bs-theme="dark"] {
 }
 
 
-/* =============== CARD =============== */
-
-/* -------- CONTACT CARD -------- */
-
-[data-bs-theme="dark"] .contact-card {
-  background: var(--purple-950);
-  backdrop-filter: blur(16px) saturate(140%);
-  -webkit-backdrop-filter: blur(96px) saturate(140%);
-  position: relative;
-  overflow: hidden;
-}
-
-/* Sutil overlay decorativo (teal ripple) */
-[data-bs-theme="dark"] .contact-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-
-  pointer-events: none;
-  z-index: -1;
-  opacity: 0.7;
-}
 
 
 
@@ -127,56 +81,70 @@ body[data-bs-theme="dark"] {
 /* =============== TEXT GRADIENTS =============== */
 
 /* animated for the intro */
-[data-bs-theme="dark"] .text-gradient-primary-wrapper {
+
+/* ornaments.css */
+
+/* Base: solo define el gradiente (NO fuerza color) */
+.text-gradient-primary-wrapper {
   background: linear-gradient(
     90deg,
-    var(--teal-300),
-    var(--rose-300)
+    var(--text-gradient-start),
+    var(--text-gradient-mid, var(--text-gradient-start)),
+    var(--text-gradient-end)
   );
+
   background-size: 260% 100%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: gradientFlow 6s ease-in-out infinite;
 }
 
-[data-bs-theme="dark"] .text-gradient-primary-wrapper--no-animated {
+/* Opt-in: solo cuando el heading lo permite */
+.has-text-gradient .text-gradient-primary-wrapper {
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  animation: gradientMove 6s ease-in-out infinite;
+}
+.text-gradient-primary-wrapper {
+  color: currentColor;
+}
+
+
+
+.text-gradient-primary-wrapper--no-animated {
   background: linear-gradient(
     90deg,
-    var(--teal-300)0%,
-    var(--rose-300)30%
+    var(--teal-200)0%,
+    var(--magenta-200)30%
   );
   background-size: 300% 300%;
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 
-[data-bs-theme="dark"] .eyebrow-gradient {
+/* ornaments.css */
+
+.eyebrow-gradient {
   display: inline-block;
 
   background: linear-gradient(
     95deg,
-    var(--rose-300) 0%,
-    color-mix(in srgb, var(--rose-300) 80%, var(--teal-300)) 50%,
-    var(--teal-300) 100%
+    var(--eyebrow-gradient-start),
+    var(--eyebrow-gradient-mid),
+    var(--eyebrow-gradient-end)
   );
 
   background-size: 100% 100%;
   background-position: center;
 
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   background-clip: text;
+  color: transparent;
 }
 
 
 
-
-[data-bs-theme="dark"] .text-gradient-secondary {
-  background: linear-gradient(120deg, var(--gray-300), var(--gray-200));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
 
 
 

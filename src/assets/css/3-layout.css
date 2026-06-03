@@ -14,14 +14,77 @@
 /* ===============================
    HEADER
 ================================ */
+
+
 .site-header {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  width: 100%;
   z-index: 1000;
-  padding: var(--space-3) 0 var(--space-3); 
-  backdrop-filter: blur(10px);
-  background: rgba(15, 0, 34, 0.4);
+
+  padding: var(--space-3) 0;
+  background: transparent;
 }
+
+.intro-surface {
+  position: relative;
+  background: var(--bg-page-solid);
+  overflow: hidden;
+}
+
+.intro-surface::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+
+  background:
+    radial-gradient(
+      100% 70% at 60% -10%,
+      var(--hero-glow-top) 0%,
+      transparent 90%
+    );
+}
+
+.intro-surface::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+
+  background:
+    radial-gradient(
+      80% 60% at 90% 30%,
+      var(--hero-glow-side) 0%,
+      transparent 65%
+    );
+}
+
+
+.intro-surface > * {
+  position: relative;
+  z-index: 1;
+}
+
+
+.intro-surface > * {
+  position: relative;
+  z-index: 1;
+}
+
+
+@keyframes gradientMove {
+  0% { background-position: 0% 0%; }
+  50% { background-position: 100% 100%; }
+  100% { background-position: 0% 0%; }
+}
+
+
+
+
 
 /* ===============================
    MOBILE NAV OVERLAY
@@ -101,10 +164,11 @@
   justify-content: center; /* centro horizontal */
 }
 
-
+/*
 main {
-  padding-top: var(--section-space-md); /* adjust to match your real navbar height */
-}
+  padding-top: var(--section-space-md); /* adjust to match your real navbar height 
+} */
+
 
 /* ----- Containers ----- */
 
@@ -161,7 +225,21 @@ main {
   display: block;
 }
 
+/* =========================================
+   PAGE RHYTHM
+========================================= */
 
+.home .section + .section {
+  margin-block-start: var(--section-space-lg);
+}
+
+.page-article > .section + .section {
+  margin-block-start: var(--section-space-lg);
+}
+
+.page-article + #contact-me {
+  margin-block-start: var(--section-space-xl);
+}
 
 /* ----- Sections 
 .section { 
@@ -209,6 +287,10 @@ main {
   display: flex;
   gap: var(--space-3);
   flex-wrap: wrap; /* Por si en móvil no caben */
+}
+
+#intro {
+  padding-block: var(--section-space-sm);
 }
 
 
